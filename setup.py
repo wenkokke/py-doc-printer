@@ -36,4 +36,5 @@ setup(
         "overrides",
         "more_itertools",
     ],
+    package_data={"prettyprinter": ["py.typed"]},
 )
