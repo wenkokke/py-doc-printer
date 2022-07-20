@@ -1,4 +1,4 @@
-from prettyprinter.doc import (
+from .doc import (
     DocLike as DocLike,
     DocClassWithUnpack as DocClassWithUnpack,
     Doc as Doc,
@@ -26,21 +26,21 @@ from prettyprinter.doc import (
     angles as angles,
     quote as quote,
 )
-from prettyprinter.render import (
+from .typing import (
     RenderError as RenderError,
     Token as Token,
     TokenStream as TokenStream,
     TokenBuffer as TokenBuffer,
     OnEmit as OnEmit,
 )
-from prettyprinter.render.table import (
+from .table import (
     CellBuffer as CellBuffer,
     RowBuffer as RowBuffer,
     TableBuffer as TableBuffer,
 )
-from prettyprinter.render.abc import DocRenderer as DocRenderer
-from prettyprinter.render.simple import SimpleDocRenderer as SimpleDocRenderer
-from prettyprinter.render.smart import (
+from .abc import DocRenderer as DocRenderer
+from .simple import SimpleDocRenderer as SimpleDocRenderer
+from .smart import (
     LineWidthExceeded as LineWidthExceeded,
     SmartDocRenderer as SmartDocRenderer,
 )

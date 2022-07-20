@@ -1,5 +1,5 @@
 from collections.abc import Callable, Iterator
-from prettyprinter.doc import *
+from .doc import *
 
 import typing
 
@@ -13,4 +13,3 @@ TokenStream: typing.TypeAlias = Iterator[Token]
 TokenBuffer: typing.TypeAlias = list[Token]
 
 OnEmit: typing.TypeAlias = Callable[[Token], Token]
-

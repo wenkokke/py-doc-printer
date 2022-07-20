@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from dataclasses import KW_ONLY
-from prettyprinter.doc import *
-from prettyprinter.render import *
-from prettyprinter.render.table import *
+
+from .doc import *
+from .typing import *
+from .table import *
 
 
 class DocRenderer(ABC):

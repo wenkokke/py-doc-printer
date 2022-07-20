@@ -1,8 +1,8 @@
 from functools import singledispatchmethod
-from prettyprinter.doc import *
-from prettyprinter.render import *
-from prettyprinter.render.abc import *
-from prettyprinter.render.table import *
+from .doc import *
+from .typing import *
+from .abc import *
+from .table import *
 
 
 @dataclass

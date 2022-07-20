@@ -1,6 +1,6 @@
-from prettyprinter.render import *
-from prettyprinter.render.simple import *
-from prettyprinter.doc import *
+from .typing import *
+from .simple import *
+from .doc import *
 
 
 class LineWidthExceeded(Exception):

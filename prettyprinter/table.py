@@ -1,9 +1,8 @@
-from collections.abc import Callable, Iterable
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from itertools import chain, repeat, zip_longest
-from more_itertools import intersperse
-from prettyprinter.doc import Line
-from prettyprinter.render import *
+from itertools import repeat, zip_longest
+from .doc import Line
+from .typing import *
 
 
 @dataclass
