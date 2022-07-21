@@ -1,7 +1,7 @@
 Pretty Printer
 ----------------------------------------
 
-.. automodule:: prettyprinter.doc
+.. automodule:: pretty_printer.doc
 
 
 Documents
@@ -169,12 +169,12 @@ Alignment
 Rendering
 =======================================
 
-Documents are rendered as a stream of :data:`prettyprinter.typing.Token`, which are joined into a string by :data:`prettyprinter.abc.DocRenderer.to_str`.
+Documents are rendered as a stream of :data:`pretty_printer.typing.Token`, which are joined into a string by :data:`pretty_printer.abc.DocRenderer.to_str`.
 
-.. autodata:: prettyprinter.typing.Token
-.. autodata:: prettyprinter.typing.TokenStream
+.. autodata:: pretty_printer.typing.Token
+.. autodata:: pretty_printer.typing.TokenStream
 
-.. automodule:: prettyprinter.abc
+.. automodule:: pretty_printer.abc
 
    .. autoclass:: DocRenderer
       :members: to_str, render
@@ -186,7 +186,7 @@ Rendering Naively
 
 The simple renderer for documents ignores all alternatives, simply choosing the first alternative, which should have the shortest line length.
 
-.. automodule:: prettyprinter.simple
+.. automodule:: pretty_printer.simple
 
    .. autoclass:: SimpleDocRenderer
       :members: render_simple
@@ -197,17 +197,17 @@ Rendering Tables
 
 Tables are cached, to calculate their column widths and insert the appropriate spacing.
 
-To create these buffers, :meth:`prettyprinter.abc.DocRenderer.buffer_table` and :meth:`prettyprinter.abc.DocRenderer.buffer_row` are provided.
+To create these buffers, :meth:`pretty_printer.abc.DocRenderer.buffer_table` and :meth:`pretty_printer.abc.DocRenderer.buffer_row` are provided.
 
-.. automethod:: prettyprinter.abc.DocRenderer.buffer_table
+.. automethod:: pretty_printer.abc.DocRenderer.buffer_table
 
-.. automethod:: prettyprinter.abc.DocRenderer.buffer_row
+.. automethod:: pretty_printer.abc.DocRenderer.buffer_row
 
-Table buffers are rendered using the :meth:`prettyprinter.table.TableBuffer.render`.
+Table buffers are rendered using the :meth:`pretty_printer.table.TableBuffer.render`.
 
-It is important to call :meth:`prettyprinter.table.TableBuffer.update` once, just before rendering, as this calculates the needed column widths.
+It is important to call :meth:`pretty_printer.table.TableBuffer.update` once, just before rendering, as this calculates the needed column widths.
 
-.. automodule:: prettyprinter.table
+.. automodule:: pretty_printer.table
 
    .. autoclass:: TableBuffer
       :members: append, extend, render, update
@@ -226,7 +226,7 @@ Finally, the smart renderer uses one level of lookahead.
 
 When rendering a series of alternatives, it renders the first line of each alternative using the simple renderer, and picks the alternative that best fills up the current line.
 
-.. automodule:: prettyprinter.smart
+.. automodule:: pretty_printer.smart
 
    .. autoclass:: SmartDocRenderer
       :members: render_with_lookahead
