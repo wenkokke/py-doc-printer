@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
-project = "prettyprinter"
+project = "pretty-printer"
 copyright = "2022, Wen Kokke"
 author = "Wen Kokke"
 
@@ -70,7 +70,7 @@ autodoc_type_aliases = {
 html_theme = "bootstrap"
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
-    "navbar_title": "PrettyPrinter",
+    "navbar_title": "Pretty Printer",
     "navbar_sidebarrel": False,
     "navbar_pagenav": False,
 }
