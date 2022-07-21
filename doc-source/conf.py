@@ -14,17 +14,18 @@ import sphinx_bootstrap_theme
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+sys.path.insert(0, os.path.abspath(".."))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'prettyprinter'
-copyright = '2022, Wen Kokke'
-author = 'Wen Kokke'
+project = "prettyprinter"
+copyright = "2022, Wen Kokke"
+author = "Wen Kokke"
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.4'
+release = "0.1.4"
 
 
 # -- General configuration ---------------------------------------------------
@@ -37,12 +38,12 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # The default options for autodoc directives. They are applied to all
 # autodoc directives automatically. It must be a dictionary which maps
@@ -57,11 +58,11 @@ autodoc_typehints_format = "short"
 python_use_unqualified_type_names = True
 
 autodoc_type_aliases = {
-    'DocLike': 'DocLike',
-    'Token': 'Token',
-    'TokenStream': 'TokenStream',
-    'TokenBuffer': 'TokenBuffer',
-    'OnEmit': 'OnEmit',
+    "DocLike": "DocLike",
+    "Token": "Token",
+    "TokenStream": "TokenStream",
+    "TokenBuffer": "TokenBuffer",
+    "OnEmit": "OnEmit",
 }
 
 # -- Options for HTML output -------------------------------------------------
@@ -69,7 +70,7 @@ autodoc_type_aliases = {
 html_theme = "bootstrap"
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
-    "navbar_title": "Tree-Sitter Talon",
+    "navbar_title": "PrettyPrinter",
     "navbar_sidebarrel": False,
     "navbar_pagenav": False,
 }
