@@ -25,7 +25,7 @@ copyright = "2022, Wen Kokke"
 author = "Wen Kokke"
 
 # The full version, including alpha/beta/rc tags
-release = "0.2.1"
+release = "0.3.0"
 
 
 # -- General configuration ---------------------------------------------------
