@@ -3,12 +3,12 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pretty-printer"
+name = "doc-printer"
 version = "0.3.0"
 description = "A Wadler-Leijen Pretty Printer in Python"
 readme = "README.md"
 requires-python = ">=3.9"
-keywords = ["pretty-printer"]
+keywords = ["doc-printer"]
 authors = [{ name = "Wen Kokke" }]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -24,11 +24,11 @@ sphinx = [
 ]
 
 [project.urls]
-documentation = "https://wenkokke.github.io/py-pretty-printer/"
-repository = "https://github.com/wenkokke/py-pretty-printer"
+documentation = "https://wenkokke.github.io/py-doc-printer/"
+repository = "https://github.com/wenkokke/py-doc-printer"
 
 [tool.setuptools.package-data]
-pretty_printer = ["py.typed"]
+doc_printer = ["py.typed"]
 
 [tool.bumpver]
 current_version = "0.3.0"
