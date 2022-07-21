@@ -1,5 +1,7 @@
-Pretty Printer
+Document Printer
 ----------------------------------------
+
+A Wadler-Leijen Pretty Printer in Python.
 
 .. automodule:: doc_printer.doc
 
