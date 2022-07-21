@@ -22,7 +22,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install .
-      - run: pytest
 
   sphinx:
     name: Sphinx
