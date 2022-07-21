@@ -48,7 +48,7 @@ class CellBuffer(Iterable[Token]):
 @dataclass
 class RowBuffer(Iterable[CellBuffer]):
     hsep: Token
-
+    min_col_widths: tuple[Optional[int], ...]
     min_n_cols: int = field(default=0, init=False)
     buffer: list[CellBuffer] = field(default_factory=list, init=False)
 
@@ -88,17 +88,8 @@ class TableBuffer:
         self.n_cols = max(self.n_cols, row.min_n_cols)
         self.n_rows += 1
         self.buffer.append(row)
-        min_col_widths = tuple(cell.min_width for cell in row)
-        if not self.col_widths:
-            self.col_widths = min_col_widths
-        else:
-            n_cols = range(0, self.n_cols)
-            self.col_widths = tuple(
-                max(w1, w2)
-                for _, w1, w2 in zip_longest(
-                    n_cols, self.col_widths, min_col_widths, fillvalue=0
-                )
-            )
+        self.append_min_col_widths(tuple(cell.min_width for cell in row))
+        self.append_min_col_widths(row.min_col_widths)
 
     def extend(self, rows: Iterable[RowBuffer]):
         for row in rows:
@@ -114,6 +105,15 @@ class TableBuffer:
             for j in range(0, self.n_cols):
                 col_width = self.col_widths[j]
                 self.buffer[i].buffer[j].width = col_width
+
+    def append_min_col_widths(self, min_col_widths: tuple[Optional[int], ...]):
+        if not self.col_widths:
+            self.col_widths = tuple(w or 0 for w in min_col_widths)
+        else:
+            self.col_widths = tuple(
+                max(w1 or 0, w2 or 0)
+                for (w1, w2) in zip_longest(self.col_widths, min_col_widths)
+            )
 
     def __iter__(self) -> Iterator[RowBuffer]:
         return iter(self.buffer)

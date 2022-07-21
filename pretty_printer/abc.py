@@ -24,7 +24,9 @@ class DocRenderer(ABC):
         )
 
     def buffer_row(self, row: Row) -> RowBuffer:
-        row_buffer = RowBuffer(hsep=row.info.hsep)
+        row_buffer = RowBuffer(
+            hsep=row.info.hsep, min_col_widths=row.info.min_col_widths
+        )
         for cell in row.cells:
             cell_buffer = CellBuffer(hpad=row.info.hpad)
             cell_buffer.extend(self.render(cell, on_emit=None))

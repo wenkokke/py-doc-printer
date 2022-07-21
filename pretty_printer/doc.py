@@ -258,6 +258,7 @@ class RowInfo:
     table_type: Optional[str]
     hpad: Text
     hsep: Text
+    min_col_widths: tuple[Optional[int], ...]
 
 
 @dataclass
@@ -356,15 +357,16 @@ def cat(*doclike: DocLike) -> "Doc":
 def row(
     *doclike: DocLike,
     table_type: Optional[str] = None,
-    hpad: str | Text = Space,
-    hsep: str | Text = Space,
+    hpad: Union[str, Text] = Space,
+    hsep: Union[str, Text] = Space,
+    min_col_widths: tuple[Optional[int], ...] = (),
 ) -> "Doc":
     # Ensure padding and separators are Text
     if isinstance(hpad, str):
         hpad = Text(hpad)
     if isinstance(hsep, str):
         hsep = Text(hsep)
-    info = RowInfo(table_type=table_type, hpad=hpad, hsep=hsep)
+    info = RowInfo(table_type=table_type, hpad=hpad, hsep=hsep, min_col_widths=min_col_widths)
     # Ensure Row settings are preserved
     cells: list[Doc] = []
     for cell_or_row in splat(doclike):
