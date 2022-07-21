@@ -25,6 +25,7 @@ from .doc import (
     braces as braces,
     angles as angles,
     quote as quote,
+    create_tables as create_tables,
 )
 from .typing import (
     RenderError as RenderError,

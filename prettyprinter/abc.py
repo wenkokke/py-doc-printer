@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from itertools import chain
 
 from .doc import *
 from .typing import *

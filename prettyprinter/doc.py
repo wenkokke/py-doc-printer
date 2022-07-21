@@ -1,15 +1,14 @@
+from __future__ import annotations
 from abc import ABC, abstractmethod
 from collections.abc import Iterable, Iterator
-from dataclasses import dataclass, field
-from functools import cache
-from itertools import chain, groupby, repeat
+from dataclasses import dataclass
+from itertools import groupby
 from operator import length_hint
 from typing import Optional, TypeAlias, Union, cast
 from overrides import overrides
 from more_itertools import intersperse
 
 import re
-
 
 DocLike: TypeAlias = Union[str, "Doc", Iterable["DocLike"]]  # type: ignore
 

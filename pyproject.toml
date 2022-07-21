@@ -1,4 +1,41 @@
 [build-system]
-requires = ["setuptools>=43.0.0", "wheel>=0.36.2"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "prettyprinter"
+version = "0.1.4"
+description = "A Wadler-Leijen Pretty Printer in Python"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["prettyprinter"]
+authors = [{ name = "Wen Kokke" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Compilers",
+]
+dependencies = ["overrides", "more_itertools"]
+
+[project.optional-dependencies]
+sphinx = [
+    "sphinx",
+    "sphinx-toolbox >=3.1.2",
+    "sphinx_bootstrap_theme",
+]
+
+[project.urls]
+repository = "https://github.com/wenkokke/py-prettyprinter"
+
+[tool.setuptools.package-data]
+prettyprinter = ["py.typed"]
+
+[tool.bumpver]
+current_version = "0.1.4"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
