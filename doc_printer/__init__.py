@@ -20,6 +20,7 @@ from .doc import (
     row as row,
     table as table,
     alt as alt,
+    nest as nest,
     parens as parens,
     brackets as brackets,
     braces as braces,
