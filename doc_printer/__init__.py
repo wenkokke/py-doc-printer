@@ -32,7 +32,6 @@ from .typing import (
     Token as Token,
     TokenStream as TokenStream,
     TokenBuffer as TokenBuffer,
-    OnEmit as OnEmit,
 )
 from .table import (
     CellBuffer as CellBuffer,
@@ -40,7 +39,10 @@ from .table import (
     TableBuffer as TableBuffer,
 )
 from .abc import DocRenderer as DocRenderer
-from .simple import SimpleDocRenderer as SimpleDocRenderer
+from .simple import (
+    OnEmit as OnEmit,
+    SimpleDocRenderer as SimpleDocRenderer,
+)
 from .smart import (
     LineWidthExceeded as LineWidthExceeded,
     SmartDocRenderer as SmartDocRenderer,

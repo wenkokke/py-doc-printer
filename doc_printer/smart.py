@@ -22,32 +22,22 @@ class SmartDocRenderer(SimpleDocRenderer):
         else:
             yield from self.render_simple(doc)
 
-    @overrides
-    def emit(self, token: Token) -> Token:
-        if self.is_buffering:
-            return token
+    def line_width_exceeded(self, token: Token) -> Token:
+        if self.line_width > self.max_line_width:
+            raise LineWidthExceeded()
         else:
-            if token is Line:
-                self.line_width = 0
-            else:
-                self.line_width += len(token)
-            if (
-                self.raise_error_if_line_width_exceeded
-                and self.line_width > self.max_line_width
-            ):
-                raise LineWidthExceeded
             return token
 
     @contextmanager
     def safe_mode(self) -> Iterator[None]:
-        self.raise_error_if_line_width_exceeded = True
+        self.on_emit.append(self.line_width_exceeded)
         try:
             yield None
         finally:
-            self.raise_error_if_line_width_exceeded = False
+            self.on_emit.remove(self.line_width_exceeded)
 
     def render_with_lookahead(self, alts: tuple[Doc, ...]) -> TokenStream:
-        default, *rest = alts
+        fallback, *rest = alts
         succeeded = False
         for alt in reversed(rest):
             try:
@@ -58,4 +48,4 @@ class SmartDocRenderer(SimpleDocRenderer):
             except LineWidthExceeded:
                 continue
         if not succeeded:
-            yield from self.render(default)
+            yield from self.render(fallback)
