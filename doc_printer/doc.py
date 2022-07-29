@@ -209,8 +209,8 @@ class Alt(Doc, Iterable[Doc]):
 
     def __init__(self, alts: tuple[Doc, ...]):
         # Invariant: None of alts is an instance of Alt.
-        assert (
-            all(not isinstance(doc, Alt) for doc in self.alts)
+        assert all(
+            not isinstance(doc, Alt) for doc in self.alts
         ), f"Alt contains Alt:\n{self}"
 
     def __repr__(self) -> str:
@@ -282,9 +282,7 @@ class Row(Doc, Iterable[Doc]):
             not isinstance(cell, Row) for cell in self.cells
         ), f"Row contains Row:\n{self}"
         # Invariant: The hpad text has width 1.
-        assert (
-            self.info.hpad.text is not Empty
-        ), f"Row hpad is Empty:\n{self}"
+        assert self.info.hpad.text is not Empty, f"Row hpad is Empty:\n{self}"
         assert (
             len(self.info.hpad.text) > 1
         ), f"Row hpad is more than one character:\n{self}"
@@ -331,17 +329,15 @@ class Nest(Doc):
     doc: Doc
 
     def __init__(self, indent: int, doc: Doc) -> None:
-        if isinstance(doc, Nest):
-            self.indent = indent + doc.indent
-            self.doc = doc.doc
-        else:
-            self.indent = indent
-            self.doc = doc
+        self.indent = indent
+        self.doc = doc
 
         # Invariant: The doc is not Nest
-        assert not isinstance(self.doc, Nest)
+        assert not isinstance(self.doc, Nest), f"Nest contains Nest:\n{self}"
+        # Invariant: The doc is not Empty
+        assert self.doc is not Empty, f"Nest contains Empty:\n{self}"
         # Invariant: The indent is greater than zero.
-        assert self.indent > 0
+        assert self.indent > 0, f"Nest has negative or zero indent:\n{self}"
 
     @overrides
     def __length_hint__(self) -> int:
@@ -376,10 +372,11 @@ def cat(*doclike: DocLike) -> "Doc":
     NOTE: `cat` and `Empty` form a monoid, where `Empty` acts as a unit for `cat`
     """
     docs = tuple(filter(bool, splat(doclike, unpack=Cat)))
-    if docs:
-        return Cat(docs)
-    else:
+    if len(docs) == 0:
         return Empty
+    if len(docs) == 1:
+        return docs[0]
+    return Cat(docs)
 
 
 def row(
@@ -456,6 +453,18 @@ def alt(*doclike: DocLike) -> Doc:
         return alts[0]
     else:
         return Alt(alts)
+
+
+def nest(indent: int, *doclike: DocLike) -> Doc:
+    doc = cat(doclike)
+    if doc is Empty:
+        return Empty
+    if isinstance(doc, Nest):
+        indent += doc.indent
+        doc = doc.doc
+    if indent < 1:
+        return doc
+    return Nest(indent, doc)
 
 
 def parens(*doclike: DocLike) -> Doc:
