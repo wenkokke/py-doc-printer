@@ -29,6 +29,7 @@ from .doc import (
 )
 from .typing import (
     RenderError as RenderError,
+    OnEmit as OnEmit,
     Token as Token,
     TokenStream as TokenStream,
     TokenBuffer as TokenBuffer,
@@ -40,10 +41,10 @@ from .table import (
 )
 from .abc import DocRenderer as DocRenderer
 from .simple import (
-    OnEmit as OnEmit,
     SimpleDocRenderer as SimpleDocRenderer,
 )
 from .smart import (
     LineWidthExceeded as LineWidthExceeded,
     SmartDocRenderer as SmartDocRenderer,
 )
+
