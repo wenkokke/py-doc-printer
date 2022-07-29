@@ -131,6 +131,10 @@ Alternative layout options
 Identation
 =======================================
 
+   .. autofunction:: nest
+
+      Smart constructor for :class:`Nest`.
+
    .. autoclass:: Nest
 
       The type of indented documents.
