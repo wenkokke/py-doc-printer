@@ -327,11 +327,9 @@ class Nest(Doc):
 
     indent: int
     doc: Doc
+    overlap: bool = False
 
-    def __init__(self, indent: int, doc: Doc) -> None:
-        self.indent = indent
-        self.doc = doc
-
+    def __post_init__(self, **rest) -> None:
         # Invariant: The doc is not Nest
         assert not isinstance(self.doc, Nest), f"Nest contains Nest:\n{self}"
         # Invariant: The doc is not Empty
@@ -455,7 +453,7 @@ def alt(*doclike: DocLike) -> Doc:
         return Alt(alts)
 
 
-def nest(indent: int, *doclike: DocLike) -> Doc:
+def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
     doc = cat(doclike)
     if doc is Empty:
         return Empty
@@ -464,7 +462,7 @@ def nest(indent: int, *doclike: DocLike) -> Doc:
         doc = doc.doc
     if indent < 1:
         return doc
-    return Nest(indent, doc)
+    return Nest(indent=indent, doc=doc, overlap=overlap)
 
 
 def parens(*doclike: DocLike) -> Doc:

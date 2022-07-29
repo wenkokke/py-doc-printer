@@ -56,23 +56,29 @@ class SimpleDocRenderer(DocRenderer):
 
     @render_simple.register
     def _(self, doc: Nest) -> TokenStream:
+        first_line: bool = True
         has_content: bool = False
         line_indent: int = 0
-        for token in self.render(doc.doc):
+        for token in self.buffer(doc.doc):
             if token is Line:
+                first_line = False
                 has_content = False
-                yield Line
+                line_indent = 0
+                yield self.emit(Line)
             else:
                 if has_content:
-                    yield token
+                    yield self.emit(token)
                 else:
                     if token is Space:
                         line_indent += 1
                     else:
                         has_content = True
-                        padding = repeat(Space, line_indent + doc.indent)
-                        yield from map(self.emit, padding)
-                        yield token
+                        if first_line:
+                            if doc.overlap and doc.indent > self.line_width:
+                                yield from map(self.emit, repeat(Space, line_indent + doc.indent - self.line_width))
+                        else:
+                            yield from map(self.emit, repeat(Space, line_indent + doc.indent))
+                        yield self.emit(token)
 
     ###########################################################################
     # Buffering

@@ -48,3 +48,15 @@ def test_DocLike_Line_and_Space():
     cat1 = cat("hello world\nwello horld")
     cat2 = cat("hello", Space, "world", Line, "wello", Space, "horld")
     assert cat1 == cat2
+
+
+def test_Cat_Empty():
+    assert cat() is Empty
+    assert Empty / Text("hello") == Text("hello")
+    assert Text("hello") / Empty == Text("hello")
+    assert Empty // Text("hello") == Text("hello")
+    assert Text("hello") // Empty == Text("hello")
+
+
+def test_Nest_Empty():
+    assert nest(4, Empty) is Empty
