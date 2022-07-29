@@ -53,13 +53,17 @@ class Doc(ABC):
         """
         Compose two documents, separated by a space.
         """
+        if self is Empty:
+            return cat(other)
+        if cat(other) is Empty:
+            return self
         return self.then(Space).then(other)
 
     def __rfloordiv__(self, other: DocLike) -> "Doc":
         """
         Compose two documents, separated by a space.
         """
-        return cat(other).then(Space).then(self)
+        return cat(other).__floordiv__(self)
 
     def __or__(self, other: DocLike) -> "Doc":
         """
@@ -205,7 +209,9 @@ class Alt(Doc, Iterable[Doc]):
 
     def __init__(self, alts: tuple[Doc, ...]):
         # Invariant: None of alts is an instance of Alt.
-        assert all(not isinstance(doc, Alt) for doc in self.alts)
+        assert (
+            all(not isinstance(doc, Alt) for doc in self.alts)
+        ), f"Alt contains Alt:\n{self}"
 
     def __repr__(self) -> str:
         if self.is_Fail():
@@ -241,9 +247,13 @@ class Cat(Doc, Iterable[Doc]):
 
     def __post_init__(self, **rest) -> None:
         # Invariant: None of docs is an instance of Cat.
-        assert all(not isinstance(doc, Cat) for doc in self.docs)
+        assert all(
+            not isinstance(doc, Cat) for doc in self.docs
+        ), f"Cat contains Cat:\n{self}"
         # Invariant: None of docs is Empty.
-        assert all(doc is not Empty for doc in self.docs)
+        assert all(
+            doc is not Empty for doc in self.docs
+        ), f"Cat contains Empty:\n{self}"
 
     def __iter__(self) -> Iterator[Doc]:
         return iter(self.docs)
@@ -268,9 +278,16 @@ class Row(Doc, Iterable[Doc]):
 
     def __post_init__(self, **rest) -> None:
         # Invariant: None of cells is an instance of Row.
-        assert all(not isinstance(cell, Row) for cell in self.cells)
+        assert all(
+            not isinstance(cell, Row) for cell in self.cells
+        ), f"Row contains Row:\n{self}"
         # Invariant: The hpad text has width 1.
-        assert len(self.info.hpad.text) == 1
+        assert (
+            self.info.hpad.text is not Empty
+        ), f"Row hpad is Empty:\n{self}"
+        assert (
+            len(self.info.hpad.text) > 1
+        ), f"Row hpad is more than one character:\n{self}"
 
     def __iter__(self) -> Iterator[Doc]:
         return iter(self.cells)
@@ -288,7 +305,9 @@ class Table(Doc, Iterable[Row]):
 
     def __post_init__(self, **rest) -> None:
         # Invariant: All of rows are an instance of Table.
-        assert all(isinstance(row, Row) for row in self.rows)
+        assert all(
+            isinstance(row, Row) for row in self.rows
+        ), f"Table contains non-Row:\n{self}"
 
     def __iter__(self) -> Iterator[Row]:
         return iter(self.rows)
@@ -351,7 +370,16 @@ def splat(
 
 
 def cat(*doclike: DocLike) -> "Doc":
-    return Cat(tuple(splat(doclike, unpack=Cat)))
+    """
+    Concatenate a series of documents or document-like objects.
+
+    NOTE: `cat` and `Empty` form a monoid, where `Empty` acts as a unit for `cat`
+    """
+    docs = tuple(filter(bool, splat(doclike, unpack=Cat)))
+    if docs:
+        return Cat(docs)
+    else:
+        return Empty
 
 
 def row(
@@ -366,7 +394,9 @@ def row(
         hpad = Text(hpad)
     if isinstance(hsep, str):
         hsep = Text(hsep)
-    info = RowInfo(table_type=table_type, hpad=hpad, hsep=hsep, min_col_widths=min_col_widths)
+    info = RowInfo(
+        table_type=table_type, hpad=hpad, hsep=hsep, min_col_widths=min_col_widths
+    )
     # Ensure Row settings are preserved
     cells: list[Doc] = []
     for cell_or_row in splat(doclike):
