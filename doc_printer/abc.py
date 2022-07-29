@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from contextlib import contextmanager
 from itertools import chain
 
 from .doc import *
@@ -7,21 +8,35 @@ from .table import *
 
 
 class DocRenderer(ABC):
+    def __init__(self):
+        self.is_buffering: bool = False
+
     def to_str(self, doc: Doc) -> str:
         return "".join(token.text for token in self.render(doc))
 
+    def emit(self, token: Token) -> Token:
+        return token
+
     @abstractmethod
-    def render(self, doc: Doc, *, on_emit: OnEmit | None = None) -> TokenStream:
+    def render(self, doc: Doc) -> TokenStream:
         """
         Render a document as a stream of tokens.
         """
 
-    def render_stream(
-        self, docs: Iterable[Doc], *, on_emit: OnEmit | None = None
-    ) -> TokenStream:
-        yield from chain.from_iterable(
-            self.render(doc, on_emit=on_emit) for doc in docs
-        )
+    def render_stream(self, docs: Iterable[Doc]) -> TokenStream:
+        yield from chain.from_iterable(self.render(doc) for doc in docs)
+
+    @contextmanager
+    def buffering(self) -> Iterator[None]:
+        self.is_buffering = True
+        try:
+            yield None
+        finally:
+            self.is_buffering = False
+
+    def buffer(self, doc: Doc) -> TokenStream:
+        with self.buffering():
+            yield from self.render(doc)
 
     def buffer_row(self, row: Row) -> RowBuffer:
         row_buffer = RowBuffer(
@@ -29,7 +44,7 @@ class DocRenderer(ABC):
         )
         for cell in row.cells:
             cell_buffer = CellBuffer(hpad=row.info.hpad)
-            cell_buffer.extend(self.render(cell, on_emit=None))
+            cell_buffer.extend(self.buffer(cell))
             row_buffer.append(cell_buffer)
         return row_buffer
 
