@@ -1,6 +1,6 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from collections.abc import Iterable, Iterator
+from collections.abc import Callable, Iterable, Iterator
 from dataclasses import dataclass
 from itertools import groupby
 from operator import length_hint
@@ -76,6 +76,11 @@ class Doc(ABC):
         Combine two documents as alternatives.
         """
         return alt(other, self)
+
+
+################################################################################
+# Text and Tokens
+################################################################################
 
 
 @dataclass
@@ -167,6 +172,97 @@ Space = Text.intern_Space()
 Line = Text.intern_Line()
 
 
+Token: TypeAlias = "Text"
+TokenStream: TypeAlias = Iterator[Token]
+
+
+################################################################################
+# Concatenation
+################################################################################
+
+
+@dataclass
+class Cat(Doc, Iterable[Doc]):
+    """
+    Concatenated documents.
+    """
+
+    docs: tuple[Doc, ...]
+
+    def __post_init__(self, **rest) -> None:
+        # Invariant: None of docs is an instance of Cat.
+        assert all(
+            not isinstance(doc, Cat) for doc in self.docs
+        ), f"Cat contains Cat:\n{repr(self)}"
+        # Invariant: None of docs is Empty.
+        assert all(
+            doc is not Empty for doc in self.docs
+        ), f"Cat contains Empty:\n{repr(self)}"
+
+    def __iter__(self) -> Iterator[Doc]:
+        return iter(self.docs)
+
+    @overrides
+    def __length_hint__(self) -> int:
+        return sum(map(length_hint, self.docs))
+
+
+def splat(
+    doclike: DocLike,
+    unpack: DocClassWithUnpack | tuple[DocClassWithUnpack, ...] = (),
+) -> Iterator["Doc"]:
+    """
+    Iterate over the elements any document-like object.
+    """
+    if not isinstance(unpack, tuple):
+        unpack = (unpack,)
+    if isinstance(doclike, str):
+        yield from splat(Text.lines(doclike), unpack=unpack)
+    elif isinstance(doclike, Doc):
+        if isinstance(doclike, unpack):
+            yield from cast(Iterable["Doc"], doclike)
+        else:
+            yield doclike
+    else:
+        for smaller_doclike in doclike:
+            yield from splat(smaller_doclike, unpack=unpack)
+
+
+def cat(*doclike: DocLike) -> "Doc":
+    """
+    Concatenate a series of documents or document-like objects.
+
+    NOTE: `cat` and `Empty` form a monoid, where `Empty` acts as a unit for `cat`
+    """
+    docs = tuple(filter(bool, splat(doclike, unpack=Cat)))
+    if len(docs) == 0:
+        return Empty
+    if len(docs) == 1:
+        return docs[0]
+    return Cat(docs)
+
+
+def parens(*doclike: DocLike) -> Doc:
+    return cat("(", doclike, ")")
+
+
+def brackets(*doclike: DocLike) -> Doc:
+    return cat("[", doclike, "]")
+
+
+def braces(*doclike: DocLike) -> Doc:
+    return cat("{", doclike, "}")
+
+
+def angles(*doclike: DocLike) -> Doc:
+    return cat("<", doclike, ">")
+
+
+################################################################################
+# Alternatives
+################################################################################
+
+
 @dataclass
 class Alt(Doc, Iterable[Doc]):
     """
@@ -211,7 +307,7 @@ class Alt(Doc, Iterable[Doc]):
         # Invariant: None of alts is an instance of Alt.
         assert all(
             not isinstance(doc, Alt) for doc in self.alts
-        ), f"Alt contains Alt:\n{self}"
+        ), f"Alt contains Alt:\n{repr(self)}"
 
     def __repr__(self) -> str:
         if self.is_Fail():
@@ -237,30 +333,94 @@ Fail = Alt.intern_Fail()
 SoftLine = Alt.intern_SoftLine()
 
 
+def alt(*doclike: DocLike) -> Doc:
+    alts = tuple(splat(doclike, unpack=Alt))
+    if len(alts) == 1:
+        return alts[0]
+    else:
+        return Alt(alts)
+
+
+################################################################################
+# Nesting and Indentation
+################################################################################
+
+
 @dataclass
-class Cat(Doc, Iterable[Doc]):
+class Nest(Doc):
     """
-    Concatenated documents.
+    Indented documents.
     """
 
-    docs: tuple[Doc, ...]
+    indent: int
+    doc: Doc
+    overlap: bool = False
 
     def __post_init__(self, **rest) -> None:
-        # Invariant: None of docs is an instance of Cat.
-        assert all(
-            not isinstance(doc, Cat) for doc in self.docs
-        ), f"Cat contains Cat:\n{self}"
-        # Invariant: None of docs is Empty.
-        assert all(
-            doc is not Empty for doc in self.docs
-        ), f"Cat contains Empty:\n{self}"
-
-    def __iter__(self) -> Iterator[Doc]:
-        return iter(self.docs)
+        # Invariant: The doc is not Nest
+        assert not isinstance(self.doc, Nest), f"Nest contains Nest:\n{repr(self)}"
+        # Invariant: The doc is not Empty
+        assert self.doc is not Empty, f"Nest contains Empty:\n{repr(self)}"
+        # Invariant: The indent is greater than zero.
+        assert self.indent > 0, f"Nest has negative or zero indent:\n{repr(self)}"
 
     @overrides
     def __length_hint__(self) -> int:
-        return sum(map(length_hint, self.docs))
+        return self.indent + length_hint(self.doc)
+
+
+def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
+    doc = cat(doclike)
+    if doc is Empty:
+        return Empty
+    if isinstance(doc, Nest):
+        indent += doc.indent
+        doc = doc.doc
+    if indent < 1:
+        return doc
+    return Nest(indent=indent, doc=doc, overlap=overlap)
+
+
+################################################################################
+# Automatic Escaping: TokenStream editing via Map
+################################################################################
+
+
+@dataclass
+class Map(Doc):
+    function: Callable[[Token], TokenStream]
+    doc: Doc
+
+    @overrides
+    def __length_hint__(self) -> int:
+        return length_hint(self.doc)
+
+
+def escape_single(token: Token) -> TokenStream:
+    yield Text(re.sub(r"(?!<\\)\'", "'", token.text))
+
+
+def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
+    doc = cat(doclike)
+    if auto_quote:
+        doc = Map(escape_single, doc)
+    return cat("'", doc, "'")
+
+
+def escape_double(token: Token) -> TokenStream:
+    yield Text(re.sub(r"(?!<\\)\"", '"', token.text))
+
+
+def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
+    doc = cat(doclike)
+    if auto_quote:
+        doc = Map(escape_double, doc)
+    return cat('"', doc, '"')
+
+
+################################################################################
+# Alignment: Rows and Tables
+################################################################################
 
 
 @dataclass
@@ -280,12 +440,12 @@ class Row(Doc, Iterable[Doc]):
         # Invariant: None of cells is an instance of Row.
         assert all(
             not isinstance(cell, Row) for cell in self.cells
-        ), f"Row contains Row:\n{self}"
+        ), f"Row contains Row:\n{repr(self)}"
         # Invariant: The hpad text has width 1.
-        assert self.info.hpad.text is not Empty, f"Row hpad is Empty:\n{self}"
+        assert self.info.hpad.text is not Empty, f"Row hpad is Empty:\n'{repr(self)}'"
         assert (
-            len(self.info.hpad.text) > 1
-        ), f"Row hpad is more than one character:\n{self}"
+            len(self.info.hpad.text) == 1
+        ), f"Row hpad is more than one character:\n'{repr(self)}'"
 
     def __iter__(self) -> Iterator[Doc]:
         return iter(self.cells)
@@ -305,7 +465,7 @@ class Table(Doc, Iterable[Row]):
         # Invariant: All of rows are an instance of Table.
         assert all(
             isinstance(row, Row) for row in self.rows
-        ), f"Table contains non-Row:\n{self}"
+        ), f"Table contains non-Row:\n{repr(self)}"
 
     def __iter__(self) -> Iterator[Row]:
         return iter(self.rows)
@@ -313,68 +473,6 @@ class Table(Doc, Iterable[Row]):
     @overrides
     def __length_hint__(self) -> int:
         return max(map(length_hint, self.rows))
-
-
-@dataclass
-class Nest(Doc):
-    """
-    Indented documents.
-
-    Note:
-        The Nest constructor cannot guarantee that the indent is positive,
-        so it is better to call the Doc.nest function.
-    """
-
-    indent: int
-    doc: Doc
-    overlap: bool = False
-
-    def __post_init__(self, **rest) -> None:
-        # Invariant: The doc is not Nest
-        assert not isinstance(self.doc, Nest), f"Nest contains Nest:\n{self}"
-        # Invariant: The doc is not Empty
-        assert self.doc is not Empty, f"Nest contains Empty:\n{self}"
-        # Invariant: The indent is greater than zero.
-        assert self.indent > 0, f"Nest has negative or zero indent:\n{self}"
-
-    @overrides
-    def __length_hint__(self) -> int:
-        return self.indent + length_hint(self.doc)
-
-
-def splat(
-    doclike: DocLike,
-    unpack: DocClassWithUnpack | tuple[DocClassWithUnpack, ...] = (),
-) -> Iterator["Doc"]:
-    """
-    Iterate over the elements any document-like object.
-    """
-    if not isinstance(unpack, tuple):
-        unpack = (unpack,)
-    if isinstance(doclike, str):
-        yield from splat(Text.lines(doclike), unpack=unpack)
-    elif isinstance(doclike, Doc):
-        if isinstance(doclike, unpack):
-            yield from cast(Iterable["Doc"], doclike)
-        else:
-            yield doclike
-    else:
-        for smaller_doclike in doclike:
-            yield from splat(smaller_doclike, unpack=unpack)
-
-
-def cat(*doclike: DocLike) -> "Doc":
-    """
-    Concatenate a series of documents or document-like objects.
-
-    NOTE: `cat` and `Empty` form a monoid, where `Empty` acts as a unit for `cat`
-    """
-    docs = tuple(filter(bool, splat(doclike, unpack=Cat)))
-    if len(docs) == 0:
-        return Empty
-    if len(docs) == 1:
-        return docs[0]
-    return Cat(docs)
 
 
 def row(
@@ -443,43 +541,3 @@ def create_tables(docs: Iterator[Doc], *, separator: Text = Line) -> Iterator[Do
             yield separator.join(subdocs)
         else:
             yield (plain | Table(subrows))
-
-
-def alt(*doclike: DocLike) -> Doc:
-    alts = tuple(splat(doclike, unpack=Alt))
-    if len(alts) == 1:
-        return alts[0]
-    else:
-        return Alt(alts)
-
-
-def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
-    doc = cat(doclike)
-    if doc is Empty:
-        return Empty
-    if isinstance(doc, Nest):
-        indent += doc.indent
-        doc = doc.doc
-    if indent < 1:
-        return doc
-    return Nest(indent=indent, doc=doc, overlap=overlap)
-
-
-def parens(*doclike: DocLike) -> Doc:
-    return cat("(", doclike, ")")
-
-
-def brackets(*doclike: DocLike) -> Doc:
-    return cat("[", doclike, "]")
-
-
-def braces(*doclike: DocLike) -> Doc:
-    return cat("{", doclike, "}")
-
-
-def angles(*doclike: DocLike) -> Doc:
-    return cat("<", doclike, ">")
-
-
-def quote(*doclike: DocLike) -> Doc:
-    return cat('"', doclike, '"')

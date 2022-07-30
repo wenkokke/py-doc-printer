@@ -1,10 +1,15 @@
 from abc import ABC, abstractmethod
-from contextlib import contextmanager
 from itertools import chain
+from typing import TypeAlias
 
 from .doc import *
-from .typing import *
-from .table import *
+
+
+class RenderError(Exception):
+    pass
+
+
+OnEmit: TypeAlias = Callable[[Token], Token]
 
 
 class DocRenderer(ABC):

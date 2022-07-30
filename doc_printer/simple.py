@@ -1,8 +1,9 @@
+from contextlib import contextmanager
 from functools import singledispatchmethod
 from .doc import *
-from .typing import *
 from .abc import *
 from .table import *
+
 
 @dataclass
 class SimpleDocRenderer(DocRenderer):
@@ -22,7 +23,6 @@ class SimpleDocRenderer(DocRenderer):
                 token = cb(token)
             return token
 
-    @overrides
     def render(self, doc: Doc) -> TokenStream:
         yield from self.render_simple(doc)
 
@@ -75,10 +75,23 @@ class SimpleDocRenderer(DocRenderer):
                         has_content = True
                         if first_line:
                             if doc.overlap and doc.indent > self.line_width:
-                                yield from map(self.emit, repeat(Space, line_indent + doc.indent - self.line_width))
+                                yield from map(
+                                    self.emit,
+                                    repeat(
+                                        Space,
+                                        line_indent + doc.indent - self.line_width,
+                                    ),
+                                )
                         else:
-                            yield from map(self.emit, repeat(Space, line_indent + doc.indent))
+                            yield from map(
+                                self.emit, repeat(Space, line_indent + doc.indent)
+                            )
                         yield self.emit(token)
+
+    @render_simple.register
+    def _(self, doc: Map) -> TokenStream:
+        for token in self.render(doc.doc):
+            yield from doc.function(token)
 
     ###########################################################################
     # Buffering

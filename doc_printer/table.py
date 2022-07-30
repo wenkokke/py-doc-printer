@@ -1,8 +1,13 @@
-from collections.abc import Iterable
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from itertools import repeat, zip_longest
-from .doc import Line
-from .typing import *
+from typing import Optional, TypeAlias
+
+from .abc import OnEmit
+from .doc import Line, Token, TokenStream
+
+
+TokenBuffer: TypeAlias = list[Token]
 
 
 @dataclass

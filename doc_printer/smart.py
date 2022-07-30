@@ -1,4 +1,4 @@
-from .typing import *
+from contextlib import contextmanager
 from .simple import *
 from .doc import *
 
@@ -15,7 +15,7 @@ class SmartDocRenderer(SimpleDocRenderer):
         default=False, init=False, repr=False
     )
 
-    @overrides
+    # @overrides
     def render(self, doc: Doc) -> TokenStream:
         if isinstance(doc, Alt) and len(doc.alts) > 1:
             yield from self.render_with_lookahead(doc.alts)
