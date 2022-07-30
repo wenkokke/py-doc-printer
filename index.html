@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -11,6 +11,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -86,10 +87,10 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="document-printer">
-<h1>Document Printer<a class="headerlink" href="#document-printer" title="Permalink to this headline">¶</a></h1>
+<h1>Document Printer<a class="headerlink" href="#document-printer" title="Permalink to this heading">¶</a></h1>
 <p>A Wadler-Leijen Pretty Printer in Python.</p>
 <span class="target" id="module-doc_printer.doc"></span><section id="documents">
-<h2>Documents<a class="headerlink" href="#documents" title="Permalink to this headline">¶</a></h2>
+<h2>Documents<a class="headerlink" href="#documents" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><dl class="py class">
 <dt class="sig sig-object py" id="doc_printer.doc.Doc">
@@ -113,7 +114,7 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 </div></blockquote>
 </section>
 <section id="basic-tokens">
-<h2>Basic tokens<a class="headerlink" href="#basic-tokens" title="Permalink to this headline">¶</a></h2>
+<h2>Basic tokens<a class="headerlink" href="#basic-tokens" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Text is the type for all concrete tokens in the document.</p>
 <p>Text tokens are assumed to be free from whitespaces and newlines, but the constructor cannot guarantee that. The safe way to construct tokens from unknown strings is to use <a class="reference internal" href="#doc_printer.doc.Text.lines" title="doc_printer.doc.Text.lines"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Text.lines()</span></code></a>.</p>
@@ -159,7 +160,7 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 </div></blockquote>
 </section>
 <section id="concatenating-documents">
-<h2>Concatenating documents<a class="headerlink" href="#concatenating-documents" title="Permalink to this headline">¶</a></h2>
+<h2>Concatenating documents<a class="headerlink" href="#concatenating-documents" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Two documents can be combined as <code class="docutils literal notranslate"><span class="pre">doc1</span> <span class="pre">/</span> <span class="pre">doc2</span></code> or, separated by a space, as <code class="docutils literal notranslate"><span class="pre">doc1</span> <span class="pre">//</span> <span class="pre">doc2</span></code>.</p>
 <dl class="py method">
@@ -208,7 +209,7 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 </div></blockquote>
 </section>
 <section id="parentheses">
-<h2>Parentheses<a class="headerlink" href="#parentheses" title="Permalink to this headline">¶</a></h2>
+<h2>Parentheses<a class="headerlink" href="#parentheses" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><dl class="py function">
 <dt class="sig sig-object py" id="doc_printer.doc.parens">
@@ -231,14 +232,19 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="doc_printer.doc.quote">
-<span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">doclike</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DocLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><span class="pre">Doc</span></a></span></span><a class="headerlink" href="#doc_printer.doc.quote" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="doc_printer.doc.single_quote">
+<span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">single_quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">doclike</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DocLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><span class="pre">Doc</span></a></span></span><a class="headerlink" href="#doc_printer.doc.single_quote" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doc_printer.doc.double_quote">
+<span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">double_quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">doclike</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DocLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><span class="pre">Doc</span></a></span></span><a class="headerlink" href="#doc_printer.doc.double_quote" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div></blockquote>
 </section>
 <section id="alternative-layout-options">
-<h2>Alternative layout options<a class="headerlink" href="#alternative-layout-options" title="Permalink to this headline">¶</a></h2>
+<h2>Alternative layout options<a class="headerlink" href="#alternative-layout-options" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Two alternative layouts can be combined as <cite>alt1 | alt2</cite>.</p>
 <dl class="py method">
@@ -281,7 +287,7 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 </div></blockquote>
 </section>
 <section id="identation">
-<h2>Identation<a class="headerlink" href="#identation" title="Permalink to this headline">¶</a></h2>
+<h2>Identation<a class="headerlink" href="#identation" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><dl class="py function">
 <dt class="sig sig-object py" id="doc_printer.doc.nest">
@@ -293,18 +299,13 @@ alias of <code class="xref py py-obj docutils literal notranslate"><span class="
 <dt class="sig sig-object py" id="doc_printer.doc.Nest">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">Nest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><span class="pre">Doc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.doc.Nest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indented documents.</p>
-<dl class="simple">
-<dt>Note:</dt><dd><p>The Nest constructor cannot guarantee that the indent is positive,
-so it is better to call the Doc.nest function.</p>
-</dd>
-</dl>
 <p>The type of indented documents.</p>
 </dd></dl>
 
 </div></blockquote>
 </section>
 <section id="alignment">
-<h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this headline">¶</a></h2>
+<h2>Alignment<a class="headerlink" href="#alignment" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><p>Alignment is done via <a class="reference internal" href="#doc_printer.doc.Row" title="doc_printer.doc.Row"><code class="xref py py-class docutils literal notranslate"><span class="pre">Row</span></code></a> and <a class="reference internal" href="#doc_printer.doc.Table" title="doc_printer.doc.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a>.
 You can create tables using <a class="reference internal" href="#doc_printer.doc.row" title="doc_printer.doc.row"><code class="xref py py-func docutils literal notranslate"><span class="pre">row()</span></code></a> and <a class="reference internal" href="#doc_printer.doc.table" title="doc_printer.doc.table"><code class="xref py py-func docutils literal notranslate"><span class="pre">table()</span></code></a>.</p>
@@ -362,18 +363,26 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 </div></blockquote>
 </section>
 <section id="rendering">
-<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
-<p>Documents are rendered as a stream of <a class="reference internal" href="#doc_printer.typing.Token" title="doc_printer.typing.Token"><code class="xref py py-data docutils literal notranslate"><span class="pre">doc_printer.typing.Token</span></code></a>, which are joined into a string by <a class="reference internal" href="#doc_printer.abc.DocRenderer.to_str" title="doc_printer.abc.DocRenderer.to_str"><code class="xref py py-data docutils literal notranslate"><span class="pre">doc_printer.abc.DocRenderer.to_str</span></code></a>.</p>
+<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this heading">¶</a></h2>
+<p>Documents are rendered as a stream of <a class="reference internal" href="#doc_printer.doc.Token" title="doc_printer.doc.Token"><code class="xref py py-data docutils literal notranslate"><span class="pre">doc_printer.doc.Token</span></code></a>, which are joined into a string by <a class="reference internal" href="#doc_printer.abc.DocRenderer.to_str" title="doc_printer.abc.DocRenderer.to_str"><code class="xref py py-data docutils literal notranslate"><span class="pre">doc_printer.abc.DocRenderer.to_str</span></code></a>.</p>
 <dl class="py data">
-<dt class="sig sig-object py" id="doc_printer.typing.Token">
-<span class="sig-prename descclassname"><span class="pre">doc_printer.typing.</span></span><span class="sig-name descname"><span class="pre">Token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;class</span> <span class="pre">'doc_printer.doc.Text'&gt;</span></em><a class="headerlink" href="#doc_printer.typing.Token" title="Permalink to this definition">¶</a></dt>
-<dd><p>A single line of text.</p>
+<dt class="sig sig-object py" id="doc_printer.doc.Token">
+<span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">Token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TypeAlias</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Text'</span></em><a class="headerlink" href="#doc_printer.doc.Token" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=’’) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
 </dd></dl>
 
 <dl class="py data">
-<dt class="sig sig-object py" id="doc_printer.typing.TokenStream">
-<span class="sig-prename descclassname"><span class="pre">doc_printer.typing.</span></span><span class="sig-name descname"><span class="pre">TokenStream</span></span><a class="headerlink" href="#doc_printer.typing.TokenStream" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code>[<a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a>]</p>
+<dt class="sig sig-object py" id="doc_printer.doc.TokenStream">
+<span class="sig-prename descclassname"><span class="pre">doc_printer.doc.</span></span><span class="sig-name descname"><span class="pre">TokenStream</span></span><a class="headerlink" href="#doc_printer.doc.TokenStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code>[Text]</p>
 </dd></dl>
 
 <span class="target" id="module-doc_printer.abc"></span><dl class="py class">
@@ -394,7 +403,7 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 
 </section>
 <section id="rendering-naively">
-<h2>Rendering Naively<a class="headerlink" href="#rendering-naively" title="Permalink to this headline">¶</a></h2>
+<h2>Rendering Naively<a class="headerlink" href="#rendering-naively" title="Permalink to this heading">¶</a></h2>
 <p>The simple renderer for documents ignores all alternatives, simply choosing the first alternative, which should have the shortest line length.</p>
 <span class="target" id="module-doc_printer.simple"></span><dl class="py class">
 <dt class="sig sig-object py" id="doc_printer.simple.SimpleDocRenderer">
@@ -402,18 +411,43 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="doc_printer.simple.SimpleDocRenderer.render_simple">
 <span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><span class="pre">Doc</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#doc_printer.simple.SimpleDocRenderer.render_simple" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Alt" title="doc_printer.doc.Alt"><span class="pre">Alt</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Cat" title="doc_printer.doc.Cat"><span class="pre">Cat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Row" title="doc_printer.doc.Row"><span class="pre">Row</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Table" title="doc_printer.doc.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Nest" title="doc_printer.doc.Nest"><span class="pre">Nest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Map</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="rendering-tables">
-<h2>Rendering Tables<a class="headerlink" href="#rendering-tables" title="Permalink to this headline">¶</a></h2>
+<h2>Rendering Tables<a class="headerlink" href="#rendering-tables" title="Permalink to this heading">¶</a></h2>
 <p>Tables are cached, to calculate their column widths and insert the appropriate spacing.</p>
-<p>To create these buffers, <code class="xref py py-meth docutils literal notranslate"><span class="pre">doc_printer.abc.DocRenderer.buffer_table()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">doc_printer.abc.DocRenderer.buffer_row()</span></code> are provided.</p>
-<p>Table buffers are rendered using the <a class="reference internal" href="#doc_printer.table.TableBuffer.render" title="doc_printer.table.TableBuffer.render"><code class="xref py py-meth docutils literal notranslate"><span class="pre">doc_printer.table.TableBuffer.render()</span></code></a>.</p>
-<p>It is important to call <a class="reference internal" href="#doc_printer.table.TableBuffer.update" title="doc_printer.table.TableBuffer.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">doc_printer.table.TableBuffer.update()</span></code></a> once, just before rendering, as this calculates the needed column widths.</p>
-<span class="target" id="module-doc_printer.table"></span><dl class="py class">
+<p>To create these buffers, <a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer.buffer_table" title="doc_printer.simple.SimpleDocRenderer.buffer_table"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SimpleDocRenderer.buffer_table()</span></code></a> and <a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer.buffer_row" title="doc_printer.simple.SimpleDocRenderer.buffer_row"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SimpleDocRenderer.buffer_row()</span></code></a> are provided.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="doc_printer.simple.SimpleDocRenderer.buffer_table">
+<span class="sig-prename descclassname"><span class="pre">SimpleDocRenderer.</span></span><span class="sig-name descname"><span class="pre">buffer_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Table" title="doc_printer.doc.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#doc_printer.table.TableBuffer" title="doc_printer.table.TableBuffer"><span class="pre">TableBuffer</span></a></span></span><a class="headerlink" href="#doc_printer.simple.SimpleDocRenderer.buffer_table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="doc_printer.simple.SimpleDocRenderer.buffer_row">
+<span class="sig-prename descclassname"><span class="pre">SimpleDocRenderer.</span></span><span class="sig-name descname"><span class="pre">buffer_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Row" title="doc_printer.doc.Row"><span class="pre">Row</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#doc_printer.table.RowBuffer" title="doc_printer.table.RowBuffer"><span class="pre">RowBuffer</span></a></span></span><a class="headerlink" href="#doc_printer.simple.SimpleDocRenderer.buffer_row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-doc_printer.table"></span><p>Table buffers are rendered using the <a class="reference internal" href="#doc_printer.table.TableBuffer.render" title="doc_printer.table.TableBuffer.render"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TableBuffer.render()</span></code></a>.</p>
+<p>It is important to call <a class="reference internal" href="#doc_printer.table.TableBuffer.update" title="doc_printer.table.TableBuffer.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TableBuffer.update()</span></code></a> once, just before rendering, as this calculates the needed column widths.</p>
+<blockquote>
+<div><dl class="py class">
 <dt class="sig sig-object py" id="doc_printer.table.TableBuffer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.table.</span></span><span class="sig-name descname"><span class="pre">TableBuffer</span></span><a class="headerlink" href="#doc_printer.table.TableBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
@@ -440,7 +474,7 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 
 <dl class="py class">
 <dt class="sig sig-object py" id="doc_printer.table.RowBuffer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.table.</span></span><span class="sig-name descname"><span class="pre">RowBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hsep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_col_widths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.RowBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.table.</span></span><span class="sig-name descname"><span class="pre">RowBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hsep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Text'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_col_widths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.RowBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="doc_printer.table.RowBuffer.append">
 <span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.table.CellBuffer" title="doc_printer.table.CellBuffer"><span class="pre">CellBuffer</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.RowBuffer.append" title="Permalink to this definition">¶</a></dt>
@@ -460,7 +494,7 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 
 <dl class="py class">
 <dt class="sig sig-object py" id="doc_printer.table.CellBuffer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.table.</span></span><span class="sig-name descname"><span class="pre">CellBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hpad</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.CellBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">doc_printer.table.</span></span><span class="sig-name descname"><span class="pre">CellBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hpad</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Text'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.CellBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="doc_printer.table.CellBuffer.append">
 <span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#doc_printer.doc.Text" title="doc_printer.doc.Text"><span class="pre">Text</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doc_printer.table.CellBuffer.append" title="Permalink to this definition">¶</a></dt>
@@ -478,9 +512,10 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
 
 </dd></dl>
 
+</div></blockquote>
 </section>
 <section id="rendering-with-lookahead">
-<h2>Rendering with Lookahead<a class="headerlink" href="#rendering-with-lookahead" title="Permalink to this headline">¶</a></h2>
+<h2>Rendering with Lookahead<a class="headerlink" href="#rendering-with-lookahead" title="Permalink to this heading">¶</a></h2>
 <p>Finally, the smart renderer uses one level of lookahead.</p>
 <p>When rendering a series of alternatives, it renders the first line of each alternative using the simple renderer, and picks the alternative that best fills up the current line.</p>
 <span class="target" id="module-doc_printer.smart"></span><dl class="py class">
@@ -509,7 +544,7 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
     </p>
     <p>
         &copy; Copyright 2022, Wen Kokke.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br/>
     </p>
   </div>
 </footer>

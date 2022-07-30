@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
@@ -97,7 +98,6 @@
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#P"><strong>P</strong></a>
- | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
@@ -146,9 +146,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#doc_printer.doc.braces">braces() (in module doc_printer.doc)</a>
 </li>
+      <li><a href="index.html#doc_printer.doc.brackets">brackets() (in module doc_printer.doc)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="index.html#doc_printer.doc.brackets">brackets() (in module doc_printer.doc)</a>
+      <li><a href="index.html#doc_printer.simple.SimpleDocRenderer.buffer_row">buffer_row() (doc_printer.simple.SimpleDocRenderer method)</a>
+</li>
+      <li><a href="index.html#doc_printer.simple.SimpleDocRenderer.buffer_table">buffer_table() (doc_printer.simple.SimpleDocRenderer method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -214,6 +218,8 @@
       <li><a href="index.html#doc_printer.doc.DocLike">DocLike (in module doc_printer.doc)</a>
 </li>
       <li><a href="index.html#doc_printer.abc.DocRenderer">DocRenderer (class in doc_printer.abc)</a>
+</li>
+      <li><a href="index.html#doc_printer.doc.double_quote">double_quote() (in module doc_printer.doc)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -315,14 +321,6 @@
   </ul></td>
 </tr></table>
 
-<h2 id="Q">Q</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="index.html#doc_printer.doc.quote">quote() (in module doc_printer.doc)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -358,10 +356,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#doc_printer.simple.SimpleDocRenderer">SimpleDocRenderer (class in doc_printer.simple)</a>
 </li>
-      <li><a href="index.html#doc_printer.smart.SmartDocRenderer">SmartDocRenderer (class in doc_printer.smart)</a>
+      <li><a href="index.html#doc_printer.doc.single_quote">single_quote() (in module doc_printer.doc)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#doc_printer.smart.SmartDocRenderer">SmartDocRenderer (class in doc_printer.smart)</a>
+</li>
       <li><a href="index.html#doc_printer.doc.SoftLine">SoftLine (in module doc_printer.doc)</a>
 </li>
       <li><a href="index.html#doc_printer.doc.Space">Space (in module doc_printer.doc)</a>
@@ -388,9 +388,9 @@
 </li>
       <li><a href="index.html#doc_printer.abc.DocRenderer.to_str">to_str() (doc_printer.abc.DocRenderer method)</a>
 </li>
-      <li><a href="index.html#doc_printer.typing.Token">Token (in module doc_printer.typing)</a>
+      <li><a href="index.html#doc_printer.doc.Token">Token (in module doc_printer.doc)</a>
 </li>
-      <li><a href="index.html#doc_printer.typing.TokenStream">TokenStream (in module doc_printer.typing)</a>
+      <li><a href="index.html#doc_printer.doc.TokenStream">TokenStream (in module doc_printer.doc)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -425,7 +425,7 @@
     </p>
     <p>
         &copy; Copyright 2022, Wen Kokke.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br/>
     </p>
   </div>
 </footer>

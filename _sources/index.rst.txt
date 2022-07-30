@@ -93,7 +93,9 @@ Parentheses
 
    .. autofunction:: angles
 
-   .. autofunction:: quote
+   .. autofunction:: single_quote
+
+   .. autofunction:: double_quote
 
 
 Alternative layout options
@@ -175,10 +177,10 @@ Alignment
 Rendering
 =======================================
 
-Documents are rendered as a stream of :data:`doc_printer.typing.Token`, which are joined into a string by :data:`doc_printer.abc.DocRenderer.to_str`.
+Documents are rendered as a stream of :data:`doc_printer.doc.Token`, which are joined into a string by :data:`doc_printer.abc.DocRenderer.to_str`.
 
-.. autodata:: doc_printer.typing.Token
-.. autodata:: doc_printer.typing.TokenStream
+.. autodata:: doc_printer.doc.Token
+.. autodata:: doc_printer.doc.TokenStream
 
 .. automodule:: doc_printer.abc
 
@@ -203,17 +205,17 @@ Rendering Tables
 
 Tables are cached, to calculate their column widths and insert the appropriate spacing.
 
-To create these buffers, :meth:`doc_printer.abc.DocRenderer.buffer_table` and :meth:`doc_printer.abc.DocRenderer.buffer_row` are provided.
+To create these buffers, :meth:`SimpleDocRenderer.buffer_table` and :meth:`SimpleDocRenderer.buffer_row` are provided.
 
-.. automethod:: doc_printer.abc.DocRenderer.buffer_table
+.. automethod:: SimpleDocRenderer.buffer_table
 
-.. automethod:: doc_printer.abc.DocRenderer.buffer_row
-
-Table buffers are rendered using the :meth:`doc_printer.table.TableBuffer.render`.
-
-It is important to call :meth:`doc_printer.table.TableBuffer.update` once, just before rendering, as this calculates the needed column widths.
+.. automethod:: SimpleDocRenderer.buffer_row
 
 .. automodule:: doc_printer.table
+
+Table buffers are rendered using the :meth:`TableBuffer.render`.
+
+It is important to call :meth:`TableBuffer.update` once, just before rendering, as this calculates the needed column widths.
 
    .. autoclass:: TableBuffer
       :members: append, extend, render, update
