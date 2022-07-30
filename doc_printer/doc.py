@@ -4,7 +4,7 @@ from collections.abc import Callable, Iterable, Iterator
 from dataclasses import dataclass
 from itertools import groupby
 from operator import length_hint
-from typing import Optional, TypeAlias, Union, cast
+from typing import ClassVar, Optional, TypeAlias, Union, cast
 from overrides import overrides
 from more_itertools import intersperse
 
@@ -91,13 +91,23 @@ class Text(Doc):
 
     text: str
 
-    @staticmethod
-    def words(text: str) -> Doc:
-        return Space.join(map(Text, text.split()))
+    RE_ONE_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s+")
 
-    @staticmethod
-    def lines(text: str) -> Doc:
-        return Line.join(map(Text.words, text.splitlines()))
+    @classmethod
+    def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
+        if collapse_whitespace:
+            pattern = cls.RE_ANY_WHITESPACE
+        else:
+            pattern = cls.RE_ONE_WHITESPACE
+        return Space.join(map(Text, pattern.split(text)))
+
+    @classmethod
+    def lines(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
+        return Line.join(
+            cls.words(line, collapse_whitespace=collapse_whitespace)
+            for line in text.splitlines()
+        )
 
     @classmethod
     def intern(cls, name: str, text: str) -> "Text":
@@ -396,8 +406,13 @@ class Map(Doc):
         return length_hint(self.doc)
 
 
+UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
+
+
 def escape_single(token: Token) -> TokenStream:
-    yield Text(re.sub(r"(?!<\\)\'", "'", token.text))
+    yield from filter(
+        None, map(Text, intersperse(r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)))
+    )
 
 
 def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
@@ -407,8 +422,13 @@ def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
     return cat("'", doc, "'")
 
 
+UNESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'(?<!\\)"')
+
+
 def escape_double(token: Token) -> TokenStream:
-    yield Text(re.sub(r"(?!<\\)\"", '"', token.text))
+    yield from filter(
+        None, map(Text, intersperse(r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)))
+    )
 
 
 def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:

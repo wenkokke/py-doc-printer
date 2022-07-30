@@ -1,54 +1,42 @@
 from .doc import (
+    # Type Aliases
     Token as Token,
     TokenStream as TokenStream,
     DocLike as DocLike,
-    # DocClassWithUnpack as DocClassWithUnpack,
+    # Document Types
     Doc as Doc,
-    #
-    # NOTE: These classes shouldn't be used directly by the end-user,
-    #       so they're not exported. Please use the lowercase smart
-    #       constructors instead.
-    #
-    # Text as Text,
-    # Cat as Cat,
-    cat as cat,
-    # Alt as Alt,
-    alt as alt,
-    # RowInfo as RowInfo,
-    # Row as Row,
-    row as row,
-    # Table as Table,
-    table as table,
-    create_tables as create_tables,
-    # Nest as Nest,
-    nest as nest,
-    # Map as Map,
-    # RowCandidate as RowCandidate,
+    Text as Text,
+    Cat as Cat,
+    Alt as Alt,
+    RowInfo as RowInfo,
+    Row as Row,
+    Table as Table,
+    Nest as Nest,
+    Map as Map,
+    # Document Constants
     Empty as Empty,
     Space as Space,
     Line as Line,
     Fail as Fail,
     SoftLine as SoftLine,
-    # splat as splat,
+    # Smart Constructors
+    cat as cat,
+    alt as alt,
+    row as row,
+    table as table,
+    nest as nest,
+    # Derived Constructors
     parens as parens,
     brackets as brackets,
     braces as braces,
     angles as angles,
     single_quote as single_quote,
     double_quote as double_quote,
+    create_tables as create_tables,
 )
-
-# NOTE: These probably shouldn't be used directly by the end-user.
-#
-# from .table import (
-#     TokenBuffer as TokenBuffer,
-#     CellBuffer as CellBuffer,
-#     RowBuffer as RowBuffer,
-#     TableBuffer as TableBuffer,
-# )
 from .abc import (
-    RenderError as RenderError,
     OnEmit as OnEmit,
+    RenderError as RenderError,
     DocRenderer as DocRenderer,
 )
 from .simple import (
