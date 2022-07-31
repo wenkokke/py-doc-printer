@@ -68,15 +68,27 @@ class RowBuffer(Iterable[CellBuffer]):
         for cell in cells:
             self.append(cell)
 
-    def render(self, *, on_emit: OnEmit | None = None) -> TokenStream:
-        if not on_emit:
-            on_emit = lambda token: token
+    def render(self, *, on_emit: OnEmit) -> TokenStream:
         for j, cell in enumerate(self):
             if j < len(self.buffer) - 1:
                 yield from map(on_emit, cell.render(padding=True))
                 yield on_emit(self.hsep)
             else:
                 yield from map(on_emit, cell.render(padding=False))
+
+    def update(self):
+        for j in range(0, self.min_n_cols):
+            try:
+                self.buffer[j].width = self.min_col_widths[j]
+            except IndexError:
+                pass
+
+    def append_min_col_widths(self, min_col_widths: tuple[Optional[int], ...]):
+        self.min_n_cols = max(self.min_n_cols, len(min_col_widths))
+        self.min_col_widths = tuple(
+            max(w1 or 0, w2 or 0)
+            for (w1, w2) in zip_longest(self.min_col_widths, min_col_widths)
+        )
 
     def __iter__(self) -> Iterator[CellBuffer]:
         return iter(self.buffer)
@@ -100,16 +112,15 @@ class TableBuffer:
         for row in rows:
             self.append(row)
 
-    def render(self, *, on_emit: OnEmit | None = None) -> TokenStream:
+    def render(self, *, on_emit: OnEmit) -> TokenStream:
         for row in self:
             yield from row.render(on_emit=on_emit)
-            yield on_emit(Line) if on_emit else Line
+            yield on_emit(Line)
 
     def update(self):
         for i in range(0, self.n_rows):
-            for j in range(0, self.n_cols):
-                col_width = self.col_widths[j]
-                self.buffer[i].buffer[j].width = col_width
+            self.buffer[i].append_min_col_widths(self.col_widths)
+            self.buffer[i].update()
 
     def append_min_col_widths(self, min_col_widths: tuple[Optional[int], ...]):
         if not self.col_widths:

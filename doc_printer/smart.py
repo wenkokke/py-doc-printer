@@ -40,12 +40,12 @@ class SmartDocRenderer(SimpleDocRenderer):
         fallback, *rest = alts
         succeeded = False
         for alt in reversed(rest):
-            try:
-                with self.safe_mode():
+            with self.safe_mode():
+                try:
                     buffer = list(self.render_simple(alt))
                     succeeded = True
                     yield from buffer
-            except LineWidthExceeded:
-                continue
+                except LineWidthExceeded:
+                    continue
         if not succeeded:
             yield from self.render(fallback)

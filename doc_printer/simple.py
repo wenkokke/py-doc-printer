@@ -47,12 +47,14 @@ class SimpleDocRenderer(DocRenderer):
 
     @render_simple.register
     def _(self, doc: Row) -> TokenStream:
-        yield from self.buffer_row(doc).render(on_emit=self.emit)
+        row_buffer = self.buffer_row(doc)
+        yield from row_buffer.render(on_emit=self.emit)
         yield self.emit(Line)
 
     @render_simple.register
     def _(self, doc: Table) -> TokenStream:
-        yield from self.buffer_table(doc).render(on_emit=self.emit)
+        table_buffer = self.buffer_table(doc)
+        yield from table_buffer.render(on_emit=self.emit)
 
     @render_simple.register
     def _(self, doc: Nest) -> TokenStream:
@@ -117,6 +119,7 @@ class SimpleDocRenderer(DocRenderer):
             cell_buffer = CellBuffer(hpad=row.info.hpad)
             cell_buffer.extend(self.buffer(cell))
             row_buffer.append(cell_buffer)
+        row_buffer.update()
         return row_buffer
 
     def buffer_table(self, table: Table) -> TableBuffer:
