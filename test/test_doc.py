@@ -51,12 +51,26 @@ def test_DocLike_Line_and_Space():
 
 
 def test_Cat_Empty():
+    hello = Text("hello")
     assert cat() is Empty
-    assert Empty / Text("hello") == Text("hello")
-    assert Text("hello") / Empty == Text("hello")
-    assert Empty // Text("hello") == Text("hello")
-    assert Text("hello") // Empty == Text("hello")
+    assert Empty / hello == hello
+    assert hello / Empty == hello
+    assert Empty // hello == hello
+    assert hello // Empty == hello
 
 
 def test_Nest_Empty():
     assert nest(4, Empty) is Empty
+
+
+def test_Cat_with_auto_Space():
+    hello = Text("hello")
+    world = Text("world")
+    assert Empty // world == world
+    assert Space // world == world
+    assert hello // Empty == hello
+    assert hello // Space == hello
+    assert hello // world == cat(hello, Space, world)
+    assert cat(hello, Space) // world == cat(hello, Space, world)
+    assert hello // cat(Space, world) == cat(hello, Space, world)
+    assert hello // world != world // hello

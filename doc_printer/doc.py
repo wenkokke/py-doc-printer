@@ -53,10 +53,15 @@ class Doc(ABC):
         """
         Compose two documents, separated by a space.
         """
-        if self is Empty:
-            return cat(other)
-        if cat(other) is Empty:
+        other = cat(other)
+        if self is Empty or self is Space:
+            return other
+        if other is Empty or other is Space:
             return self
+        if isinstance(self, Cat) and self.docs[-1] is Space:
+            return self.then(other)
+        if isinstance(other, Cat) and other.docs[0] is Space:
+            return self.then(other)
         return self.then(Space).then(other)
 
     def __rfloordiv__(self, other: DocLike) -> "Doc":
