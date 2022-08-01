@@ -1,6 +1,7 @@
 from contextlib import contextmanager
-from .simple import *
+
 from .doc import *
+from .simple import *
 
 
 class LineWidthExceeded(Exception):

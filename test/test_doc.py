@@ -75,5 +75,6 @@ def test_Cat_with_auto_Space():
     assert hello // cat(Space, world) == cat(hello, Space, world)
     assert hello // world != world // hello
 
+
 def test_None_DocLike():
     assert cat(None, None, None) is Empty

@@ -6,7 +6,6 @@ from typing import Optional, TypeAlias
 from .abc import OnEmit
 from .doc import Line, Token, TokenStream
 
-
 TokenBuffer: TypeAlias = list[Token]
 
 

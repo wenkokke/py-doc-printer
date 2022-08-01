@@ -1,14 +1,15 @@
 from contextlib import contextmanager
 from enum import IntEnum
 from functools import singledispatchmethod
-from .doc import *
+
 from .abc import *
+from .doc import *
 from .table import *
 
 
 class SimpleLayout(IntEnum):
-    ShortestLines = 0 # Always pick the first alternative
-    LongestLines = -1 # Always pick the last alternative
+    ShortestLines = 0  # Always pick the first alternative
+    LongestLines = -1  # Always pick the last alternative
 
 
 @dataclass
