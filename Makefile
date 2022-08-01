@@ -23,12 +23,14 @@ major:
 
 # Publish to PyPi
 
+PROJECT = "doc_printer"
+
 CURRENT_VERSION = $(shell eval $$(bumpver show --no-fetch --env) && echo "$$CURRENT_VERSION")
 
-CURRENT_WHEEL = dist/doc_printer-$(CURRENT_VERSION)-py3-none-any.whl
-CURRENT_TARGZ = dist/doc-printer-$(CURRENT_VERSION).tar.gz
+CURRENT_WHEEL = dist/$(PROJECT)-$(CURRENT_VERSION)-py3-none-any.whl
+CURRENT_TARGZ = dist/$(PROJECT)-$(CURRENT_VERSION).tar.gz
 
-SOURCES = $(shell find doc_printer -name "*.py")
+SOURCES = $(shell find $(PROJECT) -name "*.py")
 
 $(CURRENT_WHEEL) $(CURRENT_TARGZ): $(SOURCES)
 	pytest
