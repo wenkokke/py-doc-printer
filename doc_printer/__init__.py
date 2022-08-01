@@ -40,6 +40,7 @@ from .abc import (
     DocRenderer as DocRenderer,
 )
 from .simple import (
+    SimpleLayout as SimpleLayout,
     SimpleDocRenderer as SimpleDocRenderer,
 )
 from .smart import (

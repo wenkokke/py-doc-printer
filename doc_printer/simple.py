@@ -1,12 +1,19 @@
 from contextlib import contextmanager
+from enum import IntEnum
 from functools import singledispatchmethod
 from .doc import *
 from .abc import *
 from .table import *
 
 
+class SimpleLayout(IntEnum):
+    ShortestLines = 0 # Always pick the first alternative
+    LongestLines = -1 # Always pick the last alternative
+
+
 @dataclass
 class SimpleDocRenderer(DocRenderer):
+    simple_layout: SimpleLayout = SimpleLayout.ShortestLines
     is_buffering: bool = field(default=False, init=False, repr=False)
     line_width: int = field(default=0, init=False, repr=False)
     on_emit: list[OnEmit] = field(default_factory=list, init=False, repr=False)
@@ -37,7 +44,7 @@ class SimpleDocRenderer(DocRenderer):
     @render_simple.register
     def _(self, doc: Alt) -> TokenStream:
         if doc.alts:
-            yield from self.render(doc.alts[0])
+            yield from self.render(doc.alts[int(self.simple_layout)])
         else:
             return RenderError(doc)
 
