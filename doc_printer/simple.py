@@ -1,23 +1,28 @@
-from contextlib import contextmanager
-from enum import IntEnum
-from functools import singledispatchmethod
+import collections.abc
+import contextlib
+import dataclasses
+import enum
+import functools
+import itertools
 
 from .abc import *
 from .doc import *
 from .table import *
 
 
-class SimpleLayout(IntEnum):
+class SimpleLayout(enum.IntEnum):
     ShortestLines = 0  # Always pick the first alternative
     LongestLines = -1  # Always pick the last alternative
 
 
-@dataclass
+@dataclasses.dataclass
 class SimpleDocRenderer(DocRenderer):
     simple_layout: SimpleLayout = SimpleLayout.ShortestLines
-    is_buffering: bool = field(default=False, init=False, repr=False)
-    line_width: int = field(default=0, init=False, repr=False)
-    on_emit: list[OnEmit] = field(default_factory=list, init=False, repr=False)
+    is_buffering: bool = dataclasses.field(default=False, init=False, repr=False)
+    line_width: int = dataclasses.field(default=0, init=False, repr=False)
+    on_emit: list[OnEmit] = dataclasses.field(
+        default_factory=list, init=False, repr=False
+    )
 
     def emit(self, token: Token) -> Token:
         if self.is_buffering:
@@ -34,7 +39,7 @@ class SimpleDocRenderer(DocRenderer):
     def render(self, doc: Doc) -> TokenStream:
         yield from self.render_simple(doc)
 
-    @singledispatchmethod
+    @functools.singledispatchmethod
     def render_simple(self, doc: Doc) -> TokenStream:
         raise TypeError(type(doc))
 
@@ -87,14 +92,15 @@ class SimpleDocRenderer(DocRenderer):
                             if doc.overlap and doc.indent > self.line_width:
                                 yield from map(
                                     self.emit,
-                                    repeat(
+                                    itertools.repeat(
                                         Space,
                                         line_indent + doc.indent - self.line_width,
                                     ),
                                 )
                         else:
                             yield from map(
-                                self.emit, repeat(Space, line_indent + doc.indent)
+                                self.emit,
+                                itertools.repeat(Space, line_indent + doc.indent),
                             )
                         yield self.emit(token)
 
@@ -107,8 +113,8 @@ class SimpleDocRenderer(DocRenderer):
     # Buffering
     ###########################################################################
 
-    @contextmanager
-    def buffering(self) -> Iterator[None]:
+    @contextlib.contextmanager
+    def buffering(self) -> collections.abc.Iterator[None]:
         self.is_buffering = True
         try:
             yield None

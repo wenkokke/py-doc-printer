@@ -16,9 +16,7 @@ from .doc import SoftLine as SoftLine
 from .doc import Space as Space
 from .doc import Table as Table
 from .doc import Text as Text
-from .doc import (
-    Token as Token,  # Type Aliases; Document Types; Document Constants; Smart Constructors; Derived Constructors
-)
+from .doc import Token as Token
 from .doc import TokenStream as TokenStream
 from .doc import alt as alt
 from .doc import angles as angles

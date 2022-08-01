@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import abc
 import collections.abc
 import dataclasses
@@ -222,7 +220,7 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
 
 def splat(
     doclike: DocLike,
-    unpack: DocClassWithUnpack | tuple[DocClassWithUnpack, ...] = (),
+    unpack: typing.Union[DocClassWithUnpack, tuple[DocClassWithUnpack, ...]] = (),
 ) -> collections.abc.Iterator["Doc"]:
     """
     Iterate over the elements any document-like object.
@@ -548,12 +546,12 @@ class RowCandidate:
         return None
 
     @property
-    def table_type(self) -> bool | str:
+    def table_type(self) -> typing.Union[bool, str]:
         if self.row:
             return self.row.info.table_type or True
         return False
 
-    def __iter__(self) -> collections.abc.Iterator[Doc | Row | None]:
+    def __iter__(self) -> collections.abc.Iterator[typing.Union[Doc, Row, None]]:
         yield self.doc
         yield self.row
 

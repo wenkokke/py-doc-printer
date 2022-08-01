@@ -1,4 +1,6 @@
-from contextlib import contextmanager
+import collections.abc
+import contextlib
+import dataclasses
 
 from .doc import *
 from .simple import *
@@ -8,11 +10,11 @@ class LineWidthExceeded(Exception):
     pass
 
 
-@dataclass
+@dataclasses.dataclass
 class SmartDocRenderer(SimpleDocRenderer):
     max_line_width: int = 80
 
-    raise_error_if_line_width_exceeded: bool = field(
+    raise_error_if_line_width_exceeded: bool = dataclasses.field(
         default=False, init=False, repr=False
     )
 
@@ -28,8 +30,8 @@ class SmartDocRenderer(SimpleDocRenderer):
         else:
             return token
 
-    @contextmanager
-    def safe_mode(self) -> Iterator[None]:
+    @contextlib.contextmanager
+    def safe_mode(self) -> collections.abc.Iterator[None]:
         self.on_emit.append(self.line_width_exceeded)
         try:
             yield None
