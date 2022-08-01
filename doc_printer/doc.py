@@ -10,7 +10,7 @@ from more_itertools import intersperse
 
 import re
 
-DocLike: TypeAlias = Union[str, "Doc", Iterable["DocLike"]]  # type: ignore
+DocLike: TypeAlias = Union[None, str, "Doc", Iterable["DocLike"]]  # type: ignore
 
 DocClassWithUnpack: TypeAlias = type[Iterable["Doc"]]
 
@@ -231,7 +231,9 @@ def splat(
     """
     if not isinstance(unpack, tuple):
         unpack = (unpack,)
-    if isinstance(doclike, str):
+    if doclike is None:
+        pass
+    elif isinstance(doclike, str):
         yield from splat(Text.lines(doclike), unpack=unpack)
     elif isinstance(doclike, Doc):
         if isinstance(doclike, unpack):
@@ -555,14 +557,22 @@ class RowCandidate:
         yield self.row
 
 
+def create_table(*doclike: DocLike) -> Doc:
+    buffer: list[Row] = []
+    for doc in splat(doclike):
+        if isinstance(doc, Row):
+            buffer.append(doc)
+        else:
+            return Fail
+    if len(buffer) < 2:
+        return Fail
+    else:
+        return Table(tuple(iter(buffer)))
+
+
 def create_tables(docs: Iterator[Doc], *, separator: Text = Line) -> Iterator[Doc]:
     row_candidates = map(RowCandidate, docs)
     table_candidates = groupby(row_candidates, key=lambda rc: rc.table_type)
-
-    for table_type, group in table_candidates:
+    for _, group in table_candidates:
         subdocs, subrows = zip(*group)
-        plain = separator.join(subdocs)
-        if table_type is False:
-            yield separator.join(subdocs)
-        else:
-            yield (plain | Table(subrows))
+        yield alt(separator.join(subdocs), create_table(subrows))
