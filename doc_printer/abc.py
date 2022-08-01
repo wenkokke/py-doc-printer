@@ -1,6 +1,6 @@
-from abc import ABC, abstractmethod
-from itertools import chain
-from typing import TypeAlias
+import abc
+import collections.abc
+import itertools
 
 from .doc import *
 
@@ -9,18 +9,18 @@ class RenderError(Exception):
     pass
 
 
-OnEmit: TypeAlias = Callable[[Token], Token]
+OnEmit = collections.abc.Callable[[Token], Token]
 
 
-class DocRenderer(ABC):
+class DocRenderer(abc.ABC):
     def to_str(self, doc: Doc) -> str:
         return "".join(token.text for token in self.render(doc))
 
-    @abstractmethod
+    @abc.abstractmethod
     def render(self, doc: Doc) -> TokenStream:
         """
         Render a document as a stream of tokens.
         """
 
-    def render_stream(self, docs: Iterable[Doc]) -> TokenStream:
-        yield from chain.from_iterable(map(self.render, docs))
+    def render_stream(self, docs: collections.abc.Iterable[Doc]) -> TokenStream:
+        yield from itertools.chain.from_iterable(map(self.render, docs))

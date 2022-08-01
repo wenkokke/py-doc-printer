@@ -1,22 +1,21 @@
 from __future__ import annotations
 
+import abc
+import collections.abc
+import dataclasses
+import itertools
+import operator
 import re
-from abc import ABC, abstractmethod
-from collections.abc import Callable, Iterable, Iterator
-from dataclasses import dataclass
-from itertools import groupby
-from operator import length_hint
-from typing import ClassVar, Optional, TypeAlias, Union, cast
+import typing
 
-from more_itertools import intersperse
-from overrides import overrides
+import more_itertools
 
-DocLike: TypeAlias = Union[None, str, "Doc", Iterable["DocLike"]]  # type: ignore
+DocLike = typing.Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]  # type: ignore
 
-DocClassWithUnpack: TypeAlias = type[Iterable["Doc"]]
+DocClassWithUnpack = type[collections.abc.Iterable["Doc"]]
 
 
-class Doc(ABC):
+class Doc(abc.ABC):
     def then(self, other: DocLike) -> "Doc":
         """
         Compose two documents.
@@ -32,9 +31,9 @@ class Doc(ABC):
         #       not between Docs which are already part of a Cat.
         #       The call to cat then flattens out any existing Cats,
         #       without inserting additional separators.
-        return cat(intersperse(self, splat(others)))
+        return cat(more_itertools.intersperse(self, splat(others)))
 
-    @abstractmethod
+    @abc.abstractmethod
     def __length_hint__(self) -> int:
         pass
 
@@ -89,7 +88,7 @@ class Doc(ABC):
 ################################################################################
 
 
-@dataclass
+@dataclasses.dataclass
 class Text(Doc):
     """
     A single line of text.
@@ -97,8 +96,8 @@ class Text(Doc):
 
     text: str
 
-    RE_ONE_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s")
-    RE_ANY_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s+")
+    RE_ONE_WHITESPACE: typing.ClassVar[re.Pattern[str]] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: typing.ClassVar[re.Pattern[str]] = re.compile(r"\s+")
 
     @classmethod
     def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
@@ -173,7 +172,6 @@ class Text(Doc):
             return "Line"
         return f"Text(text={self.text})"
 
-    @overrides
     def __length_hint__(self) -> int:
         return len(self.text)
 
@@ -188,8 +186,8 @@ Space = Text.intern_Space()
 Line = Text.intern_Line()
 
 
-Token: TypeAlias = "Text"
-TokenStream: TypeAlias = Iterator[Token]
+Token = Text
+TokenStream = collections.abc.Iterator[Token]
 
 
 ################################################################################
@@ -197,8 +195,8 @@ TokenStream: TypeAlias = Iterator[Token]
 ################################################################################
 
 
-@dataclass
-class Cat(Doc, Iterable[Doc]):
+@dataclasses.dataclass
+class Cat(Doc, collections.abc.Iterable[Doc]):
     """
     Concatenated documents.
     """
@@ -215,18 +213,17 @@ class Cat(Doc, Iterable[Doc]):
             doc is not Empty for doc in self.docs
         ), f"Cat contains Empty:\n{repr(self)}"
 
-    def __iter__(self) -> Iterator[Doc]:
+    def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.docs)
 
-    @overrides
     def __length_hint__(self) -> int:
-        return sum(map(length_hint, self.docs))
+        return sum(map(operator.length_hint, self.docs))
 
 
 def splat(
     doclike: DocLike,
     unpack: DocClassWithUnpack | tuple[DocClassWithUnpack, ...] = (),
-) -> Iterator["Doc"]:
+) -> collections.abc.Iterator["Doc"]:
     """
     Iterate over the elements any document-like object.
     """
@@ -238,7 +235,7 @@ def splat(
         yield from splat(Text.lines(doclike), unpack=unpack)
     elif isinstance(doclike, Doc):
         if isinstance(doclike, unpack):
-            yield from cast(Iterable["Doc"], doclike)
+            yield from typing.cast(collections.abc.Iterable["Doc"], doclike)
         else:
             yield doclike
     else:
@@ -281,8 +278,8 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclass
-class Alt(Doc, Iterable[Doc]):
+@dataclasses.dataclass
+class Alt(Doc, collections.abc.Iterable[Doc]):
     """
     Alternatives for the document layout.
     """
@@ -334,13 +331,12 @@ class Alt(Doc, Iterable[Doc]):
             return "SoftLine"
         return f"Alt(alts={self.alts})"
 
-    def __iter__(self) -> Iterator[Doc]:
+    def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.alts)
 
-    @overrides
     def __length_hint__(self) -> int:
         if self.alts:
-            return length_hint(self.alts[0])
+            return operator.length_hint(self.alts[0])
         else:
             return 0
 
@@ -364,7 +360,7 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclass
+@dataclasses.dataclass
 class Nest(Doc):
     """
     Indented documents.
@@ -382,9 +378,8 @@ class Nest(Doc):
         # Invariant: The indent is greater than zero.
         assert self.indent > 0, f"Nest has negative or zero indent:\n{repr(self)}"
 
-    @overrides
     def __length_hint__(self) -> int:
-        return self.indent + length_hint(self.doc)
+        return self.indent + operator.length_hint(self.doc)
 
 
 def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
@@ -404,14 +399,13 @@ def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
 ################################################################################
 
 
-@dataclass
+@dataclasses.dataclass
 class Map(Doc):
-    function: Callable[[Token], TokenStream]
+    function: collections.abc.Callable[[Token], TokenStream]
     doc: Doc
 
-    @overrides
     def __length_hint__(self) -> int:
-        return length_hint(self.doc)
+        return operator.length_hint(self.doc)
 
 
 UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
@@ -419,7 +413,11 @@ UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
 
 def escape_single(token: Token) -> TokenStream:
     yield from filter(
-        None, map(Text, intersperse(r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)))
+        None,
+        map(
+            Text,
+            more_itertools.intersperse(r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)),
+        ),
     )
 
 
@@ -435,7 +433,11 @@ UNESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'(?<!\\)"')
 
 def escape_double(token: Token) -> TokenStream:
     yield from filter(
-        None, map(Text, intersperse(r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)))
+        None,
+        map(
+            Text,
+            more_itertools.intersperse(r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)),
+        ),
     )
 
 
@@ -451,16 +453,16 @@ def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
 ################################################################################
 
 
-@dataclass
+@dataclasses.dataclass
 class RowInfo:
-    table_type: Optional[str]
+    table_type: typing.Optional[str]
     hpad: Text
     hsep: Text
-    min_col_widths: tuple[Optional[int], ...]
+    min_col_widths: tuple[typing.Optional[int], ...]
 
 
-@dataclass
-class Row(Doc, Iterable[Doc]):
+@dataclasses.dataclass
+class Row(Doc, collections.abc.Iterable[Doc]):
     cells: tuple[Doc, ...]
     info: RowInfo
 
@@ -475,18 +477,17 @@ class Row(Doc, Iterable[Doc]):
             len(self.info.hpad.text) == 1
         ), f"Row hpad is more than one character:\n'{repr(self)}'"
 
-    def __iter__(self) -> Iterator[Doc]:
+    def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.cells)
 
-    @overrides
     def __length_hint__(self) -> int:
         hsep_length = len(self.info.hsep)
-        cell_length_hints = map(length_hint, self.cells)
-        return sum(intersperse(hsep_length, cell_length_hints))
+        cell_length_hints = map(operator.length_hint, self.cells)
+        return sum(more_itertools.intersperse(hsep_length, cell_length_hints))
 
 
-@dataclass
-class Table(Doc, Iterable[Row]):
+@dataclasses.dataclass
+class Table(Doc, collections.abc.Iterable[Row]):
     rows: tuple[Row, ...]
 
     def __post_init__(self, **rest) -> None:
@@ -495,21 +496,20 @@ class Table(Doc, Iterable[Row]):
             isinstance(row, Row) for row in self.rows
         ), f"Table contains non-Row:\n{repr(self)}"
 
-    def __iter__(self) -> Iterator[Row]:
+    def __iter__(self) -> collections.abc.Iterator[Row]:
         return iter(self.rows)
 
-    @overrides
     def __length_hint__(self) -> int:
-        return max(map(length_hint, self.rows))
+        return max(map(operator.length_hint, self.rows))
 
 
 def row(
     *doclike: DocLike,
-    table_type: Optional[str] = None,
-    hpad: Union[str, Text] = Space,
-    hsep: Union[str, Text] = Space,
-    min_col_widths: tuple[Optional[int], ...] = (),
-) -> "Doc":
+    table_type: typing.Optional[str] = None,
+    hpad: typing.Union[str, Text] = Space,
+    hsep: typing.Union[str, Text] = Space,
+    min_col_widths: tuple[typing.Optional[int], ...] = (),
+) -> Doc:
     # Ensure padding and separators are Text
     if isinstance(hpad, str):
         hpad = Text(hpad)
@@ -529,16 +529,16 @@ def row(
     return Row(tuple(cells), info=info)
 
 
-def table(rows: Iterator[Row]) -> Doc:
+def table(rows: collections.abc.Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
-@dataclass(frozen=True)
+@dataclasses.dataclass(frozen=True)
 class RowCandidate:
     doc: Doc
 
     @property
-    def row(self) -> Optional[Row]:
+    def row(self) -> typing.Optional[Row]:
         if isinstance(self.doc, Row):
             return self.doc
         if isinstance(self.doc, Alt):
@@ -553,7 +553,7 @@ class RowCandidate:
             return self.row.info.table_type or True
         return False
 
-    def __iter__(self) -> Iterator[Doc | Row | None]:
+    def __iter__(self) -> collections.abc.Iterator[Doc | Row | None]:
         yield self.doc
         yield self.row
 
@@ -571,9 +571,11 @@ def create_table(*doclike: DocLike) -> Doc:
         return Table(tuple(iter(buffer)))
 
 
-def create_tables(docs: Iterator[Doc], *, separator: Text = Line) -> Iterator[Doc]:
+def create_tables(
+    docs: collections.abc.Iterator[Doc], *, separator: Text = Line
+) -> collections.abc.Iterator[Doc]:
     row_candidates = map(RowCandidate, docs)
-    table_candidates = groupby(row_candidates, key=lambda rc: rc.table_type)
+    table_candidates = itertools.groupby(row_candidates, key=lambda rc: rc.table_type)
     for _, group in table_candidates:
         subdocs, subrows = zip(*group)
         yield alt(separator.join(subdocs), create_table(subrows))
