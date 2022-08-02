@@ -447,16 +447,16 @@ def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
 
 
 ################################################################################
-# Group: Removing Lines
+# Inline: Removing Lines
 ################################################################################
 
 
-def group(doc: Doc) -> Doc:
-    def inline(token: Token) -> TokenStream:
+def inline(doc: Doc) -> Doc:
+    def remove_line(token: Token) -> TokenStream:
         if not token is Line:
             yield token
 
-    return Map(function=inline, doc=doc)
+    return Map(function=remove_line, doc=doc)
 
 
 ################################################################################

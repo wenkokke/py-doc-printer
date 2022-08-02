@@ -26,7 +26,7 @@ from .doc import cat as cat
 from .doc import create_table as create_table
 from .doc import create_tables as create_tables
 from .doc import double_quote as double_quote
-from .doc import group as group
+from .doc import inline as inline
 from .doc import nest as nest
 from .doc import parens as parens
 from .doc import row as row
