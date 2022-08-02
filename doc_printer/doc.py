@@ -447,6 +447,19 @@ def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
 
 
 ################################################################################
+# Group: Removing Lines
+################################################################################
+
+
+def group(doc: Doc) -> Doc:
+    def inline(token: Token) -> TokenStream:
+        if not token is Line:
+            yield token
+
+    return Map(function=inline, doc=doc)
+
+
+################################################################################
 # Alignment: Rows and Tables
 ################################################################################
 
@@ -556,15 +569,21 @@ class RowCandidate:
         yield self.row
 
 
-def create_table(*doclike: DocLike) -> Doc:
+def create_table(*doclike: DocLike) -> typing.Optional[Table]:
     buffer: list[Row] = []
-    for doc in splat(doclike):
-        if isinstance(doc, Row):
-            buffer.append(doc)
+    previous_doc_was_row: bool = False
+    row_candidates = map(RowCandidate, splat(doclike))
+    for row_candidate in row_candidates:
+        if row_candidate.row:
+            buffer.append(row_candidate.row)
+            previous_doc_was_row = True
+        elif row_candidate.doc is Line and previous_doc_was_row:
+            previous_doc_was_row = False
         else:
-            return Fail
+            return None
+    # NOTE: only return tables with >=2 rows
     if len(buffer) < 2:
-        return Fail
+        return None
     else:
         return Table(tuple(iter(buffer)))
 
@@ -576,4 +595,8 @@ def create_tables(
     table_candidates = itertools.groupby(row_candidates, key=lambda rc: rc.table_type)
     for _, group in table_candidates:
         subdocs, subrows = zip(*group)
-        yield alt(separator.join(subdocs), create_table(subrows))
+        table = create_table(subrows)
+        if table:
+            yield alt(separator.join(subdocs), table)
+        else:
+            yield from subdocs
