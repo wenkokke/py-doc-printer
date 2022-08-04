@@ -17,14 +17,7 @@ classifiers = [
 dependencies = ["more_itertools"]
 
 [project.optional-dependencies]
-test = [
-    "pytest"
-]
-sphinx = [
-    "sphinx",
-    "sphinx_bootstrap_theme",
-]
-publish = ["build", "twine"]
+dev = ["pytest", "sphinx", "sphinx_bootstrap_theme", "build", "twine"]
 
 [project.urls]
 documentation = "https://wenkokke.github.io/py-doc-printer/"

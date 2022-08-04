@@ -26,7 +26,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - run: pip install .[test,sphinx,publish]
+          cache: "pip" # caching pip dependencies
+          cache-dependency-path: "requirements-dev.txt"
+      - run: pip install .[dev]
 
       ################################################################################
       # Test
@@ -58,7 +60,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.RECOMMENDED_PYTHON_VERSION }}
-      - run: pip install .[test,sphinx,publish]
+          cache: "pip" # caching pip dependencies
+          cache-dependency-path: "requirements-dev.txt"
+      - run: pip install .[dev]
 
       ################################################################################
       # Build
