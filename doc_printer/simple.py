@@ -106,8 +106,7 @@ class SimpleDocRenderer(DocRenderer):
 
     @render_simple.register
     def _(self, doc: Edit) -> TokenStream:
-        for token in self.render(doc.doc):
-            yield from doc.function(token)
+        yield from doc.function(self.render(doc.doc))
 
     ###########################################################################
     # Buffering

@@ -399,7 +399,7 @@ def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
 
 @dataclasses.dataclass
 class Edit(Doc):
-    function: collections.abc.Callable[[Token], TokenStream]
+    function: collections.abc.Callable[[TokenStream], TokenStream]
     doc: Doc
 
     def __length_hint__(self) -> int:
@@ -409,14 +409,17 @@ class Edit(Doc):
 UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
 
 
-def escape_single(token: Token) -> TokenStream:
-    yield from filter(
-        None,
-        map(
-            Text,
-            more_itertools.intersperse(r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)),
-        ),
-    )
+def escape_single(token_stream: TokenStream) -> TokenStream:
+    for token in token_stream:
+        yield from filter(
+            None,
+            map(
+                Text,
+                more_itertools.intersperse(
+                    r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)
+                ),
+            ),
+        )
 
 
 def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
@@ -429,14 +432,17 @@ def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
 UNESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'(?<!\\)"')
 
 
-def escape_double(token: Token) -> TokenStream:
-    yield from filter(
-        None,
-        map(
-            Text,
-            more_itertools.intersperse(r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)),
-        ),
-    )
+def escape_double(token_stream: TokenStream) -> TokenStream:
+    for token in token_stream:
+        yield from filter(
+            None,
+            map(
+                Text,
+                more_itertools.intersperse(
+                    r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)
+                ),
+            ),
+        )
 
 
 def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
@@ -452,11 +458,10 @@ def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
 
 
 def inline(doc: Doc) -> Doc:
-    def remove_line(token: Token) -> TokenStream:
-        if not token is Line:
-            yield token
+    def filter_lines(token_stream: TokenStream) -> TokenStream:
+        return filter(lambda token: token is not Line, token_stream)
 
-    return Edit(function=remove_line, doc=doc)
+    return Edit(filter_lines, doc=doc)
 
 
 ################################################################################
