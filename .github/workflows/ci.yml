@@ -28,8 +28,6 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-          cache: "pip"
-          cache-dependency-path: "requirements-dev.txt"
       - run: pip install .[test,sphinx,publish]
 
       ################################################################################
