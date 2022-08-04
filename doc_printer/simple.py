@@ -105,7 +105,7 @@ class SimpleDocRenderer(DocRenderer):
                         yield self.emit(token)
 
     @render_simple.register
-    def _(self, doc: Map) -> TokenStream:
+    def _(self, doc: Edit) -> TokenStream:
         for token in self.render(doc.doc):
             yield from doc.function(token)
 

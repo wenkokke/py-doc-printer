@@ -5,10 +5,10 @@ from .doc import Alt as Alt
 from .doc import Cat as Cat
 from .doc import Doc as Doc
 from .doc import DocLike as DocLike
+from .doc import Edit as Edit
 from .doc import Empty as Empty
 from .doc import Fail as Fail
 from .doc import Line as Line
-from .doc import Map as Map
 from .doc import Nest as Nest
 from .doc import Row as Row
 from .doc import RowInfo as RowInfo

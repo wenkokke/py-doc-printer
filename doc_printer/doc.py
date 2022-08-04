@@ -393,12 +393,12 @@ def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
 
 
 ################################################################################
-# Automatic Escaping: TokenStream editing via Map
+# Automatic Escaping: TokenStream editing via Edit
 ################################################################################
 
 
 @dataclasses.dataclass
-class Map(Doc):
+class Edit(Doc):
     function: collections.abc.Callable[[Token], TokenStream]
     doc: Doc
 
@@ -422,7 +422,7 @@ def escape_single(token: Token) -> TokenStream:
 def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
     doc = cat(doclike)
     if auto_quote:
-        doc = Map(escape_single, doc)
+        doc = Edit(escape_single, doc)
     return cat("'", doc, "'")
 
 
@@ -442,7 +442,7 @@ def escape_double(token: Token) -> TokenStream:
 def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
     doc = cat(doclike)
     if auto_quote:
-        doc = Map(escape_double, doc)
+        doc = Edit(escape_double, doc)
     return cat('"', doc, '"')
 
 
@@ -456,7 +456,7 @@ def inline(doc: Doc) -> Doc:
         if not token is Line:
             yield token
 
-    return Map(function=remove_line, doc=doc)
+    return Edit(function=remove_line, doc=doc)
 
 
 ################################################################################
