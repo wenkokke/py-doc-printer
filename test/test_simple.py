@@ -64,3 +64,10 @@ def test_render_Nest_Space():
         ]
     )
     assert simple.to_str(doc) == exp
+
+
+def test_quote():
+    simple = SimpleDocRenderer()
+    exp = "\"'hello' 'world'\""
+    doc = quote("'hello'", Space, "'world'")
+    assert simple.to_str(doc) == exp

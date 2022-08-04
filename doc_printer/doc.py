@@ -452,6 +452,27 @@ def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
     return cat('"', doc, '"')
 
 
+def quote(*doclike: DocLike) -> Doc:
+    def smart_quote(token_stream: TokenStream) -> TokenStream:
+        single: int = 0
+        double: int = 0
+        buffer: list[Token] = []
+        for token in token_stream:
+            single += token.text.count("'")
+            double += token.text.count('"')
+            buffer.append(token)
+        if single < double:
+            yield Text("'")
+            yield from escape_single(iter(buffer))
+            yield Text("'")
+        else:
+            yield Text('"')
+            yield from escape_double(iter(buffer))
+            yield Text('"')
+
+    return Edit(smart_quote, cat(doclike))
+
+
 ################################################################################
 # Inline: Removing Lines
 ################################################################################
