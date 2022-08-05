@@ -43,7 +43,7 @@ jobs:
         run: make html
       - name: Publish Sphinx Doc
         if: matrix.python-version == env.RECOMMENDED_PYTHON_VERSION && runner.os == env.RECOMMENDED_OS
-        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: docs
           folder: _build/html
