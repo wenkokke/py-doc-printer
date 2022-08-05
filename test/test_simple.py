@@ -57,17 +57,67 @@ def test_render_Nest_Space():
     doc = Text("label:") // Nest(
         10, Space / Text("a") / Line / Space / Text("b"), overlap=True
     )
+    act = simple.to_str(doc)
     exp = "\n".join(
         [
             "label:     a",
             "           b",
         ]
     )
-    assert simple.to_str(doc) == exp
+    assert act == exp
+
+
+def test_single_quote():
+    simple = SimpleDocRenderer()
+    doc = single_quote("'hello'", Space, '"world"')
+    act = simple.to_str(doc)
+    exp = "'\\'hello\\' \"world\"'"
+    assert act == exp
+
+
+def test_double_quote():
+    simple = SimpleDocRenderer()
+    doc = double_quote("'hello'", Space, '"world"')
+    act = simple.to_str(doc)
+    exp = '"\'hello\' \\"world\\""'
+    assert act == exp
+
+
+def test_single_quote_auto_unescape():
+    simple = SimpleDocRenderer()
+    doc = single_quote("\\'hello\\'", Space, '\\"world\\"')
+    act = simple.to_str(doc)
+    exp = "'\\'hello\\' \"world\"'"
+    assert act == exp
+
+
+def test_double_quote_auto_unescape():
+    simple = SimpleDocRenderer()
+    doc = double_quote("\\'hello\\'", Space, '\\"world\\"')
+    act = simple.to_str(doc)
+    exp = '"\'hello\' \\"world\\""'
+    assert act == exp
+
+
+def test_single_quote_no_auto_unescape():
+    simple = SimpleDocRenderer()
+    doc = single_quote("\\'hello\\'", Space, '\\"world\\"', auto_unescape=False)
+    act = simple.to_str(doc)
+    exp = "'\\'hello\\' \\\"world\\\"'"
+    assert act == exp
+
+
+def test_double_quote_no_auto_unescape():
+    simple = SimpleDocRenderer()
+    doc = double_quote("\\'hello\\'", Space, '\\"world\\"', auto_unescape=False)
+    act = simple.to_str(doc)
+    exp = '"\\\'hello\\\' \\"world\\""'
+    assert act == exp
 
 
 def test_quote():
     simple = SimpleDocRenderer()
-    exp = "\"'hello' 'world'\""
-    doc = quote("'hello'", Space, "'world'")
-    assert simple.to_str(doc) == exp
+    doc = quote("\\'hello\\'", Space, '\\"world\\"')
+    act = simple.to_str(doc)
+    exp = '"\'hello\' \\"world\\""'
+    assert act == exp

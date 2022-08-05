@@ -1,6 +1,7 @@
 import abc
 import collections.abc
 import dataclasses
+import functools
 import itertools
 import operator
 import re
@@ -406,49 +407,61 @@ class Edit(Doc):
         return operator.length_hint(self.doc)
 
 
+ESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"\\'")
+
+
+def unescape_single(token: Token) -> Token:
+    return Text(ESCAPED_SINGLE_QUOTE.sub(r"'", token.text))
+
+
 UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
 
 
-def escape_single(token_stream: TokenStream) -> TokenStream:
-    for token in token_stream:
-        yield from filter(
-            None,
-            map(
-                Text,
-                more_itertools.intersperse(
-                    r"\'", UNESCAPED_SINGLE_QUOTE.split(token.text)
-                ),
-            ),
-        )
+def escape_single(token: Token) -> Token:
+    return Text(UNESCAPED_SINGLE_QUOTE.sub(r"\'", token.text))
 
 
-def single_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
-    doc = cat(doclike)
-    if auto_quote:
-        doc = Edit(escape_single, doc)
-    return cat("'", doc, "'")
+ESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'\\"')
+
+
+def unescape_double(token: Token) -> Token:
+    return Text(ESCAPED_DOUBLE_QUOTE.sub(r'"', token.text))
 
 
 UNESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'(?<!\\)"')
 
 
-def escape_double(token_stream: TokenStream) -> TokenStream:
-    for token in token_stream:
-        yield from filter(
-            None,
-            map(
-                Text,
-                more_itertools.intersperse(
-                    r"\"", UNESCAPED_DOUBLE_QUOTE.split(token.text)
-                ),
-            ),
-        )
+def escape_double(token: Token) -> Token:
+    return Text(UNESCAPED_DOUBLE_QUOTE.sub(r"\"", token.text))
 
 
-def double_quote(*doclike: DocLike, auto_quote: bool = True) -> Doc:
+def single_quote(
+    *doclike: DocLike, auto_escape: bool = True, auto_unescape: bool = True
+) -> Doc:
     doc = cat(doclike)
-    if auto_quote:
-        doc = Edit(escape_double, doc)
+    if auto_escape:
+
+        def _process(token_stream: TokenStream) -> TokenStream:
+            if auto_unescape:
+                token_stream = map(unescape_double, token_stream)
+            return map(escape_single, token_stream)
+
+        doc = Edit(_process, doc)
+    return cat("'", doc, "'")
+
+
+def double_quote(
+    *doclike: DocLike, auto_escape: bool = True, auto_unescape: bool = True
+) -> Doc:
+    doc = cat(doclike)
+    if auto_escape:
+
+        def _process(token_stream: TokenStream) -> TokenStream:
+            if auto_unescape:
+                token_stream = map(unescape_single, token_stream)
+            return map(escape_double, token_stream)
+
+        doc = Edit(_process, doc)
     return cat('"', doc, '"')
 
 
@@ -463,11 +476,11 @@ def quote(*doclike: DocLike) -> Doc:
             buffer.append(token)
         if single < double:
             yield Text("'")
-            yield from escape_single(iter(buffer))
+            yield from map(escape_single, map(unescape_double, buffer))
             yield Text("'")
         else:
             yield Text('"')
-            yield from escape_double(iter(buffer))
+            yield from map(escape_double, map(unescape_single, buffer))
             yield Text('"')
 
     return Edit(smart_quote, cat(doclike))
