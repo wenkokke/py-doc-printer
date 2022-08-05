@@ -97,7 +97,7 @@ Parentheses
 
    .. autofunction:: double_quote
 
-   .. autofunction:: quote
+   .. autofunction:: smart_quote
 
 Alternative layout options
 =======================================

@@ -441,12 +441,12 @@ def single_quote(
     doc = cat(doclike)
     if auto_escape:
 
-        def _process(token_stream: TokenStream) -> TokenStream:
+        def _single_quote(token_stream: TokenStream) -> TokenStream:
             if auto_unescape:
                 token_stream = map(unescape_double, token_stream)
             return map(escape_single, token_stream)
 
-        doc = Edit(_process, doc)
+        doc = Edit(_single_quote, doc)
     return cat("'", doc, "'")
 
 
@@ -456,17 +456,17 @@ def double_quote(
     doc = cat(doclike)
     if auto_escape:
 
-        def _process(token_stream: TokenStream) -> TokenStream:
+        def _double_quote(token_stream: TokenStream) -> TokenStream:
             if auto_unescape:
                 token_stream = map(unescape_single, token_stream)
             return map(escape_double, token_stream)
 
-        doc = Edit(_process, doc)
+        doc = Edit(_double_quote, doc)
     return cat('"', doc, '"')
 
 
-def quote(*doclike: DocLike) -> Doc:
-    def smart_quote(token_stream: TokenStream) -> TokenStream:
+def smart_quote(*doclike: DocLike) -> Doc:
+    def _smart_quote(token_stream: TokenStream) -> TokenStream:
         single: int = 0
         double: int = 0
         buffer: list[Token] = []
@@ -483,7 +483,7 @@ def quote(*doclike: DocLike) -> Doc:
             yield from map(escape_double, map(unescape_single, buffer))
             yield Text('"')
 
-    return Edit(smart_quote, cat(doclike))
+    return Edit(_smart_quote, cat(doclike))
 
 
 ################################################################################

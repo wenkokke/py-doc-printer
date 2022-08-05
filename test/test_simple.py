@@ -115,9 +115,9 @@ def test_double_quote_no_auto_unescape():
     assert act == exp
 
 
-def test_quote():
+def test_smart_quote():
     simple = SimpleDocRenderer()
-    doc = quote("\\'hello\\'", Space, '\\"world\\"')
+    doc = smart_quote("\\'hello\\'", Space, '\\"world\\"')
     act = simple.to_str(doc)
     exp = '"\'hello\' \\"world\\""'
     assert act == exp

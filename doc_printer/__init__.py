@@ -29,9 +29,9 @@ from .doc import double_quote as double_quote
 from .doc import inline as inline
 from .doc import nest as nest
 from .doc import parens as parens
-from .doc import quote as quote
 from .doc import row as row
 from .doc import single_quote as single_quote
+from .doc import smart_quote as smart_quote
 from .doc import table as table
 from .simple import SimpleDocRenderer as SimpleDocRenderer
 from .simple import SimpleLayout as SimpleLayout
