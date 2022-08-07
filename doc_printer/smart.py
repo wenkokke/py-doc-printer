@@ -44,9 +44,11 @@ class SmartDocRenderer(SimpleDocRenderer):
         for alt in reversed(rest):
             with self.safe_mode():
                 try:
-                    buffer = list(self.render_simple(alt))
+                    with self.buffering():
+                        buffer: list[Token] = list(self.render_simple(alt))
                     succeeded = True
-                    yield from buffer
+                    for token in buffer:
+                        yield self.emit(token)
                 except LineWidthExceeded:
                     continue
         if not succeeded:
