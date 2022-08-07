@@ -106,7 +106,10 @@ class SimpleDocRenderer(DocRenderer):
 
     @render_simple.register
     def _(self, doc: Edit) -> TokenStream:
-        yield from doc.function(self.render(doc.doc))
+        with self.buffering():
+            buffer: list[Token] = list(doc.function(self.render(doc.doc)))
+            for token in buffer:
+                yield self.emit(token)
 
     ###########################################################################
     # Buffering
