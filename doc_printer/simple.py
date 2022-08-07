@@ -72,7 +72,9 @@ class SimpleDocRenderer(DocRenderer):
         first_line: bool = True
         has_content: bool = False
         line_indent: int = 0
-        for token in self.buffer(doc.doc):
+        with self.buffering():
+            buffer: list[Token] = list(self.render(doc.doc))
+        for token in buffer:
             if token is Line:
                 first_line = False
                 has_content = False
@@ -121,17 +123,15 @@ class SimpleDocRenderer(DocRenderer):
         finally:
             self.is_buffering = False
 
-    def buffer(self, doc: Doc) -> TokenStream:
-        with self.buffering():
-            yield from self.render(doc)
-
     def buffer_row(self, row: Row) -> RowBuffer:
         row_buffer = RowBuffer(
             hsep=row.info.hsep, min_col_widths=row.info.min_col_widths
         )
         for cell in row.cells:
+            with self.buffering():
+                token_buffer: list[Token] = list(self.render(cell))
             cell_buffer = CellBuffer(hpad=row.info.hpad)
-            cell_buffer.extend(self.buffer(cell))
+            cell_buffer.extend(iter(token_buffer))
             row_buffer.append(cell_buffer)
         row_buffer.update()
         return row_buffer
