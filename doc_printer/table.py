@@ -33,19 +33,17 @@ class CellBuffer(collections.abc.Iterable[Token]):
         self.min_width += len(token)
         self.buffer.append(token)
 
-    def extend(self, token_stream: TokenStream):
-        for token in token_stream:
+    def extend(self, tokens: collections.abc.Iterable[Token]):
+        for token in tokens:
             self.append(token)
 
-    def render(self, *, on_emit: OnEmit, padding: bool = True) -> TokenStream:
-        yield from map(on_emit, self.buffer)
+    def render(self, *, padding: bool = True) -> TokenStream:
+        yield from self.buffer
         if padding:
-            yield from self.padding(on_emit=on_emit)
+            yield from self.padding()
 
-    def padding(self, *, on_emit: OnEmit) -> TokenStream:
-        yield from map(
-            on_emit, itertools.repeat(self.hpad, self.width - self.min_width)
-        )
+    def padding(self) -> TokenStream:
+        yield from itertools.repeat(self.hpad, self.width - self.min_width)
 
     def __iter__(self) -> TokenStream:
         return iter(self.buffer)
@@ -69,13 +67,13 @@ class RowBuffer(collections.abc.Iterable[CellBuffer]):
         for cell in cells:
             self.append(cell)
 
-    def render(self, *, on_emit: OnEmit) -> TokenStream:
+    def render(self) -> TokenStream:
         for j, cell in enumerate(self):
             if j < len(self.buffer) - 1:
-                yield from cell.render(on_emit=on_emit, padding=True)
-                yield on_emit(self.hsep)
+                yield from cell.render(padding=True)
+                yield self.hsep
             else:
-                yield from cell.render(on_emit=on_emit, padding=False)
+                yield from cell.render(padding=False)
 
     def update(self):
         for j in range(0, self.min_n_cols):
@@ -113,10 +111,10 @@ class TableBuffer:
         for row in rows:
             self.append(row)
 
-    def render(self, *, on_emit: OnEmit) -> TokenStream:
+    def render(self) -> TokenStream:
         for row in self:
-            yield from row.render(on_emit=on_emit)
-            yield on_emit(Line)
+            yield from row.render()
+            yield Line
 
     def update(self):
         for i in range(0, self.n_rows):

@@ -14,41 +14,44 @@ class LineWidthExceeded(Exception):
 class SmartDocRenderer(SimpleDocRenderer):
     max_line_width: int = 80
 
-    raise_error_if_line_width_exceeded: bool = dataclasses.field(
-        default=False, init=False, repr=False
-    )
-
     def render(self, doc: Doc) -> TokenStream:
         if isinstance(doc, Alt) and len(doc.alts) > 1:
             yield from self.render_with_lookahead(doc.alts)
         else:
             yield from self.render_simple(doc)
 
-    def line_width_exceeded(self, token: Token) -> Token:
-        if self.line_width > self.max_line_width:
+    ###########################################################################
+    # Strict Mode & Raising Errors when Max Line Width is Exceeded
+    ###########################################################################
+
+    is_strict: bool = dataclasses.field(default=False, init=False)
+
+    def strict_emit(self, token: Token) -> Token:
+        if self.column + len(token) > self.max_line_width:
             raise LineWidthExceeded()
         else:
             return token
 
     @contextlib.contextmanager
-    def safe_mode(self) -> collections.abc.Iterator[None]:
-        self.on_emit.append(self.line_width_exceeded)
+    def strict(self) -> collections.abc.Iterator[None]:
+        self.on_emit.append(self.strict_emit)
         try:
             yield None
         finally:
-            self.on_emit.remove(self.line_width_exceeded)
+            self.on_emit.remove(self.strict_emit)
 
     def render_with_lookahead(self, alts: tuple[Doc, ...]) -> TokenStream:
         fallback, *rest = alts
         succeeded = False
         for alt in reversed(rest):
-            with self.safe_mode():
+            with self.strict():
                 try:
-                    with self.buffering():
-                        buffer: list[Token] = list(self.render_simple(alt))
+                    token_stream = self.render_simple(alt)
+                    token_buffer, token_stream = self.buffer_line(token_stream)
                     succeeded = True
-                    for token in buffer:
-                        yield self.emit(token)
+                    yield from map(self.emit, token_buffer)
+                    yield from token_stream
+                    break
                 except LineWidthExceeded:
                     continue
         if not succeeded:

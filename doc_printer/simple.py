@@ -18,21 +18,6 @@ class SimpleLayout(enum.IntEnum):
 @dataclasses.dataclass
 class SimpleDocRenderer(DocRenderer):
     simple_layout: SimpleLayout = SimpleLayout.ShortestLines
-    is_buffering: bool = dataclasses.field(default=False, init=False, repr=False)
-    line_width: int = dataclasses.field(default=0, init=False, repr=False)
-    on_emit: list[OnEmit] = dataclasses.field(
-        default_factory=list, init=False, repr=False
-    )
-
-    def emit(self, token: Token) -> Token:
-        for cb in self.on_emit:
-            token = cb(token)
-        if not self.is_buffering:
-            if token is Line:
-                self.line_width = 0
-            else:
-                self.line_width += len(token)
-        return token
 
     def render(self, doc: Doc) -> TokenStream:
         yield from self.render_simple(doc)
@@ -59,21 +44,20 @@ class SimpleDocRenderer(DocRenderer):
     @render_simple.register
     def _(self, doc: Row) -> TokenStream:
         row_buffer = self.buffer_row(doc)
-        yield from row_buffer.render(on_emit=self.emit)
+        yield from map(self.emit, row_buffer.render())
         yield self.emit(Line)
 
     @render_simple.register
     def _(self, doc: Table) -> TokenStream:
         table_buffer = self.buffer_table(doc)
-        yield from table_buffer.render(on_emit=self.emit)
+        yield from map(self.emit, table_buffer.render())
 
     @render_simple.register
     def _(self, doc: Nest) -> TokenStream:
         first_line: bool = True
         has_content: bool = False
         line_indent: int = 0
-        with self.buffering():
-            buffer: list[Token] = list(self.render(doc.doc))
+        buffer = self.buffer_stream(self.render(doc.doc))
         for token in buffer:
             if token is Line:
                 first_line = False
@@ -89,49 +73,88 @@ class SimpleDocRenderer(DocRenderer):
                     else:
                         has_content = True
                         if first_line:
-                            if doc.overlap and doc.indent > self.line_width:
-                                yield from map(
-                                    self.emit,
-                                    itertools.repeat(
-                                        Space,
-                                        line_indent + doc.indent - self.line_width,
-                                    ),
+                            if doc.overlap and doc.indent > self.column:
+                                yield from self.padding(
+                                    line_indent + doc.indent - self.column
                                 )
                         else:
-                            yield from map(
-                                self.emit,
-                                itertools.repeat(Space, line_indent + doc.indent),
-                            )
+                            yield from self.padding(line_indent + doc.indent)
                         yield self.emit(token)
 
     @render_simple.register
     def _(self, doc: Edit) -> TokenStream:
-        with self.buffering():
-            buffer: list[Token] = list(doc.function(self.render(doc.doc)))
-        for token in buffer:
-            yield self.emit(token)
+        buffer = self.buffer_stream(doc.function(self.render(doc.doc)))
+        yield from map(self.emit, buffer)
+
+    ###########################################################################
+    # Padding
+    ###########################################################################
+
+    def padding(self, amount: int) -> TokenStream:
+        yield from map(self.emit, itertools.repeat(Space, amount))
+
+    ###########################################################################
+    # Emitting Tokens & Tracking Position
+    ###########################################################################
+
+    on_emit: list[OnEmit] = dataclasses.field(default_factory=list)
+
+    line: int = dataclasses.field(default=0, init=False)
+    column: int = dataclasses.field(default=0, init=False)
+
+    def emit(self, token: Token) -> Token:
+        # Invoke all callbacks
+        for cb in self.on_emit:
+            token = cb(token)
+        # Update position
+        if token is Line:
+            self.line += 1
+            self.column = 0
+        else:
+            self.column += len(token)
+        return token
 
     ###########################################################################
     # Buffering
     ###########################################################################
 
+    position_stack: list[tuple[int, int]] = dataclasses.field(
+        default_factory=list, init=False
+    )
+
     @contextlib.contextmanager
     def buffering(self) -> collections.abc.Iterator[None]:
-        self.is_buffering = True
+        self.position_stack.append((self.line, self.column))
         try:
             yield None
         finally:
-            self.is_buffering = False
+            line, column = self.position_stack.pop()
+            self.line = line
+            self.column = column
+
+    @property
+    def is_buffering(self) -> bool:
+        return bool(self.position_stack)
+
+    def buffer_line(self, token_stream: TokenStream) -> tuple[TokenBuffer, TokenStream]:
+        token_buffer: TokenBuffer = []
+        with self.buffering():
+            for token in token_stream:
+                token_buffer.append(token)
+                if token is Line:
+                    break
+        return (token_buffer, token_stream)
+
+    def buffer_stream(self, token_stream: TokenStream) -> TokenBuffer:
+        with self.buffering():
+            token_buffer = list(token_stream)
+        return token_buffer
 
     def buffer_row(self, row: Row) -> RowBuffer:
-        row_buffer = RowBuffer(
-            hsep=row.info.hsep, min_col_widths=row.info.min_col_widths
-        )
+        row_buffer = RowBuffer(row.info.hsep, row.info.min_col_widths)
         for cell in row.cells:
-            with self.buffering():
-                token_buffer: list[Token] = list(self.render(cell))
             cell_buffer = CellBuffer(hpad=row.info.hpad)
-            cell_buffer.extend(iter(token_buffer))
+            cell_buffer.extend(self.buffer_stream(self.render(cell)))
             row_buffer.append(cell_buffer)
         row_buffer.update()
         return row_buffer
