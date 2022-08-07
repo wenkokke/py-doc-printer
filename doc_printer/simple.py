@@ -25,6 +25,8 @@ class SimpleDocRenderer(DocRenderer):
     )
 
     def emit(self, token: Token) -> Token:
+        for cb in self.on_emit:
+            token = cb(token)
         if self.is_buffering:
             return token
         else:
@@ -32,8 +34,6 @@ class SimpleDocRenderer(DocRenderer):
                 self.line_width = 0
             else:
                 self.line_width += len(token)
-            for cb in self.on_emit:
-                token = cb(token)
             return token
 
     def render(self, doc: Doc) -> TokenStream:
