@@ -47,12 +47,11 @@ class SmartDocRenderer(SimpleDocRenderer):
             with self.strict():
                 try:
                     token_stream = self.render_simple(alt)
-                    token_buffer, token_stream = self.buffer_line(token_stream)
-                    succeeded = True
-                    yield from map(self.emit, token_buffer)
-                    yield from token_stream
-                    break
+                    token_buffer = self.buffer_stream(token_stream)
                 except LineWidthExceeded:
                     continue
+                succeeded = True
+                yield from map(self.emit, token_buffer)
+                break
         if not succeeded:
             yield from self.render(fallback)
