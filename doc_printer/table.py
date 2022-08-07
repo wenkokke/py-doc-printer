@@ -37,13 +37,15 @@ class CellBuffer(collections.abc.Iterable[Token]):
         for token in token_stream:
             self.append(token)
 
-    def render(self, padding: bool = True) -> TokenStream:
-        yield from self.buffer
+    def render(self, *, on_emit: OnEmit, padding: bool = True) -> TokenStream:
+        yield from map(on_emit, self.buffer)
         if padding:
-            yield from self.padding()
+            yield from self.padding(on_emit=on_emit)
 
-    def padding(self) -> TokenStream:
-        yield from itertools.repeat(self.hpad, self.width - self.min_width)
+    def padding(self, *, on_emit: OnEmit) -> TokenStream:
+        yield from map(
+            on_emit, itertools.repeat(self.hpad, self.width - self.min_width)
+        )
 
     def __iter__(self) -> TokenStream:
         return iter(self.buffer)
@@ -70,10 +72,10 @@ class RowBuffer(collections.abc.Iterable[CellBuffer]):
     def render(self, *, on_emit: OnEmit) -> TokenStream:
         for j, cell in enumerate(self):
             if j < len(self.buffer) - 1:
-                yield from map(on_emit, cell.render(padding=True))
+                yield from cell.render(on_emit=on_emit, padding=True)
                 yield on_emit(self.hsep)
             else:
-                yield from map(on_emit, cell.render(padding=False))
+                yield from cell.render(on_emit=on_emit, padding=False)
 
     def update(self):
         for j in range(0, self.min_n_cols):
