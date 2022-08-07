@@ -108,8 +108,8 @@ class SimpleDocRenderer(DocRenderer):
     def _(self, doc: Edit) -> TokenStream:
         with self.buffering():
             buffer: list[Token] = list(doc.function(self.render(doc.doc)))
-            for token in buffer:
-                yield self.emit(token)
+        for token in buffer:
+            yield self.emit(token)
 
     ###########################################################################
     # Buffering
