@@ -1,0 +1,255 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: allows
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: prevent
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: executing
+    - text: ' '
+    - text: by
+    - text: ' '
+    - text: ending
+    - text: ' '
+    - text: it
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: '"cancel'
+    - text: ' '
+    - text: cancel"
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: cancel
+        - text: ' '
+        - text: cancel
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: skip
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cancel
+          - text: ' '
+          - text: cancel
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: skip
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: actual
+    - text: ' '
+    - text: behavior
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: '"cancel'
+    - text: ' '
+    - text: cancel"
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: implemented
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: code/cancel.py;
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: want
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: use
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: different
+    - text: ' '
+    - text: phrase
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: must
+    - text: ' '
+    - text: also
+    - text: ' '
+    - text: change
+    - text: ' '
+    - text: cancel_phrase
+    - text: ' '
+    - text: there.
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: allows
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: say
+    - text: ' '
+    - text: something
+    - text: ' '
+    - text: (eg
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: human)
+    - text: ' '
+    - text: that
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: don't
+    - text: ' '
+    - text: want
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: hear,
+    - text: ' '
+    - text: eg
+    - text: ' '
+    - text: '"ignore'
+    - text: ' '
+    - text: hey
+    - text: ' '
+    - text: Jerry"
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: ignore
+        - text: ' '
+        - text: '['
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ']'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: app.notify
+            - text: (
+            - doc:
+                docs:
+                - text: Command
+                - text: ' '
+                - text: ignored
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: ignore
+          - text: ' '
+          - text: '['
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ']'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: app.notify
+            - text: (
+            - doc:
+                docs:
+                - text: Command
+                - text: ' '
+                - text: ignored
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  -
+  # allows you to prevent a command executing by ending it with "cancel cancel"
+  cancel cancel$:                  skip()
+  # the actual behavior of "cancel cancel" is implemented in code/cancel.py; if you want to use a different phrase you must also change cancel_phrase there.
+
+  # allows you to say something (eg to a human) that you don't want talon to hear, eg "ignore hey Jerry"
+  ignore [<phrase>]$:              app.notify("Command ignored")

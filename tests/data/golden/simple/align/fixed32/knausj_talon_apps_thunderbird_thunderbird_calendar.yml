@@ -1,0 +1,477 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: thunderbird_calendar
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: event/task
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: event
+        - text: ' '
+        - text: new
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: i
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: event
+          - text: ' '
+          - text: new
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: i
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: new
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: d
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: new
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: d
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: task
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: event
+        - text: )
+        - text: ' '
+        - text: delete
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: delete
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: task
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: event
+          - text: )
+          - text: ' '
+          - text: delete
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: delete
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: layout
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: today
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: f11
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: today
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: f11
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: number_small
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: number_small
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: day
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: day
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: week
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '2'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: week
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '2'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: multi
+        - text: ' '
+        - text: '['
+        - text: week
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '3'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: multi
+          - text: ' '
+          - text: '['
+          - text: week
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '3'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: month
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '4'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: month
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_calendar_view
+            - text: (
+            - text: '4'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  app:                             thunderbird_calendar
+  -
+  # event/task
+  event new:                       user.thunderbird_mod("i")
+  task new:                        user.thunderbird_mod("d")
+  (task | event) delete:           key(delete)
+  # layout
+  toggle today:                    key(f11)
+  view <number_small>:             user.thunderbird_calendar_view(number_small)
+  view day:                        user.thunderbird_calendar_view(1)
+  view week:                       user.thunderbird_calendar_view(2)
+  view multi [week]:               user.thunderbird_calendar_view(3)
+  view month:                      user.thunderbird_calendar_view(4)

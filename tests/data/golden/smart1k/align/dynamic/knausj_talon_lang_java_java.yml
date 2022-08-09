@@ -1,0 +1,721 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.java
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_imperative
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_object_oriented
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_line
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_block_c_like
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_data_bool
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_data_null
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_functions
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_libraries
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_array
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_assignment
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_bitwise
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_lambda
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_math
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: 'settings():'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.code_private_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_protected_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_public_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_private_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_protected_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_public_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Types
+    - text: ' '
+    - text: Commands
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: boxed
+            - text: ' '
+            - text: '['
+            - text: type
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_boxed_type
+            - text: '}'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: insert
+                - text: (
+                - text: user.java_boxed_type
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: boxed
+              - text: ' '
+              - text: '['
+              - text: type
+              - text: ']'
+              - text: ' '
+              - text: '{'
+              - text: user.java_boxed_type
+              - text: '}'
+              - text: ':'
+            - doc:
+                docs:
+                - text: insert
+                - text: (
+                - text: user.java_boxed_type
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: generic
+            - text: ' '
+            - text: '['
+            - text: type
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_generic_data_structure
+            - text: '}'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - text: java_generic_data_structure
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: <
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: '>'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: generic
+              - text: ' '
+              - text: '['
+              - text: type
+              - text: ']'
+              - text: ' '
+              - text: '{'
+              - text: user.java_generic_data_structure
+              - text: '}'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - text: java_generic_data_structure
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: <
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: '>'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: boxed
+            - text: ' '
+            - text: '['
+            - text: type
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_boxed_type
+            - text: '}'
+            - text: ':'
+          - doc:
+              docs:
+              - text: insert
+              - text: (
+              - text: user.java_boxed_type
+              - text: ' '
+              - text: +
+              - text: ' '
+              - doc:
+                  text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: generic
+            - text: ' '
+            - text: '['
+            - text: type
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_generic_data_structure
+            - text: '}'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - text: java_generic_data_structure
+              - text: ' '
+              - text: +
+              - text: ' '
+              - doc:
+                  text: <
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: '>'
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Arrays
+    - text: '
+
+        '
+    - text: type
+    - text: ' '
+    - text: '{'
+    - text: user.code_type
+    - text: '}'
+    - text: ' '
+    - text: array
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.code_type
+        - text: )
+        - text: '
+
+            '
+        - text: user.code_operator_subscript
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: '['
+            - text: state
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_modifier
+            - text: '}'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: insert
+                - text: (
+                - text: user.java_modifier
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: '['
+              - text: state
+              - text: ']'
+              - text: ' '
+              - text: '{'
+              - text: user.java_modifier
+              - text: '}'
+              - text: ':'
+            - doc:
+                docs:
+                - text: insert
+                - text: (
+                - text: user.java_modifier
+                - text: ' '
+                - text: +
+                - text: ' '
+                - doc:
+                    text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: array
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_subscript
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: array
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_subscript
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: new
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: insert
+                - text: (
+                - doc:
+                    docs:
+                    - text: new
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: new
+              - text: ':'
+            - doc:
+                docs:
+                - text: insert
+                - text: (
+                - doc:
+                    docs:
+                    - text: new
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: '['
+            - text: state
+            - text: ']'
+            - text: ' '
+            - text: '{'
+            - text: user.java_modifier
+            - text: '}'
+            - text: ':'
+          - doc:
+              docs:
+              - text: insert
+              - text: (
+              - text: user.java_modifier
+              - text: ' '
+              - text: +
+              - text: ' '
+              - doc:
+                  text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: array
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_subscript
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: new
+            - text: ':'
+          - doc:
+              docs:
+              - text: insert
+              - text: (
+              - doc:
+                  docs:
+                  - text: new
+                  - text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.java
+  -
+  tag(): user.code_imperative
+  tag(): user.code_object_oriented
+
+  tag(): user.code_comment_line
+  tag(): user.code_comment_block_c_like
+  tag(): user.code_data_bool
+  tag(): user.code_data_null
+  tag(): user.code_functions
+  tag(): user.code_libraries
+  tag(): user.code_operators_array
+  tag(): user.code_operators_assignment
+  tag(): user.code_operators_bitwise
+  tag(): user.code_operators_lambda
+  tag(): user.code_operators_math
+
+  settings():
+      user.code_private_function_formatter = "PRIVATE_CAMEL_CASE"
+      user.code_protected_function_formatter = "PRIVATE_CAMEL_CASE"
+      user.code_public_function_formatter = "PRIVATE_CAMEL_CASE"
+      user.code_private_variable_formatter = "PRIVATE_CAMEL_CASE"
+      user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
+      user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
+
+  # Types Commands
+  boxed [type] {user.java_boxed_type}:               insert(user.java_boxed_type + " ")
+  generic [type] {user.java_generic_data_structure}: user.insert_between(java_generic_data_structure + "<", ">")
+
+  # Arrays
+  type {user.code_type} array:
+      insert(user.code_type)
+      user.code_operator_subscript()
+  [state] {user.java_modifier}: insert(user.java_modifier + " ")
+  op array:                     user.code_operator_subscript()
+  op new:                       insert("new ")

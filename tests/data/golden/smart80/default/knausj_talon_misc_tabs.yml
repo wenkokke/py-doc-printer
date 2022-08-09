@@ -1,0 +1,411 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.tabs
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: (
+        - text: open
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: new
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: app.tab_open
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: (
+          - text: open
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: new
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: app.tab_open
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: (
+        - text: last
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: previous
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: app.tab_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: (
+          - text: last
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: previous
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: app.tab_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: next
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: app.tab_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: next
+          - text: ':'
+        - doc:
+            docs:
+            - text: app.tab_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: close
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.tab_close_wrapper
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: close
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.tab_close_wrapper
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: (
+        - text: reopen
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: restore
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: app.tab_reopen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: (
+          - text: reopen
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: restore
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: app.tab_reopen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: tab
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.tab_jump
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: tab
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.tab_jump
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: tab
+        - text: ' '
+        - text: final
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.tab_final
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: tab
+          - text: ' '
+          - text: final
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.tab_final
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: duplicate
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.tab_duplicate
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: duplicate
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.tab_duplicate
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.tabs
+  -
+  tab (open | new): app.tab_open()
+  tab (last | previous): app.tab_previous()
+  tab next: app.tab_next()
+  tab close: user.tab_close_wrapper()
+  tab (reopen | restore): app.tab_reopen()
+  go tab <number>: user.tab_jump(number)
+  go tab final: user.tab_final()
+  tab duplicate: user.tab_duplicate()

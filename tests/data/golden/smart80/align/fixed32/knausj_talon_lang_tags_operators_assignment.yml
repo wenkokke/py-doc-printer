@@ -1,0 +1,722 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_assignment
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_math
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_bitwise
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: assignment
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: (
+        - text: equals
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: assign
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: (
+          - text: equals
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: assign
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: combined
+    - text: ' '
+    - text: computation
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: assignment
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: (
+        - text: minus
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: subtract
+        - text: )
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_subtraction_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: (
+          - text: minus
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: subtract
+          - text: )
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_subtraction_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: (
+        - text: plus
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: add
+        - text: )
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_addition_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: (
+          - text: plus
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: add
+          - text: )
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_addition_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: (
+        - text: times
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: multiply
+        - text: )
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_multiplication_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: (
+          - text: times
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: multiply
+          - text: )
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_multiplication_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: divide
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_division_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: divide
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_division_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: mod
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_modulo_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: mod
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_modulo_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: op
+        - text: ']'
+        - text: ' '
+        - text: increment
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_increment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: op
+          - text: ']'
+          - text: ' '
+          - text: increment
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_increment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: bitwise
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ' '
+        - text: (
+        - text: ex
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: exclusive
+        - text: )
+        - text: ' '
+        - text: or
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_exclusive_or_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ' '
+          - text: (
+          - text: ex
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: exclusive
+          - text: )
+          - text: ' '
+          - text: or
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_exclusive_or_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: left
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: left
+        - text: )
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_left_shift_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: left
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: left
+          - text: )
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_left_shift_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: right
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: right
+        - text: )
+        - text: ' '
+        - text: equals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_right_shift_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: right
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: right
+          - text: )
+          - text: ' '
+          - text: equals
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_right_shift_assignment
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             user.code_operators_assignment
+  -
+  tag(): user.code_operators_math
+  tag(): user.code_operators_bitwise
+
+  # assignment
+  op (equals | assign):            user.code_operator_assignment()
+
+  # combined computation and assignment
+  op (minus | subtract) equals:    user.code_operator_subtraction_assignment()
+  op (plus | add) equals:          user.code_operator_addition_assignment()
+  op (times | multiply) equals:    user.code_operator_multiplication_assignment()
+  op divide equals:                user.code_operator_division_assignment()
+  op mod equals:                   user.code_operator_modulo_assignment()
+  [op] increment:                  user.code_operator_increment()
+
+  # bitwise operators
+  (op | logical | bitwise) (ex | exclusive) or equals:
+      user.code_operator_bitwise_exclusive_or_assignment()
+  [(op | logical | bitwise)] (left shift | shift left) equals:
+      user.code_operator_bitwise_left_shift_assignment()
+  [(op | logical | bitwise)] (right shift | shift right) equals:
+      user.code_operator_bitwise_right_shift_assignment()

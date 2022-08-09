@@ -1,0 +1,166 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_libraries_gui_showing
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: The
+    - text: ' '
+    - text: show
+    - text: ' '
+    - text: functions
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: have
+    - text: ' '
+    - text: language
+    - text: ' '
+    - text: specific
+    - text: ' '
+    - text: names,
+    - text: ' '
+    - text: e.g.
+    - text: ' '
+    - text: toggle
+    - text: ' '
+    - text: imports
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: Python
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: but
+    - text: ' '
+    - text: let's
+    - text: ' '
+    - text: use
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: generic
+    - text: ' '
+    - text: name
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: close
+    - text: ' '
+    - text: one.
+    - text: ' '
+    - text: Having
+    - text: ' '
+    - text: it
+    - text: ' '
+    - text: behind
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: tag
+    - text: ' '
+    - text: allows
+    - text: ' '
+    - text: it
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: closed
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: even
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: your
+    - text: ' '
+    - text: editor
+    - text: ' '
+    - text: isn't
+    - text: ' '
+    - text: visible.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: libraries
+        - text: ' '
+        - text: close
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_toggle_libraries
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: libraries
+          - text: ' '
+          - text: close
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_toggle_libraries
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: user.code_libraries_gui_showing
+  -
+  # The show functions for this have language specific names, e.g. toggle imports for Python
+  # but let's use a generic name for the close one. Having it behind this tag allows it to be closed
+  # even if your editor isn't visible.
+  toggle libraries close: user.code_toggle_libraries()

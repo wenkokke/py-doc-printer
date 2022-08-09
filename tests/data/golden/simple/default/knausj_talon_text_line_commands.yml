@@ -1,0 +1,1472 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.line_commands
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: defines
+    - text: ' '
+    - text: some
+    - text: ' '
+    - text: common
+    - text: ' '
+    - text: line
+    - text: ' '
+    - text: commands.
+    - text: ' '
+    - text: More
+    - text: ' '
+    - text: may
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: defined
+    - text: ' '
+    - text: that
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: ide-specific.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: lend
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.line_end
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: lend
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.line_end
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: bend
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.line_start
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: bend
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.line_start
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.jump_line
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.jump_line
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: go
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: end
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: edit.jump_line
+        - text: (
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.line_end
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: clear
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: edit.jump_line
+        - text: (
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: clear
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: copy
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.copy
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: copy
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.copy
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: cut
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.cut
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: cut
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.cut
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: (
+    - text: paste
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: replace
+    - text: )
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: (
+        - text: select
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: cell
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: sell
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: line
+        - text: ']'
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_range
+            - text: (
+            - text: number
+            - text: ','
+            - text: ' '
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: select
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: cell
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: sell
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: line
+          - text: ']'
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_range
+            - text: (
+            - text: number
+            - text: ','
+            - text: ' '
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: select
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: cell
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: sell
+        - text: )
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: until
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_range
+            - text: (
+            - text: number_1
+            - text: ','
+            - text: ' '
+            - text: number_2
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: select
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: cell
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: sell
+          - text: )
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: until
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_range
+            - text: (
+            - text: number_1
+            - text: ','
+            - text: ' '
+            - text: number_2
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: tab
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.indent_more
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: tab
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.indent_more
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: tab
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: edit.jump_line
+        - text: (
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.indent_more
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: tab
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.indent_more
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: retab
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.indent_less
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: retab
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.indent_less
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: retab
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.indent_less
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: retab
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.indent_less
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: drag
+        - text: ' '
+        - text: '['
+        - text: line
+        - text: ']'
+        - text: ' '
+        - text: down
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.line_swap_down
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: drag
+          - text: ' '
+          - text: '['
+          - text: line
+          - text: ']'
+          - text: ' '
+          - text: down
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.line_swap_down
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: drag
+        - text: ' '
+        - text: '['
+        - text: line
+        - text: ']'
+        - text: ' '
+        - text: up
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.line_swap_up
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: drag
+          - text: ' '
+          - text: '['
+          - text: line
+          - text: ']'
+          - text: ' '
+          - text: up
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.line_swap_up
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: drag
+    - text: ' '
+    - text: up
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.line_swap_up
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: drag
+    - text: ' '
+    - text: up
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.line_swap_up
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: drag
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number
+        - text: ','
+        - text: ' '
+        - text: number
+        - text: )
+        - text: '
+
+            '
+        - text: edit.line_swap_down
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: drag
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_range
+        - text: (
+        - text: number_1
+        - text: ','
+        - text: ' '
+        - text: number_2
+        - text: )
+        - text: '
+
+            '
+        - text: edit.line_swap_down
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: clone
+        - text: ' '
+        - text: (
+        - text: line
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: that
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: edit.line_clone
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: clone
+          - text: ' '
+          - text: (
+          - text: line
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: that
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: edit.line_clone
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: camel
+        - text: ' '
+        - text: left
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.extend_camel_left
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: camel
+          - text: ' '
+          - text: left
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.extend_camel_left
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: camel
+        - text: ' '
+        - text: right
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.extend_camel_right
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: camel
+          - text: ' '
+          - text: right
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.extend_camel_right
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: camel
+        - text: ' '
+        - text: left
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.camel_left
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: camel
+          - text: ' '
+          - text: left
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.camel_left
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: camel
+        - text: ' '
+        - text: right
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.camel_right
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: camel
+          - text: ' '
+          - text: right
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.camel_right
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  tag: user.line_commands
+  -
+  # this defines some common line commands. More may be defined that are ide-specific.
+  lend:
+      edit.line_end()
+  bend:
+      edit.line_start()
+  go <number>:
+      edit.jump_line(number)
+  go <number> end:
+      edit.jump_line(number)
+      edit.line_end()
+  comment [line] <number>:
+      user.select_range(number, number)
+      code.toggle_comment()
+  comment <number> until <number>:
+      user.select_range(number_1, number_2)
+      code.toggle_comment()
+  clear [line] <number>:
+      edit.jump_line(number)
+      user.select_range(number, number)
+      edit.delete()
+  clear <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.delete()
+  copy [line] <number>:
+      user.select_range(number, number)
+      edit.copy()
+  copy <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.copy()
+  cut [line] <number>:
+      user.select_range(number, number)
+      edit.cut()
+  cut [line] <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.cut()
+  (paste | replace) <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.paste()
+  (select | cell | sell) [line] <number>:
+      user.select_range(number, number)
+  (select | cell | sell) <number> until <number>:
+      user.select_range(number_1, number_2)
+  tab that:
+      edit.indent_more()
+  tab [line] <number>:
+      edit.jump_line(number)
+      edit.indent_more()
+  tab <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.indent_more()
+  retab that:
+      edit.indent_less()
+  retab [line] <number>:
+      user.select_range(number, number)
+      edit.indent_less()
+  retab <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.indent_less()
+  drag [line] down:
+      edit.line_swap_down()
+  drag [line] up:
+      edit.line_swap_up()
+  drag up [line] <number>:
+      user.select_range(number, number)
+      edit.line_swap_up()
+  drag up <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.line_swap_up()
+  drag down [line] <number>:
+      user.select_range(number, number)
+      edit.line_swap_down()
+  drag down <number> until <number>:
+      user.select_range(number_1, number_2)
+      edit.line_swap_down()
+  clone (line | that):
+      edit.line_clone()
+
+  select camel left:
+      user.extend_camel_left()
+  select camel right:
+      user.extend_camel_right()
+  go camel left:
+      user.camel_left()
+  go camel right:
+      user.camel_right()

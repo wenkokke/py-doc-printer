@@ -1,0 +1,403 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.multiple_cursors
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: multiple
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_enable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: multiple
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_enable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: stop
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_disable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: stop
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_disable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: up
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_add_above
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: up
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_add_above
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: down
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_add_below
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: down
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_add_below
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: less
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_select_fewer_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: less
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_select_fewer_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: more
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_select_more_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: more
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_select_more_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: skip
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_skip_occurrence
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: skip
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_skip_occurrence
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_select_all_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_select_all_occurrences
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: cursor
+        - text: ' '
+        - text: lines
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.multi_cursor_add_to_line_ends
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cursor
+          - text: ' '
+          - text: lines
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.multi_cursor_add_to_line_ends
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.multiple_cursors
+  -
+  cursor multiple: user.multi_cursor_enable()
+  cursor stop: user.multi_cursor_disable()
+  cursor up: user.multi_cursor_add_above()
+  cursor down: user.multi_cursor_add_below()
+  cursor less: user.multi_cursor_select_fewer_occurrences()
+  cursor more: user.multi_cursor_select_more_occurrences()
+  cursor skip: user.multi_cursor_skip_occurrence()
+  cursor all: user.multi_cursor_select_all_occurrences()
+  cursor lines: user.multi_cursor_add_to_line_ends()

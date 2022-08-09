@@ -1,0 +1,183 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: defines
+    - text: ' '
+    - text: modes
+    - text: ' '
+    - text: specific
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: Dragon.
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: speech.engine
+        - text: ':'
+      - text: dragon
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: all
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: wakes
+    - text: ' '
+    - text: Dragon
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: Mac,
+    - text: ' '
+    - text: deactivates
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: speech
+    - text: ' '
+    - text: commands
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: dragon
+        - text: ' '
+        - text: mode
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.dragon_mode
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dragon
+          - text: ' '
+          - text: mode
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.dragon_mode
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: sleep
+    - text: ' '
+    - text: dragon
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: Mac,
+    - text: ' '
+    - text: activates
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: speech
+    - text: ' '
+    - text: commands
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: talon
+        - text: ' '
+        - text: mode
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.talon_mode
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: talon
+          - text: ' '
+          - text: mode
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.talon_mode
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  # defines modes specific to Dragon.
+  speech.engine:                   dragon
+  mode:                            all
+  -
+  # wakes Dragon on Mac, deactivates talon speech commands
+  dragon mode:                     user.dragon_mode()
+  # sleep dragon on Mac, activates talon speech commands
+  talon mode:                      user.talon_mode()

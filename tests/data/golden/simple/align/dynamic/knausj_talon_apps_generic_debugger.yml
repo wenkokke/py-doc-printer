@@ -1,0 +1,3219 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: debugger
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Code
+    - text: ' '
+    - text: execution
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: instruction
+    - text: ' '
+    - text: level
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: into
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_step_into
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: step
+              - text: ' '
+              - text: into
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_step_into
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: over
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_step_over
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: step
+              - text: ' '
+              - text: over
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_step_over
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: into
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_step_into
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: over
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_step_over
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: line
+    - text: ' '
+    - text: level
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: line
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_step_line
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: step
+              - text: ' '
+              - text: line
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_step_line
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: over
+            - text: ' '
+            - text: line
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_step_over_line
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: step
+              - text: ' '
+              - text: over
+              - text: ' '
+              - text: line
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_step_over_line
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: out
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_step_out
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: step
+              - text: ' '
+              - text: out
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_step_out
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: continue
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_continue
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: continue
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_continue
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: line
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_step_line
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: over
+            - text: ' '
+            - text: line
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_step_over_line
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: step
+            - text: ' '
+            - text: out
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_step_out
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: continue
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_continue
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: multi
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: avoid
+    - text: ' '
+    - text: accidental
+    - text: ' '
+    - text: utterance
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: start
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_start
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: debug
+              - text: ' '
+              - text: start
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_start
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: stop
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_stop
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: debug
+              - text: ' '
+              - text: stop
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_stop
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: exit
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_exit
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: debug
+              - text: ' '
+              - text: exit
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_exit
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: detach
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_detach
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: debug
+              - text: ' '
+              - text: detach
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_detach
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: restart
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_restart
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: debug
+              - text: ' '
+              - text: restart
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_restart
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: start
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_start
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: stop
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_stop
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: exit
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_exit
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: detach
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_detach
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: debug
+            - text: ' '
+            - text: restart
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_restart
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Register
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: registers
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.debugger_show_registers
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: registers
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.debugger_show_registers
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: get
+            - text: ' '
+            - text: register
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_get_register
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: get
+              - text: ' '
+              - text: register
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_get_register
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: set
+            - text: ' '
+            - text: register
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_set_register
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: set
+              - text: ' '
+              - text: register
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_set_register
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: get
+            - text: ' '
+            - text: register
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_get_register
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: set
+            - text: ' '
+            - text: register
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_set_register
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Breakpoints
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: break
+            - text: ' '
+            - text: now
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_break_now
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: break
+              - text: ' '
+              - text: now
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_break_now
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: break
+            - text: ' '
+            - text: here
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_break_here
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: break
+              - text: ' '
+              - text: here
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_break_here
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: list
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: show
+            - text: )
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_show_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: list
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: show
+              - text: )
+              - text: ' '
+              - text: (
+              - text: breaks
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: points
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_show_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: set
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_add_sw_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: set
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: add
+              - text: )
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_add_sw_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: set
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ' '
+            - text: hardware
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_add_hw_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: set
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: add
+              - text: )
+              - text: ' '
+              - text: hardware
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_add_hw_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_clear_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: clear
+              - text: ' '
+              - text: all
+              - text: ' '
+              - text: (
+              - text: breaks
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: points
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_clear_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_clear_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: clear
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_clear_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_clear_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: clear
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ' '
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_clear_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disable_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disable
+              - text: ' '
+              - text: all
+              - text: ' '
+              - text: (
+              - text: breaks
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: points
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disable_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disable_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disable
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disable_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disable_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disable
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ' '
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disable_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_enable_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: enable
+              - text: ' '
+              - text: all
+              - text: ' '
+              - text: (
+              - text: breaks
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: points
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_enable_all_breakpoints
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_enable_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: enable
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_enable_breakpoint
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_enable_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: enable
+              - text: ' '
+              - text: (
+              - text: break
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: break
+              - text: ' '
+              - text: point
+              - text: )
+              - text: ' '
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_enable_breakpoint_id
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: break
+            - text: ' '
+            - text: now
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_break_now
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: break
+            - text: ' '
+            - text: here
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_break_here
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: list
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: show
+            - text: )
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_show_breakpoints
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: set
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_add_sw_breakpoint
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: set
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ' '
+            - text: hardware
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_add_hw_breakpoint
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_clear_all_breakpoints
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_clear_breakpoint
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: clear
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_clear_breakpoint_id
+              - text: (
+              - text: number_small
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disable_all_breakpoints
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disable_breakpoint
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disable_breakpoint_id
+              - text: (
+              - text: number_small
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: all
+            - text: ' '
+            - text: (
+            - text: breaks
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: points
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_enable_all_breakpoints
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_enable_breakpoint
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: enable
+            - text: ' '
+            - text: (
+            - text: break
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: break
+            - text: ' '
+            - text: point
+            - text: )
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_enable_breakpoint_id
+              - text: (
+              - text: number_small
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Navigation
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Memory
+    - text: ' '
+    - text: Inspection
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: stack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: back
+            - text: )
+            - text: ' '
+            - text: trace
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_backtrace
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: stack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: back
+              - text: )
+              - text: ' '
+              - text: trace
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_backtrace
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disassemble
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disassemble
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disassemble
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disassemble
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disassemble
+            - text: ' '
+            - text: here
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disassemble_here
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disassemble
+              - text: ' '
+              - text: here
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disassemble_here
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: disassemble
+            - text: ' '
+            - text: clipboard
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_disassemble_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: disassemble
+              - text: ' '
+              - text: clipboard
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_disassemble_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: address
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_goto_address
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: jump
+              - text: ' '
+              - text: to
+              - text: ' '
+              - text: address
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_goto_address
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: clipboard
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_goto_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: jump
+              - text: ' '
+              - text: to
+              - text: ' '
+              - text: clipboard
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_goto_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: highlighted
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_goto_highlighted
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: jump
+              - text: ' '
+              - text: to
+              - text: ' '
+              - text: highlighted
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_goto_highlighted
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: string
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_dump_ascii_string
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: dump
+              - text: ' '
+              - text: string
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_dump_ascii_string
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: unicode
+            - text: ' '
+            - text: '['
+            - text: string
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_dump_unicode_string
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: dump
+              - text: ' '
+              - text: unicode
+              - text: ' '
+              - text: '['
+              - text: string
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_dump_unicode_string
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: pointers
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_dump_pointers
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: dump
+              - text: ' '
+              - text: pointers
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_dump_pointers
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: list
+            - text: ' '
+            - text: modules
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.debugger_list_modules
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: list
+              - text: ' '
+              - text: modules
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.debugger_list_modules
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: stack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: back
+            - text: )
+            - text: ' '
+            - text: trace
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_backtrace
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disassemble
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disassemble
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disassemble
+            - text: ' '
+            - text: here
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disassemble_here
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: disassemble
+            - text: ' '
+            - text: clipboard
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_disassemble_clipboard
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: address
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_goto_address
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: clipboard
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_goto_clipboard
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: jump
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: highlighted
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_goto_highlighted
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: string
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_dump_ascii_string
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: unicode
+            - text: ' '
+            - text: '['
+            - text: string
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_dump_unicode_string
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: dump
+            - text: ' '
+            - text: pointers
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_dump_pointers
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: list
+            - text: ' '
+            - text: modules
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.debugger_list_modules
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Type
+    - text: ' '
+    - text: inspection
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: inspect
+        - text: ' '
+        - text: type
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.debugger_inspect_type
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: inspect
+          - text: ' '
+          - text: type
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.debugger_inspect_type
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Hex
+    - text: ' '
+    - text: Dumping
+    - text: ' '
+    - text: Memory
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: hex
+    - text: ' '
+    - text: dump
+    - text: ' '
+    - text: 'register:'
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Convenience
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: clear
+        - text: ' '
+        - text: line
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.debugger_clear_line
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: clear
+          - text: ' '
+          - text: line
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.debugger_clear_line
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: debugger
+  -
+  # Code execution
+
+  # instruction level
+  step into: user.debugger_step_into()
+  step over: user.debugger_step_over()
+
+  # line level
+  step line:      user.debugger_step_line()
+  step over line: user.debugger_step_over_line()
+  step out:       user.debugger_step_out()
+  continue:       user.debugger_continue()
+
+  # these are multi word to avoid accidental utterance
+  debug start:   user.debugger_start()
+  debug stop:    user.debugger_stop()
+  debug exit:    user.debugger_exit()
+  debug detach:  user.debugger_detach()
+  debug restart: user.debugger_restart()
+
+  # Register
+  show registers: user.debugger_show_registers()
+  # XXX -
+  get register: user.debugger_get_register()
+  set register: user.debugger_set_register()
+
+  # Breakpoints
+  break now:                                    user.debugger_break_now()
+  break here:                                   user.debugger_break_here()
+  (list | show) (breaks | break points):        user.debugger_show_breakpoints()
+  (set | add) (break | break point):            user.debugger_add_sw_breakpoint()
+  (set | add) hardware (break | break point):   user.debugger_add_hw_breakpoint()
+  clear all (breaks | break points):            user.debugger_clear_all_breakpoints()
+  clear (break | break point):                  user.debugger_clear_breakpoint()
+  clear (break | break point) <number_small>:   user.debugger_clear_breakpoint_id(number_small)
+  disable all (breaks | break points):          user.debugger_disable_all_breakpoints()
+  disable (break | break point):                user.debugger_disable_breakpoint()
+  disable (break | break point) <number_small>: user.debugger_disable_breakpoint_id(number_small)
+  enable all (breaks | break points):           user.debugger_enable_all_breakpoints()
+  enable (break | break point):                 user.debugger_enable_breakpoint()
+  enable (break | break point) <number_small>:  user.debugger_enable_breakpoint_id(number_small)
+
+  # Navigation
+
+  # Memory Inspection
+  (stack | back) trace:  user.debugger_backtrace()
+  disassemble:           user.debugger_disassemble()
+  disassemble here:      user.debugger_disassemble_here()
+  disassemble clipboard: user.debugger_disassemble_clipboard()
+  jump to address:       user.debugger_goto_address()
+  jump to clipboard:     user.debugger_goto_clipboard()
+  jump to highlighted:   user.debugger_goto_highlighted()
+  dump string:           user.debugger_dump_ascii_string()
+  dump unicode [string]: user.debugger_dump_unicode_string()
+  dump pointers:         user.debugger_dump_pointers()
+  list modules:          user.debugger_list_modules()
+
+  # Type inspection
+  inspect type: user.debugger_inspect_type()
+
+  # Hex Dumping Memory
+  # hex dump register:
+
+  # Convenience
+  clear line: user.debugger_clear_line()

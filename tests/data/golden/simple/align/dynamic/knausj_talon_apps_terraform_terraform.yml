@@ -1,0 +1,900 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: tag
+        - text: ':'
+      - text: user.terraform_client
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: apply
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: apply
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: apply
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: apply
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: destroy
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: destroy
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: destroy
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: destroy
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: format
+            - text: ' '
+            - text: recursive
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: fmt
+                    - text: ' '
+                    - text: -recursive
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: format
+              - text: ' '
+              - text: recursive
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: fmt
+                    - text: ' '
+                    - text: -recursive
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: format
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: fmt
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: format
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: fmt
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: help
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: -help
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: help
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: -help
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: init
+            - text: ' '
+            - text: upgrade
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: init
+                    - text: ' '
+                    - text: -upgrade
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: init
+              - text: ' '
+              - text: upgrade
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: init
+                    - text: ' '
+                    - text: -upgrade
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: init
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: init
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: init
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: init
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: plan
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: plan
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: plan
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: plan
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: state
+            - text: ' '
+            - text: move
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: state
+                    - text: ' '
+                    - text: mv
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: state
+              - text: ' '
+              - text: move
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: state
+                    - text: ' '
+                    - text: mv
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: validate
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: validate
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: terraform
+              - text: ' '
+              - text: validate
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: terraform
+                    - text: ' '
+                    - text: validate
+                    - text: \n
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: apply
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: apply
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: destroy
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: destroy
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: format
+            - text: ' '
+            - text: recursive
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: fmt
+                  - text: ' '
+                  - text: -recursive
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: format
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: fmt
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: help
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: -help
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: init
+            - text: ' '
+            - text: upgrade
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: init
+                  - text: ' '
+                  - text: -upgrade
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: init
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: init
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: plan
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: plan
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: state
+            - text: ' '
+            - text: move
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: state
+                  - text: ' '
+                  - text: mv
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: terraform
+            - text: ' '
+            - text: validate
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: terraform
+                  - text: ' '
+                  - text: validate
+                  - text: \n
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: terminal
+  and tag: user.terraform_client
+  -
+  terraform:                  "terraform "
+  terraform apply:            "terraform apply "
+  terraform destroy:          "terraform destroy "
+  terraform format recursive: "terraform fmt -recursive\n"
+  terraform format:           "terraform fmt\n"
+  terraform help:             "terraform -help"
+  terraform init upgrade:     "terraform init -upgrade\n"
+  terraform init:             "terraform init\n"
+  terraform plan:             "terraform plan\n"
+  terraform state move:       "terraform state mv "
+  terraform validate:         "terraform validate\n"

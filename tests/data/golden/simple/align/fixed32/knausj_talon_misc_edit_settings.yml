@@ -1,0 +1,49 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: customize
+    - text: ' '
+    - text: '{'
+    - text: user.talon_settings_csv
+    - text: '}'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.edit_text_file
+        - text: (
+        - text: talon_settings_csv
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 500ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.file_end
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  -
+  customize {user.talon_settings_csv}:
+      user.edit_text_file(talon_settings_csv)
+      sleep(500ms)
+      edit.file_end()

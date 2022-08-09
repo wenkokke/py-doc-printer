@@ -1,0 +1,1595 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.sql
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_math
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_line
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_block_c_like
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_data_null
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_functions_common
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: select
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: SELECT
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: select
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: SELECT
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: distinct
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: DISTINCT
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: distinct
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: DISTINCT
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: from
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: FROM
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: from
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: FROM
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: select
+            - text: ' '
+            - text: star
+            - text: ' '
+            - text: from
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: SELECT
+                    - text: ' '
+                    - text: '*'
+                    - text: \n
+                    - text: FROM
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: select
+              - text: ' '
+              - text: star
+              - text: ' '
+              - text: from
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: SELECT
+                    - text: ' '
+                    - text: '*'
+                    - text: \n
+                    - text: FROM
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: where
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: WHERE
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: where
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: WHERE
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: order
+            - text: ' '
+            - text: by
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: ORDER
+                    - text: ' '
+                    - text: BY
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: order
+              - text: ' '
+              - text: by
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: ORDER
+                    - text: ' '
+                    - text: BY
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: group
+            - text: ' '
+            - text: by
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: GROUP
+                    - text: ' '
+                    - text: BY
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: group
+              - text: ' '
+              - text: by
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: GROUP
+                    - text: ' '
+                    - text: BY
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: having
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: HAVING
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: having
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: HAVING
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: descending
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: DESC
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: descending
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: DESC
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ascending
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: ASC
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ascending
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: ASC
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: dot
+            - text: ' '
+            - text: i
+            - text: ' '
+            - text: d
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    text: .id
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: dot
+              - text: ' '
+              - text: i
+              - text: ' '
+              - text: d
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    text: .id
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: inner
+            - text: ' '
+            - text: join
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: INNER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: inner
+              - text: ' '
+              - text: join
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: INNER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: inner
+            - text: ' '
+            - text: join
+            - text: ' '
+            - text: using
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: INNER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: USING
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: inner
+              - text: ' '
+              - text: join
+              - text: ' '
+              - text: using
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: INNER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: USING
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: left
+            - text: ' '
+            - text: outer
+            - text: ' '
+            - text: join
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: LEFT
+                    - text: ' '
+                    - text: OUTER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: left
+              - text: ' '
+              - text: outer
+              - text: ' '
+              - text: join
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: LEFT
+                    - text: ' '
+                    - text: OUTER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: right
+            - text: ' '
+            - text: outer
+            - text: ' '
+            - text: join
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: RIGHT
+                    - text: ' '
+                    - text: OUTER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: right
+              - text: ' '
+              - text: outer
+              - text: ' '
+              - text: join
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: RIGHT
+                    - text: ' '
+                    - text: OUTER
+                    - text: ' '
+                    - text: JOIN
+                    - text: ' '
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    docs:
+                    - text: ' '
+                    - text: 'ON'
+                    - text: ' '
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: select
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: SELECT
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: distinct
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: DISTINCT
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: from
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: FROM
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: select
+            - text: ' '
+            - text: star
+            - text: ' '
+            - text: from
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: SELECT
+                  - text: ' '
+                  - text: '*'
+                  - text: \n
+                  - text: FROM
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: where
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: WHERE
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: order
+            - text: ' '
+            - text: by
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: ORDER
+                  - text: ' '
+                  - text: BY
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: group
+            - text: ' '
+            - text: by
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: GROUP
+                  - text: ' '
+                  - text: BY
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: having
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: HAVING
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: descending
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: DESC
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ascending
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: ASC
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: dot
+            - text: ' '
+            - text: i
+            - text: ' '
+            - text: d
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  text: .id
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: inner
+            - text: ' '
+            - text: join
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - doc:
+                  docs:
+                  - text: INNER
+                  - text: ' '
+                  - text: JOIN
+                  - text: ' '
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: 'ON'
+                  - text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: inner
+            - text: ' '
+            - text: join
+            - text: ' '
+            - text: using
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - doc:
+                  docs:
+                  - text: INNER
+                  - text: ' '
+                  - text: JOIN
+                  - text: ' '
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: USING
+                  - text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: left
+            - text: ' '
+            - text: outer
+            - text: ' '
+            - text: join
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - doc:
+                  docs:
+                  - text: LEFT
+                  - text: ' '
+                  - text: OUTER
+                  - text: ' '
+                  - text: JOIN
+                  - text: ' '
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: 'ON'
+                  - text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: right
+            - text: ' '
+            - text: outer
+            - text: ' '
+            - text: join
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - doc:
+                  docs:
+                  - text: RIGHT
+                  - text: ' '
+                  - text: OUTER
+                  - text: ' '
+                  - text: JOIN
+                  - text: ' '
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  docs:
+                  - text: ' '
+                  - text: 'ON'
+                  - text: ' '
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: with
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: ' '
+        - text: up
+        - text: )
+        - text: '
+
+            '
+        - doc:
+            docs:
+            - text: WITH
+            - text: ' '
+            - text: ' '
+            - text: AS
+            - text: ' '
+            - text: (
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: ' '
+        - text: tab
+        - text: )
+        - text: '
+
+            '
+        - doc:
+            docs:
+            - text: SELECT
+            - text: ' '
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: ' '
+        - text: shift-tab
+        - text: )
+        - text: '
+
+            '
+        - text: edit.extend_line_end
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - doc:
+            docs:
+            - text: )
+            - text: ' '
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: delete
+        - text: ' '
+        - text: up:2
+        - text: ' '
+        - text: right:3
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: column
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: return
+        - text: )
+        - text: '
+
+            '
+        - doc:
+            docs:
+            - text: ','
+            - text: ' '
+          function: _smart_quote
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: count
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_insert_function
+                - text: (
+                - doc:
+                    text: Count
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ''
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: count
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_insert_function
+                - text: (
+                - doc:
+                    text: Count
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ''
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: date
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: DATE
+                    - text: ' '
+                    - text: ''''
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ''''
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: date
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_between
+                - text: (
+                - doc:
+                    docs:
+                    - text: DATE
+                    - text: ' '
+                    - text: ''''
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ''''
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: count
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_insert_function
+              - text: (
+              - doc:
+                  text: Count
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: ''
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: date
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_between
+              - text: (
+              - doc:
+                  docs:
+                  - text: DATE
+                  - text: ' '
+                  - text: ''''
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: ''''
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.sql
+  -
+  tag(): user.code_operators_math
+  tag(): user.code_comment_line
+  tag(): user.code_comment_block_c_like
+  tag(): user.code_data_null
+  tag(): user.code_functions_common
+  select:           "SELECT "
+  distinct:         "DISTINCT "
+  from:             "FROM "
+  select star from: "SELECT *\nFROM "
+  where:            "WHERE "
+  order by:         "ORDER BY "
+  group by:         "GROUP BY "
+  having:           "HAVING "
+  descending:       " DESC"
+  ascending:        " ASC"
+  dot i d:          ".id"
+  inner join:       user.insert_between("INNER JOIN ", " ON ")
+  inner join using: user.insert_between("INNER JOIN ", " USING ")
+  left outer join:  user.insert_between("LEFT OUTER JOIN ", " ON ")
+  right outer join: user.insert_between("RIGHT OUTER JOIN ", " ON ")
+
+  with:
+      key(enter up)
+      "WITH  AS ("
+      key(enter tab)
+      "SELECT "
+      key(enter shift-tab)
+      edit.extend_line_end()
+      edit.delete()
+      ") "
+      key(delete up:2 right:3)
+
+  column:
+      key(return)
+      ", "
+  count: user.code_insert_function("Count", "")
+  date:  user.insert_between("DATE '", "'")

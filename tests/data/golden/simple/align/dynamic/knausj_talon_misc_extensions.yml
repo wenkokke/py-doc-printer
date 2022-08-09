@@ -1,0 +1,60 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: '{'
+        - text: user.file_extension
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: '{'
+                - text: file_extension
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '{'
+          - text: user.file_extension
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: '{'
+                - text: file_extension
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  -
+  {user.file_extension}: "{file_extension}"

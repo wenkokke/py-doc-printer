@@ -1,0 +1,109 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_data_bool
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: 'true'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_insert_true
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: 'true'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_insert_true
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: 'false'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_insert_false
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: 'false'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_insert_false
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.code_data_bool
+  -
+  state true: user.code_insert_true()
+  state false: user.code_insert_false()

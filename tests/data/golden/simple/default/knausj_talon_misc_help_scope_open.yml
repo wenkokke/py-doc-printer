@@ -1,0 +1,82 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: user.help_scope
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: scope
+        - text: ' '
+        - text: (
+        - text: hide
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: close
+        - text: )
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.help_scope_toggle
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: scope
+          - text: ' '
+          - text: (
+          - text: hide
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: close
+          - text: )
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.help_scope_toggle
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  mode: user.help_scope
+  -
+  scope (hide | close)$:
+      user.help_scope_toggle()

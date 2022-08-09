@@ -1,0 +1,451 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: user.help
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: next
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: next
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: previous
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_previous
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: previous
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_previous
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: <
+            - text: number
+            - text: '>'
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_select_index
+                - text: (
+                - text: number
+                - text: ' '
+                - text: '-'
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: <
+              - text: number
+              - text: '>'
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_select_index
+                - text: (
+                - text: number
+                - text: ' '
+                - text: '-'
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: return
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_return
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: return
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_return
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: refresh
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_refresh
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: refresh
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_refresh
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: close
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.help_hide
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: help
+              - text: ' '
+              - text: close
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.help_hide
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: next
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_next
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: previous
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_previous
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: <
+            - text: number
+            - text: '>'
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_select_index
+              - text: (
+              - text: number
+              - text: ' '
+              - text: '-'
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: return
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_return
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: refresh
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_refresh
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: help
+            - text: ' '
+            - text: close
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.help_hide
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  mode: user.help
+  -
+  help next$:     user.help_next()
+  help previous$: user.help_previous()
+  help <number>$: user.help_select_index(number - 1)
+  help return$:   user.help_return()
+  help refresh$:  user.help_refresh()
+  help close$:    user.help_hide()

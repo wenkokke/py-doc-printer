@@ -1,0 +1,124 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.draft_editor_active
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: tag
+        - text: ':'
+      - text: user.draft_editor_app_focused
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: draft
+        - text: ' '
+        - text: submit
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_editor_submit
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: draft
+          - text: ' '
+          - text: submit
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_editor_submit
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: draft
+        - text: ' '
+        - text: discard
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_editor_discard
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: draft
+          - text: ' '
+          - text: discard
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_editor_discard
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.draft_editor_active
+  and tag: user.draft_editor_app_focused
+  -
+  draft submit: user.draft_editor_submit()
+  draft discard: user.draft_editor_discard()

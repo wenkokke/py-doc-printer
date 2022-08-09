@@ -1,0 +1,84 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.mouse_grid_enabled
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: M
+    - text: ' '
+    - text: grid
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''mouse'
+            - text: ' '
+            - text: grid'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''m'
+            - text: ' '
+            - text: grid'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_select_screen
+        - text: (
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_activate
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             user.mouse_grid_enabled
+  -
+  M grid:
+      app.notify("please use the voice command 'mouse grid' instead of 'm grid'")
+      user.grid_select_screen(1)
+      user.grid_activate()

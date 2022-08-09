@@ -1,0 +1,98 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_functions_common_gui_active
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Toggle
+    - text: ' '
+    - text: prefix
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: mentally
+    - text: ' '
+    - text: similar
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: '''toggle'
+    - text: ' '
+    - text: funk'
+    - text: ' '
+    - text: show
+    - text: ' '
+    - text: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: funk
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_toggle_functions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: funk
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_toggle_functions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag:                             user.code_functions_common_gui_active
+  -
+  # Toggle prefix to be mentally similar to the 'toggle funk' show command
+  toggle funk:                     user.code_toggle_functions()

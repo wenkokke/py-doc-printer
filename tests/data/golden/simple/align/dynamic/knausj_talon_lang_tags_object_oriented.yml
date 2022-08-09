@@ -1,0 +1,182 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_object_oriented
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: self
+    - text: ' '
+    - text: dot
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.code_self
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.code_operator_object_accessor
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: self
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_self
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: self
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_self
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: class
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_define_class
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: class
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_define_class
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: self
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_self
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: class
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_define_class
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: user.code_object_oriented
+  -
+  self dot:
+      user.code_self()
+      user.code_operator_object_accessor()
+  state self:  user.code_self()
+  state class: user.code_define_class()

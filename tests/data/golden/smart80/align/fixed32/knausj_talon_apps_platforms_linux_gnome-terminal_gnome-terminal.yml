@@ -1,0 +1,70 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: gnome_terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Set
+    - text: ' '
+    - text: tags
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: terminal
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.tabs
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.generic_unix_shell
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.git
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.kubectl
+    - text: '
+
+        '
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  app:                             gnome_terminal
+  -
+  # Set tags
+  tag(): terminal
+  tag(): user.tabs
+  tag(): user.generic_unix_shell
+  tag(): user.git
+  tag(): user.kubectl

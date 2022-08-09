@@ -1,0 +1,994 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_imperative
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: block
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_block
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: block
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_block
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: if
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_if
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: if
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_if
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: else
+            - text: ' '
+            - text: if
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_else_if
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: else
+              - text: ' '
+              - text: if
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_else_if
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: else
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_else
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: else
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_else
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: while
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_while
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: while
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_while
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: loop
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_infinite_loop
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: loop
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_infinite_loop
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: for
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_for
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: for
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_for
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: for
+            - text: ' '
+            - text: in
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_for_each
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: for
+              - text: ' '
+              - text: in
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_for_each
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: switch
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_switch
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: switch
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_switch
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: case
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_case
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: case
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_case
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: do
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_do
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: do
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_do
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: goto
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_go_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: goto
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_go_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: return
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_state_return
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: return
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_state_return
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: break
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_break
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: break
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_break
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: next
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: next
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: block
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_block
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: if
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_if
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: else
+            - text: ' '
+            - text: if
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_else_if
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: else
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_else
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: while
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_while
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: loop
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_infinite_loop
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: for
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_for
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: for
+            - text: ' '
+            - text: in
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_for_each
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: switch
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_switch
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: case
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_case
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: do
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_do
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: goto
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_go_to
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: return
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_state_return
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: break
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_break
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: next
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_next
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.code_imperative
+  -
+  block:         user.code_block()
+  state if:      user.code_state_if()
+  state else if: user.code_state_else_if()
+  state else:    user.code_state_else()
+  state while:   user.code_state_while()
+  state loop:    user.code_state_infinite_loop()
+  state for:     user.code_state_for()
+  state for in:  user.code_state_for_each()
+  state switch:  user.code_state_switch()
+  state case:    user.code_state_case()
+  state do:      user.code_state_do()
+  state goto:    user.code_state_go_to()
+  state return:  user.code_state_return()
+  state break:   user.code_break()
+  state next:    user.code_next()

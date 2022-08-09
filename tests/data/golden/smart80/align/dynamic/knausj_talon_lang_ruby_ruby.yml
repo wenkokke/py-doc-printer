@@ -1,0 +1,675 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.ruby
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_imperative
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_object_oriented
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_line
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_comment_documentation
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_data_bool
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_data_null
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_functions
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_libraries
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_array
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_assignment
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_bitwise
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_lambda
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.code_operators_math
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: 'settings():'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.code_private_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_protected_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_public_function_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_private_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_protected_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+        - text: user.code_public_variable_formatter
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - doc:
+            text: SNAKE_CASE
+          function: _smart_quote
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: args
+        - text: ' '
+        - text: pipe
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_between
+            - text: (
+            - doc:
+                text: '|'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: '|'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: args
+          - text: ' '
+          - text: pipe
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_between
+            - text: (
+            - doc:
+                text: '|'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: '|'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'NOTE:'
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: created
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: backward
+    - text: ' '
+    - text: compatibility,
+    - text: ' '
+    - text: but
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: documentation
+    - text: ' '
+    - text: comments
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: not
+    - text: ' '
+    - text: actually
+    - text: ' '
+    - text: strings
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: Ruby.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: dock
+            - text: ' '
+            - text: string
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_comment_documentation
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: dock
+              - text: ' '
+              - text: string
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_comment_documentation
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: end
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    text: end
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: end
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    text: end
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: begin
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    text: begin
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: begin
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    text: begin
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: rescue
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: rescue
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: rescue
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: rescue
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: module
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: module
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: state
+              - text: ' '
+              - text: module
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: module
+                    - text: ' '
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: dock
+            - text: ' '
+            - text: string
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_comment_documentation
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: end
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  text: end
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: begin
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  text: begin
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: rescue
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: rescue
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: state
+            - text: ' '
+            - text: module
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: module
+                  - text: ' '
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: ^
+    - text: instance
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: '@'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.code_public_variable_formatter
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.ruby
+  -
+  tag(): user.code_imperative
+  tag(): user.code_object_oriented
+
+  tag(): user.code_comment_line
+  tag(): user.code_comment_documentation
+  tag(): user.code_data_bool
+  tag(): user.code_data_null
+  tag(): user.code_functions
+  tag(): user.code_libraries
+  tag(): user.code_operators_array
+  tag(): user.code_operators_assignment
+  tag(): user.code_operators_bitwise
+  tag(): user.code_operators_lambda
+  tag(): user.code_operators_math
+
+  settings():
+      user.code_private_function_formatter = "SNAKE_CASE"
+      user.code_protected_function_formatter = "SNAKE_CASE"
+      user.code_public_function_formatter = "SNAKE_CASE"
+      user.code_private_variable_formatter = "SNAKE_CASE"
+      user.code_protected_variable_formatter = "SNAKE_CASE"
+      user.code_public_variable_formatter = "SNAKE_CASE"
+  args pipe: user.insert_between("|", "|")
+
+  # NOTE: this command is created for backward compatibility, but the documentation comments are not actually strings in Ruby.
+  dock string:  user.code_comment_documentation()
+  state end:    "end"
+  state begin:  "begin"
+  state rescue: "rescue "
+  state module: "module "
+
+  ^instance <user.text>$:
+      insert("@")
+      user.code_public_variable_formatter(text)

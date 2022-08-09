@@ -1,0 +1,851 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: These
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: active
+    - text: ' '
+    - text: when
+    - text: ' '
+    - text: we
+    - text: ' '
+    - text: have
+    - text: ' '
+    - text: focus
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: draft
+    - text: ' '
+    - text: window
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: title
+        - text: ':'
+      - docs:
+        - text: Talon
+        - text: ' '
+        - text: Draft
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'settings():'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: Enable
+        - text: ' '
+        - text: '''Smart'
+        - text: ' '
+        - text: dictation
+        - text: ' '
+        - text: mode',
+        - text: ' '
+        - text: see
+        - text: ' '
+        - text: https://github.com/knausj85/knausj_talon/pull/356
+        - text: '
+
+            '
+        - text: user.context_sensitive_dictation
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: '1'
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Replace
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: single
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: phrase
+    - text: '
+
+        '
+    - text: replace
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.draft_select
+        - text: (
+        - doc:
+            docs:
+            - text: '{'
+            - text: draft_anchor
+            - text: '}'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: result
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: NOOP
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: result
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Position
+    - text: ' '
+    - text: cursor
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: word
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: pre
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: cursor
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: cursor
+        - text: ' '
+        - text: before
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.draft_anchor
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_position_caret
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: pre
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: cursor
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: cursor
+          - text: ' '
+          - text: before
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.draft_anchor
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_position_caret
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Position
+    - text: ' '
+    - text: cursor
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: word
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: post
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: cursor
+        - text: ' '
+        - text: after
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.draft_anchor
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_position_caret
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: post
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: cursor
+          - text: ' '
+          - text: after
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.draft_anchor
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_position_caret
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Select
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: whole
+    - text: ' '
+    - text: word
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: take
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: select
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.draft_anchor
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_select
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: take
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: select
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.draft_anchor
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_select
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Select
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: range
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: words
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: take
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: select
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.draft_anchor
+        - text: '>'
+        - text: ' '
+        - text: (
+        - text: through
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: past
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.draft_anchor
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_select
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor_1
+                - text: '}'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor_2
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: take
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: select
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.draft_anchor
+          - text: '>'
+          - text: ' '
+          - text: (
+          - text: through
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: past
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.draft_anchor
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_select
+            - text: (
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor_1
+                - text: '}'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                docs:
+                - text: '{'
+                - text: draft_anchor_2
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Delete
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: word
+    - text: '
+
+        '
+    - text: (
+    - text: change
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: chuck
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: clear
+    - text: )
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.draft_select
+        - text: (
+        - doc:
+            docs:
+            - text: '{'
+            - text: draft_anchor
+            - text: '}'
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - doc:
+            text: ''
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: backspace
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Delete
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: range
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: words
+    - text: '
+
+        '
+    - text: (
+    - text: change
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: chuck
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: clear
+    - text: )
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ' '
+    - text: (
+    - text: through
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: past
+    - text: )
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.draft_select
+        - text: (
+        - text: draft_anchor_1
+        - text: ','
+        - text: ' '
+        - text: draft_anchor_2
+        - text: ','
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: backspace
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: reformat
+    - text: ' '
+    - text: word
+    - text: '
+
+        '
+    - text: <
+    - text: user.formatters
+    - text: '>'
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.draft_select
+        - text: (
+        - doc:
+            docs:
+            - text: '{'
+            - text: draft_anchor
+            - text: '}'
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - doc:
+            text: ''
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: user.formatters_reformat_selection
+        - text: (
+        - text: user.formatters
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: reformat
+    - text: ' '
+    - text: range
+    - text: '
+
+        '
+    - text: <
+    - text: user.formatters
+    - text: '>'
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ' '
+    - text: (
+    - text: through
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: past
+    - text: )
+    - text: ' '
+    - text: <
+    - text: user.draft_anchor
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.draft_select
+        - text: (
+        - text: draft_anchor_1
+        - text: ','
+        - text: ' '
+        - text: draft_anchor_2
+        - text: ','
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: user.formatters_reformat_selection
+        - text: (
+        - text: user.formatters
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  # These are active when we have focus on the draft window
+  title: Talon Draft
+  -
+  settings():
+      # Enable 'Smart dictation mode', see https://github.com/knausj85/knausj_talon/pull/356
+      user.context_sensitive_dictation = 1
+
+  # Replace a single word with a phrase
+  replace <user.draft_anchor> with <user.text>:
+      user.draft_select("{draft_anchor}")
+      result = user.formatted_text(text, "NOOP")
+      insert(result)
+
+  # Position cursor before word
+  (pre | cursor | cursor before) <user.draft_anchor>: user.draft_position_caret("{draft_anchor}")
+
+  # Position cursor after word
+  (post | cursor after) <user.draft_anchor>: user.draft_position_caret("{draft_anchor}", 1)
+
+  # Select a whole word
+  (take | select) <user.draft_anchor>: user.draft_select("{draft_anchor}")
+
+  # Select a range of words
+  (take | select) <user.draft_anchor> (through | past) <user.draft_anchor>: user.draft_select("{draft_anchor_1}", "{draft_anchor_2}")
+
+  # Delete a word
+  (change | chuck | clear) <user.draft_anchor>:
+      user.draft_select("{draft_anchor}", "", 1)
+      key(backspace)
+
+  # Delete a range of words
+  (change | chuck | clear) <user.draft_anchor> (through | past) <user.draft_anchor>:
+      user.draft_select(draft_anchor_1, draft_anchor_2, 1)
+      key(backspace)
+
+  # reformat word
+  <user.formatters> word <user.draft_anchor>:
+      user.draft_select("{draft_anchor}", "", 1)
+      user.formatters_reformat_selection(user.formatters)
+
+  # reformat range
+  <user.formatters> <user.draft_anchor> (through | past) <user.draft_anchor>:
+      user.draft_select(draft_anchor_1, draft_anchor_2, 1)
+      user.formatters_reformat_selection(user.formatters)

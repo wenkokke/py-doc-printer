@@ -1,0 +1,373 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: volume
+        - text: ' '
+        - text: up
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: volup
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: volume
+          - text: ' '
+          - text: up
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: volup
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: volume
+        - text: ' '
+        - text: down
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: voldown
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: volume
+          - text: ' '
+          - text: down
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: voldown
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: set
+        - text: ' '
+        - text: volume
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.media_set_volume
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: set
+          - text: ' '
+          - text: volume
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.media_set_volume
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: volume
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: media
+        - text: )
+        - text: ' '
+        - text: mute
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: mute
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: volume
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: media
+          - text: )
+          - text: ' '
+          - text: mute
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: mute
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: media
+        - text: ']'
+        - text: ' '
+        - text: play
+        - text: ' '
+        - text: next
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: next
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: media
+          - text: ']'
+          - text: ' '
+          - text: play
+          - text: ' '
+          - text: next
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: next
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: media
+        - text: ']'
+        - text: ' '
+        - text: play
+        - text: ' '
+        - text: previous
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: prev
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: media
+          - text: ']'
+          - text: ' '
+          - text: play
+          - text: ' '
+          - text: previous
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: prev
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: media
+        - text: ' '
+        - text: (
+        - text: play
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: pause
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.play_pause
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: media
+          - text: ' '
+          - text: (
+          - text: play
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: pause
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.play_pause
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  volume up:                       key(volup)
+  volume down:                     key(voldown)
+  set volume <number>:             user.media_set_volume(number)
+  (volume | media) mute:           key(mute)
+  [media] play next:               key(next)
+  [media] play previous:           key(prev)
+  media (play | pause):            user.play_pause()

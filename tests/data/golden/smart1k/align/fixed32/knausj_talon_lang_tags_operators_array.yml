@@ -1,0 +1,78 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_array
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: array
+    - text: ' '
+    - text: subscription
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: subscript
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_subscript
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: subscript
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_subscript
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             user.code_operators_array
+  -
+  # array subscription
+  op subscript:                    user.code_operator_subscript()

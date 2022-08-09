@@ -1,0 +1,726 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: discord
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.messaging
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.emoji
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'Navigation:'
+    - text: ' '
+    - text: Channels
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: '['
+        - text: channel
+        - text: ']'
+        - text: ' '
+        - text: mentions
+        - text: ' '
+        - text: last
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_mentions_last
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: channel
+          - text: ']'
+          - text: ' '
+          - text: mentions
+          - text: ' '
+          - text: last
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_mentions_last
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: channel
+        - text: ']'
+        - text: ' '
+        - text: mentions
+        - text: ' '
+        - text: next
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_mentions_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: channel
+          - text: ']'
+          - text: ' '
+          - text: mentions
+          - text: ' '
+          - text: next
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_mentions_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: oldest
+        - text: ' '
+        - text: unread
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_oldest_unread
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: oldest
+          - text: ' '
+          - text: unread
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_oldest_unread
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: UI
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: pins
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_toggle_pins
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: pins
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_toggle_pins
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: inbox
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_toggle_inbox
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: inbox
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_toggle_inbox
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: (
+        - text: members
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: member
+        - text: ' '
+        - text: list
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_toggle_members
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: (
+          - text: members
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: member
+          - text: ' '
+          - text: list
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_toggle_members
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: pick
+        - text: ' '
+        - text: emoji
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_emoji_picker
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: pick
+          - text: ' '
+          - text: emoji
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_emoji_picker
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: pick
+        - text: ' '
+        - text: (
+        - text: jif
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: gif
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: gift
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_gif_picker
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: pick
+          - text: ' '
+          - text: (
+          - text: jif
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: gif
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: gift
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_gif_picker
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Misc
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: mark
+        - text: ' '
+        - text: inbox
+        - text: ' '
+        - text: channel
+        - text: ' '
+        - text: read
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_mark_inbox_read
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: mark
+          - text: ' '
+          - text: inbox
+          - text: ' '
+          - text: channel
+          - text: ' '
+          - text: read
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_mark_inbox_read
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: toggle
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: mute
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: unmute
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_mute
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: toggle
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: mute
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: unmute
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_mute
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: toggle
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: deafen
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: undeafen
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_deafen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: toggle
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: deafen
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: undeafen
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_deafen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: answer
+        - text: ' '
+        - text: call
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_answer_call
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: answer
+          - text: ' '
+          - text: call
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_answer_call
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: decline
+        - text: ' '
+        - text: call
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.discord_decline_call
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: decline
+          - text: ' '
+          - text: call
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.discord_decline_call
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  app:                             discord
+  -
+  tag(): user.messaging
+  tag(): user.emoji
+
+  # Navigation: Channels
+  [channel] mentions last:         user.discord_mentions_last()
+  [channel] mentions next:         user.discord_mentions_next()
+  oldest unread:                   user.discord_oldest_unread()
+
+  # UI
+  toggle pins:                     user.discord_toggle_pins()
+  toggle inbox:                    user.discord_toggle_inbox()
+  toggle (members | member list):  user.discord_toggle_members()
+  pick emoji:                      user.discord_emoji_picker()
+  pick (jif | gif | gift):         user.discord_gif_picker()
+
+  # Misc
+  mark inbox channel read:         user.discord_mark_inbox_read()
+  [toggle] (mute | unmute):        user.discord_mute()
+  [toggle] (deafen | undeafen):    user.discord_deafen()
+  answer call:                     user.discord_answer_call()
+  decline call:                    user.discord_decline_call()

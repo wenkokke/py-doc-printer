@@ -1,0 +1,93 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: mac
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: iterm2
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: terminal
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'todo:'
+    - text: ' '
+    - text: filemanager
+    - text: ' '
+    - text: support
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.file_manager
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.generic_unix_shell
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.git
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.kubectl
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.tabs
+    - text: '
+
+        '
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  os: mac
+  app: iterm2
+  -
+  tag(): terminal
+  # todo: filemanager support
+  # tag(): user.file_manager
+  tag(): user.generic_unix_shell
+  tag(): user.git
+  tag(): user.kubectl
+  tag(): user.tabs

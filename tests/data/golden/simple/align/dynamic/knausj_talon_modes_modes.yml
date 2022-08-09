@@ -1,0 +1,132 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: not
+        - text: ' '
+        - text: mode
+        - text: ':'
+      - text: sleep
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: ^
+    - text: dictation
+    - text: ' '
+    - text: mode
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: mode.disable
+        - text: (
+        - doc:
+            text: sleep
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: mode.disable
+        - text: (
+        - doc:
+            text: command
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: mode.enable
+        - text: (
+        - doc:
+            text: dictation
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.code_clear_language_mode
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: mode.disable
+        - text: (
+        - doc:
+            text: user.gdb
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: ^
+    - text: command
+    - text: ' '
+    - text: mode
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: mode.disable
+        - text: (
+        - doc:
+            text: sleep
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: mode.disable
+        - text: (
+        - doc:
+            text: dictation
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: mode.enable
+        - text: (
+        - doc:
+            text: command
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  not mode: sleep
+  -
+  ^dictation mode$:
+      mode.disable("sleep")
+      mode.disable("command")
+      mode.enable("dictation")
+      user.code_clear_language_mode()
+      mode.disable("user.gdb")
+  ^command mode$:
+      mode.disable("sleep")
+      mode.disable("dictation")
+      mode.enable("command")

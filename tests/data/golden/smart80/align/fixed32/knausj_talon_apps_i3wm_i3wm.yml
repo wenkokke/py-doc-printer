@@ -1,0 +1,3216 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: 'NOTE:'
+    - text: ' '
+    - text: If
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: want
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: use
+    - text: ' '
+    - text: i3wm
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: must
+    - text: ' '
+    - text: enable
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: tag
+    - text: ' '
+    - text: settings.talon.
+    - text: ' '
+    - text: 'ex:'
+    - text: ' '
+    - text: '`tag():'
+    - text: ' '
+    - text: user.i3wm`
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.i3wm
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: port
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: port
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: port
+        - text: ' '
+        - text: ten
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '10'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: port
+          - text: ' '
+          - text: ten
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '10'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: port
+        - text: ' '
+        - text: flip
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: flipper
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: back_and_forth
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: port
+          - text: ' '
+          - text: flip
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: flipper
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: back_and_forth
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: port
+        - text: ' '
+        - text: right
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: next
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: port
+          - text: ' '
+          - text: right
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: next
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: port
+        - text: ' '
+        - text: left
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: prev
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: port
+          - text: ' '
+          - text: left
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: prev
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: left
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: left
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: left
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: left
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: right
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: right
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: right
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: right
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: up
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: up
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: up
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: up
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: down
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: down
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: down
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: down
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: kill
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: murder
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: kill
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: kill
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: murder
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: kill
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: stacking
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: stacking
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: stacking
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: stacking
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: default
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: toggle
+                - text: ' '
+                - text: split
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: default
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: toggle
+                - text: ' '
+                - text: split
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: tabbed
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: tabbed
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: tabbed
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: layout
+                - text: ' '
+                - text: tabbed
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: reload
+        - text: ' '
+        - text: i
+        - text: ' '
+        - text: three
+        - text: ' '
+        - text: config
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: reload
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: reload
+          - text: ' '
+          - text: i
+          - text: ' '
+          - text: three
+          - text: ' '
+          - text: config
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: reload
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: restart
+        - text: ' '
+        - text: i
+        - text: ' '
+        - text: three
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: restart
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: restart
+          - text: ' '
+          - text: i
+          - text: ' '
+          - text: three
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: restart
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: full
+        - text: ' '
+        - text: screen
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: scuba
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: fullscreen
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: full
+          - text: ' '
+          - text: screen
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: scuba
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: fullscreen
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: floating
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: floating
+                - text: ' '
+                - text: toggle
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: floating
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: floating
+                - text: ' '
+                - text: toggle
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: focus
+        - text: ' '
+        - text: floating
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: mode_toggle
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: focus
+          - text: ' '
+          - text: floating
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: mode_toggle
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: center
+        - text: ' '
+        - text: window
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: position
+                - text: ' '
+                - text: center
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: center
+          - text: ' '
+          - text: window
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: position
+                - text: ' '
+                - text: center
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: resize
+        - text: ' '
+        - text: mode
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: mode
+                - text: ' '
+                - text: '"resize"'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: resize
+          - text: ' '
+          - text: mode
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: mode
+                - text: ' '
+                - text: '"resize"'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: focus
+        - text: ' '
+        - text: parent
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: parent
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: focus
+          - text: ' '
+          - text: parent
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: parent
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: focus
+        - text: ' '
+        - text: child
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: child
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: focus
+          - text: ' '
+          - text: child
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: focus
+                - text: ' '
+                - text: child
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: resize
+    - text: ' '
+    - text: helpers
+    - text: '
+
+        '
+    - text: grow
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: mode
+            - text: ' '
+            - text: '"resize"'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: right:10
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: down:10
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: escape
+        - text: ' '
+        - text: resize
+        - text: ' '
+        - text: mode
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: escape
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: center
+        - text: ' '
+        - text: window
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 200ms
+        - text: )
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: move
+            - text: ' '
+            - text: position
+            - text: ' '
+            - text: center
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: resize
+    - text: ' '
+    - text: helpers
+    - text: '
+
+        '
+    - text: shrink
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: mode
+            - text: ' '
+            - text: '"resize"'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: left:10
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: up:10
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: escape
+        - text: ' '
+        - text: resize
+        - text: ' '
+        - text: mode
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: escape
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: center
+        - text: ' '
+        - text: window
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 200ms
+        - text: )
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: move
+            - text: ' '
+            - text: position
+            - text: ' '
+            - text: center
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: horizontal
+    - text: ' '
+    - text: (
+    - text: shell
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: terminal
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: split
+            - text: ' '
+            - text: h
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.i3wm_shell
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: vertical
+    - text: ' '
+    - text: (
+    - text: shell
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: terminal
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: split
+            - text: ' '
+            - text: v
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.i3wm_shell
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: just
+    - text: ' '
+    - text: replace
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: shuffle
+    - text: ' '
+    - text: eventually?
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: like
+    - text: ' '
+    - text: also
+    - text: ' '
+    - text: need
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: match
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: generic
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: commands
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: to
+        - text: ']'
+        - text: ' '
+        - text: port
+        - text: )
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: to
+          - text: ']'
+          - text: ' '
+          - text: port
+          - text: )
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: to
+        - text: ']'
+        - text: ' '
+        - text: port
+        - text: ' '
+        - text: ten
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '10'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: to
+          - text: ']'
+          - text: ' '
+          - text: port
+          - text: ' '
+          - text: ten
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: number
+                - text: ' '
+                - text: '10'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: to
+        - text: ']'
+        - text: ' '
+        - text: last
+        - text: ' '
+        - text: port
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: back_and_forth
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: to
+          - text: ']'
+          - text: ' '
+          - text: last
+          - text: ' '
+          - text: port
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: container
+                - text: ' '
+                - text: to
+                - text: ' '
+                - text: workspace
+                - text: ' '
+                - text: back_and_forth
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: left
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: left
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: left
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: left
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: right
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: right
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: right
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: right
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: up
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: up
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: up
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: up
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: shuffle
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: move
+        - text: ' '
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: down
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: down
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: shuffle
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: move
+          - text: ' '
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: down
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: down
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: horizontal
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: split
+                - text: ' '
+                - text: h
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: horizontal
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: split
+                - text: ' '
+                - text: h
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: win
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: window
+        - text: )
+        - text: ' '
+        - text: vertical
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: split
+                - text: ' '
+                - text: v
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: win
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: window
+          - text: )
+          - text: ' '
+          - text: vertical
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: split
+                - text: ' '
+                - text: v
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: make
+        - text: ' '
+        - text: scratch
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: scratchpad
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: make
+          - text: ' '
+          - text: scratch
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: move
+                - text: ' '
+                - text: scratchpad
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: (
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: hide
+        - text: )
+        - text: ']'
+        - text: ' '
+        - text: scratch
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: scratchpad
+                - text: ' '
+                - text: show
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: (
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: hide
+          - text: )
+          - text: ']'
+          - text: ' '
+          - text: scratch
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: i3-msg
+                - text: ' '
+                - text: scratchpad
+                - text: ' '
+                - text: show
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: next
+    - text: ' '
+    - text: scratch
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: scratchpad
+            - text: ' '
+            - text: show
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: scratchpad
+            - text: ' '
+            - text: show
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: rely
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: user
+    - text: ' '
+    - text: settings
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: mod
+    - text: ' '
+    - text: key.
+    - text: ' '
+    - text: see
+    - text: ' '
+    - text: i3wm.py
+    - text: ' '
+    - text: Actions
+    - text: ' '
+    - text: class
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: launch
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.i3wm_launch
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: launch
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.i3wm_launch
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: launch
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.i3wm_launch
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: '{'
+            - text: text
+            - text: '}'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: lock
+        - text: ' '
+        - text: screen
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.i3wm_launch
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: lock
+          - text: ' '
+          - text: screen
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.i3wm_launch
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: launch
+        - text: ' '
+        - text: shell
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: koopa
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.i3wm_shell
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: launch
+          - text: ' '
+          - text: shell
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: koopa
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.i3wm_shell
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: new
+    - text: ' '
+    - text: scratch
+    - text: ' '
+    - text: (
+    - text: shell
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: window
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.i3wm_shell
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 200ms
+        - text: )
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: move
+            - text: ' '
+            - text: scratchpad
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: user.system_command
+        - text: (
+        - doc:
+            docs:
+            - text: i3-msg
+            - text: ' '
+            - text: scratchpad
+            - text: ' '
+            - text: show
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  # NOTE: If you want to use i3wm you must enable the tag settings.talon. ex: `tag(): user.i3wm`
+  os:                              linux
+  tag:                             user.i3wm
+  -
+  port <number_small>:
+      user.system_command("i3-msg workspace number {number_small}")
+  port ten:
+      user.system_command("i3-msg workspace number 10")
+  (port flip | flipper):
+      user.system_command("i3-msg workspace back_and_forth")
+  port right:                      user.system_command("i3-msg workspace next")
+  port left:                       user.system_command("i3-msg workspace prev")
+
+  (win | window) left:             user.system_command("i3-msg focus left")
+  (win | window) right:            user.system_command("i3-msg focus right")
+  (win | window) up:               user.system_command("i3-msg focus up")
+  (win | window) down:             user.system_command("i3-msg focus down")
+  ((win | window) kill | murder):  user.system_command("i3-msg kill")
+  (win | window) stacking:         user.system_command("i3-msg layout stacking")
+  (win | window) default:
+      user.system_command("i3-msg layout toggle split")
+  (win | window) tabbed:           user.system_command("i3-msg layout tabbed")
+
+  reload i three config:           user.system_command("i3-msg reload")
+  restart i three:                 user.system_command("i3-msg restart")
+
+  (full screen | scuba):           user.system_command("i3-msg fullscreen")
+  toggle floating:                 user.system_command("i3-msg floating toggle")
+  focus floating:
+      user.system_command("i3-msg focus mode_toggle")
+  center window:
+      user.system_command("i3-msg move position center")
+  resize mode:                     user.system_command('i3-msg mode "resize"')
+  focus parent:                    user.system_command("i3-msg focus parent")
+  focus child:                     user.system_command("i3-msg focus child")
+
+  # resize helpers
+  grow window:
+      user.system_command('i3-msg mode "resize"')
+      key(right:10)
+      key(down:10)
+      # escape resize mode
+      key(escape)
+      # center window
+      sleep(200ms)
+      user.system_command("i3-msg move position center")
+
+  # resize helpers
+  shrink window:
+      user.system_command('i3-msg mode "resize"')
+      key(left:10)
+      key(up:10)
+      # escape resize mode
+      key(escape)
+      # center window
+      sleep(200ms)
+      user.system_command("i3-msg move position center")
+
+  horizontal (shell | terminal):
+      user.system_command("i3-msg split h")
+      user.i3wm_shell()
+
+  vertical (shell | terminal):
+      user.system_command("i3-msg split v")
+      user.i3wm_shell()
+
+  # XXX - just replace with shuffle eventually?
+  # XXX - like also need to match the generic talon commands
+  (shuffle | move (win | window) [to] port) <number_small>:
+      user.system_command("i3-msg move container to workspace number {number_small}")
+  (shuffle | move (win | window) [to] port ten):
+      user.system_command("i3-msg move container to workspace number 10")
+  (shuffle | move (win | window) [to] last port):
+      user.system_command("i3-msg move container to workspace back_and_forth")
+  (shuffle | move (win | window) left): user.system_command("i3-msg move left")
+  (shuffle | move (win | window) right): user.system_command("i3-msg move right")
+  (shuffle | move (win | window) up): user.system_command("i3-msg move up")
+  (shuffle | move (win | window) down): user.system_command("i3-msg move down")
+
+  (win | window) horizontal:       user.system_command("i3-msg split h")
+  (win | window) vertical:         user.system_command("i3-msg split v")
+
+  make scratch:                    user.system_command("i3-msg move scratchpad")
+  [(show | hide)] scratch:         user.system_command("i3-msg scratchpad show")
+  next scratch:
+      user.system_command("i3-msg scratchpad show")
+      user.system_command("i3-msg scratchpad show")
+
+  # these rely on the user settings for the mod key. see i3wm.py Actions class
+  launch:                          user.i3wm_launch()
+  launch <user.text>:
+      user.i3wm_launch()
+      sleep(100ms)
+      insert("{text}")
+  lock screen:                     user.i3wm_launch()
+
+  (launch shell | koopa):          user.i3wm_shell()
+
+  new scratch (shell | window):
+      user.i3wm_shell()
+      sleep(200ms)
+      user.system_command("i3-msg move scratchpad")
+      user.system_command("i3-msg scratchpad show")

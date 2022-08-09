@@ -1,0 +1,48 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: nautilus
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Set
+    - text: ' '
+    - text: tags
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.tabs
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.file_manager
+    - text: '
+
+        '
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  app: nautilus
+  -
+  # Set tags
+  tag(): user.tabs
+  tag(): user.file_manager

@@ -1,0 +1,594 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: command
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: dictation
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: vocab
+        - text: ' '
+        - text: '['
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ']'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: vocab
+          - text: ' '
+          - text: '['
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ']'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Automatically
+    - text: ' '
+    - text: adds
+    - text: ' '
+    - text: possessive
+    - text: ' '
+    - text: form
+    - text: ' '
+    - text: by
+    - text: ' '
+    - text: appending
+    - text: ' '
+    - text: '"''s".'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: name
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: vocab
+        - text: ' '
+        - text: '['
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ']'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: name
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: name
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: vocab
+          - text: ' '
+          - text: '['
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ']'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: name
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Automatically
+    - text: ' '
+    - text: adds
+    - text: ' '
+    - text: plural
+    - text: ' '
+    - text: form
+    - text: ' '
+    - text: by
+    - text: ' '
+    - text: simply
+    - text: ' '
+    - text: appending
+    - text: ' '
+    - text: '"s".'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: noun
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: vocab
+        - text: ' '
+        - text: '['
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ']'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: noun
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: noun
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: vocab
+          - text: ' '
+          - text: '['
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ']'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_vocabulary
+            - text: (
+            - text: phrase
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: noun
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: replacements
+        - text: ' '
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: replacements
+          - text: ' '
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Automatically
+    - text: ' '
+    - text: adds
+    - text: ' '
+    - text: possessive
+    - text: ' '
+    - text: form
+    - text: ' '
+    - text: by
+    - text: ' '
+    - text: appending
+    - text: ' '
+    - text: '"''s".'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: name
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: replacements
+        - text: ' '
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: ','
+            - text: ' '
+            - doc:
+                text: name
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: name
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: replacements
+          - text: ' '
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: ','
+            - text: ' '
+            - doc:
+                text: name
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Automatically
+    - text: ' '
+    - text: adds
+    - text: ' '
+    - text: plural
+    - text: ' '
+    - text: form
+    - text: ' '
+    - text: by
+    - text: ' '
+    - text: simply
+    - text: ' '
+    - text: appending
+    - text: ' '
+    - text: '"s".'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: copy
+        - text: ' '
+        - text: noun
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: replacements
+        - text: ' '
+        - text: as
+        - text: ' '
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: ','
+            - text: ' '
+            - doc:
+                text: noun
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: copy
+          - text: ' '
+          - text: noun
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: replacements
+          - text: ' '
+          - text: as
+          - text: ' '
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.add_selection_to_words_to_replace
+            - text: (
+            - text: phrase
+            - text: ','
+            - text: ' '
+            - doc:
+                text: noun
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  mode: command
+  mode: dictation
+  -
+  copy to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "")
+  # Automatically adds possessive form by appending "'s".
+  copy name to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "", "name")
+  # Automatically adds plural form by simply appending "s".
+  copy noun to vocab [as <phrase>]$: user.add_selection_to_vocabulary(phrase or "", "noun")
+  copy to replacements as <phrase>$: user.add_selection_to_words_to_replace(phrase)
+  # Automatically adds possessive form by appending "'s".
+  copy name to replacements as <phrase>$: user.add_selection_to_words_to_replace(phrase, "name")
+  # Automatically adds plural form by simply appending "s".
+  copy noun to replacements as <phrase>$: user.add_selection_to_words_to_replace(phrase, "noun")

@@ -1,0 +1,1604 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_math
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: math
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: minus
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: subtract
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_subtraction
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: (
+              - text: minus
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: subtract
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_subtraction
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: plus
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_addition
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: (
+              - text: plus
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: add
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_addition
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: times
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: multiply
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_multiplication
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: (
+              - text: times
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: multiply
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_multiplication
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: divide
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_division
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: divide
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_division
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: mod
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_modulo
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: mod
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_modulo
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: (
+            - text: power
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: exponent
+            - text: )
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: power
+            - text: ' '
+            - text: '['
+            - text: of
+            - text: ']'
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_exponent
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: (
+              - text: power
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: exponent
+              - text: )
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: to
+              - text: ' '
+              - text: the
+              - text: ' '
+              - text: power
+              - text: ' '
+              - text: '['
+              - text: of
+              - text: ']'
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_exponent
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: minus
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: subtract
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_subtraction
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: plus
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: add
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_addition
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: (
+            - text: times
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: multiply
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_multiplication
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: divide
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_division
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: mod
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_modulo
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: (
+            - text: power
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: exponent
+            - text: )
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: to
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: power
+            - text: ' '
+            - text: '['
+            - text: of
+            - text: ']'
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_exponent
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: comparison
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: equal
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_equal
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: equal
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_equal
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: not
+            - text: ' '
+            - text: equal
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_not_equal
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: not
+              - text: ' '
+              - text: equal
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_not_equal
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: (
+            - text: greater
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: more
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_greater_than
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: (
+              - text: greater
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: more
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_greater_than
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: (
+            - text: less
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: below
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_less_than
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: (
+              - text: less
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: below
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: than
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_less_than
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: greater
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ' '
+            - text: or
+            - text: ' '
+            - text: equal
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_greater_than_or_equal_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: greater
+              - text: ' '
+              - text: '['
+              - text: than
+              - text: ']'
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: equal
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_greater_than_or_equal_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: less
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ' '
+            - text: or
+            - text: ' '
+            - text: equal
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_less_than_or_equal_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: less
+              - text: ' '
+              - text: '['
+              - text: than
+              - text: ']'
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: equal
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_less_than_or_equal_to
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: equal
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_equal
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: not
+            - text: ' '
+            - text: equal
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_not_equal
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: (
+            - text: greater
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: more
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_greater_than
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: (
+            - text: less
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: below
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_less_than
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: greater
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ' '
+            - text: or
+            - text: ' '
+            - text: equal
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_greater_than_or_equal_to
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: less
+            - text: ' '
+            - text: '['
+            - text: than
+            - text: ']'
+            - text: ' '
+            - text: or
+            - text: ' '
+            - text: equal
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_less_than_or_equal_to
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: logical
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: logical
+            - text: )
+            - text: ' '
+            - text: and
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_and
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: logical
+              - text: )
+              - text: ' '
+              - text: and
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_and
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: logical
+            - text: )
+            - text: ' '
+            - text: or
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_or
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: logical
+              - text: )
+              - text: ' '
+              - text: or
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_or
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: logical
+            - text: )
+            - text: ' '
+            - text: and
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_and
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: logical
+            - text: )
+            - text: ' '
+            - text: or
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_or
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: set
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: in
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_in
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: in
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_in
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: not
+            - text: ' '
+            - text: in
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_not_in
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: op
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: is
+              - text: )
+              - text: ' '
+              - text: not
+              - text: ' '
+              - text: in
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_not_in
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: in
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_in
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: op
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: is
+            - text: )
+            - text: ' '
+            - text: not
+            - text: ' '
+            - text: in
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_not_in
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'TODO:'
+    - text: ' '
+    - text: This
+    - text: ' '
+    - text: operator
+    - text: ' '
+    - text: should
+    - text: ' '
+    - text: either
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: abstracted
+    - text: ' '
+    - text: into
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: function
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: removed.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: pad
+        - text: )
+        - text: ' '
+        - text: colon
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: ':'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: pad
+          - text: )
+          - text: ' '
+          - text: colon
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: ':'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.code_operators_math
+  -
+  # math operators
+  op (minus | subtract):                       user.code_operator_subtraction()
+  op (plus | add):                             user.code_operator_addition()
+  op (times | multiply):                       user.code_operator_multiplication()
+  op divide:                                   user.code_operator_division()
+  op mod:                                      user.code_operator_modulo()
+  (op (power | exponent) | to the power [of]): user.code_operator_exponent()
+
+  # comparison operators
+  (op | is) equal:                   user.code_operator_equal()
+  (op | is) not equal:               user.code_operator_not_equal()
+  (op | is) (greater | more):        user.code_operator_greater_than()
+  (op | is) (less | below) [than]:   user.code_operator_less_than()
+  (op | is) greater [than] or equal: user.code_operator_greater_than_or_equal_to()
+  (op | is) less [than] or equal:    user.code_operator_less_than_or_equal_to()
+
+  # logical operators
+  (op | logical) and: user.code_operator_and()
+  (op | logical) or:  user.code_operator_or()
+
+  # set operators
+  (op | is) in:     user.code_operator_in()
+  (op | is) not in: user.code_operator_not_in()
+
+  # TODO: This operator should either be abstracted into a function or removed.
+  (op | pad) colon: " : "

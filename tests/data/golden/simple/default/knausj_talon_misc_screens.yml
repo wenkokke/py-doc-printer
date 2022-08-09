@@ -1,0 +1,55 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: screen
+        - text: ' '
+        - text: numbers
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.screens_show_numbering
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: screen
+          - text: ' '
+          - text: numbers
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.screens_show_numbering
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  -
+  screen numbers:
+      user.screens_show_numbering()

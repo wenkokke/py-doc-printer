@@ -1,0 +1,861 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: provide
+    - text: ' '
+    - text: both
+    - text: ' '
+    - text: anchored
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: unachored
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: via
+    - text: ' '
+    - text: '''over'''
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: phrase
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_with_history
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: phrase
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_with_history
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: phrase
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ' '
+        - text: over
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_with_history
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: phrase
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ' '
+          - text: over
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_with_history
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '{'
+        - text: user.prose_formatter
+        - text: '}'
+        - text: ' '
+        - text: <
+        - text: user.prose
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_formatted
+            - text: (
+            - text: prose
+            - text: ','
+            - text: ' '
+            - text: prose_formatter
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '{'
+          - text: user.prose_formatter
+          - text: '}'
+          - text: ' '
+          - text: <
+          - text: user.prose
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_formatted
+            - text: (
+            - text: prose
+            - text: ','
+            - text: ' '
+            - text: prose_formatter
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '{'
+        - text: user.prose_formatter
+        - text: '}'
+        - text: ' '
+        - text: <
+        - text: user.prose
+        - text: '>'
+        - text: ' '
+        - text: over
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_formatted
+            - text: (
+            - text: prose
+            - text: ','
+            - text: ' '
+            - text: prose_formatter
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '{'
+          - text: user.prose_formatter
+          - text: '}'
+          - text: ' '
+          - text: <
+          - text: user.prose
+          - text: '>'
+          - text: ' '
+          - text: over
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_formatted
+            - text: (
+            - text: prose
+            - text: ','
+            - text: ' '
+            - text: prose_formatter
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: <
+        - text: user.format_text
+        - text: '>'
+        - text: +
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_many
+            - text: (
+            - text: format_text_list
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: user.format_text
+          - text: '>'
+          - text: +
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_many
+            - text: (
+            - text: format_text_list
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: <
+        - text: user.format_text
+        - text: '>'
+        - text: +
+        - text: ' '
+        - text: over
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_many
+            - text: (
+            - text: format_text_list
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: user.format_text
+          - text: '>'
+          - text: +
+          - text: ' '
+          - text: over
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_many
+            - text: (
+            - text: format_text_list
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: <
+        - text: user.formatters
+        - text: '>'
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.formatters_reformat_selection
+            - text: (
+            - text: user.formatters
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: user.formatters
+          - text: '>'
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.formatters_reformat_selection
+            - text: (
+            - text: user.formatters
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: word
+        - text: ' '
+        - text: <
+        - text: user.word
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_with_history
+            - text: (
+            - text: user.word
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: word
+          - text: ' '
+          - text: <
+          - text: user.word
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_with_history
+            - text: (
+            - text: user.word
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: recent
+        - text: ' '
+        - text: list
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.toggle_phrase_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: recent
+          - text: ' '
+          - text: list
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.toggle_phrase_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: recent
+        - text: ' '
+        - text: close
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.phrase_history_hide
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: recent
+          - text: ' '
+          - text: close
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.phrase_history_hide
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: recent
+        - text: ' '
+        - text: repeat
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_with_history
+            - text: (
+            - text: user.get_recent_phrase
+            - text: (
+            - text: number_small
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: recent
+          - text: ' '
+          - text: repeat
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_with_history
+            - text: (
+            - text: user.get_recent_phrase
+            - text: (
+            - text: number_small
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: recent
+        - text: ' '
+        - text: copy
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: clip.set_text
+            - text: (
+            - text: user.get_recent_phrase
+            - text: (
+            - text: number_small
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: recent
+          - text: ' '
+          - text: copy
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: clip.set_text
+            - text: (
+            - text: user.get_recent_phrase
+            - text: (
+            - text: number_small
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: before
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.before_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: before
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.before_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: nope
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: scratch
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.clear_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: nope
+          - text: ' '
+          - text: that
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: scratch
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.clear_last_phrase
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: nope
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: was
+        - text: ' '
+        - text: <
+        - text: user.formatters
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.formatters_reformat_last
+            - text: (
+            - text: formatters
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: nope
+          - text: ' '
+          - text: that
+          - text: ' '
+          - text: was
+          - text: ' '
+          - text: <
+          - text: user.formatters
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.formatters_reformat_last
+            - text: (
+            - text: formatters
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  -
+  # provide both anchored and unachored commands via 'over'
+  phrase <user.text>$:
+      user.insert_with_history(text)
+  phrase <user.text> over:
+      user.insert_with_history(text)
+  {user.prose_formatter} <user.prose>$:
+      user.insert_formatted(prose, prose_formatter)
+  {user.prose_formatter} <user.prose> over:
+      user.insert_formatted(prose, prose_formatter)
+  <user.format_text>+$:
+      user.insert_many(format_text_list)
+  <user.format_text>+ over:
+      user.insert_many(format_text_list)
+  <user.formatters> that:
+      user.formatters_reformat_selection(user.formatters)
+  word <user.word>:
+      user.insert_with_history(user.word)
+  recent list:
+      user.toggle_phrase_history()
+  recent close:
+      user.phrase_history_hide()
+  recent repeat <number_small>:
+      user.insert_with_history(user.get_recent_phrase(number_small))
+  recent copy <number_small>:
+      clip.set_text(user.get_recent_phrase(number_small))
+  select that:
+      user.select_last_phrase()
+  before that:
+      user.before_last_phrase()
+  nope that | scratch that:
+      user.clear_last_phrase()
+  nope that was <user.formatters>:
+      user.formatters_reformat_last(formatters)

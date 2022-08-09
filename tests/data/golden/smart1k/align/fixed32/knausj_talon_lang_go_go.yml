@@ -1,0 +1,3988 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.go
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: variadic
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: '...'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: variadic
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: '...'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: logical
+        - text: ' '
+        - text: and
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: '&&'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: logical
+          - text: ' '
+          - text: and
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: '&&'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: logical
+        - text: ' '
+        - text: or
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: '||'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: logical
+          - text: ' '
+          - text: or
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: '||'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Many
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: add
+    - text: ' '
+    - text: extra
+    - text: ' '
+    - text: terrible
+    - text: ' '
+    - text: spacing
+    - text: ' '
+    - text: under
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: assumption
+    - text: ' '
+    - text: that
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: gofmt/goimports
+    - text: ' '
+    - text: will
+    - text: ' '
+    - text: erase
+    - text: ' '
+    - text: it.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: comment
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: //
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: comment
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: //
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '['
+    - text: line
+    - text: ']'
+    - text: ' '
+    - text: comment
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"cmd-right"'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: //
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: sentence
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '"add'
+    - text: ' '
+    - text: comment
+    - text: ' '
+    - text: <user.text>
+    - text: ' '
+    - text: '[over]:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: key("cmd-right")
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: text_with_leading("
+    - text: ' '
+    - text: //
+    - text: ' '
+    - text: '")'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ']'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '"[state]'
+    - text: ' '
+    - text: 'context:'
+    - text: ' '
+    - text: insert("ctx")
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: (
+        - text: funk
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: func
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: fun
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: func
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: (
+          - text: funk
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: func
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: fun
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: func
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: function
+        - text: ' '
+        - text: (
+        - text: Annette
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: init
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: over
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: func
+                - text: ' '
+                - text: init()
+                - text: ' '
+                - text: '{'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: function
+          - text: ' '
+          - text: (
+          - text: Annette
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: init
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: over
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: func
+                - text: ' '
+                - text: init()
+                - text: ' '
+                - text: '{'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: function
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: func
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: (
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: method
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: meth
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: var
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: var
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: var
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: var
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: variable
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: var
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: insert("
+        - text: ' '
+        - text: '")'
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: of
+    - text: ' '
+    - text: type
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '"set'
+    - text: ' '
+    - text: <user.text>
+    - text: ' '
+    - text: '[over]:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: insert(user.formatted_text(text,
+    - text: ' '
+    - text: '"PRIVATE_CAMEL_CASE"))'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: insert("
+    - text: ' '
+    - text: :=
+    - text: ' '
+    - text: '")'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: sleep(100ms)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ']'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: break
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: break
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: break
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: break
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: (
+        - text: chan
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: channel
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: chan
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: (
+          - text: chan
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: channel
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: chan
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: go
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: go
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: go
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: go
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: if
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: if
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: if
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: if
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: if
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: if
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: spawn
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: go
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: else
+        - text: ' '
+        - text: if
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: else
+                - text: ' '
+                - text: if
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: else
+          - text: ' '
+          - text: if
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: else
+                - text: ' '
+                - text: if
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: else
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: else
+            - text: ' '
+            - text: if
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: else
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: else
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: else
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: else
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: else
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: else
+            - text: ' '
+            - text: '{'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"enter"'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: while
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: while
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: while
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: while
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: while
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: while
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: for
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: for
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: for
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: for
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: for
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: for
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: for
+        - text: ' '
+        - text: range
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: forr
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: for
+          - text: ' '
+          - text: range
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: forr
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: range
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: forr
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: format
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: fmt
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: format
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: fmt
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: format
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: fmt.
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: switch
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: switch
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: switch
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: switch
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: switch
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: switch
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: select
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: select
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: select
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: select
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: '"select'
+    - text: ' '
+    - text: <user.text>:insert("select
+    - text: ' '
+    - text: '"),'
+    - text: ' '
+    - text: insert(user.formatted_text(text,
+    - text: ' '
+    - text: '"PRIVATE_CAMEL_CASE")]'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: (
+        - text: const
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: constant
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: const
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: (
+          - text: const
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: constant
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: const
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: constant
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: const
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: case
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: case
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: case
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: case
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: default
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'default:'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: default
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'default:'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: case
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: case
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: type
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: type
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: type
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: type
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: type
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: type
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: 'true'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'true'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: 'true'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'true'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: 'false'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'false'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: 'false'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: 'false'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: state
+    - text: ' '
+    - text: (
+    - text: start
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: struct
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: struck
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: struct
+            - text: ' '
+            - text: '{'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"enter"'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: (
+    - text: struct
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: struck
+    - text: )
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: struct
+            - text: ' '
+            - text: '{'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"enter"'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: '['
+        - text: state
+        - text: ']'
+        - text: ' '
+        - text: empty
+        - text: ' '
+        - text: interface
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: interface
+                - text: '{'
+                - text: '}'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: state
+          - text: ']'
+          - text: ' '
+          - text: empty
+          - text: ' '
+          - text: interface
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: interface
+                - text: '{'
+                - text: '}'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: state
+    - text: ' '
+    - text: interface
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: interface
+            - text: ' '
+            - text: '{'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"enter"'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: interface
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: interface
+            - text: ' '
+            - text: '{'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"enter"'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: string
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: string
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: string
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: string
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: state
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: int
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: integer
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: ant
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: int
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: state
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: int
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: integer
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: ant
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: int
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: slice
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: '[]'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: slice
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: '[]'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: slice
+        - text: ' '
+        - text: of
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: '[]'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: slice
+          - text: ' '
+          - text: of
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: '[]'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: state
+        - text: ']'
+        - text: ' '
+        - text: (
+        - text: 'no'
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: nil
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: nil
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: state
+          - text: ']'
+          - text: ' '
+          - text: (
+          - text: 'no'
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: nil
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: nil
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: (
+        - text: int
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: integer
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: ant
+        - text: )
+        - text: ' '
+        - text: sixty
+        - text: ' '
+        - text: four
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: int64
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: (
+          - text: int
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: integer
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: ant
+          - text: )
+          - text: ' '
+          - text: sixty
+          - text: ' '
+          - text: four
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: int64
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: tag
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_between
+            - text: (
+            - doc:
+                docs:
+                - text: ' '
+                - text: '`'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: '`'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: tag
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_between
+            - text: (
+            - doc:
+                docs:
+                - text: ' '
+                - text: '`'
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: '`'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: field
+    - text: ' '
+    - text: tag
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.insert_between
+        - text: (
+        - doc:
+            docs:
+            - text: ' '
+            - text: '`'
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - doc:
+            text: '`'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: snake
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: return
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: return
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: return
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: return
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: return
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: return
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: map
+        - text: ' '
+        - text: of
+        - text: ' '
+        - text: string
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: string
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: map[string]string
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: map
+          - text: ' '
+          - text: of
+          - text: ' '
+          - text: string
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: string
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: map[string]string
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: map
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: map[
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"right"'
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: receive
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: <-
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: receive
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: <-
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: make
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: make(
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: make
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: make(
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: loggers
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: logrus.
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PUBLIC_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: length
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: len(
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: append
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: append(
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: state
+        - text: ' '
+        - text: (
+        - text: air
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: err
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                text: err
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: state
+          - text: ' '
+          - text: (
+          - text: air
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: err
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                text: err
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: error
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: ' '
+                - text: err
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: error
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: ' '
+                - text: err
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: loop
+    - text: ' '
+    - text: over
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: forr
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: item
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ','
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: value
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ':'
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: address
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: '&'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: pointer
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            text: '*'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: swipe
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"right"'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: ','
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: text
+        - text: ','
+        - text: ' '
+        - doc:
+            text: PRIVATE_CAMEL_CASE
+          function: _smart_quote
+        - text: )
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             user.go
+  -
+  variadic:                        "..."
+  logical and:                     " && "
+  logical or:                      " || "
+  # Many of these add extra terrible spacing under the assumption that
+  # gofmt/goimports will erase it.
+  state comment:                   "// "
+  [line] comment <user.text>:
+      key("cmd-right")
+      insert(" // ")
+      insert(user.formatted_text(text, "sentence"))
+
+  # "add comment <user.text> [over]:
+  #     key("cmd-right")
+  #     text_with_leading(" // ")
+  # ]
+  # "[state] context: insert("ctx")
+  state (funk | func | fun):       "func "
+  function (Annette | init) [over]: "func init() {\n"
+  function <user.text> [over]:
+      insert("func ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+      insert("(")
+      sleep(100ms)
+
+  method <user.text> [over]:
+      insert("meth ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+      sleep(100ms)
+
+  state var:                       "var "
+  variable [<user.text>] [over]:
+      insert("var ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+      # insert(" ")
+      sleep(100ms)
+
+  of type [<user.text>] [over]:
+      insert(" ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  # "set <user.text> [over]:
+  #     insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+  #     insert(" := ")
+  #     sleep(100ms)
+  # ]
+  state break:                     "break"
+  state (chan | channel):          " chan "
+  state go:                        "go "
+  state if:                        "if "
+  if <user.text> [over]:
+      insert("if ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+  spawn <user.text> [over]:
+      insert("go ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+  state else if:                   " else if "
+  else if <user.text> [over]:
+      insert(" else if ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state else:                      " else "
+  else <user.text> [over]:
+      insert(" else {")
+      key("enter")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state while:                     "while "
+  while <user.text> [over]:
+      insert("while ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state for:                       "for "
+  for <user.text> [over]:
+      insert("for ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state for range:                 "forr "
+  range <user.text> [over]:
+      insert("forr ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state format:                    "fmt"
+  format <user.text> [over]:
+      insert("fmt.")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+
+  state switch:                    "switch "
+  switch <user.text> [over]:
+      insert("switch ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state select:                    "select "
+  # "select <user.text>:insert("select "), insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE")]
+  state (const | constant):        " const "
+  constant <user.text> [over]:
+      insert("const ")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+
+  state case:                      " case "
+  state default:                   " default:"
+  case <user.text> [over]:
+      insert("case ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state type:                      " type "
+  type <user.text> [over]:
+      insert("type ")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+  state true:                      " true "
+  state false:                     " false "
+  state (start | struct | struck):
+      insert(" struct {")
+      key("enter")
+  (struct | struck) <user.text> [over]:
+      insert(" struct {")
+      key("enter")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+
+  [state] empty interface:         " interface{} "
+  state interface:
+      insert(" interface {")
+      key("enter")
+  interface <user.text> [over]:
+      insert(" interface {")
+      key("enter")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+
+  state string:                    " string "
+  [state] (int | integer | ant):   "int"
+  state slice:                     " []"
+  slice of:                        "[]"
+  [state] (no | nil):              "nil"
+  state (int | integer | ant) sixty four: " int64 "
+  state tag:                       user.insert_between(" `", "`")
+  field tag <user.text> [over]:
+      user.insert_between(" `", "`")
+      sleep(100ms)
+      insert(user.formatted_text(text, "snake"))
+      insert(" ")
+      sleep(100ms)
+
+  state return:                    " return "
+  return <user.text> [over]:
+      insert("return ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  map of string to string:         " map[string]string "
+  map of <user.text> [over]:
+      insert("map[")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+      key("right")
+      sleep(100ms)
+
+  receive:                         " <- "
+  make:                            "make("
+  loggers [<user.text>] [over]:
+      insert("logrus.")
+      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
+
+  length <user.text> [over]:
+      insert("len(")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  append <user.text> [over]:
+      insert("append(")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  state (air | err):               "err"
+  error:                           " err "
+  loop over [<user.text>] [over]:
+      insert("forr ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  item <user.text> [over]:
+      insert(", ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  value <user.text> [over]:
+      insert(": ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  address of [<user.text>] [over]:
+      insert("&")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  pointer to [<user.text>] [over]:
+      insert("*")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+  swipe [<user.text>] [over]:
+      key("right")
+      insert(", ")
+      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))

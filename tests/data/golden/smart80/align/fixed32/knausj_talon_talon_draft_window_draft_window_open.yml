@@ -1,0 +1,187 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: These
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: available
+    - text: ' '
+    - text: when
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: draft
+    - text: ' '
+    - text: window
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: open,
+    - text: ' '
+    - text: but
+    - text: ' '
+    - text: not
+    - text: ' '
+    - text: necessarily
+    - text: ' '
+    - text: focussed
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.draft_window_showing
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: draft
+        - text: ' '
+        - text: hide
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.draft_hide
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: draft
+          - text: ' '
+          - text: hide
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.draft_hide
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: draft
+    - text: ' '
+    - text: submit
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: content
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: user.draft_get_text
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.draft_hide
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: content
+        - text: )
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: user.paste
+        - text: ' '
+        - text: may
+        - text: ' '
+        - text: be
+        - text: ' '
+        - text: somewhat
+        - text: ' '
+        - text: faster,
+        - text: ' '
+        - text: but
+        - text: ' '
+        - text: seems
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: be
+        - text: ' '
+        - text: unreliable
+        - text: ' '
+        - text: 'on'
+        - text: ' '
+        - text: MacOSX,
+        - text: ' '
+        - text: see
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: https://github.com/talonvoice/talon/issues/254#issuecomment-789355238
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: user.paste(content)
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  # These are available when the draft window is open, but not necessarily focussed
+  tag:                             user.draft_window_showing
+  -
+  draft hide:                      user.draft_hide()
+
+  draft submit:
+      content = user.draft_get_text()
+      user.draft_hide()
+      insert(content)
+      # user.paste may be somewhat faster, but seems to be unreliable on MacOSX, see
+      # https://github.com/talonvoice/talon/issues/254#issuecomment-789355238
+      # user.paste(content)

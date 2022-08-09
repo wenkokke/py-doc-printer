@@ -1,0 +1,689 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.tmux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: mux
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: mux
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: session
+    - text: ' '
+    - text: management
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: mux
+        - text: ' '
+        - text: new
+        - text: ' '
+        - text: session
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+                - text: new
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: mux
+          - text: ' '
+          - text: new
+          - text: ' '
+          - text: session
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+                - text: new
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: mux
+    - text: ' '
+    - text: sessions
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: s
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: name
+    - text: ' '
+    - text: session
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: $
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: mux
+        - text: ' '
+        - text: kill
+        - text: ' '
+        - text: session
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+                - text: kill-session
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: mux
+          - text: ' '
+          - text: kill
+          - text: ' '
+          - text: session
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: tmux
+                - text: ' '
+                - text: kill-session
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: window
+    - text: ' '
+    - text: management
+    - text: '
+
+        '
+    - text: mux
+    - text: ' '
+    - text: new
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: c
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: window
+    - text: ' '
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '''{number}'''
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: previous
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: p
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: n
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: rename
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ','
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: close
+    - text: ' '
+    - text: window
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '&'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '#'
+    - text: ' '
+    - text: pane
+    - text: ' '
+    - text: management
+    - text: '
+
+        '
+    - text: mux
+    - text: ' '
+    - text: split
+    - text: ' '
+    - text: horizontal
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '%'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: split
+    - text: ' '
+    - text: vertical
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '"'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: pane
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: o
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: move
+    - text: ' '
+    - text: <
+    - text: user.arrow_key
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: arrow_key
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: mux
+    - text: ' '
+    - text: close
+    - text: ' '
+    - text: pane
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: x
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '#'
+    - text: ' '
+    - text: Say
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: number
+    - text: ' '
+    - text: right
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: command,
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: switch
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: pane
+    - text: '
+
+        '
+    - text: mux
+    - text: ' '
+    - text: pane
+    - text: ' '
+    - text: numbers
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-b
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: q
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  os:                              linux
+  tag:                             user.tmux
+  -
+  mux:                             "tmux "
+
+  # session management
+  mux new session:                 insert("tmux new ")
+  mux sessions:
+      key(ctrl-b)
+      key(s)
+  mux name session:
+      key(ctrl-b)
+      key($)
+  mux kill session:                insert("tmux kill-session -t ")
+  # window management
+  mux new window:
+      key(ctrl-b)
+      key(c)
+  mux window <number>:
+      key(ctrl-b)
+      key('{number}')
+  mux previous window:
+      key(ctrl-b)
+      key(p)
+  mux next window:
+      key(ctrl-b)
+      key(n)
+  mux rename window:
+      key(ctrl-b)
+      key(,)
+  mux close window:
+      key(ctrl-b)
+      key(&)
+  # pane management
+  mux split horizontal:
+      key(ctrl-b)
+      key(%)
+  mux split vertical:
+      key(ctrl-b)
+      key(")
+  mux next pane:
+      key(ctrl-b)
+      key(o)
+  mux move <user.arrow_key>:
+      key(ctrl-b)
+      key(arrow_key)
+  mux close pane:
+      key(ctrl-b)
+      key(x)
+  # Say a number right after this command, to switch to pane
+  mux pane numbers:
+      key(ctrl-b)
+      key(q)

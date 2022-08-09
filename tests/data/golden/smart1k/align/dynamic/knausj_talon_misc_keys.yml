@@ -1,0 +1,723 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: <
+            - text: user.arrow_keys
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.move_cursor
+                - text: (
+                - text: arrow_keys
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: go
+              - text: ' '
+              - text: <
+              - text: user.arrow_keys
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.move_cursor
+                - text: (
+                - text: arrow_keys
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: <
+            - text: user.letter
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: letter
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.letter
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: letter
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: ship
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: uppercase
+            - text: )
+            - text: ' '
+            - text: <
+            - text: user.letters
+            - text: '>'
+            - text: ' '
+            - text: '['
+            - text: (
+            - text: lowercase
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: sunk
+            - text: )
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.insert_formatted
+                - text: (
+                - text: letters
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ALL_CAPS
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: ship
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: uppercase
+              - text: )
+              - text: ' '
+              - text: <
+              - text: user.letters
+              - text: '>'
+              - text: ' '
+              - text: '['
+              - text: (
+              - text: lowercase
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: sunk
+              - text: )
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.insert_formatted
+                - text: (
+                - text: letters
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: ALL_CAPS
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: <
+            - text: user.symbol_key
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: symbol_key
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.symbol_key
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: symbol_key
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: <
+            - text: user.function_key
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: function_key
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.function_key
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: function_key
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: <
+            - text: user.special_key
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: special_key
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.special_key
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: special_key
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: <
+            - text: user.modifiers
+            - text: '>'
+            - text: ' '
+            - text: <
+            - text: user.unmodified_key
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: '"{modifiers}-{unmodified_key}"'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.modifiers
+              - text: '>'
+              - text: ' '
+              - text: <
+              - text: user.unmodified_key
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: '"{modifiers}-{unmodified_key}"'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: <
+            - text: user.arrow_keys
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.move_cursor
+              - text: (
+              - text: arrow_keys
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: <
+            - text: user.letter
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: letter
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: ship
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: uppercase
+            - text: )
+            - text: ' '
+            - text: <
+            - text: user.letters
+            - text: '>'
+            - text: ' '
+            - text: '['
+            - text: (
+            - text: lowercase
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: sunk
+            - text: )
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.insert_formatted
+              - text: (
+              - text: letters
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: ALL_CAPS
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: <
+            - text: user.symbol_key
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: symbol_key
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: <
+            - text: user.function_key
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: function_key
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: <
+            - text: user.special_key
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: special_key
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: <
+            - text: user.modifiers
+            - text: '>'
+            - text: ' '
+            - text: <
+            - text: user.unmodified_key
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: '"{modifiers}-{unmodified_key}"'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '#'
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: key
+    - text: ' '
+    - text: combos
+    - text: ' '
+    - text: consisting
+    - text: ' '
+    - text: only
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: modifiers,
+    - text: ' '
+    - text: eg.
+    - text: ' '
+    - text: '`press'
+    - text: ' '
+    - text: super`.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: press
+        - text: ' '
+        - text: <
+        - text: user.modifiers
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: modifiers
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: press
+          - text: ' '
+          - text: <
+          - text: user.modifiers
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: modifiers
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: consistency
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: dictation
+    - text: ' '
+    - text: mode
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: explicit
+    - text: ' '
+    - text: arrow
+    - text: ' '
+    - text: keys
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: need
+    - text: ' '
+    - text: them.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: press
+        - text: ' '
+        - text: <
+        - text: user.keys
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: keys
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: press
+          - text: ' '
+          - text: <
+          - text: user.keys
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: keys
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  go <user.arrow_keys>:                                   user.move_cursor(arrow_keys)
+  <user.letter>:                                          key(letter)
+  (ship | uppercase) <user.letters> [(lowercase | sunk)]: user.insert_formatted(letters, "ALL_CAPS")
+  <user.symbol_key>:                                      key(symbol_key)
+  <user.function_key>:                                    key(function_key)
+  <user.special_key>:                                     key(special_key)
+  <user.modifiers> <user.unmodified_key>:                 key("{modifiers}-{unmodified_key}")
+  # for key combos consisting only of modifiers, eg. `press super`.
+  press <user.modifiers>: key(modifiers)
+  # for consistency with dictation mode and explicit arrow keys if you need them.
+  press <user.keys>: key(keys)

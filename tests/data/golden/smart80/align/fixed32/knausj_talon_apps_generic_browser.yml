@@ -1,0 +1,1632 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: browser
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: address
+        - text: ' '
+        - text: bar
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: go
+        - text: ' '
+        - text: address
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: go
+        - text: ' '
+        - text: url
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.focus_address
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: address
+          - text: ' '
+          - text: bar
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: go
+          - text: ' '
+          - text: address
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: go
+          - text: ' '
+          - text: url
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.focus_address
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: address
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: url
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: address
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: url
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: browser.focus_address
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 50ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.copy
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: home
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.go_home
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: home
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.go_home
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: go
+        - text: ']'
+        - text: ' '
+        - text: forward
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.go_forward
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: go
+          - text: ']'
+          - text: ' '
+          - text: forward
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.go_forward
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: (
+        - text: back
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: backward
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.go_back
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: (
+          - text: back
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: backward
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.go_back
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: '{'
+        - text: user.website
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.go
+            - text: (
+            - text: website
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: to
+          - text: ' '
+          - text: '{'
+          - text: user.website
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.go
+            - text: (
+            - text: website
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: private
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.open_private_window
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: private
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.open_private_window
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: bookmark
+        - text: ' '
+        - text: it
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.bookmark
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: bookmark
+          - text: ' '
+          - text: it
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.bookmark
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: bookmark
+        - text: ' '
+        - text: tabs
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.bookmark_tabs
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: bookmark
+          - text: ' '
+          - text: tabs
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.bookmark_tabs
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: refresh
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: reload
+        - text: )
+        - text: ' '
+        - text: it
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.reload
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: refresh
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: reload
+          - text: )
+          - text: ' '
+          - text: it
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.reload
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: refresh
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: reload
+        - text: )
+        - text: ' '
+        - text: it
+        - text: ' '
+        - text: hard
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.reload_hard
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: refresh
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: reload
+          - text: )
+          - text: ' '
+          - text: it
+          - text: ' '
+          - text: hard
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.reload_hard
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: bookmark
+        - text: ' '
+        - text: show
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.bookmarks
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: bookmark
+          - text: ' '
+          - text: show
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.bookmarks
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: bookmark
+        - text: ' '
+        - text: bar
+        - text: ' '
+        - text: '['
+        - text: show
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.bookmarks_bar
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: bookmark
+          - text: ' '
+          - text: bar
+          - text: ' '
+          - text: '['
+          - text: show
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.bookmarks_bar
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: downloads
+        - text: ' '
+        - text: show
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_downloads
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: downloads
+          - text: ' '
+          - text: show
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_downloads
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: extensions
+        - text: ' '
+        - text: show
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_extensions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: extensions
+          - text: ' '
+          - text: show
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_extensions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: history
+        - text: ' '
+        - text: show
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: history
+          - text: ' '
+          - text: show
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: cache
+        - text: ' '
+        - text: show
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_clear_cache
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cache
+          - text: ' '
+          - text: show
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_clear_cache
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: dev
+        - text: ' '
+        - text: tools
+        - text: ' '
+        - text: '['
+        - text: show
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.toggle_dev_tools
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dev
+          - text: ' '
+          - text: tools
+          - text: ' '
+          - text: '['
+          - text: show
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.toggle_dev_tools
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Legacy
+    - text: ' '
+    - text: '[verb'
+    - text: ' '
+    - text: noun]
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: removed
+    - text: ' '
+    - text: at
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: later
+    - text: ' '
+    - text: time
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: downloads
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_downloads
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: downloads
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_downloads
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: extensions
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_extensions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: extensions
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_extensions
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: history
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: history
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_history
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: cache
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: browser.show_clear_cache
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: cache
+          - text: ':'
+        - doc:
+            docs:
+            - text: browser.show_clear_cache
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: todo
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: port
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: apps
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigating
+    - text: ' '
+    - text: current
+    - text: ' '
+    - text: page
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'help:'
+    - text: ' '
+    - text: key(?)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: tiny
+    - text: ' '
+    - text: 'down:'
+    - text: ' '
+    - text: key(j)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: tiny
+    - text: ' '
+    - text: 'up:'
+    - text: ' '
+    - text: key(k)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: 'left:'
+    - text: ' '
+    - text: key(h)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: 'right:'
+    - text: ' '
+    - text: key(l)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: (pop
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'spring):'
+    - text: ' '
+    - text: key(z
+    - text: ' '
+    - text: H)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: 'push:'
+    - text: ' '
+    - text: key(z
+    - text: ' '
+    - text: L)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: 'top:'
+    - text: ' '
+    - text: key(gg)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: (bottom
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'end):'
+    - text: ' '
+    - text: key(G)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (scroll
+    - text: ' '
+    - text: half
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: mini
+    - text: ' '
+    - text: 'page):'
+    - text: ' '
+    - text: key(d)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: scroll
+    - text: ' '
+    - text: half
+    - text: ' '
+    - text: 'up:'
+    - text: ' '
+    - text: key(u)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[open]'
+    - text: ' '
+    - text: 'link:'
+    - text: ' '
+    - text: key(f)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[open]'
+    - text: ' '
+    - text: link
+    - text: ' '
+    - text: 'new:'
+    - text: ' '
+    - text: key(F)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: 'link:'
+    - text: ' '
+    - text: key(y
+    - text: ' '
+    - text: f)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: (address
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'url):'
+    - text: ' '
+    - text: key(escape
+    - text: ' '
+    - text: y
+    - text: ' '
+    - text: y)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (refresh
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'reload):'
+    - text: ' '
+    - text: browser.reload()
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: view
+    - text: ' '
+    - text: 'source:'
+    - text: ' '
+    - text: key(g
+    - text: ' '
+    - text: s)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: insert
+    - text: ' '
+    - text: 'mode:'
+    - text: ' '
+    - text: key(i)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: 'frame:'
+    - text: ' '
+    - text: key(g
+    - text: ' '
+    - text: f)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: main
+    - text: ' '
+    - text: 'frame:'
+    - text: ' '
+    - text: key(g
+    - text: ' '
+    - text: F)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigating
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: new
+    - text: ' '
+    - text: pages
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (open
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: go)
+    - text: ' '
+    - text: (url
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'history):'
+    - text: ' '
+    - text: key(o)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (open
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: go)
+    - text: ' '
+    - text: (url
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: history)
+    - text: ' '
+    - text: 'new:'
+    - text: ' '
+    - text: key(O)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (open
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: go)
+    - text: ' '
+    - text: 'bookmark:'
+    - text: ' '
+    - text: key(b)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (open
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: go)
+    - text: ' '
+    - text: bookmark
+    - text: ' '
+    - text: 'new:'
+    - text: ' '
+    - text: key(B)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: using
+    - text: ' '
+    - text: find
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: find
+    - text: ' '
+    - text: 'mode:'
+    - text: ' '
+    - text: key(/)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: 'match:'
+    - text: ' '
+    - text: key(n)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: previous
+    - text: ' '
+    - text: 'match:'
+    - text: ' '
+    - text: key(N)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigating
+    - text: ' '
+    - text: history
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: history
+    - text: ' '
+    - text: 'back:'
+    - text: ' '
+    - text: key(H)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: history
+    - text: ' '
+    - text: 'forward:'
+    - text: ' '
+    - text: key(L)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: manipulating
+    - text: ' '
+    - text: tabs
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: 'visited:'
+    - text: ' '
+    - text: key(^)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: dupe
+    - text: ' '
+    - text: 'tab:'
+    - text: ' '
+    - text: key(y
+    - text: ' '
+    - text: t)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'restore:'
+    - text: ' '
+    - text: key(X)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: search
+    - text: ' '
+    - text: 'tabs:'
+    - text: ' '
+    - text: key(T)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: move
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: 'window:'
+    - text: ' '
+    - text: key(W)
+    - text: '
+
+        '
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             browser
+  -
+  address bar | go address | go url: browser.focus_address()
+  address copy | url copy | copy address | copy url:
+      browser.focus_address()
+      sleep(50ms)
+      edit.copy()
+  go home:                         browser.go_home()
+  [go] forward:                    browser.go_forward()
+  go (back | backward):            browser.go_back()
+  go to {user.website}:            browser.go(website)
+  go private:                      browser.open_private_window()
+
+  bookmark it:                     browser.bookmark()
+  bookmark tabs:                   browser.bookmark_tabs()
+  (refresh | reload) it:           browser.reload()
+  (refresh | reload) it hard:      browser.reload_hard()
+
+  bookmark show:                   browser.bookmarks()
+  bookmark bar [show]:             browser.bookmarks_bar()
+  downloads show:                  browser.show_downloads()
+  extensions show:                 browser.show_extensions()
+  history show:                    browser.show_history()
+  cache show:                      browser.show_clear_cache()
+  dev tools [show]:                browser.toggle_dev_tools()
+
+  # Legacy [verb noun] commands to be removed at a later time
+  show downloads:                  browser.show_downloads()
+  show extensions:                 browser.show_extensions()
+  show history:                    browser.show_history()
+  show cache:                      browser.show_clear_cache()
+
+  # todo - port to apps
+  # navigating current page
+  # help: key(?)
+  # scroll tiny down: key(j)
+  # scroll tiny up: key(k)
+  # scroll left: key(h)
+  # scroll right: key(l)
+  # scroll (pop | spring): key(z H)
+  # scroll push: key(z L)
+  # scroll top: key(gg)
+  # scroll (bottom | end): key(G)
+  # (scroll half down | mini page): key(d)
+  # scroll half up: key(u)
+  # [open] link: key(f)
+  # [open] link new: key(F)
+  # copy link: key(y f)
+  # copy (address | url): key(escape y y)
+  # (refresh | reload): browser.reload()
+  # view source: key(g s)
+  # insert mode: key(i)
+  # next frame: key(g f)
+  # main frame: key(g F)
+  # navigating to new pages
+  # (open | go) (url | history): key(o)
+  # (open | go) (url | history) new: key(O)
+  # (open | go) bookmark: key(b)
+  # (open | go) bookmark new: key(B)
+  # using find
+  # find mode: key(/)
+  # next match: key(n)
+  # previous match: key(N)
+  # navigating history
+  # history back: key(H)
+  # history forward: key(L)
+  # manipulating tabs
+  # last visited: key(^)
+  # dupe tab: key(y t)
+  # restore: key(X)
+  # search tabs: key(T)
+  # move to window: key(W)

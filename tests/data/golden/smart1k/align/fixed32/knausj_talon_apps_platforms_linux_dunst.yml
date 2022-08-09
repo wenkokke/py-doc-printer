@@ -1,0 +1,236 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: notifications
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: ctrl-`
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: notifications
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: ctrl-`
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: dismiss
+        - text: ' '
+        - text: '['
+        - text: notifications
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: dunstctl
+                - text: ' '
+                - text: close
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dismiss
+          - text: ' '
+          - text: '['
+          - text: notifications
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: dunstctl
+                - text: ' '
+                - text: close
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: dismiss
+        - text: ' '
+        - text: all
+        - text: ' '
+        - text: '['
+        - text: notifications
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: dunstctl
+                - text: ' '
+                - text: close-all
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dismiss
+          - text: ' '
+          - text: all
+          - text: ' '
+          - text: '['
+          - text: notifications
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.system_command
+            - text: (
+            - doc:
+                docs:
+                - text: dunstctl
+                - text: ' '
+                - text: close-all
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: dunce
+    - text: ' '
+    - text: 'pause:'
+    - text: ' '
+    - text: user.system_command('notify-send
+    - text: ' '
+    - text: '"DUNST_COMMAND_PAUSE"'')'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: dunce
+    - text: ' '
+    - text: 'resume:'
+    - text: ' '
+    - text: user.system_command('notify-send
+    - text: ' '
+    - text: '"DUNST_COMMAND_RESUME"'')'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: test
+    - text: ' '
+    - text: 'notification:'
+    - text: ' '
+    - text: user.system_command('notify-send
+    - text: ' '
+    - text: '"Hello'
+    - text: ' '
+    - text: from
+    - text: ' '
+    - text: Talon"')
+    - text: '
+
+        '
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  os:                              linux
+  -
+  show notifications:              key(ctrl-`)
+  dismiss [notifications]:         user.system_command("dunstctl close")
+  dismiss all [notifications]:     user.system_command("dunstctl close-all")
+  # dunce pause: user.system_command('notify-send "DUNST_COMMAND_PAUSE"')
+  # dunce resume: user.system_command('notify-send "DUNST_COMMAND_RESUME"')
+  # test notification: user.system_command('notify-send "Hello from Talon"')

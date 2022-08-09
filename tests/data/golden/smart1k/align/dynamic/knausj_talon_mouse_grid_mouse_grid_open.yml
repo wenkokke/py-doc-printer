@@ -1,0 +1,287 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.mouse_grid_showing
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: <
+            - text: user.number_key
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.grid_narrow
+                - text: (
+                - text: number_key
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: <
+              - text: user.number_key
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.grid_narrow
+                - text: (
+                - text: number_key
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: 'off'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.grid_close
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: grid
+              - text: ' '
+              - text: 'off'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.grid_close
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: reset
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.grid_reset
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: grid
+              - text: ' '
+              - text: reset
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.grid_reset
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: back
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.grid_go_back
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: grid
+              - text: ' '
+              - text: back
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.grid_go_back
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: <
+            - text: user.number_key
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.grid_narrow
+              - text: (
+              - text: number_key
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: 'off'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.grid_close
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: reset
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.grid_reset
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: grid
+            - text: ' '
+            - text: back
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.grid_go_back
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.mouse_grid_showing
+  -
+  <user.number_key>: user.grid_narrow(number_key)
+  grid off:          user.grid_close()
+  grid reset:        user.grid_reset()
+  grid back:         user.grid_go_back()

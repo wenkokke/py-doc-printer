@@ -1,0 +1,77 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: not
+        - text: ' '
+        - text: tag
+        - text: ':'
+      - text: user.mouse_grid_showing
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: <
+        - text: user.number_string
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: '{'
+                - text: number_string
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: user.number_string
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: '{'
+                - text: number_string
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  not tag:                         user.mouse_grid_showing
+  -
+  <user.number_string>:            "{number_string}"

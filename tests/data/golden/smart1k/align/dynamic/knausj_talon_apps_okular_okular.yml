@@ -1,0 +1,41 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: okular
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Set
+    - text: ' '
+    - text: tags
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.pages
+    - text: '
+
+        '
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  app: okular
+  -
+  # Set tags
+  tag(): user.pages

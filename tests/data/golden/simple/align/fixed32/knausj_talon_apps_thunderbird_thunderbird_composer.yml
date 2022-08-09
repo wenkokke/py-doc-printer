@@ -1,0 +1,583 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: thunderbird_composer
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: mail
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: draft
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: mail
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: message
+        - text: )
+        - text: ' '
+        - text: save
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: s
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: draft
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: mail
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: message
+          - text: )
+          - text: ' '
+          - text: save
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: s
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: draft
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: mail
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: message
+        - text: )
+        - text: ' '
+        - text: print
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: p
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: draft
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: mail
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: message
+          - text: )
+          - text: ' '
+          - text: print
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: p
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: draft
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: mail
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: message
+        - text: )
+        - text: ' '
+        - text: send
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: enter
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: draft
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: mail
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: message
+          - text: )
+          - text: ' '
+          - text: send
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: enter
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: layout
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: toggle
+        - text: ' '
+        - text: contacts
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: f9
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: toggle
+          - text: ' '
+          - text: contacts
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: f9
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: navigation
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: (
+        - text: inbox
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: thunderbird
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: main
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: '1'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: (
+          - text: inbox
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: thunderbird
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: main
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: '1'
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: edit
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: cite
+        - text: ' '
+        - text: paste
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-o
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: cite
+          - text: ' '
+          - text: paste
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-o
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: unformatted
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: raw
+        - text: )
+        - text: ' '
+        - text: paste
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-v
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: unformatted
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: raw
+          - text: )
+          - text: ' '
+          - text: paste
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-v
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: link
+        - text: ' '
+        - text: new
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: k
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: link
+          - text: ' '
+          - text: new
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: k
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: link
+        - text: ' '
+        - text: delete
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-k
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: link
+          - text: ' '
+          - text: delete
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-k
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  app:                             thunderbird_composer
+  -
+  # mail
+  (draft | mail | message) save:   user.thunderbird_mod("s")
+  (draft | mail | message) print:  user.thunderbird_mod("p")
+  (draft | mail | message) send:   user.thunderbird_mod("enter")
+  # layout
+  toggle contacts:                 key(f9)
+  # navigation
+  go (inbox | thunderbird | main): user.thunderbird_mod("1")
+  # edit
+  cite paste:                      user.thunderbird_mod("shift-o")
+  (unformatted | raw) paste:       user.thunderbird_mod("shift-v")
+  link new:                        user.thunderbird_mod("k")
+  link delete:                     user.thunderbird_mod("shift-k")

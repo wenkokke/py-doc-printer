@@ -1,0 +1,235 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_pointer
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: pointer
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: dereference
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_indirection
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: dereference
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_indirection
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: address
+            - text: ' '
+            - text: of
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_address_of
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: address
+              - text: ' '
+              - text: of
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_address_of
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: arrow
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.code_operator_structure_dereference
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: op
+              - text: ' '
+              - text: arrow
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.code_operator_structure_dereference
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: dereference
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_indirection
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: address
+            - text: ' '
+            - text: of
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_address_of
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: op
+            - text: ' '
+            - text: arrow
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.code_operator_structure_dereference
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.code_operators_pointer
+  -
+  # pointer operators
+  op dereference: user.code_operator_indirection()
+  op address of:  user.code_operator_address_of()
+  op arrow:       user.code_operator_structure_dereference()

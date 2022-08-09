@@ -1,0 +1,623 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: screen
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: screen
+              - text: ' '
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: window
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_window
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: window
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_window
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: selection
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_selection
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: selection
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_selection
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: settings
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_settings
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: settings
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_settings
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: screen
+              - text: ' '
+              - text: clip
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_clipboard
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: screen
+              - text: ' '
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ' '
+              - text: clip
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_clipboard
+                - text: (
+                - text: number_small
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: window
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.screenshot_window_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: grab
+              - text: ' '
+              - text: window
+              - text: ' '
+              - text: clip
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.screenshot_window_clipboard
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot
+              - text: (
+              - text: number_small
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: window
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_window
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: selection
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_selection
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: settings
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_settings
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_clipboard
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: screen
+            - text: ' '
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_clipboard
+              - text: (
+              - text: number_small
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: ^
+            - text: grab
+            - text: ' '
+            - text: window
+            - text: ' '
+            - text: clip
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.screenshot_window_clipboard
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  ^grab screen$:                     user.screenshot()
+  ^grab screen <number_small>$:      user.screenshot(number_small)
+  ^grab window$:                     user.screenshot_window()
+  ^grab selection$:                  user.screenshot_selection()
+  ^grab settings$:                   user.screenshot_settings()
+  ^grab screen clip$:                user.screenshot_clipboard()
+  ^grab screen <number_small> clip$: user.screenshot_clipboard(number_small)
+  ^grab window clip$:                user.screenshot_window_clipboard()

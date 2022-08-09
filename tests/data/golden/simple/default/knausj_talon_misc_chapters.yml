@@ -1,0 +1,211 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.chapters
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: chapter
+        - text: ' '
+        - text: next
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.chapter_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: chapter
+          - text: ' '
+          - text: next
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.chapter_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: chapter
+        - text: ' '
+        - text: last
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.chapter_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: chapter
+          - text: ' '
+          - text: last
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.chapter_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: chapter
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.chapter_jump
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: chapter
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.chapter_jump
+            - text: (
+            - text: number
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: chapter
+        - text: ' '
+        - text: final
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.chapter_final
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: chapter
+          - text: ' '
+          - text: final
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.chapter_final
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  tag: user.chapters
+  -
+  chapter next:
+      user.chapter_next()
+  chapter last:
+      user.chapter_previous()
+  go chapter <number>:
+      user.chapter_jump(number)
+  go chapter final:
+      user.chapter_final()

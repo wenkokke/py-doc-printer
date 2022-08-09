@@ -1,0 +1,188 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: tag
+        - text: ':'
+      - text: user.git
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: title
+        - text: ':'
+      - docs:
+        - text: /git
+        - text: ' '
+        - text: add
+        - text: ' '
+        - text: .*\-p/
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: yank
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: y
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: near
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: n
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: quench
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: q
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: drum
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: d
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: air
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: a
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: terminal
+  and tag: user.git
+  title: /git add .*\-p/
+  -
+  yank:
+      key(y)
+      key(enter)
+  near:
+      key(n)
+      key(enter)
+  quench:
+      key(q)
+      key(enter)
+  drum:
+      key(d)
+      key(enter)
+  air:
+      key(a)
+      key(enter)

@@ -1,0 +1,303 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: windows_explorer
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: windows_file_browser
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.file_manager
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: ^
+            - text: go
+            - text: ' '
+            - text: <
+            - text: user.letter
+            - text: '>'
+            - text: $
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.file_manager_open_volume
+                - text: (
+                - doc:
+                    docs:
+                    - text: '{'
+                    - text: letter
+                    - text: '}'
+                    - text: ':'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: ^
+              - text: go
+              - text: ' '
+              - text: <
+              - text: user.letter
+              - text: '>'
+              - text: $
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.file_manager_open_volume
+                - text: (
+                - doc:
+                    docs:
+                    - text: '{'
+                    - text: letter
+                    - text: '}'
+                    - text: ':'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: app
+            - text: ' '
+            - text: data
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.file_manager_open_directory
+                - text: (
+                - doc:
+                    text: '%AppData%'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: go
+              - text: ' '
+              - text: app
+              - text: ' '
+              - text: data
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.file_manager_open_directory
+                - text: (
+                - doc:
+                    text: '%AppData%'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: program
+            - text: ' '
+            - text: files
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.file_manager_open_directory
+                - text: (
+                - doc:
+                    text: '%programfiles%'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: go
+              - text: ' '
+              - text: program
+              - text: ' '
+              - text: files
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.file_manager_open_directory
+                - text: (
+                - doc:
+                    text: '%programfiles%'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: ^
+            - text: go
+            - text: ' '
+            - text: <
+            - text: user.letter
+            - text: '>'
+            - text: $
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.file_manager_open_volume
+              - text: (
+              - doc:
+                  docs:
+                  - text: '{'
+                  - text: letter
+                  - text: '}'
+                  - text: ':'
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: app
+            - text: ' '
+            - text: data
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.file_manager_open_directory
+              - text: (
+              - doc:
+                  text: '%AppData%'
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: program
+            - text: ' '
+            - text: files
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.file_manager_open_directory
+              - text: (
+              - doc:
+                  text: '%programfiles%'
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  app: windows_explorer
+  app: windows_file_browser
+  -
+  tag(): user.file_manager
+  ^go <user.letter>$: user.file_manager_open_volume("{letter}:")
+  go app data:        user.file_manager_open_directory("%AppData%")
+  go program files:   user.file_manager_open_directory("%programfiles%")

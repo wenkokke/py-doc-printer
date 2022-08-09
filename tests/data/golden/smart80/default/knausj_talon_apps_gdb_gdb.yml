@@ -1,0 +1,3318 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: matches
+    - text: ' '
+    - text: .gdb
+    - text: ' '
+    - text: files
+    - text: ' '
+    - text: atm
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'win.title:'
+    - text: ' '
+    - text: /gdb/
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: user.gdb
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.gdb
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.debugger
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: until
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: until
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: until
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: until
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: force
+    - text: ' '
+    - text: clear
+    - text: ' '
+    - text: all
+    - text: ' '
+    - text: break
+    - text: ' '
+    - text: points
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: d
+            - text: ' '
+            - text: br
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: y
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: break
+    - text: ' '
+    - text: '['
+    - text: 'on'
+    - text: ']'
+    - text: ' '
+    - text: clipboard
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: break
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-shift-v
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: information
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: list
+        - text: ' '
+        - text: '['
+        - text: source
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: list
+          - text: ' '
+          - text: '['
+          - text: source
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: info
+        - text: ' '
+        - text: source
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: source
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: info
+          - text: ' '
+          - text: source
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: source
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: print
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: p
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: print
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: p
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: print
+        - text: ' '
+        - text: '['
+        - text: variable
+        - text: ']'
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: p
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: print
+          - text: ' '
+          - text: '['
+          - text: variable
+          - text: ']'
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: p
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: print
+        - text: ' '
+        - text: hex
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: p/x
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: print
+          - text: ' '
+          - text: hex
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: p/x
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: print
+        - text: ' '
+        - text: hex
+        - text: ' '
+        - text: '['
+        - text: variable
+        - text: ']'
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: p/x
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: print
+          - text: ' '
+          - text: hex
+          - text: ' '
+          - text: '['
+          - text: variable
+          - text: ']'
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: p/x
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: print
+        - text: ' '
+        - text: string
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: p/s
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: print
+          - text: ' '
+          - text: string
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: p/s
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: hexdumping
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: switch
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: sizes
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: list
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: python?
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: should
+    - text: ' '
+    - text: cache
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: used
+    - text: ' '
+    - text: size
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: hex
+        - text: ' '
+        - text: dump
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: bytes
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: bx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hex
+          - text: ' '
+          - text: dump
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: bytes
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: bx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hex
+        - text: ' '
+        - text: dump
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: (
+        - text: half
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: short
+        - text: )
+        - text: ' '
+        - text: words
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: hx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hex
+          - text: ' '
+          - text: dump
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: (
+          - text: half
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: short
+          - text: )
+          - text: ' '
+          - text: words
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: hx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hex
+        - text: ' '
+        - text: dump
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: (
+        - text: d
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: long
+        - text: )
+        - text: ' '
+        - text: words
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: dx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hex
+          - text: ' '
+          - text: dump
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: (
+          - text: d
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: long
+          - text: )
+          - text: ' '
+          - text: words
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: dx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hex
+        - text: ' '
+        - text: dump
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: quad
+        - text: ' '
+        - text: words
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: gx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hex
+          - text: ' '
+          - text: dump
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: quad
+          - text: ' '
+          - text: words
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: x/
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: gx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: some
+    - text: ' '
+    - text: arbitrary
+    - text: ' '
+    - text: default
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: convenience
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: hex
+        - text: ' '
+        - text: dump
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: x/100gx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hex
+          - text: ' '
+          - text: dump
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: x/100gx
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: hex
+    - text: ' '
+    - text: dump
+    - text: ' '
+    - text: highlighted
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: x/100gx
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: edit.copy
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: hex
+    - text: ' '
+    - text: dump
+    - text: ' '
+    - text: clipboard
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: x/100gx
+            - text: ' '
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: enter
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: execution
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: source
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: source
+                - text: ' '
+                - text: \t
+                - text: \t
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: source
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: source
+                - text: ' '
+                - text: \t
+                - text: \t
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: displays
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: move
+    - text: ' '
+    - text: thee
+    - text: ' '
+    - text: invoke
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: into
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: python
+    - text: ' '
+    - text: script
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: display
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: display
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: display
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: display
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: display
+        - text: ' '
+        - text: assembly
+        - text: ' '
+        - text: line
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: display
+                - text: ' '
+                - text: /i
+                - text: ' '
+                - text: $pc
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: display
+          - text: ' '
+          - text: assembly
+          - text: ' '
+          - text: line
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: display
+                - text: ' '
+                - text: /i
+                - text: ' '
+                - text: $pc
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: display
+        - text: ' '
+        - text: source
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: display
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: display
+          - text: ' '
+          - text: source
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: display
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: enable
+        - text: ' '
+        - text: display
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: enable
+                - text: ' '
+                - text: display
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: enable
+          - text: ' '
+          - text: display
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: enable
+                - text: ' '
+                - text: display
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: disable
+        - text: ' '
+        - text: display
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: disable
+                - text: ' '
+                - text: display
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: disable
+          - text: ' '
+          - text: display
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: disable
+                - text: ' '
+                - text: display
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: undisplay
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: undisplay
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: undisplay
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: undisplay
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: variables
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: local
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: local
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: local
+        - text: ' '
+        - text: typed
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: local
+          - text: ' '
+          - text: typed
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: variable
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variable
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: variable
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variable
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: variable
+        - text: ' '
+        - text: typed
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variable
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: variable
+          - text: ' '
+          - text: typed
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variable
+                - text: ' '
+                - text: -t
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: locals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: locals
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: local
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: list
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: variables
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variables
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: list
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: variables
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: variables
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: threads
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: info
+        - text: ' '
+        - text: threads
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: threads
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: info
+          - text: ' '
+          - text: threads
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: threads
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: restart
+        - text: ' '
+        - text: '['
+        - text: program
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: r
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: restart
+          - text: ' '
+          - text: '['
+          - text: program
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: r
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: continue
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: c
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: continue
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: c
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: back
+        - text: ' '
+        - text: trace
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: bt
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: back
+          - text: ' '
+          - text: trace
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: bt
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: debug
+        - text: ' '
+        - text: quit
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: quit
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: debug
+          - text: ' '
+          - text: quit
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: quit
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: more
+    - text: ' '
+    - text: quickly
+    - text: ' '
+    - text: quit
+    - text: ' '
+    - text: when
+    - text: ' '
+    - text: there
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: inferiors
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: debug
+        - text: ' '
+        - text: force
+        - text: ' '
+        - text: quit
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: quit
+                - text: \n
+                - text: y
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: debug
+          - text: ' '
+          - text: force
+          - text: ' '
+          - text: quit
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: quit
+                - text: \n
+                - text: y
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: show
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: info
+        - text: )
+        - text: ' '
+        - text: (
+        - text: inf
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: inferiors
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: inferiors
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: show
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: info
+          - text: )
+          - text: ' '
+          - text: (
+          - text: inf
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: inferiors
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: info
+                - text: ' '
+                - text: inferiors
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: inferior
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: inferior
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: inferior
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: inferior
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: inferior
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: inferior
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: inferior
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: inferior
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: resume
+    - text: ' '
+    - text: main
+    - text: ' '
+    - text: (
+    - text: inf
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: inferior
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: inferior
+            - text: ' '
+            - text: '1'
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: c
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: resume
+    - text: ' '
+    - text: '['
+    - text: from
+    - text: ']'
+    - text: ' '
+    - text: (
+    - text: inf
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: inferior
+    - text: )
+    - text: ' '
+    - text: <
+    - text: number_small
+    - text: '>'
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: inferior
+            - text: ' '
+            - text: '{'
+            - text: number_small
+            - text: '}'
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: c
+            - text: \n
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: arguments
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: set
+        - text: ' '
+        - text: args
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: args
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: set
+          - text: ' '
+          - text: args
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: args
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: settings
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: follow
+        - text: ' '
+        - text: (
+        - text: fork
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: forks
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: mode
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: follow-fork-mode
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: follow
+          - text: ' '
+          - text: (
+          - text: fork
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: forks
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: mode
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: follow-fork-mode
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: set
+        - text: ']'
+        - text: ' '
+        - text: follow
+        - text: ' '
+        - text: (
+        - text: fork
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: forks
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: mode
+        - text: ']'
+        - text: ' '
+        - text: child
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: follow-fork-mode
+                - text: ' '
+                - text: child
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: set
+          - text: ']'
+          - text: ' '
+          - text: follow
+          - text: ' '
+          - text: (
+          - text: fork
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: forks
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: mode
+          - text: ']'
+          - text: ' '
+          - text: child
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: follow-fork-mode
+                - text: ' '
+                - text: child
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: set
+        - text: ']'
+        - text: ' '
+        - text: follow
+        - text: ' '
+        - text: (
+        - text: fork
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: forks
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: mode
+        - text: ']'
+        - text: ' '
+        - text: parent
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: follow-fork-mode
+                - text: ' '
+                - text: parent
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: set
+          - text: ']'
+          - text: ' '
+          - text: follow
+          - text: ' '
+          - text: (
+          - text: fork
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: forks
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: mode
+          - text: ']'
+          - text: ' '
+          - text: parent
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: follow-fork-mode
+                - text: ' '
+                - text: parent
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: detach
+        - text: ' '
+        - text: 'on'
+        - text: ' '
+        - text: fork
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: detach-on-fork
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: detach
+          - text: ' '
+          - text: 'on'
+          - text: ' '
+          - text: fork
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: detach-on-fork
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: set
+        - text: ' '
+        - text: detach
+        - text: ' '
+        - text: 'on'
+        - text: ' '
+        - text: fork
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: detach-on-fork
+                - text: ' '
+                - text: 'on'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: set
+          - text: ' '
+          - text: detach
+          - text: ' '
+          - text: 'on'
+          - text: ' '
+          - text: fork
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: detach-on-fork
+                - text: ' '
+                - text: 'on'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: unset
+        - text: ' '
+        - text: detach
+        - text: ' '
+        - text: 'on'
+        - text: ' '
+        - text: fork
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: detach-on-fork
+                - text: ' '
+                - text: 'off'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: unset
+          - text: ' '
+          - text: detach
+          - text: ' '
+          - text: 'on'
+          - text: ' '
+          - text: fork
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: detach-on-fork
+                - text: ' '
+                - text: 'off'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: list
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: size
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: listsize
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: size
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: show
+                - text: ' '
+                - text: listsize
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: set
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: size
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: listsize
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: set
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: size
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: set
+                - text: ' '
+                - text: listsize
+                - text: ' '
+                - text: '{'
+                - text: number_small
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: misc
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: clear
+        - text: ' '
+        - text: screen
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: shell
+                - text: ' '
+                - text: clear
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: clear
+          - text: ' '
+          - text: screen
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: shell
+                - text: ' '
+                - text: clear
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  os: linux
+  # XXX - this matches .gdb files atm
+  # win.title: /gdb/
+  tag: terminal
+  mode: user.gdb
+  -
+  tag(): user.gdb
+  tag(): user.debugger
+  until <number>: "until {number}"
+  force clear all break points:
+      insert("d br\n")
+      insert("y\n")
+  break [on] clipboard:
+      insert("break ")
+      key(ctrl-shift-v)
+      key(enter)
+
+  # information
+  list [source]: "list\n"
+  info source: "info source\n"
+
+  print: "p "
+  print [variable] <user.text>: "p {text}"
+  print hex: "p/x "
+  print hex [variable] <user.text>: "p/x {text}"
+  print string: "p/s "
+
+  # hexdumping
+  # XXX - switch the sizes to a list in python?
+  # XXX - should cache the last used size
+  hex dump <number> bytes: "x/{number}bx "
+  hex dump <number> (half | short) words: "x/{number}hx "
+  hex dump <number> (d | long) words: "x/{number}dx "
+  hex dump <number> quad words: "x/{number}gx "
+  # this is some arbitrary default for convenience
+  hex dump: "x/100gx "
+  hex dump highlighted:
+      insert("x/100gx ")
+      edit.copy()
+      edit.paste()
+      key(enter)
+  hex dump clipboard:
+      insert("x/100gx ")
+      edit.paste()
+      key(enter)
+
+  # execution
+  source: "source \t\t"
+
+  # displays
+  # XXX - move thee invoke command into a python script
+  (list | show | info) display: "info display\n"
+  display assembly line$: "display /i $pc\n"
+  display source: "display "
+  enable display <number_small>: "enable display {number_small}\n"
+  disable display <number_small>: "disable display {number_small}\n"
+  undisplay: "undisplay\n"
+
+  # variables
+  (list | show | info) local: "info local "
+  (list | show | info) local typed: "info local -t "
+  (list | show | info) variable: "info variable "
+  (list | show | info) variable typed: "info variable -t "
+  (list | show | info) locals: "info local\n"
+  (list | show | info) variables: "info variables\n"
+
+  # threads
+  info threads: "info threads\n"
+
+  restart [program]: "r\n"
+  continue: "c\n"
+  back trace: "bt\n"
+  debug quit: "quit\n"
+  # more quickly quit when there are inferiors
+  debug force quit: "quit\ny\n"
+  (show | info) (inf | inferiors): "info inferiors\n"
+  inferior <number_small>$: "inferior {number_small}\n"
+  inferior: "inferior "
+  resume main (inf | inferior):
+      insert("inferior 1\n")
+      insert("c\n")
+  resume [from] (inf | inferior) <number_small>$:
+      insert("inferior {number_small}\n")
+      insert("c\n")
+
+  # arguments
+  set args: "set args "
+
+  # settings
+  show follow (fork | forks) [mode]: "show follow-fork-mode\n"
+  [set] follow (fork | forks) [mode] child: "set follow-fork-mode child\n"
+  [set] follow (fork | forks) [mode] parent: "set follow-fork-mode parent\n"
+
+  show detach on fork: "show detach-on-fork\n"
+  set detach on fork: "set detach-on-fork on\n"
+  unset detach on fork: "set detach-on-fork off\n"
+
+  # list
+  show list size: "show listsize\n"
+  set list size <number_small>: "set listsize {number_small}\n"
+
+  # misc
+  clear screen: "shell clear\n"

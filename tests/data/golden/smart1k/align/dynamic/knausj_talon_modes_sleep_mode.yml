@@ -1,0 +1,90 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: sleep
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'settings():'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: stop
+        - text: ' '
+        - text: continuous
+        - text: ' '
+        - text: scroll/gaze
+        - text: ' '
+        - text: scroll
+        - text: ' '
+        - text: with
+        - text: ' '
+        - text: a
+        - text: ' '
+        - text: pop
+        - text: '
+
+            '
+        - text: user.mouse_enable_pop_stops_scroll
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: '0'
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: enable
+        - text: ' '
+        - text: pop
+        - text: ' '
+        - text: click
+        - text: ' '
+        - text: with
+        - text: ' '
+        - text: '''control'
+        - text: ' '
+        - text: mouse'
+        - text: ' '
+        - text: mode
+        - text: '
+
+            '
+        - text: user.mouse_enable_pop_click
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: '0'
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  mode: sleep
+  -
+  settings():
+      # stop continuous scroll/gaze scroll with a pop
+      user.mouse_enable_pop_stops_scroll = 0
+      # enable pop click with 'control mouse' mode
+      user.mouse_enable_pop_click = 0

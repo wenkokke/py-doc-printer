@@ -1,0 +1,211 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_lambda
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: In
+    - text: ' '
+    - text: many
+    - text: ' '
+    - text: languages,
+    - text: ' '
+    - text: anonymous
+    - text: ' '
+    - text: functions
+    - text: ' '
+    - text: aren't
+    - text: ' '
+    - text: merely
+    - text: ' '
+    - text: infix
+    - text: ' '
+    - text: 'syntax:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Haskell
+    - text: ' '
+    - text: ' '
+    - text: '''\x'
+    - text: ' '
+    - text: ->
+    - text: ' '
+    - text: bla'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: OCaml
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: '''fun'
+    - text: ' '
+    - text: x
+    - text: ' '
+    - text: ->
+    - text: ' '
+    - text: bla'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Rust
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: '''|x|'
+    - text: ' '
+    - text: '{'
+    - text: ' '
+    - text: bla
+    - text: ' '
+    - text: '}'''
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Therefore
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: revision
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: may
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: order.
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: syntax
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: anonymous
+    - text: ' '
+    - text: functions
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: op
+        - text: ' '
+        - text: lambda
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_lambda
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: op
+          - text: ' '
+          - text: lambda
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_lambda
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.code_operators_lambda
+  -
+  # In many languages, anonymous functions aren't merely infix syntax:
+  #
+  #       Haskell  '\x -> bla'
+  #       OCaml    'fun x -> bla'
+  #       Rust     '|x| { bla }'
+  #
+  # Therefore a revision of this command may be in order.
+
+  # syntax for anonymous functions
+  op lambda: user.code_operator_lambda()

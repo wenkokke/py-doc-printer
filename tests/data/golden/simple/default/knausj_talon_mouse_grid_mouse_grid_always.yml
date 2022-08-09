@@ -1,0 +1,144 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: mouse
+    - text: ' '
+    - text: grid
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.grid_select_screen
+        - text: (
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_activate
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: grid
+    - text: ' '
+    - text: win
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.grid_place_window
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_activate
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: grid
+    - text: ' '
+    - text: <
+    - text: user.number_key
+    - text: '>'
+    - text: +
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.grid_activate
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_narrow_list
+        - text: (
+        - text: number_key_list
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: grid
+    - text: ' '
+    - text: screen
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: number
+    - text: '>'
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.grid_select_screen
+        - text: (
+        - text: number
+        - text: ' '
+        - text: or
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+        - text: user.grid_activate
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  -
+  mouse grid:
+      user.grid_select_screen(1)
+      user.grid_activate()
+
+  grid win:
+      user.grid_place_window()
+      user.grid_activate()
+
+  grid <user.number_key>+:
+      user.grid_activate()
+      user.grid_narrow_list(number_key_list)
+
+  grid screen [<number>]:
+      user.grid_select_screen(number or 1)
+      user.grid_activate()

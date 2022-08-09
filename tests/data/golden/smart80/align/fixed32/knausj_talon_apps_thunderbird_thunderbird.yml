@@ -1,0 +1,410 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: thunderbird
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: not
+        - text: ' '
+        - text: app
+        - text: ':'
+      - text: thunderbird_contacts
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: not
+        - text: ' '
+        - text: app
+        - text: ':'
+      - text: thunderbird_composer
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Set
+    - text: ' '
+    - text: tags
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.tabs
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: tabs
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: (
+        - text: mails
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: messages
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: inbox
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.tab_jump
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: (
+          - text: mails
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: messages
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: inbox
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.tab_jump
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: (
+        - text: calendar
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: lightning
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-c
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: (
+          - text: calendar
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: lightning
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-c
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: tasks
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-d
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: tasks
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-d
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: open
+    - text: ' '
+    - text: windows
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: open
+        - text: ' '
+        - text: address
+        - text: ' '
+        - text: '['
+        - text: book
+        - text: ']'
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: address
+        - text: ' '
+        - text: book
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: open
+        - text: ' '
+        - text: contacts
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-b
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: open
+          - text: ' '
+          - text: address
+          - text: ' '
+          - text: '['
+          - text: book
+          - text: ']'
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: address
+          - text: ' '
+          - text: book
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: open
+          - text: ' '
+          - text: contacts
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-b
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: dev
+        - text: ' '
+        - text: tools
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-i
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dev
+          - text: ' '
+          - text: tools
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.thunderbird_mod
+            - text: (
+            - doc:
+                text: shift-i
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  app:                             thunderbird
+  and not app:                     thunderbird_contacts
+  and not app:                     thunderbird_composer
+  -
+  # Set tags
+  tag(): user.tabs
+
+  # navigate tabs
+  go (mails | messages | inbox):   user.tab_jump(1)
+  go (calendar | lightning):       user.thunderbird_mod("shift-c")
+  go tasks:                        user.thunderbird_mod("shift-d")
+  # open windows
+  (open address [book] | address book | open contacts):
+      user.thunderbird_mod("shift-b")
+  dev tools:                       user.thunderbird_mod("shift-i")

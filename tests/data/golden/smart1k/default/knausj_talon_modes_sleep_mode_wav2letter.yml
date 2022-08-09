@@ -1,0 +1,144 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: sleep
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: speech.engine
+        - text: ':'
+      - text: wav2letter
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: exists
+    - text: ' '
+    - text: solely
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: prevent
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: from
+    - text: ' '
+    - text: waking
+    - text: ' '
+    - text: up
+    - text: ' '
+    - text: super
+    - text: ' '
+    - text: easily
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: sleep
+    - text: ' '
+    - text: mode
+    - text: ' '
+    - text: at
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: moment
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: wav2letter
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: probably
+    - text: ' '
+    - text: shouldn't
+    - text: ' '
+    - text: have
+    - text: ' '
+    - text: any
+    - text: ' '
+    - text: other
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: here
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: skip
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: skip
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  mode: sleep
+  speech.engine: wav2letter
+  -
+  # this exists solely to prevent talon from waking up super easily in sleep mode at the moment with wav2letter
+  # you probably shouldn't have any other commands here
+  <phrase>: skip()

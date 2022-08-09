@@ -1,0 +1,173 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.emoji
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: emoticon
+        - text: ' '
+        - text: '{'
+        - text: user.emoticon
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: '{'
+                - text: emoticon
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: emoticon
+          - text: ' '
+          - text: '{'
+          - text: user.emoticon
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: '{'
+                - text: emoticon
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: emoji
+        - text: ' '
+        - text: '{'
+        - text: user.emoji
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.paste
+            - text: (
+            - text: emoji
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: emoji
+          - text: ' '
+          - text: '{'
+          - text: user.emoji
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.paste
+            - text: (
+            - text: emoji
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: kaomoji
+        - text: ' '
+        - text: '{'
+        - text: user.kaomoji
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.paste
+            - text: (
+            - text: kaomoji
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: kaomoji
+          - text: ' '
+          - text: '{'
+          - text: user.kaomoji
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.paste
+            - text: (
+            - text: kaomoji
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.emoji
+  -
+  emoticon {user.emoticon}: "{emoticon}"
+  emoji {user.emoji}: user.paste(emoji)
+  kaomoji {user.kaomoji}: user.paste(kaomoji)

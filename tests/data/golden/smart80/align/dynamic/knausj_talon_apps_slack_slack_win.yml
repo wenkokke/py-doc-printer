@@ -1,0 +1,3569 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: windows
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: app
+        - text: ':'
+      - text: slack
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '#'
+    - text: ' '
+    - text: 'todo:'
+    - text: ' '
+    - text: some
+    - text: ' '
+    - text: sort
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: plugin,
+    - text: ' '
+    - text: consolidate
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: teams
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: something?
+    - text: '
+
+        '
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.messaging
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.emoji
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Workspaces
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: workspace
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: '"ctrl-{number}"'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: workspace
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: '"ctrl-{number}"'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Channel
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: slack
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: lack
+        - text: )
+        - text: ' '
+        - text: '['
+        - text: channel
+        - text: ']'
+        - text: ' '
+        - text: info
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: ctrl-shift-i
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: slack
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: lack
+          - text: )
+          - text: ' '
+          - text: '['
+          - text: channel
+          - text: ']'
+          - text: ' '
+          - text: info
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: ctrl-shift-i
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Navigation
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: focus
+            - text: ' '
+            - text: (
+            - text: move
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: next
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-`
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: focus
+              - text: ' '
+              - text: (
+              - text: move
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: next
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-`
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: section
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: zone
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: f6
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: section
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: zone
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: next
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: f6
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: section
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: zone
+            - text: )
+            - text: ' '
+            - text: (
+            - text: previous
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: last
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: shift-f6
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: section
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: zone
+              - text: )
+              - text: ' '
+              - text: (
+              - text: previous
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: last
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: shift-f6
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: direct
+            - text: ']'
+            - text: ' '
+            - text: messages
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-k
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: direct
+              - text: ']'
+              - text: ' '
+              - text: messages
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-k
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: threads
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-t
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: threads
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-t
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: history
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: back
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: backward
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: alt-left
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: history
+              - text: ' '
+              - text: '['
+              - text: next
+              - text: ']'
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: back
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: backward
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: alt-left
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: forward
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: alt-right
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: forward
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: alt-right
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: element
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bit
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: tab
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: element
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: bit
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: next
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: tab
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: element
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bit
+            - text: )
+            - text: ' '
+            - text: (
+            - text: previous
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: last
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: shift-tab
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: element
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: bit
+              - text: )
+              - text: ' '
+              - text: (
+              - text: previous
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: last
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: shift-tab
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: my
+            - text: ' '
+            - text: stuff
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: activity
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-m
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: my
+              - text: ' '
+              - text: stuff
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: activity
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-m
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: directory
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-e
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: directory
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-e
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: starred
+            - text: ' '
+            - text: '['
+            - text: items
+            - text: ']'
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: stars
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-s
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: starred
+              - text: ' '
+              - text: '['
+              - text: items
+              - text: ']'
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: stars
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-s
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: unread
+            - text: ' '
+            - text: '['
+            - text: messages
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-a
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: unread
+              - text: ' '
+              - text: '['
+              - text: messages
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-a
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: focus
+            - text: ' '
+            - text: (
+            - text: move
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: next
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-`
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: section
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: zone
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: f6
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: section
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: zone
+            - text: )
+            - text: ' '
+            - text: (
+            - text: previous
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: last
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: shift-f6
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: direct
+            - text: ']'
+            - text: ' '
+            - text: messages
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-k
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: threads
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-t
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: history
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: back
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: backward
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: alt-left
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: forward
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: alt-right
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: element
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bit
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: next
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: tab
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: element
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bit
+            - text: )
+            - text: ' '
+            - text: (
+            - text: previous
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: last
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: shift-tab
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: my
+            - text: ' '
+            - text: stuff
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: activity
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-m
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: directory
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-e
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: starred
+            - text: ' '
+            - text: '['
+            - text: items
+            - text: ']'
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: stars
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-s
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: unread
+            - text: ' '
+            - text: '['
+            - text: messages
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-a
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Messaging
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: grab
+            - text: ' '
+            - text: left
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: shift-up
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: grab
+              - text: ' '
+              - text: left
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: shift-up
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: grab
+            - text: ' '
+            - text: right
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: shift-down
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: grab
+              - text: ' '
+              - text: right
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: shift-down
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: add
+            - text: ' '
+            - text: line
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: shift-enter
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: add
+              - text: ' '
+              - text: line
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: shift-enter
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: grab
+            - text: ' '
+            - text: left
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: shift-up
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: grab
+            - text: ' '
+            - text: right
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: shift-down
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: add
+            - text: ' '
+            - text: line
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: shift-enter
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '#'
+    - text: ' '
+    - text: '"(slack'
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: lack)
+    - text: ' '
+    - text: (slap
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: slaw
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: 'slapper):'
+    - text: ' '
+    - text: '[key(cmd-right)'
+    - text: ' '
+    - text: key(shift-enter")],
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: react
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: reaction
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-\
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: react
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: reaction
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-\
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: insert
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: commandify
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-c
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: insert
+              - text: ' '
+              - text: command
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: commandify
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-c
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: insert
+            - text: ' '
+            - text: code
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: insert
+                - text: (
+                - doc:
+                    text: '```'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: insert
+              - text: ' '
+              - text: code
+              - text: ':'
+            - doc:
+                docs:
+                - text: insert
+                - text: (
+                - doc:
+                    text: '```'
+                  function: _smart_quote
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: bull
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bullet
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bulleted
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: list
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-8
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: bull
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: bullet
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: bulleted
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: list
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-8
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: number
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: numbered
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: list
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-7
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: number
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: numbered
+              - text: )
+              - text: ' '
+              - text: '['
+              - text: list
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-7
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: quotes
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: quotation
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-9
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: quotes
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: quotation
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-9
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: bold
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-b
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: bold
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-b
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: italic
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: italicize
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-i
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: italic
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: italicize
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-i
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: strike
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: strikethrough
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-x
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: strike
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: strikethrough
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-x
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: snippet
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-enter
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: snippet
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-enter
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: react
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: reaction
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-\
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: insert
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: commandify
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-c
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: insert
+            - text: ' '
+            - text: code
+            - text: ':'
+          - doc:
+              docs:
+              - text: insert
+              - text: (
+              - doc:
+                  text: '```'
+                function: _smart_quote
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: bull
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bullet
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: bulleted
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: list
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-8
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: number
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: numbered
+            - text: )
+            - text: ' '
+            - text: '['
+            - text: list
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-7
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: quotes
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: quotation
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-9
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: bold
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-b
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: italic
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: italicize
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-i
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: strike
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: strikethrough
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-x
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: snippet
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-enter
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Calls
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: '['
+            - text: toggle
+            - text: ']'
+            - text: ' '
+            - text: mute
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: unmute
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: m
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: '['
+              - text: toggle
+              - text: ']'
+              - text: ' '
+              - text: mute
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: unmute
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: m
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: '['
+            - text: toggle
+            - text: ']'
+            - text: ' '
+            - text: video
+            - text: )
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: v
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: (
+              - text: '['
+              - text: toggle
+              - text: ']'
+              - text: ' '
+              - text: video
+              - text: )
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: v
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: invite
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: a
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: invite
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: a
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: '['
+            - text: toggle
+            - text: ']'
+            - text: ' '
+            - text: mute
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: unmute
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: m
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: (
+            - text: '['
+            - text: toggle
+            - text: ']'
+            - text: ' '
+            - text: video
+            - text: )
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: v
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: invite
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: a
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '#'
+    - text: ' '
+    - text: Miscellaneous
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: shortcuts
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-/
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: (
+              - text: slack
+              - text: ' '
+              - text: '|'
+              - text: ' '
+              - text: lack
+              - text: )
+              - text: ' '
+              - text: shortcuts
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-/
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: emote
+            - text: ' '
+            - text: <
+            - text: user.text
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - doc:
+                    docs:
+                    - text: '{'
+                    - text: text
+                    - text: '}'
+                  function: _smart_quote
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: emote
+              - text: ' '
+              - text: <
+              - text: user.text
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - doc:
+                    docs:
+                    - text: '{'
+                    - text: text
+                    - text: '}'
+                  function: _smart_quote
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: toggle
+            - text: ' '
+            - text: left
+            - text: ' '
+            - text: sidebar
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-shift-d
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: toggle
+              - text: ' '
+              - text: left
+              - text: ' '
+              - text: sidebar
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-shift-d
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: toggle
+            - text: ' '
+            - text: right
+            - text: ' '
+            - text: sidebar
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: key
+                - text: (
+                - text: ctrl-.
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: toggle
+              - text: ' '
+              - text: right
+              - text: ' '
+              - text: sidebar
+              - text: ':'
+            - doc:
+                docs:
+                - text: key
+                - text: (
+                - text: ctrl-.
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: (
+            - text: slack
+            - text: ' '
+            - text: '|'
+            - text: ' '
+            - text: lack
+            - text: )
+            - text: ' '
+            - text: shortcuts
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-/
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: emote
+            - text: ' '
+            - text: <
+            - text: user.text
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - doc:
+                  docs:
+                  - text: '{'
+                  - text: text
+                  - text: '}'
+                function: _smart_quote
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: toggle
+            - text: ' '
+            - text: left
+            - text: ' '
+            - text: sidebar
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-shift-d
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: toggle
+            - text: ' '
+            - text: right
+            - text: ' '
+            - text: sidebar
+            - text: ':'
+          - doc:
+              docs:
+              - text: key
+              - text: (
+              - text: ctrl-.
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: DEPRECATED
+    - text: '
+
+        '
+    - text: (
+    - text: move
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: next
+    - text: )
+    - text: ' '
+    - text: focus
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''focus'
+            - text: ' '
+            - text: next'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''next'
+            - text: ' '
+            - text: focus'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: ctrl-`
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '['
+    - text: next
+    - text: ']'
+    - text: ' '
+    - text: (
+    - text: section
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: zone
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''section'
+            - text: ' '
+            - text: next'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''next'
+            - text: ' '
+            - text: section'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: f6
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: (
+    - text: previous
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: last
+    - text: )
+    - text: ' '
+    - text: (
+    - text: section
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: zone
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''section'
+            - text: ' '
+            - text: last'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''last'
+            - text: ' '
+            - text: section'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: shift-f6
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '['
+    - text: next
+    - text: ']'
+    - text: ' '
+    - text: (
+    - text: element
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: bit
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''element'
+            - text: ' '
+            - text: next'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''next'
+            - text: ' '
+            - text: element'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: tab
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: (
+    - text: previous
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: last
+    - text: )
+    - text: ' '
+    - text: (
+    - text: element
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: bit
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: app.notify
+        - text: (
+        - doc:
+            docs:
+            - text: please
+            - text: ' '
+            - text: use
+            - text: ' '
+            - text: the
+            - text: ' '
+            - text: voice
+            - text: ' '
+            - text: command
+            - text: ' '
+            - text: '''element'
+            - text: ' '
+            - text: last'
+            - text: ' '
+            - text: instead
+            - text: ' '
+            - text: of
+            - text: ' '
+            - text: '''last'
+            - text: ' '
+            - text: element'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: shift-tab
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  os: windows
+  os: linux
+  app: slack
+  # todo: some sort of plugin, consolidate with teams or something?
+  -
+  tag(): user.messaging
+  tag(): user.emoji
+  # Workspaces
+  workspace <number>: key("ctrl-{number}")
+  # Channel
+  (slack | lack) [channel] info: key(ctrl-shift-i)
+  # Navigation
+  focus (move | next):                               key(ctrl-`)
+  (section | zone) [next]:                           key(f6)
+  (section | zone) (previous | last):                key(shift-f6)
+  (slack | lack) [direct] messages:                  key(ctrl-shift-k)
+  (slack | lack) threads:                            key(ctrl-shift-t)
+  (slack | lack) (history [next] | back | backward): key(alt-left)
+  (slack | lack) forward:                            key(alt-right)
+  (element | bit) [next]:                            key(tab)
+  (element | bit) (previous | last):                 key(shift-tab)
+  (slack | lack) (my stuff | activity):              key(ctrl-shift-m)
+  (slack | lack) directory:                          key(ctrl-shift-e)
+  (slack | lack) (starred [items] | stars):          key(ctrl-shift-s)
+  (slack | lack) unread [messages]:                  key(ctrl-shift-a)
+  # Messaging
+  grab left:  key(shift-up)
+  grab right: key(shift-down)
+  add line:   key(shift-enter)
+  # "(slack | lack) (slap | slaw | slapper): [key(cmd-right) key(shift-enter")],
+  (slack | lack) (react | reaction):                key(ctrl-shift-\)
+  (insert command | commandify):                    key(ctrl-shift-c)
+  insert code:                                      insert("```")
+  (slack | lack) (bull | bullet | bulleted) [list]: key(ctrl-shift-8)
+  (slack | lack) (number | numbered) [list]:        key(ctrl-shift-7)
+  (slack | lack) (quotes | quotation):              key(ctrl-shift-9)
+  bold:                                             key(ctrl-b)
+  (italic | italicize):                             key(ctrl-i)
+  (strike | strikethrough):                         key(ctrl-shift-x)
+  (slack | lack) snippet:                           key(ctrl-shift-enter)
+  # Calls
+  ([toggle] mute | unmute):        key(m)
+  (slack | lack) ([toggle] video): key(v)
+  (slack | lack) invite:           key(a)
+  # Miscellaneous
+  (slack | lack) shortcuts: key(ctrl-/)
+  emote <user.text>:        "{text}"
+  toggle left sidebar:      key(ctrl-shift-d)
+  toggle right sidebar:     key(ctrl-.)
+
+  # DEPRECATED
+  (move | next) focus:
+      app.notify("please use the voice command 'focus next' instead of 'next focus'")
+      key(ctrl-`)
+  [next] (section | zone):
+      app.notify("please use the voice command 'section next' instead of 'next section'")
+      key(f6)
+  (previous | last) (section | zone):
+      app.notify("please use the voice command 'section last' instead of 'last section'")
+      key(shift-f6)
+  [next] (element | bit):
+      app.notify("please use the voice command 'element next' instead of 'next element'")
+      key(tab)
+  (previous | last) (element | bit):
+      app.notify("please use the voice command 'element last' instead of 'last element'")
+      key(shift-tab)

@@ -1,0 +1,80 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_keywords
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: keyword
+        - text: ' '
+        - text: (
+        - text: <
+        - text: user.code_keyword
+        - text: '>'
+        - text: +
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_keyword
+            - text: (
+            - text: code_keyword_list
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: keyword
+          - text: ' '
+          - text: (
+          - text: <
+          - text: user.code_keyword
+          - text: '>'
+          - text: +
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_keyword
+            - text: (
+            - text: code_keyword_list
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  tag: user.code_keywords
+  -
+  keyword (<user.code_keyword>+):
+      user.code_keyword(code_keyword_list)

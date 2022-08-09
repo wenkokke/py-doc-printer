@@ -1,0 +1,265 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '-1'
+    - text: ' '
+    - text: because
+    - text: ' '
+    - text: we
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: repeating,
+    - text: ' '
+    - text: so
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: initial
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: counts
+    - text: ' '
+    - text: as
+    - text: ' '
+    - text: one
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: <
+        - text: user.ordinals
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: core.repeat_command
+            - text: (
+            - text: ordinals
+            - text: ' '
+            - text: '-'
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: user.ordinals
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: core.repeat_command
+            - text: (
+            - text: ordinals
+            - text: ' '
+            - text: '-'
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ' '
+        - text: times
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: core.repeat_command
+            - text: (
+            - text: number_small
+            - text: ' '
+            - text: '-'
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ' '
+          - text: times
+          - text: ':'
+        - doc:
+            docs:
+            - text: core.repeat_command
+            - text: (
+            - text: number_small
+            - text: ' '
+            - text: '-'
+            - text: ' '
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: repeat
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: twice
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: core.repeat_command
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: repeat
+          - text: ' '
+          - text: that
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: twice
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: core.repeat_command
+            - text: (
+            - text: '1'
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: repeat
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: <
+        - text: number_small
+        - text: '>'
+        - text: ' '
+        - text: '['
+        - text: times
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: core.repeat_command
+            - text: (
+            - text: number_small
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: repeat
+          - text: ' '
+          - text: that
+          - text: ' '
+          - text: <
+          - text: number_small
+          - text: '>'
+          - text: ' '
+          - text: '['
+          - text: times
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: core.repeat_command
+            - text: (
+            - text: number_small
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  # -1 because we are repeating, so the initial command counts as one
+  <user.ordinals>: core.repeat_command(ordinals - 1)
+  <number_small> times: core.repeat_command(number_small - 1)
+  (repeat that | twice): core.repeat_command(1)
+  repeat that <number_small> [times]: core.repeat_command(number_small)

@@ -1,0 +1,1594 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.find_and_replace
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: this
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: this
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: this
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: this
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_everywhere
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_everywhere
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: all
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_everywhere
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: all
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_everywhere
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: case
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_toggle_match_by_case
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: case
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_toggle_match_by_case
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: word
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_toggle_match_by_word
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: word
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_toggle_match_by_word
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: expression
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_toggle_match_by_regex
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: expression
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_toggle_match_by_regex
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: next
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: next
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_next
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: hunt
+        - text: ' '
+        - text: previous
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.find_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: hunt
+          - text: ' '
+          - text: previous
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.find_previous
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: replace
+        - text: ' '
+        - text: this
+        - text: ' '
+        - text: '['
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.replace
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: replace
+          - text: ' '
+          - text: this
+          - text: ' '
+          - text: '['
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.replace
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: replace
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.replace_everywhere
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: replace
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.replace_everywhere
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: replace
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.replace_everywhere
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: replace
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.replace_everywhere
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: replace
+        - text: ' '
+        - text: confirm
+        - text: ' '
+        - text: that
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.replace_confirm
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: replace
+          - text: ' '
+          - text: confirm
+          - text: ' '
+          - text: that
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.replace_confirm
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: replace
+        - text: ' '
+        - text: confirm
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.replace_confirm_all
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: replace
+          - text: ' '
+          - text: confirm
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.replace_confirm_all
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: quick
+    - text: ' '
+    - text: replace
+    - text: ' '
+    - text: commands,
+    - text: ' '
+    - text: modeled
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: jetbrains
+    - text: '
+
+        '
+    - text: clear
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: clear
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: clear
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: clear
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.delete
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: comment
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: code.toggle_comment
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: go
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: go
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: go
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: go
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: clip
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: clip.text
+        - text: (
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: paste
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: paste
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.right
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: replace
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_previous_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: replace
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: <
+    - text: user.text
+    - text: '>'
+    - text: ' '
+    - text: '['
+    - text: over
+    - text: ']'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.select_next_occurrence
+        - text: (
+        - text: text
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 100ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: last
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ' '
+        - text: '['
+        - text: over
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_previous_occurrence
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: last
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ' '
+          - text: '['
+          - text: over
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_previous_occurrence
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: next
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ' '
+        - text: '['
+        - text: over
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_next_occurrence
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: next
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ' '
+          - text: '['
+          - text: over
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_next_occurrence
+            - text: (
+            - text: text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: last
+        - text: ' '
+        - text: clip
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_previous_occurrence
+            - text: (
+            - text: clip.text
+            - text: (
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: last
+          - text: ' '
+          - text: clip
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_previous_occurrence
+            - text: (
+            - text: clip.text
+            - text: (
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: select
+        - text: ' '
+        - text: next
+        - text: ' '
+        - text: clip
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.select_next_occurrence
+            - text: (
+            - text: clip.text
+            - text: (
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: select
+          - text: ' '
+          - text: next
+          - text: ' '
+          - text: clip
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.select_next_occurrence
+            - text: (
+            - text: clip.text
+            - text: (
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag: user.find_and_replace
+  -
+  hunt this: user.find("")
+  hunt this <user.text>: user.find(text)
+  hunt all: user.find_everywhere("")
+  hunt all <user.text>: user.find_everywhere(text)
+  hunt case: user.find_toggle_match_by_case()
+  hunt word: user.find_toggle_match_by_word()
+  hunt expression: user.find_toggle_match_by_regex()
+  hunt next: user.find_next()
+  hunt previous: user.find_previous()
+  replace this [<user.text>]: user.replace(text or "")
+  replace all: user.replace_everywhere("")
+  replace <user.text> all: user.replace_everywhere(text)
+  replace confirm that: user.replace_confirm()
+  replace confirm all: user.replace_confirm_all()
+
+  # quick replace commands, modeled after jetbrains
+  clear last <user.text> [over]:
+      user.select_previous_occurrence(text)
+      sleep(100ms)
+      edit.delete()
+  clear next <user.text> [over]:
+      user.select_next_occurrence(text)
+      sleep(100ms)
+      edit.delete()
+  clear last clip:
+      user.select_previous_occurrence(clip.text())
+      edit.delete()
+  clear next clip:
+      user.select_next_occurrence(clip.text())
+      sleep(100ms)
+      edit.delete()
+  comment last <user.text> [over]:
+      user.select_previous_occurrence(text)
+      sleep(100ms)
+      code.toggle_comment()
+  comment last clip:
+      user.select_previous_occurrence(clip.text())
+      sleep(100ms)
+      code.toggle_comment()
+  comment next <user.text> [over]:
+      user.select_next_occurrence(text)
+      sleep(100ms)
+      code.toggle_comment()
+  comment next clip:
+      user.select_next_occurrence(clip.text())
+      sleep(100ms)
+      code.toggle_comment()
+  go last <user.text> [over]:
+      user.select_previous_occurrence(text)
+      sleep(100ms)
+      edit.right()
+  go last clip:
+      user.select_previous_occurrence(clip.text())
+      sleep(100ms)
+      edit.right()
+  go next <user.text> [over]:
+      user.select_next_occurrence(text)
+      edit.right()
+  go next clip:
+      user.select_next_occurrence(clip.text())
+      edit.right()
+  paste last <user.text> [over]:
+      user.select_previous_occurrence(text)
+      sleep(100ms)
+      edit.right()
+      edit.paste()
+  paste next <user.text> [over]:
+      user.select_next_occurrence(text)
+      sleep(100ms)
+      edit.right()
+      edit.paste()
+  replace last <user.text> [over]:
+      user.select_previous_occurrence(text)
+      sleep(100ms)
+      edit.paste()
+  replace next <user.text> [over]:
+      user.select_next_occurrence(text)
+      sleep(100ms)
+      edit.paste()
+  select last <user.text> [over]: user.select_previous_occurrence(text)
+  select next <user.text> [over]: user.select_next_occurrence(text)
+  select last clip: user.select_previous_occurrence(clip.text())
+  select next clip: user.select_next_occurrence(clip.text())

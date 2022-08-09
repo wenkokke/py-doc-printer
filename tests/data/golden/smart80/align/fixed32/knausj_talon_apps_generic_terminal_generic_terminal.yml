@@ -1,0 +1,601 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: tags
+    - text: ' '
+    - text: should
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: activated
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: each
+    - text: ' '
+    - text: specific
+    - text: ' '
+    - text: terminal
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: respective
+    - text: ' '
+    - text: talon
+    - text: ' '
+    - text: file
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: lisa
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_list_directories
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: lisa
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_list_directories
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: lisa
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_list_all_directories
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: lisa
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_list_all_directories
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: katie
+        - text: ' '
+        - text: '['
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_change_directory
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: katie
+          - text: ' '
+          - text: '['
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_change_directory
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: katie
+        - text: ' '
+        - text: root
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_change_directory_root
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: katie
+          - text: ' '
+          - text: root
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_change_directory_root
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: go
+        - text: ' '
+        - text: <
+        - text: user.system_path
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: cd
+                - text: ' '
+                - text: \"
+                - text: '{'
+                - text: system_path
+                - text: '}'
+                - text: \"
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: go
+          - text: ' '
+          - text: <
+          - text: user.system_path
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: cd
+                - text: ' '
+                - text: \"
+                - text: '{'
+                - text: system_path
+                - text: '}'
+                - text: \"
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: clear
+        - text: ' '
+        - text: screen
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_clear_screen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: clear
+          - text: ' '
+          - text: screen
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_clear_screen
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: run
+        - text: ' '
+        - text: last
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_run_last
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: run
+          - text: ' '
+          - text: last
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_run_last
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: rerun
+        - text: ' '
+        - text: '['
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ']'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_rerun_search
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: rerun
+          - text: ' '
+          - text: '['
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ']'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_rerun_search
+            - text: (
+            - text: text
+            - text: ' '
+            - text: or
+            - text: ' '
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: rerun
+        - text: ' '
+        - text: search
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_rerun_search
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: rerun
+          - text: ' '
+          - text: search
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_rerun_search
+            - text: (
+            - doc:
+                text: ''
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: kill
+        - text: ' '
+        - text: all
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.terminal_kill_all
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: kill
+          - text: ' '
+          - text: all
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.terminal_kill_all
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: copy
+    - text: ' '
+    - text: paste
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: edit.copy
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: sleep
+        - text: (
+        - text: 50ms
+        - text: )
+        - text: '
+
+            '
+        - text: edit.paste
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  tag:                             terminal
+  -
+  # tags should be activated for each specific terminal in the respective talon file
+
+  lisa:                            user.terminal_list_directories()
+  lisa all:                        user.terminal_list_all_directories()
+  katie [<user.text>]:             user.terminal_change_directory(text or "")
+  katie root:                      user.terminal_change_directory_root()
+  go <user.system_path>:           insert('cd "{system_path}"\n')
+  clear screen:                    user.terminal_clear_screen()
+  run last:                        user.terminal_run_last()
+  rerun [<user.text>]:             user.terminal_rerun_search(text or "")
+  rerun search:                    user.terminal_rerun_search("")
+  kill all:                        user.terminal_kill_all()
+
+  copy paste:
+      edit.copy()
+      sleep(50ms)
+      edit.paste()

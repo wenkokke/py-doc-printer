@@ -1,0 +1,416 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.code_operators_bitwise
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: bitwise
+    - text: ' '
+    - text: operators
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: '['
+        - text: op
+        - text: ']'
+        - text: ' '
+        - text: bitwise
+        - text: ' '
+        - text: and
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_and
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: op
+          - text: ']'
+          - text: ' '
+          - text: bitwise
+          - text: ' '
+          - text: and
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_and
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '['
+        - text: op
+        - text: ']'
+        - text: ' '
+        - text: bitwise
+        - text: ' '
+        - text: or
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_or
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '['
+          - text: op
+          - text: ']'
+          - text: ' '
+          - text: bitwise
+          - text: ' '
+          - text: or
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_or
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'TODO:'
+    - text: ' '
+    - text: split
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: out
+    - text: ' '
+    - text: into
+    - text: ' '
+    - text: separate
+    - text: ' '
+    - text: logical
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: bitwise
+    - text: ' '
+    - text: operator
+    - text: ' '
+    - text: commands
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ' '
+        - text: (
+        - text: ex
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: exclusive
+        - text: )
+        - text: ' '
+        - text: or
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_exclusive_or
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ' '
+          - text: (
+          - text: ex
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: exclusive
+          - text: )
+          - text: ' '
+          - text: or
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_exclusive_or
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ' '
+        - text: (
+        - text: left
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: left
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_left_shift
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ' '
+          - text: (
+          - text: left
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: left
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_left_shift
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: (
+        - text: op
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: logical
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: bitwise
+        - text: )
+        - text: ' '
+        - text: (
+        - text: right
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: shift
+        - text: ' '
+        - text: right
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.code_operator_bitwise_right_shift
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: op
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: logical
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: bitwise
+          - text: )
+          - text: ' '
+          - text: (
+          - text: right
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: shift
+          - text: ' '
+          - text: right
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.code_operator_bitwise_right_shift
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: ShortestLines
+output: |
+  tag: user.code_operators_bitwise
+  -
+  # bitwise operators
+  [op] bitwise and:
+      user.code_operator_bitwise_and()
+  [op] bitwise or:
+      user.code_operator_bitwise_or()
+
+  # TODO: split these out into separate logical and bitwise operator commands
+
+  (op | logical | bitwise) (ex | exclusive) or:
+      user.code_operator_bitwise_exclusive_or()
+  (op | logical | bitwise) (left shift | shift left):
+      user.code_operator_bitwise_left_shift()
+  (op | logical | bitwise) (right shift | shift right):
+      user.code_operator_bitwise_right_shift()

@@ -1,0 +1,397 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: date
+        - text: ' '
+        - text: insert
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                text: '%Y-%m-%d'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: date
+          - text: ' '
+          - text: insert
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                text: '%Y-%m-%d'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: date
+        - text: ' '
+        - text: insert
+        - text: ' '
+        - text: UTC
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                text: '%Y-%m-%d'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: date
+          - text: ' '
+          - text: insert
+          - text: ' '
+          - text: UTC
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                text: '%Y-%m-%d'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: timestamp
+        - text: ' '
+        - text: insert
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: timestamp
+          - text: ' '
+          - text: insert
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: timestamp
+        - text: ' '
+        - text: insert
+        - text: ' '
+        - text: high
+        - text: ' '
+        - text: resolution
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S.%f'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: timestamp
+          - text: ' '
+          - text: insert
+          - text: ' '
+          - text: high
+          - text: ' '
+          - text: resolution
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S.%f'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: timestamp
+        - text: ' '
+        - text: insert
+        - text: ' '
+        - text: UTC
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: timestamp
+          - text: ' '
+          - text: insert
+          - text: ' '
+          - text: UTC
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: timestamp
+        - text: ' '
+        - text: insert
+        - text: ' '
+        - text: UTC
+        - text: ' '
+        - text: high
+        - text: ' '
+        - text: resolution
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S.%f'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: timestamp
+          - text: ' '
+          - text: insert
+          - text: ' '
+          - text: UTC
+          - text: ' '
+          - text: high
+          - text: ' '
+          - text: resolution
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - text: user.time_format_utc
+            - text: (
+            - doc:
+                docs:
+                - text: '%Y-%m-%d'
+                - text: ' '
+                - text: '%H:%M:%S.%f'
+              function: _smart_quote
+            - text: )
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  date insert:                     insert(user.time_format("%Y-%m-%d"))
+  date insert UTC:                 insert(user.time_format_utc("%Y-%m-%d"))
+  timestamp insert:                insert(user.time_format("%Y-%m-%d %H:%M:%S"))
+  timestamp insert high resolution:
+      insert(user.time_format("%Y-%m-%d %H:%M:%S.%f"))
+  timestamp insert UTC:
+      insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
+  timestamp insert UTC high resolution:
+      insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))

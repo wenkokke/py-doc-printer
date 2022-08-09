@@ -1,0 +1,1073 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: terminal
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: tag
+        - text: ':'
+      - text: user.taskwarrior
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: general
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: version
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: --version
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: version
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: --version
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: commands
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: commands
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: commands
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: commands
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: help
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: help
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: help
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: help
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: task
+    - text: ' '
+    - text: list
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: orphans
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: 'project:'
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: orphans
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: 'project:'
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: untagged
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: 'tags.none:'
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: untagged
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: 'tags.none:'
+                - text: ' '
+                - text: list
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: project
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: 'project:'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: project
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: 'project:'
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: list
+        - text: ' '
+        - text: project
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: 'project:'
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: list
+          - text: ' '
+          - text: project
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: list
+                - text: ' '
+                - text: 'project:'
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: task
+    - text: ' '
+    - text: add
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: add
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: add
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: add
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: add
+                - text: ' '
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: add
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: add
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: add
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: add
+                - text: ' '
+                - text: '{'
+                - text: text
+                - text: '}'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: undo
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: undo
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: undo
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: undo
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: tasks
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: task
+        - text: ' '
+        - text: next
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: next
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: tasks
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: task
+          - text: ' '
+          - text: next
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: next
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: task
+    - text: ' '
+    - text: editing
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: edit
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: edit
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: edit
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: edit
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: task
+    - text: ' '
+    - text: completion
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: done
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: done
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: done
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: done
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: task
+        - text: ' '
+        - text: <
+        - text: number
+        - text: '>'
+        - text: ' '
+        - text: delete
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: delete
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: task
+          - text: ' '
+          - text: <
+          - text: number
+          - text: '>'
+          - text: ' '
+          - text: delete
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: task
+                - text: ' '
+                - text: '{'
+                - text: number
+                - text: '}'
+                - text: ' '
+                - text: delete
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  os:                              linux
+  tag:                             terminal
+  and tag:                         user.taskwarrior
+  -
+  # general
+  task version:                    "task --version\n"
+  task commands:                   "task commands\n"
+  task help:                       "task help\n"
+
+  # task list
+  task list:                       "task list\n"
+  task list orphans:               "task project: list\n"
+  task list untagged:              "task tags.none: list\n"
+  task list <user.text>:           "task list {text}\n"
+  task list project:               "task list project: "
+  task list project <user.text>:   "task list project:{text}\n"
+
+  # task add
+  task add:                        "task add "
+  task add <user.text>:            "task add {text}\n"
+  task undo:                       "task undo\n"
+
+  (tasks | task next):             "task next\n"
+
+  # task editing
+  task <number> edit$:             "task {number} edit"
+
+  # task completion
+  task <number> done$:             "task {number} done"
+  task <number> delete$:           "task {number} delete"

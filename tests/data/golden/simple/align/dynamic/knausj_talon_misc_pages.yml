@@ -1,0 +1,305 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: tag
+        - text: ':'
+      - text: user.pages
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: page
+            - text: ' '
+            - text: next
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.page_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: page
+              - text: ' '
+              - text: next
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.page_next
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: page
+            - text: ' '
+            - text: last
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.page_previous
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: page
+              - text: ' '
+              - text: last
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.page_previous
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: page
+            - text: ' '
+            - text: <
+            - text: number
+            - text: '>'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.page_jump
+                - text: (
+                - text: number
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: go
+              - text: ' '
+              - text: page
+              - text: ' '
+              - text: <
+              - text: number
+              - text: '>'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.page_jump
+                - text: (
+                - text: number
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: page
+            - text: ' '
+            - text: final
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.page_final
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: go
+              - text: ' '
+              - text: page
+              - text: ' '
+              - text: final
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.page_final
+                - text: (
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: page
+            - text: ' '
+            - text: next
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.page_next
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: page
+            - text: ' '
+            - text: last
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.page_previous
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: page
+            - text: ' '
+            - text: <
+            - text: number
+            - text: '>'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.page_jump
+              - text: (
+              - text: number
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: go
+            - text: ' '
+            - text: page
+            - text: ' '
+            - text: final
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.page_final
+              - text: (
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  tag: user.pages
+  -
+  page next:        user.page_next()
+  page last:        user.page_previous()
+  go page <number>: user.page_jump(number)
+  go page final:    user.page_final()

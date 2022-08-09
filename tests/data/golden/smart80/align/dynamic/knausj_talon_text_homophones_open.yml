@@ -1,0 +1,117 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: user.homophones
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: choose
+    - text: ' '
+    - text: <
+    - text: number_small
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: result
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: user.homophones_select
+        - text: (
+        - text: number_small
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: result
+        - text: )
+        - text: '
+
+            '
+        - text: user.homophones_hide
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: choose
+    - text: ' '
+    - text: <
+    - text: user.formatters
+    - text: '>'
+    - text: ' '
+    - text: <
+    - text: number_small
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: result
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: user.homophones_select
+        - text: (
+        - text: number_small
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - text: user.formatted_text
+        - text: (
+        - text: result
+        - text: ','
+        - text: ' '
+        - text: formatters
+        - text: )
+        - text: )
+        - text: '
+
+            '
+        - text: user.homophones_hide
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  mode: user.homophones
+  -
+  choose <number_small>:
+      result = user.homophones_select(number_small)
+      insert(result)
+      user.homophones_hide()
+  choose <user.formatters> <number_small>:
+      result = user.homophones_select(number_small)
+      insert(user.formatted_text(result, formatters))
+      user.homophones_hide()

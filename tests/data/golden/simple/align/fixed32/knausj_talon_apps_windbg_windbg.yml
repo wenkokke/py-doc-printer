@@ -1,0 +1,1206 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: trigger
+    - text: ' '
+    - text: alt-1
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: hit
+    - text: ' '
+    - text: command
+    - text: ' '
+    - text: window
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: necessary
+    - text: ' '
+    - text: commands?
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'ex:'
+    - text: ' '
+    - text: user.windbg_insert_in_cmd()
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: edit.left()
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: user.windbg
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.debugger
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.windbg
+    - text: '
+
+        '
+    - text: register
+    - text: ' '
+    - text: <
+    - text: user.registers
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: key
+        - text: (
+        - text: '@'
+        - text: )
+        - text: '
+
+            '
+        - text: insert
+        - text: (
+        - doc:
+            docs:
+            - text: '{'
+            - text: registers
+            - text: '}'
+          function: _smart_quote
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: open
+        - text: ' '
+        - text: help
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .hh
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: open
+          - text: ' '
+          - text: help
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .hh
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: xxx
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: add
+    - text: ' '
+    - text: window
+    - text: ' '
+    - text: switching
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: add
+        - text: ' '
+        - text: microsoft
+        - text: ' '
+        - text: symbols
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: 'srv*C:'
+                - text: \\
+                - text: symbols*http://msdl.microsoft.com/download/symbols;
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: add
+          - text: ' '
+          - text: microsoft
+          - text: ' '
+          - text: symbols
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: 'srv*C:'
+                - text: \\
+                - text: symbols*http://msdl.microsoft.com/download/symbols;
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: force
+        - text: ' '
+        - text: reload
+        - text: ' '
+        - text: symbols
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .reload
+                - text: ' '
+                - text: /f
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: force
+          - text: ' '
+          - text: reload
+          - text: ' '
+          - text: symbols
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .reload
+                - text: ' '
+                - text: /f
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: reload
+        - text: ' '
+        - text: symbols
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .reload
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: reload
+          - text: ' '
+          - text: symbols
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: .reload
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: loaded
+        - text: ' '
+        - text: modules
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: lm
+                - text: ' '
+                - text: l
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: loaded
+          - text: ' '
+          - text: modules
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: lm
+                - text: ' '
+                - text: l
+                - text: \n
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: display
+        - text: ' '
+        - text: pointers
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: dps
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: display
+          - text: ' '
+          - text: pointers
+          - text: ':'
+        - doc:
+            docs:
+            - text: insert
+            - text: (
+            - doc:
+                docs:
+                - text: dps
+                - text: ' '
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: should
+    - text: ' '
+    - text: be
+    - text: ' '
+    - text: generic
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: dereference
+        - text: ' '
+        - text: pointer
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.insert_between
+            - text: (
+            - doc:
+                text: poi(
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: )
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dereference
+          - text: ' '
+          - text: pointer
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.insert_between
+            - text: (
+            - doc:
+                text: poi(
+              function: _smart_quote
+            - text: ','
+            - text: ' '
+            - doc:
+                text: )
+              function: _smart_quote
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: show
+        - text: ' '
+        - text: version
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: ctrl-alt-w
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: show
+          - text: ' '
+          - text: version
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: ctrl-alt-w
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Windows
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: command
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-1
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: command
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-1
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: watch
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-2
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: watch
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-2
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: locals
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-3
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: locals
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-3
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: registers
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-4
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: registers
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-4
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: memory
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-5
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: memory
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-5
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: call
+        - text: ' '
+        - text: stack
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-6
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: call
+          - text: ' '
+          - text: stack
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-6
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: disassembly
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-7
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: disassembly
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-7
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: scratch
+        - text: ' '
+        - text: pad
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-8
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: scratch
+          - text: ' '
+          - text: pad
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-8
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - alts:
+      - docs:
+        - text: view
+        - text: ' '
+        - text: (
+        - text: processes
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: threads
+        - text: )
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: key
+            - text: (
+            - text: alt-9
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: view
+          - text: ' '
+          - text: (
+          - text: processes
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: threads
+          - text: )
+          - text: ':'
+        - doc:
+            docs:
+            - text: key
+            - text: (
+            - text: alt-9
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: XXX
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: temp
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: dump
+        - text: ' '
+        - text: function
+        - text: ' '
+        - text: params
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: r
+                - text: ' '
+                - text: '@rcx,@rdx,@r8,@r9'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: dump
+          - text: ' '
+          - text: function
+          - text: ' '
+          - text: params
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: r
+                - text: ' '
+                - text: '@rcx,@rdx,@r8,@r9'
+                - text: \n
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: (
+        - text: lib
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: library
+        - text: )
+        - text: ' '
+        - text: <
+        - text: user.windows_dlls
+        - text: '>'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - doc:
+                docs:
+                - text: '{'
+                - text: windows_dlls
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: (
+          - text: lib
+          - text: ' '
+          - text: '|'
+          - text: ' '
+          - text: library
+          - text: )
+          - text: ' '
+          - text: <
+          - text: user.windows_dlls
+          - text: '>'
+          - text: ':'
+        - doc:
+            docs:
+            - doc:
+                docs:
+                - text: '{'
+                - text: windows_dlls
+                - text: '}'
+              function: _smart_quote
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths:
+          - 32
+          table_type: command
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  # XXX - trigger alt-1 to hit command window for necessary commands?
+  # ex: user.windbg_insert_in_cmd()
+  #    edit.left()
+  mode:                            user.windbg
+  -
+  tag(): user.debugger
+  tag(): user.windbg
+  register <user.registers>:
+      key(@)
+      insert("{registers}")
+
+  open help:                       insert(".hh\n")
+
+  # xxx - add window switching
+
+  add microsoft symbols:           insert("srv*C:\\symbols*http://msdl.microsoft.com/download/symbols;\n")
+  force reload symbols:            insert(".reload /f\n")
+  reload symbols:                  insert(".reload\n")
+  loaded modules:                  insert("lm l\n")
+
+  display pointers:                insert("dps ")
+
+  # XXX - should be generic
+  dereference pointer:             user.insert_between("poi(", ")")
+
+  show version:                    key(ctrl-alt-w)
+
+  #
+  # Windows
+  #
+
+  view command:                    key(alt-1)
+  view watch:                      key(alt-2)
+  view locals:                     key(alt-3)
+  view registers:                  key(alt-4)
+  view memory:                     key(alt-5)
+  view call stack:                 key(alt-6)
+  view disassembly:                key(alt-7)
+  view scratch pad:                key(alt-8)
+  view (processes | threads):      key(alt-9)
+
+  # XXX - temp
+  dump function params:            "r @rcx,@rdx,@r8,@r9\n"
+
+  (lib | library) <user.windows_dlls>: "{windows_dlls}"

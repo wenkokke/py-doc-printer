@@ -1,0 +1,2613 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: (2021-03-09)
+    - text: ' '
+    - text: This
+    - text: ' '
+    - text: syntax
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: experimental
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: may
+    - text: ' '
+    - text: change.
+    - text: ' '
+    - text: See
+    - text: ' '
+    - text: below
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: an
+    - text: ' '
+    - text: explanation.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: If
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: having
+    - text: ' '
+    - text: issues
+    - text: ' '
+    - text: with
+    - text: ' '
+    - text: this
+    - text: ' '
+    - text: module
+    - text: ' '
+    - text: not
+    - text: ' '
+    - text: working
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: vscode
+    - text: ' '
+    - text: try
+    - text: ' '
+    - text: adding
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: vscode
+    - text: ' '
+    - text: setting
+    - text: ' '
+    - text: '"editor.emptySelectionClipboard":'
+    - text: ' '
+    - text: 'false'
+    - text: '
+
+        '
+    - text: navigate
+    - text: ' '
+    - text: '['
+    - text: '{'
+    - text: user.arrow_key
+    - text: '}'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: '{'
+    - text: user.navigation_action
+    - text: '}'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: '{'
+    - text: user.navigation_target_name
+    - text: '}'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: '{'
+    - text: user.before_or_after
+    - text: '}'
+    - text: ']'
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: user.ordinals
+    - text: '>'
+    - text: ']'
+    - text: ' '
+    - text: <
+    - text: user.navigation_target
+    - text: '>'
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: If
+        - text: ' '
+        - text: you
+        - text: ' '
+        - text: use
+        - text: ' '
+        - text: this
+        - text: ' '
+        - text: command
+        - text: ' '
+        - text: a
+        - text: ' '
+        - text: lot,
+        - text: ' '
+        - text: you
+        - text: ' '
+        - text: may
+        - text: ' '
+        - text: wish
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: have
+        - text: ' '
+        - text: a
+        - text: ' '
+        - text: shorter
+        - text: ' '
+        - text: syntax
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: omits
+        - text: ' '
+        - text: the
+        - text: ' '
+        - text: navigate
+        - text: ' '
+        - text: keyword.
+        - text: ' '
+        - text: Note
+        - text: ' '
+        - text: that
+        - text: ' '
+        - text: you
+        - text: ' '
+        - text: then
+        - text: ' '
+        - text: at
+        - text: ' '
+        - text: least
+        - text: ' '
+        - text: have
+        - text: ' '
+        - text: to
+        - text: ' '
+        - text: say
+        - text: ' '
+        - text: either
+        - text: ' '
+        - text: a
+        - text: ' '
+        - text: navigation_action
+        - text: ' '
+        - text: or
+        - text: ' '
+        - text: 'before_or_after:'
+        - text: '
+
+            '
+        - text: '#'
+        - text: ' '
+        - text: ({user.navigation_action}
+        - text: ' '
+        - text: '[{user.arrow_key}]'
+        - text: ' '
+        - text: '[{user.navigation_target_name}]'
+        - text: ' '
+        - text: '[{user.before_or_after}]'
+        - text: ' '
+        - text: '|'
+        - text: ' '
+        - text: '[{user.arrow_key}]'
+        - text: ' '
+        - text: '{user.before_or_after})'
+        - text: ' '
+        - text: '[<user.ordinals>]'
+        - text: ' '
+        - text: '<user.navigation_target>:'
+        - text: '
+
+            '
+        - text: user.navigation
+        - text: (
+        - text: navigation_action
+        - text: ' '
+        - text: or
+        - text: ' '
+        - doc:
+            text: GO
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: arrow_key
+        - text: ' '
+        - text: or
+        - text: ' '
+        - doc:
+            text: RIGHT
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: navigation_target_name
+        - text: ' '
+        - text: or
+        - text: ' '
+        - doc:
+            text: DEFAULT
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: before_or_after
+        - text: ' '
+        - text: or
+        - text: ' '
+        - doc:
+            text: DEFAULT
+          function: _smart_quote
+        - text: ','
+        - text: ' '
+        - text: navigation_target
+        - text: ','
+        - text: ' '
+        - text: ordinals
+        - text: ' '
+        - text: or
+        - text: ' '
+        - text: '1'
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: =====
+    - text: ' '
+    - text: Examples
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: use
+    - text: ' '
+    - text: =====
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: 'comma:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: '","'
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: 'five:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: '"5"'
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: 'underscore:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: previous
+    - text: ' '
+    - text: '"_"'
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: second
+    - text: ' '
+    - text: 'plex:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: second-previous
+    - text: ' '
+    - text: '"x"'
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Besides
+    - text: ' '
+    - text: characters,
+    - text: ' '
+    - text: we
+    - text: ' '
+    - text: can
+    - text: ' '
+    - text: find
+    - text: ' '
+    - text: phrases
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: move
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: predetermined
+    - text: ' '
+    - text: 'units:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: phrase
+    - text: ' '
+    - text: hello
+    - text: ' '
+    - text: 'world:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: '"hello'
+    - text: ' '
+    - text: world"
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: 'word:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: over
+    - text: ' '
+    - text: three
+    - text: ' '
+    - text: words.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: second
+    - text: ' '
+    - text: 'big:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: second-next
+    - text: ' '
+    - text: '''big'''
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: (a
+    - text: ' '
+    - text: chunk
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: anything
+    - text: ' '
+    - text: except
+    - text: ' '
+    - text: white
+    - text: ' '
+    - text: space).
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: second
+    - text: ' '
+    - text: 'small:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: over
+    - text: ' '
+    - text: two
+    - text: ' '
+    - text: '''small'''
+    - text: ' '
+    - text: words
+    - text: ' '
+    - text: (chunks
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: camelCase
+    - text: ' '
+    - text: name).
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: We
+    - text: ' '
+    - text: can
+    - text: ' '
+    - text: search
+    - text: ' '
+    - text: several
+    - text: ' '
+    - text: lines
+    - text: ' '
+    - text: (default
+    - text: ' '
+    - text: 10)
+    - text: ' '
+    - text: above
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: below
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: 'cursor:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: up
+    - text: ' '
+    - text: phrase
+    - text: ' '
+    - text: 'john:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: previous
+    - text: ' '
+    - text: '"john"'
+    - text: ' '
+    - text: (case-insensitive)
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: preceding
+    - text: ' '
+    - text: lines.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: 'period:'
+    - text: ' '
+    - text: moves
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: period
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: following
+    - text: ' '
+    - text: lines.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Besides
+    - text: ' '
+    - text: movement,
+    - text: ' '
+    - text: we
+    - text: ' '
+    - text: can
+    - text: ' '
+    - text: cut,
+    - text: ' '
+    - text: copy,
+    - text: ' '
+    - text: select,
+    - text: ' '
+    - text: clear
+    - text: ' '
+    - text: (delete),
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: extend
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: current
+    - text: ' '
+    - text: 'selection:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: cut
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: 'comma:'
+    - text: ' '
+    - text: cut
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: following
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: comma
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: 'word:'
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: left.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: extend
+    - text: ' '
+    - text: third
+    - text: ' '
+    - text: 'big:'
+    - text: ' '
+    - text: extend
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: selection
+    - text: ' '
+    - text: three
+    - text: ' '
+    - text: big
+    - text: ' '
+    - text: words
+    - text: ' '
+    - text: right.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: clear
+    - text: ' '
+    - text: phrase
+    - text: ' '
+    - text: I
+    - text: ' '
+    - text: 'think:'
+    - text: ' '
+    - text: delete
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: next
+    - text: ' '
+    - text: occurrence
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: '"I'
+    - text: ' '
+    - text: think"
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: following
+    - text: ' '
+    - text: lines.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: up
+    - text: ' '
+    - text: select
+    - text: ' '
+    - text: 'colon:'
+    - text: ' '
+    - text: select
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: closest
+    - text: ' '
+    - text: colon
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: preceeding
+    - text: ' '
+    - text: lines.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: We
+    - text: ' '
+    - text: can
+    - text: ' '
+    - text: specify
+    - text: ' '
+    - text: what
+    - text: ' '
+    - text: gets
+    - text: ' '
+    - text: selected
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: given
+    - text: ' '
+    - text: 'input:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: select
+    - text: ' '
+    - text: parens
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: 'equals:'
+    - text: ' '
+    - text: Select
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: first
+    - text: ' '
+    - text: '"("'
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: everything
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: first
+    - text: ' '
+    - text: '")"'
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: '"="'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: left
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: all
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: 'equals:'
+    - text: ' '
+    - text: Copy
+    - text: ' '
+    - text: everything
+    - text: ' '
+    - text: from
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: start
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: line
+    - text: ' '
+    - text: until
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: first
+    - text: ' '
+    - text: '"="'
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: encounter
+    - text: ' '
+    - text: while
+    - text: ' '
+    - text: moving
+    - text: ' '
+    - text: left
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: clear
+    - text: ' '
+    - text: constant
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: 'semicolon:'
+    - text: ' '
+    - text: Delete
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: last
+    - text: ' '
+    - text: word
+    - text: ' '
+    - text: consisting
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: only
+    - text: ' '
+    - text: uppercase
+    - text: ' '
+    - text: characters
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: underscores
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: '";"'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: =====
+    - text: ' '
+    - text: Explanation
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: grammar
+    - text: ' '
+    - text: =====
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[{user.arrow_key}]:'
+    - text: ' '
+    - text: left,
+    - text: ' '
+    - text: right,
+    - text: ' '
+    - text: up,
+    - text: ' '
+    - text: down
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: right)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Which
+    - text: ' '
+    - text: direction
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: in.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: left/right
+    - text: ' '
+    - text: work
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: current
+    - text: ' '
+    - text: line.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: up/down
+    - text: ' '
+    - text: work
+    - text: ' '
+    - text: 'on'
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: closest
+    - text: ' '
+    - text: lines
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: 10)
+    - text: ' '
+    - text: above
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: below.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[{user.navigation_action}]:'
+    - text: ' '
+    - text: move,
+    - text: ' '
+    - text: extend,
+    - text: ' '
+    - text: select,
+    - text: ' '
+    - text: clear,
+    - text: ' '
+    - text: cut,
+    - text: ' '
+    - text: copy
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: move)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: What
+    - text: ' '
+    - text: action
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: perform.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[{user.navigation_target_name}]:'
+    - text: ' '
+    - text: word,
+    - text: ' '
+    - text: small,
+    - text: ' '
+    - text: big,
+    - text: ' '
+    - text: parens,
+    - text: ' '
+    - text: squares,
+    - text: ' '
+    - text: braces,
+    - text: ' '
+    - text: quotes,
+    - text: ' '
+    - text: angles,
+    - text: ' '
+    - text: all,
+    - text: ' '
+    - text: method,
+    - text: ' '
+    - text: constant
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: word)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: The
+    - text: ' '
+    - text: predetermined
+    - text: ' '
+    - text: unit
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: select
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: before_or_after
+    - text: ' '
+    - text: was
+    - text: ' '
+    - text: specified.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: Defaults
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: '"word"'
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[{user.before_or_after}]:'
+    - text: ' '
+    - text: before,
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: special
+    - text: ' '
+    - text: behavior)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: For
+    - text: ' '
+    - text: 'move/extend:'
+    - text: ' '
+    - text: where
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: leave
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: cursor,
+    - text: ' '
+    - text: before
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: target.
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Defaults
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: '"after"'
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: right/down
+    - text: ' '
+    - text: and
+    - text: ' '
+    - text: '"before"'
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: left/up.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: For
+    - text: ' '
+    - text: 'select/copy/cut:'
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: absent,
+    - text: ' '
+    - text: select/copy/cut
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: target
+    - text: ' '
+    - text: iself.
+    - text: ' '
+    - text: If
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: present,
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: navigation_target_name
+    - text: ' '
+    - text: before/after
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: target.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '[<user.ordinals>]:'
+    - text: ' '
+    - text: an
+    - text: ' '
+    - text: english
+    - text: ' '
+    - text: ordinal,
+    - text: ' '
+    - text: like
+    - text: ' '
+    - text: '"second"'
+    - text: ' '
+    - text: '(default:'
+    - text: ' '
+    - text: first)
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Which
+    - text: ' '
+    - text: occurrence
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: target
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: navigate
+    - text: ' '
+    - text: to.
+    - text: '
+
+        '
+    - text: '#'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: '<user.navigation_target>:'
+    - text: ' '
+    - text: one
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: 'following:'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: a
+    - text: ' '
+    - text: character
+    - text: ' '
+    - text: name,
+    - text: ' '
+    - text: like
+    - text: ' '
+    - text: '"comma"'
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: '"five".'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: '"word"'
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: '"big"'
+    - text: ' '
+    - text: or
+    - text: ' '
+    - text: '"small"'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: '-'
+    - text: ' '
+    - text: '"phrase'
+    - text: ' '
+    - text: <some
+    - text: ' '
+    - text: text
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: search
+    - text: ' '
+    - text: for>"
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: ' '
+    - text: ' '
+    - text: Specifies
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: target
+    - text: ' '
+    - text: to
+    - text: ' '
+    - text: search
+    - text: ' '
+    - text: for/navigate
+    - text: ' '
+    - text: to.
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: The
+    - text: ' '
+    - text: functionality
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: all
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: is
+    - text: ' '
+    - text: covered
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: lines
+    - text: ' '
+    - text: above,
+    - text: ' '
+    - text: but
+    - text: ' '
+    - text: these
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: are
+    - text: ' '
+    - text: kept
+    - text: ' '
+    - text: here
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: convenience.
+    - text: ' '
+    - text: Originally
+    - text: ' '
+    - text: from
+    - text: ' '
+    - text: word_selection.talon.
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - alts:
+          - docs:
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: word
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: word
+              - text: ' '
+              - text: neck
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: word
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: word
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: word
+              - text: ' '
+              - text: pre
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: word
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: small
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: small
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: small
+              - text: ' '
+              - text: word
+              - text: ' '
+              - text: neck
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: small
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: small
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: small
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: small
+              - text: ' '
+              - text: word
+              - text: ' '
+              - text: pre
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: small
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: big
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: big
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: big
+              - text: ' '
+              - text: word
+              - text: ' '
+              - text: neck
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: RIGHT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: big
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+        - alts:
+          - docs:
+            - text: big
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+            - doc:
+                docs:
+                - text: '
+
+                    '
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: big
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              indent: 4
+              overlap: false
+          - cells:
+            - docs:
+              - text: big
+              - text: ' '
+              - text: word
+              - text: ' '
+              - text: pre
+              - text: ' '
+              - text: '['
+              - text: <
+              - text: number_small
+              - text: '>'
+              - text: ']'
+              - text: ':'
+            - doc:
+                docs:
+                - text: user.navigation_by_name
+                - text: (
+                - doc:
+                    text: SELECT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: LEFT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: DEFAULT
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - doc:
+                    text: big
+                  function: _smart_quote
+                - text: ','
+                - text: ' '
+                - text: number_small
+                - text: ' '
+                - text: or
+                - text: ' '
+                - text: '1'
+                - text: )
+                - text: '
+
+                    '
+              function: _inline
+            info:
+              hpad:
+                text: ' '
+              hsep:
+                text: ' '
+              min_col_widths: []
+              table_type: command
+      - rows:
+        - cells:
+          - docs:
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: RIGHT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: word
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: LEFT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: word
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: small
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: RIGHT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: small
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: small
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: LEFT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: small
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: big
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: neck
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: RIGHT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: big
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+        - cells:
+          - docs:
+            - text: big
+            - text: ' '
+            - text: word
+            - text: ' '
+            - text: pre
+            - text: ' '
+            - text: '['
+            - text: <
+            - text: number_small
+            - text: '>'
+            - text: ']'
+            - text: ':'
+          - doc:
+              docs:
+              - text: user.navigation_by_name
+              - text: (
+              - doc:
+                  text: SELECT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: LEFT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: DEFAULT
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - doc:
+                  text: big
+                function: _smart_quote
+              - text: ','
+              - text: ' '
+              - text: number_small
+              - text: ' '
+              - text: or
+              - text: ' '
+              - text: '1'
+              - text: )
+              - text: '
+
+                  '
+            function: _inline
+          info:
+            hpad:
+              text: ' '
+            hsep:
+              text: ' '
+            min_col_widths: []
+            table_type: command
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  # (2021-03-09) This syntax is experimental and may change. See below for an explanation.
+  # If you are having issues with this module not working in vscode try adding the vscode setting "editor.emptySelectionClipboard": false
+  navigate [{user.arrow_key}] [{user.navigation_action}] [{user.navigation_target_name}] [{user.before_or_after}] [<user.ordinals>] <user.navigation_target>:
+      # If you use this command a lot, you may wish to have a shorter syntax that omits the navigate keyword. Note that you then at least have to say either a navigation_action or before_or_after:
+      # ({user.navigation_action} [{user.arrow_key}] [{user.navigation_target_name}] [{user.before_or_after}] | [{user.arrow_key}] {user.before_or_after}) [<user.ordinals>] <user.navigation_target>:
+      user.navigation(navigation_action or "GO", arrow_key or "RIGHT", navigation_target_name or "DEFAULT", before_or_after or "DEFAULT", navigation_target, ordinals or 1)
+
+  # ===== Examples of use =====
+  #
+  #   navigate comma: moves after the next "," on the line.
+  #   navigate before five: moves before the next "5" on the line.
+  #   navigate left underscore: moves before the previous "_" on the line.
+  #   navigate left after second plex: moves after the second-previous "x" on the line.
+  #
+  # Besides characters, we can find phrases or move in predetermined units:
+  #
+  #   navigate phrase hello world: moves after the next "hello world" on the line.
+  #   navigate left third word: moves left over three words.
+  #   navigate before second big: moves before the second-next 'big' word (a chunk of anything except white space).
+  #   navigate left second small: moves left over two 'small' words (chunks of a camelCase name).
+  #
+  # We can search several lines (default 10) above or below the cursor:
+  #
+  #   navigate up phrase john: moves before the previous "john" (case-insensitive) on the preceding lines.
+  #   navigate down third period: moves after the third period on the following lines.
+  #
+  # Besides movement, we can cut, copy, select, clear (delete), or extend the current selection:
+  #
+  #   navigate cut after comma: cut the word following the next comma on the line.
+  #   navigate left copy third word: copy the third word to the left.
+  #   navigate extend third big: extend the selection three big words right.
+  #   navigate down clear phrase I think: delete the next occurrence of "I think" on the following lines.
+  #   navigate up select colon: select the closest colon on the preceeding lines.
+  #
+  # We can specify what gets selected before or after the given input:
+  #
+  # navigate select parens after equals: Select the first "(" and everything until the first ")" after the "="
+  # navigate left copy all before equals: Copy everything from the start of the line until the first "=" you encounter while moving left
+  # navigate clear constant before semicolon: Delete the last word consisting of only uppercase characters or underscores before a ";"
+  #
+  # ===== Explanation of the grammar =====
+  #
+  # [{user.arrow_key}]: left, right, up, down (default: right)
+  #   Which direction to navigate in.
+  #   left/right work on the current line.
+  #   up/down work on the closest lines (default: 10) above or below.
+  #
+  # [{user.navigation_action}]: move, extend, select, clear, cut, copy (default: move)
+  #   What action to perform.
+  #
+  # [{user.navigation_target_name}]: word, small, big, parens, squares, braces, quotes, angles, all, method, constant (default: word)
+  # The predetermined unit to select if before_or_after was specified.
+  # Defaults to "word"
+  #
+  # [{user.before_or_after}]: before, after (default: special behavior)
+  #   For move/extend: where to leave the cursor, before or after the target.
+  #   Defaults to "after" for right/down and "before" for left/up.
+  #
+  #   For select/copy/cut: if absent, select/copy/cut the target iself. If
+  #   present, the navigation_target_name before/after the target.
+  #
+  # [<user.ordinals>]: an english ordinal, like "second" (default: first)
+  #   Which occurrence of the target to navigate to.
+  #
+  # <user.navigation_target>: one of the following:
+  #   - a character name, like "comma" or "five".
+  #   - "word" or "big" or "small"
+  #   - "phrase <some text to search for>"
+  #   Specifies the target to search for/navigate to.
+
+  # The functionality for all these commands is covered in the lines above, but these commands are kept here for convenience. Originally from word_selection.talon.
+  word neck [<number_small>]:       user.navigation_by_name("SELECT", "RIGHT", "DEFAULT", "word", number_small or 1)
+  word pre [<number_small>]:        user.navigation_by_name("SELECT", "LEFT", "DEFAULT", "word", number_small or 1)
+  small word neck [<number_small>]: user.navigation_by_name("SELECT", "RIGHT", "DEFAULT", "small", number_small or 1)
+  small word pre [<number_small>]:  user.navigation_by_name("SELECT", "LEFT", "DEFAULT", "small", number_small or 1)
+  big word neck [<number_small>]:   user.navigation_by_name("SELECT", "RIGHT", "DEFAULT", "big", number_small or 1)
+  big word pre [<number_small>]:    user.navigation_by_name("SELECT", "LEFT", "DEFAULT", "big", number_small or 1)

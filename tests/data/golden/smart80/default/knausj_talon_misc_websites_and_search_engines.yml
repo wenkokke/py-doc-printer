@@ -1,0 +1,167 @@
+input:
+  doc:
+    docs:
+    - text: '-'
+    - text: '
+
+        '
+    - alts:
+      - docs:
+        - text: open
+        - text: ' '
+        - text: '{'
+        - text: user.website
+        - text: '}'
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.open_url
+            - text: (
+            - text: website
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: open
+          - text: ' '
+          - text: '{'
+          - text: user.website
+          - text: '}'
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.open_url
+            - text: (
+            - text: website
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: '{'
+        - text: user.search_engine
+        - text: '}'
+        - text: ' '
+        - text: hunt
+        - text: ' '
+        - text: <
+        - text: user.text
+        - text: '>'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: user.search_with_search_engine
+            - text: (
+            - text: search_engine
+            - text: ','
+            - text: ' '
+            - text: user.text
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: '{'
+          - text: user.search_engine
+          - text: '}'
+          - text: ' '
+          - text: hunt
+          - text: ' '
+          - text: <
+          - text: user.text
+          - text: '>'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: user.search_with_search_engine
+            - text: (
+            - text: search_engine
+            - text: ','
+            - text: ' '
+            - text: user.text
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - text: '{'
+    - text: user.search_engine
+    - text: '}'
+    - text: ' '
+    - text: (
+    - text: that
+    - text: ' '
+    - text: '|'
+    - text: ' '
+    - text: this
+    - text: )
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: text
+        - text: ' '
+        - text: '='
+        - text: ' '
+        - text: edit.selected_text
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.search_with_search_engine
+        - text: (
+        - text: search_engine
+        - text: ','
+        - text: ' '
+        - text: text
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  -
+  open {user.website}: user.open_url(website)
+  {user.search_engine} hunt <user.text>$:
+      user.search_with_search_engine(search_engine, user.text)
+  {user.search_engine} (that | this):
+      text = edit.selected_text()
+      user.search_with_search_engine(search_engine, text)

@@ -1,0 +1,250 @@
+input:
+  doc:
+    docs:
+    - text: '#'
+    - text: ' '
+    - text: defines
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: that
+    - text: ' '
+    - text: sleep/wake
+    - text: ' '
+    - text: Talon
+    - text: '
+
+        '
+    - cells:
+      - docs:
+        - text: mode
+        - text: ':'
+      - text: all
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: ^
+    - text: welcome
+    - text: ' '
+    - text: back
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.mouse_wake
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.history_enable
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.talon_mode
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - text: ^
+    - text: sleep
+    - text: ' '
+    - text: all
+    - text: ' '
+    - text: '['
+    - text: <
+    - text: phrase
+    - text: '>'
+    - text: ']'
+    - text: $
+    - text: ':'
+    - doc:
+        docs:
+        - text: '
+
+            '
+        - text: user.switcher_hide_running
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.history_disable
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.homophones_hide
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.help_hide
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.mouse_sleep
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: speech.disable
+        - text: (
+        - text: )
+        - text: '
+
+            '
+        - text: user.engine_sleep
+        - text: (
+        - text: )
+        - text: '
+
+            '
+      indent: 4
+      overlap: false
+    - alts:
+      - docs:
+        - text: ^
+        - text: talon
+        - text: ' '
+        - text: sleep
+        - text: ' '
+        - text: '['
+        - text: <
+        - text: phrase
+        - text: '>'
+        - text: ']'
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: speech.disable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: ^
+          - text: talon
+          - text: ' '
+          - text: sleep
+          - text: ' '
+          - text: '['
+          - text: <
+          - text: phrase
+          - text: '>'
+          - text: ']'
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: speech.disable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+    - alts:
+      - docs:
+        - text: ^
+        - text: talon
+        - text: ' '
+        - text: wake
+        - text: $
+        - text: ':'
+        - doc:
+            docs:
+            - text: '
+
+                '
+            - text: speech.enable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          indent: 4
+          overlap: false
+      - cells:
+        - docs:
+          - text: ^
+          - text: talon
+          - text: ' '
+          - text: wake
+          - text: $
+          - text: ':'
+        - doc:
+            docs:
+            - text: speech.enable
+            - text: (
+            - text: )
+            - text: '
+
+                '
+          function: _inline
+        info:
+          hpad:
+            text: ' '
+          hsep:
+            text: ' '
+          min_col_widths: []
+          table_type: command
+  max_line_width: 80
+  renderer: smart
+  simple_layout: null
+output: |
+  # defines the commands that sleep/wake Talon
+  mode: all
+  -
+  ^welcome back$:
+      user.mouse_wake()
+      user.history_enable()
+      user.talon_mode()
+  ^sleep all [<phrase>]$:
+      user.switcher_hide_running()
+      user.history_disable()
+      user.homophones_hide()
+      user.help_hide()
+      user.mouse_sleep()
+      speech.disable()
+      user.engine_sleep()
+  ^talon sleep [<phrase>]$: speech.disable()
+  ^talon wake$: speech.enable()

@@ -1,0 +1,54 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: windows
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - cells:
+      - docs:
+        - text: app.exe
+        - text: ':'
+      - text: ConEmu64.exe
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths:
+        - 32
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: terminal
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.git
+    - text: '
+
+        '
+  max_line_width: null
+  renderer: simple
+  simple_layout: LongestLines
+output: |
+  os:                              windows
+  app.exe:                         ConEmu64.exe
+  -
+  tag(): terminal
+  tag(): user.git

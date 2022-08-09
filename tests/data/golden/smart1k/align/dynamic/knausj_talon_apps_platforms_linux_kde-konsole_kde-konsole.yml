@@ -1,0 +1,191 @@
+input:
+  doc:
+    docs:
+    - cells:
+      - docs:
+        - text: os
+        - text: ':'
+      - text: linux
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - cells:
+      - docs:
+        - text: and
+        - text: ' '
+        - text: app.name
+        - text: ':'
+      - text: konsole
+      info:
+        hpad:
+          text: ' '
+        hsep:
+          text: ' '
+        min_col_widths: []
+        table_type: match
+    - text: '-'
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: makes
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: generic_terminal
+    - text: ' '
+    - text: available
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: terminal
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: activates
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: implementation
+    - text: ' '
+    - text: of
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: commands/functions
+    - text: ' '
+    - text: in
+    - text: ' '
+    - text: generic_terminal
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.generic_unix_shell
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: makes
+    - text: ' '
+    - text: commands
+    - text: ' '
+    - text: for
+    - text: ' '
+    - text: certain
+    - text: ' '
+    - text: applications
+    - text: ' '
+    - text: available
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: can
+    - text: ' '
+    - text: deactivate
+    - text: ' '
+    - text: them
+    - text: ' '
+    - text: if
+    - text: ' '
+    - text: you
+    - text: ' '
+    - text: do
+    - text: ' '
+    - text: not
+    - text: ' '
+    - text: use
+    - text: ' '
+    - text: the
+    - text: ' '
+    - text: application
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.git
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.anaconda
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.kubectl
+    - text: '
+
+        '
+    - text: '
+
+        '
+    - text: 'tag():'
+    - text: ' '
+    - text: user.tabs
+    - text: '
+
+        '
+    - text: '#'
+    - text: ' '
+    - text: 'TODO:'
+    - text: ' '
+    - text: add
+    - text: ' '
+    - text: file_manager
+    - text: ' '
+    - text: support
+    - text: '
+
+        '
+  max_line_width: 1000
+  renderer: smart
+  simple_layout: null
+output: |
+  os: linux
+  and app.name: konsole
+  -
+  # makes the commands in generic_terminal available
+  tag(): terminal
+
+  # activates the implementation of the commands/functions in generic_terminal
+  tag(): user.generic_unix_shell
+
+  # makes commands for certain applications available
+  # you can deactivate them if you do not use the application
+  tag(): user.git
+  tag(): user.anaconda
+  # tag(): user.kubectl
+
+  tag(): user.tabs
+  # TODO: add file_manager support
