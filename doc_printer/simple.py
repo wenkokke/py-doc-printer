@@ -73,6 +73,7 @@ class SimpleDocRenderer(DocRenderer):
                     else:
                         has_content = True
                         if first_line:
+                            # TODO: what if doc.indent < self.column?
                             if doc.overlap and doc.indent > self.column:
                                 yield from self.padding(
                                     line_indent + doc.indent - self.column

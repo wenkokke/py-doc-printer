@@ -1,17 +1,40 @@
 import abc
 import collections.abc
 import dataclasses
-import functools
 import itertools
-import operator
 import re
 import typing
 
+import dataclasses_json
 import more_itertools
 
 DocLike = typing.Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]  # type: ignore
 
 DocClassWithUnpack = type[collections.abc.Iterable["Doc"]]
+
+
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
+class WidthHint:
+    width: int = 0
+    end_of_line: bool = False
+
+    def __add__(self, other: typing.Union[int, "Doc", "WidthHint"]) -> "WidthHint":
+        if self.end_of_line:
+            return self
+        else:
+            if isinstance(other, int):
+                other = WidthHint(other)
+            if isinstance(other, Doc):
+                other = other.width_hint()
+            return WidthHint(self.width + other.width, other.end_of_line)
+
+    def __radd__(self, other: typing.Union[int, "Doc", "WidthHint"]) -> "WidthHint":
+        if isinstance(other, int):
+            other = WidthHint(other)
+        if isinstance(other, Doc):
+            other = other.width_hint()
+        return other.__add__(self)
 
 
 class Doc(abc.ABC):
@@ -33,8 +56,10 @@ class Doc(abc.ABC):
         return cat(more_itertools.intersperse(self, splat(others)))
 
     @abc.abstractmethod
-    def __length_hint__(self) -> int:
-        pass
+    def width_hint(self) -> WidthHint:
+        """
+        Return an estimate of the width of the first line, when this document is rendered.
+        """
 
     def __truediv__(self, other: DocLike) -> "Doc":
         """
@@ -87,7 +112,8 @@ class Doc(abc.ABC):
 ################################################################################
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Text(Doc):
     """
     A single line of text.
@@ -117,7 +143,7 @@ class Text(Doc):
     def intern(cls, name: str, text: str) -> "Text":
         if not hasattr(cls, name):
             instance = super().__new__(Text)
-            instance.text = text
+            object.__setattr__(instance, "text", text)
             setattr(cls, name, instance)
         return getattr(cls, name)
 
@@ -150,7 +176,7 @@ class Text(Doc):
         if text == cls.intern_Line().text:
             return cls.intern_Line()
         instance = super().__new__(Text)
-        instance.text = text
+        object.__setattr__(instance, "text", text)
         return instance
 
     def __init__(self, text: str) -> None:
@@ -171,8 +197,11 @@ class Text(Doc):
             return "Line"
         return f"Text(text={self.text})"
 
-    def __length_hint__(self) -> int:
-        return len(self.text)
+    def width_hint(self) -> WidthHint:
+        if self is Line:
+            return WidthHint(width=0, end_of_line=True)
+        else:
+            return WidthHint(width=len(self), end_of_line=False)
 
     def __len__(self) -> int:
         return len(self.text)
@@ -194,7 +223,8 @@ TokenStream = collections.abc.Iterator[Token]
 ################################################################################
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Cat(Doc, collections.abc.Iterable[Doc]):
     """
     Concatenated documents.
@@ -215,8 +245,13 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.docs)
 
-    def __length_hint__(self) -> int:
-        return sum(map(operator.length_hint, self.docs))
+    def width_hint(self) -> WidthHint:
+        width_hint = WidthHint()
+        for doc in self.docs:
+            width_hint = width_hint + doc
+            if width_hint.end_of_line:
+                return width_hint  # short-circuit
+        return width_hint
 
 
 def splat(
@@ -277,7 +312,8 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Alt(Doc, collections.abc.Iterable[Doc]):
     """
     Alternatives for the document layout.
@@ -290,7 +326,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
     def intern(cls, name: str, alts: tuple[Doc, ...]) -> "Alt":
         if not hasattr(cls, name):
             instance = super().__new__(Alt)
-            instance.alts = alts
+            object.__setattr__(instance, "alts", alts)
             setattr(cls, name, instance)
         return getattr(cls, name)
 
@@ -314,7 +350,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
         if alts == cls.intern_SoftLine().alts:
             return cls.intern_SoftLine()
         instance = super().__new__(Alt)
-        instance.alts = alts
+        object.__setattr__(instance, "alts", alts)
         return instance
 
     def __init__(self, alts: tuple[Doc, ...]):
@@ -333,11 +369,11 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.alts)
 
-    def __length_hint__(self) -> int:
-        if self.alts:
-            return operator.length_hint(self.alts[0])
+    def width_hint(self) -> WidthHint:
+        if self.alts:  # i.e., self is not Fail
+            return self.alts[0].width_hint()
         else:
-            return 0
+            return WidthHint()  # TODO: raise exception?
 
 
 Fail = Alt.intern_Fail()
@@ -359,7 +395,8 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Nest(Doc):
     """
     Indented documents.
@@ -377,8 +414,12 @@ class Nest(Doc):
         # Invariant: The indent is greater than zero.
         assert self.indent > 0, f"Nest has negative or zero indent:\n{repr(self)}"
 
-    def __length_hint__(self) -> int:
-        return self.indent + operator.length_hint(self.doc)
+    def width_hint(self) -> WidthHint:
+        if self.overlap:
+            # TODO: use the current column to decide more accurately?
+            return self.indent + self.doc.width_hint()
+        else:
+            return self.doc.width_hint()
 
 
 def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
@@ -398,13 +439,94 @@ def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass
-class Edit(Doc):
+def _escape_single(token_stream: TokenStream) -> TokenStream:
+    return map(escape_single, token_stream)
+
+
+def _escape_single_and_unescape_double(token_stream: TokenStream) -> TokenStream:
+    return _escape_single(map(unescape_single, token_stream))
+
+
+def _escape_double(token_stream: TokenStream) -> TokenStream:
+    return map(escape_double, token_stream)
+
+
+def _escape_double_and_unescape_single(token_stream: TokenStream) -> TokenStream:
+    return _escape_double(map(unescape_single, token_stream))
+
+
+def _smart_quote(token_stream: TokenStream) -> TokenStream:
+    single: int = 0
+    double: int = 0
+    buffer: list[Token] = []
+    for token in token_stream:
+        single += token.text.count("'")
+        double += token.text.count('"')
+        buffer.append(token)
+    if single < double:
+        yield Text("'")
+        yield from _escape_single_and_unescape_double(iter(buffer))
+        yield Text("'")
+    else:
+        yield Text('"')
+        yield from _escape_double_and_unescape_single(iter(buffer))
+        yield Text('"')
+
+
+def _inline(token_stream: TokenStream) -> TokenStream:
+    return filter(lambda token: token is not Line, token_stream)
+
+
+def _encode_edit_function(
     function: collections.abc.Callable[[TokenStream], TokenStream]
+) -> str:
+    if function is _escape_single:
+        return "_escape_single"
+    if function is _escape_single_and_unescape_double:
+        return "_escape_single_and_unescape_double"
+    if function is _escape_double:
+        return "_escape_double"
+    if function is _escape_double_and_unescape_single:
+        return "_escape_double_and_unescape_single"
+    if function is _smart_quote:
+        return "_smart_quote"
+    if function is _inline:
+        return "_inline"
+    raise ValueError(f"Unknown edit function '{repr(function)}'")
+
+
+def _decode_edit_function(
+    function_name: str,
+) -> collections.abc.Callable[[TokenStream], TokenStream]:
+    if function_name is "_escape_single":
+        return _escape_single
+    if function_name is "_escape_single_and_unescape_double":
+        return _escape_single_and_unescape_double
+    if function_name is "_escape_double":
+        return _escape_double
+    if function_name is "_escape_double_and_unescape_single":
+        return _escape_double_and_unescape_single
+    if function_name is "_smart_quote":
+        return _smart_quote
+    if function_name is "_inline":
+        return _inline
+    raise ValueError(f"Unknown edit function '{function_name}'")
+
+
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
+class Edit(Doc):
+    function: collections.abc.Callable[[TokenStream], TokenStream] = dataclasses.field(
+        metadata=dataclasses_json.config(
+            encoder=_encode_edit_function,
+            decoder=_decode_edit_function,
+        )
+    )
     doc: Doc
 
-    def __length_hint__(self) -> int:
-        return operator.length_hint(self.doc)
+    def width_hint(self) -> WidthHint:
+        # NOTE: function should not significantly alter the width
+        return self.doc.width_hint()
 
 
 ESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"\\'")
@@ -440,13 +562,10 @@ def single_quote(
 ) -> Doc:
     doc = cat(doclike)
     if auto_escape:
-
-        def _single_quote(token_stream: TokenStream) -> TokenStream:
-            if auto_unescape:
-                token_stream = map(unescape_double, token_stream)
-            return map(escape_single, token_stream)
-
-        doc = Edit(_single_quote, doc)
+        if auto_unescape:
+            doc = Edit(_escape_single_and_unescape_double, doc)
+        else:
+            doc = Edit(_escape_single, doc)
     return cat("'", doc, "'")
 
 
@@ -455,34 +574,14 @@ def double_quote(
 ) -> Doc:
     doc = cat(doclike)
     if auto_escape:
-
-        def _double_quote(token_stream: TokenStream) -> TokenStream:
-            if auto_unescape:
-                token_stream = map(unescape_single, token_stream)
-            return map(escape_double, token_stream)
-
-        doc = Edit(_double_quote, doc)
+        if auto_unescape:
+            doc = Edit(_escape_double_and_unescape_single, doc)
+        else:
+            doc = Edit(_escape_double, doc)
     return cat('"', doc, '"')
 
 
 def smart_quote(*doclike: DocLike) -> Doc:
-    def _smart_quote(token_stream: TokenStream) -> TokenStream:
-        single: int = 0
-        double: int = 0
-        buffer: list[Token] = []
-        for token in token_stream:
-            single += token.text.count("'")
-            double += token.text.count('"')
-            buffer.append(token)
-        if single < double:
-            yield Text("'")
-            yield from map(escape_single, map(unescape_double, buffer))
-            yield Text("'")
-        else:
-            yield Text('"')
-            yield from map(escape_double, map(unescape_single, buffer))
-            yield Text('"')
-
     return Edit(_smart_quote, cat(doclike))
 
 
@@ -492,10 +591,7 @@ def smart_quote(*doclike: DocLike) -> Doc:
 
 
 def inline(doc: Doc) -> Doc:
-    def filter_lines(token_stream: TokenStream) -> TokenStream:
-        return filter(lambda token: token is not Line, token_stream)
-
-    return Edit(filter_lines, doc=doc)
+    return Edit(_inline, doc=doc)
 
 
 ################################################################################
@@ -503,7 +599,8 @@ def inline(doc: Doc) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class RowInfo:
     table_type: typing.Optional[str]
     hpad: Text
@@ -511,7 +608,8 @@ class RowInfo:
     min_col_widths: tuple[typing.Optional[int], ...]
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Row(Doc, collections.abc.Iterable[Doc]):
     cells: tuple[Doc, ...]
     info: RowInfo
@@ -530,13 +628,17 @@ class Row(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.cells)
 
-    def __length_hint__(self) -> int:
-        hsep_length = len(self.info.hsep)
-        cell_length_hints = map(operator.length_hint, self.cells)
-        return sum(more_itertools.intersperse(hsep_length, cell_length_hints))
+    def width_hint(self) -> WidthHint:
+        width_hint = WidthHint()
+        for cell in more_itertools.intersperse(self.info.hsep, self.cells):
+            # NOTE: sum the length of the first line of each cell
+            width_hint = width_hint + cell.width_hint().width
+        # NOTE: rows always end the line
+        return WidthHint(width_hint.width, True)
 
 
-@dataclasses.dataclass
+@dataclasses_json.dataclass_json
+@dataclasses.dataclass(frozen=True)
 class Table(Doc, collections.abc.Iterable[Row]):
     rows: tuple[Row, ...]
 
@@ -549,8 +651,12 @@ class Table(Doc, collections.abc.Iterable[Row]):
     def __iter__(self) -> collections.abc.Iterator[Row]:
         return iter(self.rows)
 
-    def __length_hint__(self) -> int:
-        return max(map(operator.length_hint, self.rows))
+    def width_hint(self) -> WidthHint:
+        if self.rows:
+            # NOTE: only process the first row
+            return self.rows[0].width_hint()
+        else:
+            return WidthHint()
 
 
 def row(
@@ -583,6 +689,7 @@ def table(rows: collections.abc.Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
+@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class RowCandidate:
     doc: Doc
