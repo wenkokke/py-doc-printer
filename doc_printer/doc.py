@@ -444,7 +444,7 @@ def _escape_single(token_stream: TokenStream) -> TokenStream:
 
 
 def _escape_single_and_unescape_double(token_stream: TokenStream) -> TokenStream:
-    return _escape_single(map(unescape_single, token_stream))
+    return _escape_single(map(unescape_double, token_stream))
 
 
 def _escape_double(token_stream: TokenStream) -> TokenStream:
