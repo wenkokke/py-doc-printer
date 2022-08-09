@@ -37,7 +37,7 @@ class WidthHint:
         return other.__add__(self)
 
 
-class Doc(abc.ABC):
+class Doc(dataclasses_json.DataClassJsonMixin):
     def then(self, other: DocLike) -> "Doc":
         """
         Compose two documents.
