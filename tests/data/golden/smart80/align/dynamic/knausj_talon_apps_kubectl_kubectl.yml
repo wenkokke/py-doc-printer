@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: terminal
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,13 +17,19 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: and
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.kubectl
+        type: Text
       info:
         hpad:
           text: ' '
@@ -27,54 +37,70 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: control
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: control
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -82,48 +108,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: create
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: create
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: create
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: create
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -131,48 +173,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: expose
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: expose
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: expose
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: expose
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -180,48 +238,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: run
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: run
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: run
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: run
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -229,48 +303,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: set
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: set
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: set
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: set
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -278,52 +368,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: run
-            - text: ' '
+              type: Text
+            - type: Space
             - text: container
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: run-container
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: run
-              - text: ' '
+                type: Text
+              - type: Space
               - text: container
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: run-container
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -331,48 +439,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: explain
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: explain
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: explain
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: explain
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -380,48 +504,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: get
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: get
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: get
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: get
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -429,48 +569,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: edit
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: edit
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: edit
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -478,48 +634,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: delete
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: delete
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: delete
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: delete
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -527,48 +699,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: rollout
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: rollout
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: rollout
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: rollout
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -576,52 +764,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: rolling
-            - text: ' '
+              type: Text
+            - type: Space
             - text: update
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: rolling-update
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: rolling
-              - text: ' '
+                type: Text
+              - type: Space
               - text: update
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: rolling-update
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -629,48 +835,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scale
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: scale
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: scale
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: scale
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -678,52 +900,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: auto
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scale
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: autoscale
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: auto
-              - text: ' '
+                type: Text
+              - type: Space
               - text: scale
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: autoscale
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -731,48 +971,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: certificate
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: certificate
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: certificate
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: certificate
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -780,48 +1036,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: top
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: top
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: top
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: top
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -829,48 +1101,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: drain
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: drain
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: drain
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: drain
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -878,48 +1166,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: taint
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: taint
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: taint
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: taint
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -927,60 +1231,84 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: cord
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cordon
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cordon
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: cord
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: cordon
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cordon
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -988,60 +1316,84 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: uncord
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: uncordon
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: uncordon
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: uncord
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: uncordon
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: uncordon
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1049,64 +1401,90 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cluster
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: info
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: information
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cluster-info
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: cluster
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: info
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: information
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cluster-info
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1114,48 +1492,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: describe
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: describe
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: describe
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: describe
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1163,48 +1557,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logs
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: logs
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: logs
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: logs
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1212,48 +1622,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: attach
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: attach
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: attach
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: attach
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1261,48 +1687,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: exec
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: exec
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: exec
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: exec
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1310,52 +1752,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: port
-            - text: ' '
+              type: Text
+            - type: Space
             - text: forward
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: port-forward
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: port
-              - text: ' '
+                type: Text
+              - type: Space
               - text: forward
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: port-forward
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1363,48 +1823,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: proxy
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: proxy
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: proxy
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: proxy
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1412,48 +1888,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: copy
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cp
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: copy
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: cp
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1461,48 +1953,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: auth
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: auth
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: auth
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: auth
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1510,48 +2018,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: diff
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: diff
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: diff
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: diff
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1559,48 +2083,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: apply
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: apply
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: apply
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: apply
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1608,48 +2148,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: patch
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: patch
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: patch
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: patch
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1657,48 +2213,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: replace
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: replace
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: replace
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: replace
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1706,48 +2278,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: wait
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: wait
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: wait
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: wait
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1755,48 +2343,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: convert
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: convert
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: convert
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: convert
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1804,48 +2408,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: customize
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: kustomize
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: customize
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: kustomize
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1853,48 +2473,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: label
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: label
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: label
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: label
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1902,48 +2538,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: annotate
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: annotate
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: annotate
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: annotate
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1951,48 +2603,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: completion
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: completion
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: completion
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: completion
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2000,60 +2668,84 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: API
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: interface
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: API
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2061,52 +2753,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resources
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api-resources
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: interface
-              - text: ' '
+                type: Text
+              - type: Space
               - text: resources
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api-resources
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2114,52 +2824,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: versions
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api-versions
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: interface
-              - text: ' '
+                type: Text
+              - type: Space
               - text: versions
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: api-versions
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2167,48 +2895,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: config
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: config
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: config
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: config
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2216,48 +2960,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: help
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: help
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: help
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: help
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2265,48 +3025,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plugin
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: plugin
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: plugin
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: plugin
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2314,48 +3090,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: version
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: version
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: cube
-              - text: ' '
+                type: Text
+              - type: Space
               - text: version
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: kubectl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: version
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -2363,26 +3155,38 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: control
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2390,25 +3194,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: create
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: create
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2416,25 +3229,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: expose
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: expose
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2442,25 +3264,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: run
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: run
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2468,25 +3299,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: set
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: set
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2494,27 +3334,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: run
-            - text: ' '
+              type: Text
+            - type: Space
             - text: container
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: run-container
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2522,25 +3372,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: explain
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: explain
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2548,25 +3407,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: get
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: get
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2574,25 +3442,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: edit
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2600,25 +3477,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: delete
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: delete
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2626,25 +3512,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: rollout
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: rollout
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2652,27 +3547,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: rolling
-            - text: ' '
+              type: Text
+            - type: Space
             - text: update
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: rolling-update
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2680,25 +3585,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scale
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: scale
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2706,27 +3620,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: auto
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scale
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: autoscale
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2734,25 +3658,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: certificate
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: certificate
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2760,25 +3693,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: top
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: top
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2786,25 +3728,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: drain
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: drain
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2812,25 +3763,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: taint
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: taint
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2838,31 +3798,44 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: cord
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cordon
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: cordon
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2870,31 +3843,44 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: uncord
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: uncordon
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: uncordon
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2902,33 +3888,47 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cluster
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: info
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: information
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: cluster-info
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2936,25 +3936,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: describe
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: describe
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2962,25 +3971,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logs
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: logs
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -2988,25 +4006,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: attach
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: attach
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3014,25 +4041,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: exec
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: exec
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3040,27 +4076,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: port
-            - text: ' '
+              type: Text
+            - type: Space
             - text: forward
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: port-forward
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3068,25 +4114,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: proxy
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: proxy
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3094,25 +4149,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: copy
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: cp
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3120,25 +4184,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: auth
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: auth
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3146,25 +4219,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: diff
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: diff
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3172,25 +4254,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: apply
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: apply
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3198,25 +4289,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: patch
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: patch
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3224,25 +4324,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: replace
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: replace
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3250,25 +4359,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: wait
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: wait
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3276,25 +4394,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: convert
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: convert
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3302,25 +4429,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: customize
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: kustomize
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3328,25 +4464,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: label
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: label
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3354,25 +4499,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: annotate
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: annotate
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3380,25 +4534,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: completion
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: completion
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3406,31 +4569,44 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: API
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: api
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3438,27 +4614,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resources
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: api-resources
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3466,27 +4652,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: versions
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: api-versions
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3494,25 +4690,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: config
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: config
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3520,25 +4725,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: help
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: help
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3546,25 +4760,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plugin
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: plugin
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3572,25 +4795,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: cube
-            - text: ' '
+              type: Text
+            - type: Space
             - text: version
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: kubectl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: version
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -3598,154 +4830,213 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: cube
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '{'
+      type: Text
     - text: user.kubectl_action
+      type: Text
     - text: '}'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: '{'
+      type: Text
     - text: user.kubectl_object
+      type: Text
     - text: '}'
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: kubectl
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: kubectl_action
+              type: Text
             - text: '}'
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: kubectl_object
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: cube
-    - text: ' '
+      type: Text
+    - type: Space
     - text: detach
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"ctrl-p"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"ctrl-q"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: cube
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shell
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: kubectl
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: exec
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -it
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: --
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: /bin/bash
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: cube
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shell
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: kubectl
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: exec
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -it
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: --
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: /bin/bash
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3753,65 +5044,46 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag: terminal
-  and tag: user.kubectl
-  -
-  cube [control]:                    "kubectl "
-  cube create:                       "kubectl create "
-  cube expose:                       "kubectl expose "
-  cube run:                          "kubectl run "
-  cube set:                          "kubectl set "
-  cube run container:                "kubectl run-container "
-  cube explain:                      "kubectl explain "
-  cube get:                          "kubectl get "
-  cube edit:                         "kubectl edit "
-  cube delete:                       "kubectl delete "
-  cube rollout:                      "kubectl rollout "
-  cube rolling update:               "kubectl rolling-update "
-  cube scale:                        "kubectl scale "
-  cube auto scale:                   "kubectl autoscale "
-  cube certificate:                  "kubectl certificate "
-  cube top:                          "kubectl top "
-  cube drain:                        "kubectl drain "
-  cube taint:                        "kubectl taint "
-  cube (cord | cordon):              "kubectl cordon "
-  cube (uncord | uncordon):          "kubectl uncordon "
-  cube cluster (info | information): "kubectl cluster-info "
-  cube describe:                     "kubectl describe "
-  cube logs:                         "kubectl logs "
-  cube attach:                       "kubectl attach "
-  cube exec:                         "kubectl exec "
-  cube port forward:                 "kubectl port-forward "
-  cube proxy:                        "kubectl proxy "
-  cube copy:                         "kubectl cp "
-  cube auth:                         "kubectl auth "
-  cube diff:                         "kubectl diff "
-  cube apply:                        "kubectl apply "
-  cube patch:                        "kubectl patch "
-  cube replace:                      "kubectl replace "
-  cube wait:                         "kubectl wait "
-  cube convert:                      "kubectl convert "
-  cube customize:                    "kubectl kustomize "
-  cube label:                        "kubectl label "
-  cube annotate:                     "kubectl annotate "
-  cube completion:                   "kubectl completion "
-  cube (interface | API):            "kubectl api "
-  cube interface resources:          "kubectl api-resources "
-  cube interface versions:           "kubectl api-versions "
-  cube config:                       "kubectl config "
-  cube help:                         "kubectl help "
-  cube plugin:                       "kubectl plugin "
-  cube version:                      "kubectl version "
-
-  cube {user.kubectl_action} [{user.kubectl_object}]:
-      insert("kubectl {kubectl_action} ")
-      insert(kubectl_object or "")
-
-  cube detach:
-      key("ctrl-p")
-      key("ctrl-q")
-  cube shell: user.insert_between("kubectl exec -it ", " -- /bin/bash")
+output: "tag: terminal\nand tag: user.kubectl\n-\ncube [control]:                \
+  \    \"kubectl \"\ncube create:                       \"kubectl create \"\ncube\
+  \ expose:                       \"kubectl expose \"\ncube run:                 \
+  \         \"kubectl run \"\ncube set:                          \"kubectl set \"\n\
+  cube run container:                \"kubectl run-container \"\ncube explain:   \
+  \                   \"kubectl explain \"\ncube get:                          \"\
+  kubectl get \"\ncube edit:                         \"kubectl edit \"\ncube delete:\
+  \                       \"kubectl delete \"\ncube rollout:                     \
+  \ \"kubectl rollout \"\ncube rolling update:               \"kubectl rolling-update\
+  \ \"\ncube scale:                        \"kubectl scale \"\ncube auto scale:  \
+  \                 \"kubectl autoscale \"\ncube certificate:                  \"\
+  kubectl certificate \"\ncube top:                          \"kubectl top \"\ncube\
+  \ drain:                        \"kubectl drain \"\ncube taint:                \
+  \        \"kubectl taint \"\ncube (cord | cordon):              \"kubectl cordon\
+  \ \"\ncube (uncord | uncordon):          \"kubectl uncordon \"\ncube cluster (info\
+  \ | information): \"kubectl cluster-info \"\ncube describe:                    \
+  \ \"kubectl describe \"\ncube logs:                         \"kubectl logs \"\n\
+  cube attach:                       \"kubectl attach \"\ncube exec:             \
+  \            \"kubectl exec \"\ncube port forward:                 \"kubectl port-forward\
+  \ \"\ncube proxy:                        \"kubectl proxy \"\ncube copy:        \
+  \                 \"kubectl cp \"\ncube auth:                         \"kubectl\
+  \ auth \"\ncube diff:                         \"kubectl diff \"\ncube apply:   \
+  \                     \"kubectl apply \"\ncube patch:                        \"\
+  kubectl patch \"\ncube replace:                      \"kubectl replace \"\ncube\
+  \ wait:                         \"kubectl wait \"\ncube convert:               \
+  \       \"kubectl convert \"\ncube customize:                    \"kubectl kustomize\
+  \ \"\ncube label:                        \"kubectl label \"\ncube annotate:    \
+  \                 \"kubectl annotate \"\ncube completion:                   \"kubectl\
+  \ completion \"\ncube (interface | API):            \"kubectl api \"\ncube interface\
+  \ resources:          \"kubectl api-resources \"\ncube interface versions:     \
+  \      \"kubectl api-versions \"\ncube config:                       \"kubectl config\
+  \ \"\ncube help:                         \"kubectl help \"\ncube plugin:       \
+  \                \"kubectl plugin \"\ncube version:                      \"kubectl\
+  \ version \"\n\ncube {user.kubectl_action} [{user.kubectl_object}]:\n    insert(\"\
+  kubectl {kubectl_action} \")\n    insert(kubectl_object or \"\")\n\ncube detach:\n\
+  \    key(\"ctrl-p\")\n    key(\"ctrl-q\")\ncube shell: user.insert_between(\"kubectl\
+  \ exec -it \", \" -- /bin/bash\")\n"

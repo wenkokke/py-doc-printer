@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: windows_explorer
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: windows_file_browser
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,74 +34,106 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.file_manager
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.letter
+              type: Text
             - text: '>'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_volume
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: letter
+                      type: Text
                     - text: '}'
+                      type: Text
                     - text: ':'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.letter
+                type: Text
               - text: '>'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_volume
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: letter
+                      type: Text
                     - text: '}'
+                      type: Text
                     - text: ':'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -100,50 +141,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: app
-            - text: ' '
+              type: Text
+            - type: Space
             - text: data
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%AppData%'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: app
-              - text: ' '
+                type: Text
+              - type: Space
               - text: data
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%AppData%'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -151,50 +212,70 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: program
-            - text: ' '
+              type: Text
+            - type: Space
             - text: files
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%programfiles%'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: program
-              - text: ' '
+                type: Text
+              - type: Space
               - text: files
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%programfiles%'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -202,33 +283,53 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.letter
+              type: Text
             - text: '>'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_volume
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '{'
+                    type: Text
                   - text: letter
+                    type: Text
                   - text: '}'
+                    type: Text
                   - text: ':'
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -236,26 +337,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: app
-            - text: ' '
+              type: Text
+            - type: Space
             - text: data
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_directory
+                type: Text
               - text: (
+                type: Text
               - doc:
                   text: '%AppData%'
+                  type: Text
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -263,26 +375,37 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: program
-            - text: ' '
+              type: Text
+            - type: Space
             - text: files
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_directory
+                type: Text
               - text: (
+                type: Text
               - doc:
                   text: '%programfiles%'
+                  type: Text
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -290,14 +413,25 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  app: windows_explorer
+output: 'app: windows_explorer
+
   app: windows_file_browser
+
   -
+
   tag(): user.file_manager
+
   ^go <user.letter>$: user.file_manager_open_volume("{letter}:")
+
   go app data:        user.file_manager_open_directory("%AppData%")
+
   go program files:   user.file_manager_open_directory("%programfiles%")
+
+  '

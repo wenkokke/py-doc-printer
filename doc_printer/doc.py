@@ -1,6 +1,7 @@
 import abc
 import collections.abc
 import dataclasses
+import functools
 import itertools
 import re
 import typing
@@ -13,7 +14,6 @@ DocLike = typing.Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]  #
 DocClassWithUnpack = type[collections.abc.Iterable["Doc"]]
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class WidthHint:
     width: int = 0
@@ -26,18 +26,18 @@ class WidthHint:
             if isinstance(other, int):
                 other = WidthHint(other)
             if isinstance(other, Doc):
-                other = other.width_hint()
+                other = other.width_hint
             return WidthHint(self.width + other.width, other.end_of_line)
 
     def __radd__(self, other: typing.Union[int, "Doc", "WidthHint"]) -> "WidthHint":
         if isinstance(other, int):
             other = WidthHint(other)
         if isinstance(other, Doc):
-            other = other.width_hint()
+            other = other.width_hint
         return other.__add__(self)
 
 
-class Doc(dataclasses_json.DataClassJsonMixin):
+class Doc(abc.ABC):
     def then(self, other: DocLike) -> "Doc":
         """
         Compose two documents.
@@ -55,11 +55,35 @@ class Doc(dataclasses_json.DataClassJsonMixin):
         #       without inserting additional separators.
         return cat(more_itertools.intersperse(self, splat(others)))
 
+    @property
     @abc.abstractmethod
     def width_hint(self) -> WidthHint:
         """
         Return an estimate of the width of the first line, when this document is rendered.
         """
+
+    @abc.abstractmethod
+    def to_dict(self) -> dict[str, typing.Any]:
+        pass
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Doc":
+        type_name = kvs["type"]
+        if type_name in ["Text", "Empty", "Space", "Line"]:
+            return Text.from_dict(kvs)
+        if type_name in ["Cat"]:
+            return Cat.from_dict(kvs)
+        if type_name in ["Alt", "Fail", "SoftLine"]:
+            return Alt.from_dict(kvs)
+        if type_name in ["Nest"]:
+            return Nest.from_dict(kvs)
+        if type_name in ["Edit"]:
+            return Edit.from_dict(kvs)
+        if type_name in ["Row"]:
+            return Row.from_dict(kvs)
+        if type_name in ["Table"]:
+            return Table.from_dict(kvs)
+        raise ValueError(kvs)
 
     def __truediv__(self, other: DocLike) -> "Doc":
         """
@@ -112,7 +136,6 @@ class Doc(dataclasses_json.DataClassJsonMixin):
 ################################################################################
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Text(Doc):
     """
@@ -197,6 +220,8 @@ class Text(Doc):
             return "Line"
         return f"Text(text={self.text})"
 
+    @property  # type: ignore
+    @functools.cache
     def width_hint(self) -> WidthHint:
         if self is Line:
             return WidthHint(width=0, end_of_line=True)
@@ -205,6 +230,30 @@ class Text(Doc):
 
     def __len__(self) -> int:
         return len(self.text)
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        if self.is_Empty():
+            return {"type": "Empty"}
+        if self.is_Space():
+            return {"type": "Space"}
+        if self.is_Line():
+            return {"type": "Line"}
+        return {"type": "Text", "text": self.text}
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Text":
+        type_name = kvs.get("type", None)
+        if type_name == "Empty":
+            return Empty
+        if type_name == "Space":
+            return Space
+        if type_name == "Line":
+            return Line
+        if type_name == "Text":
+            text = kvs.get("text", None)
+            if text is not None:
+                return Text(text)
+        raise ValueError(kvs)
 
 
 Empty = Text.intern_Empty()
@@ -223,7 +272,6 @@ TokenStream = collections.abc.Iterator[Token]
 ################################################################################
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Cat(Doc, collections.abc.Iterable[Doc]):
     """
@@ -245,6 +293,8 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.docs)
 
+    @property  # type: ignore
+    @functools.cache
     def width_hint(self) -> WidthHint:
         width_hint = WidthHint()
         for doc in self.docs:
@@ -252,6 +302,19 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
             if width_hint.end_of_line:
                 return width_hint  # short-circuit
         return width_hint
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        return {
+            "type": "Cat",
+            "docs": [doc.to_dict() for doc in self.docs],
+        }
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Cat":
+        docs = kvs.get("docs", None)
+        if docs is not None:
+            return Cat(docs=tuple(map(Doc.from_dict, docs)))
+        raise ValueError(kvs)
 
 
 def splat(
@@ -312,7 +375,6 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Alt(Doc, collections.abc.Iterable[Doc]):
     """
@@ -369,11 +431,35 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.alts)
 
+    @property
     def width_hint(self) -> WidthHint:
         if self.alts:  # i.e., self is not Fail
-            return self.alts[0].width_hint()
+            return self.alts[0].width_hint
         else:
             return WidthHint()  # TODO: raise exception?
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        if self.is_Fail():
+            return {"type": "Fail"}
+        if self.is_SoftLine():
+            return {"type": "SoftLine"}
+        return {
+            "type": "Alt",
+            "alts": [doc.to_dict() for doc in self.alts],
+        }
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Alt":
+        type_name = kvs.get("type", None)
+        if type_name == "Fail":
+            return Fail
+        if type_name == "SoftLine":
+            return SoftLine
+        if type_name == "Alt":
+            alts = kvs.get("alts", None)
+            if alts is not None:
+                return Alt(alts=tuple(map(Doc.from_dict, alts)))
+        raise ValueError(kvs)
 
 
 Fail = Alt.intern_Fail()
@@ -395,7 +481,6 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Nest(Doc):
     """
@@ -414,12 +499,30 @@ class Nest(Doc):
         # Invariant: The indent is greater than zero.
         assert self.indent > 0, f"Nest has negative or zero indent:\n{repr(self)}"
 
+    @property
     def width_hint(self) -> WidthHint:
         if self.overlap:
             # TODO: use the current column to decide more accurately?
-            return self.indent + self.doc.width_hint()
+            return self.indent + self.doc.width_hint
         else:
-            return self.doc.width_hint()
+            return self.doc.width_hint
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        return {
+            "type": "Nest",
+            "indent": self.indent,
+            "overlap": self.overlap,
+            "doc": self.doc.to_dict(),
+        }
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Nest":
+        indent = kvs.get("indent", None)
+        doc = kvs.get("doc", None)
+        overlap = kvs.get("overlap", None)
+        if indent is not None and doc is not None and overlap is not None:
+            return Nest(indent, Doc.from_dict(doc), overlap=overlap)
+        raise ValueError(kvs)
 
 
 def nest(indent: int, *doclike: DocLike, overlap: bool = False) -> Doc:
@@ -477,56 +580,60 @@ def _inline(token_stream: TokenStream) -> TokenStream:
     return filter(lambda token: token is not Line, token_stream)
 
 
+edit_functions: dict[str, collections.abc.Callable[[TokenStream], TokenStream]] = {
+    "_escape_single": _escape_single,
+    "_escape_single_and_unescape_double": _escape_single_and_unescape_double,
+    "_escape_double": _escape_double,
+    "_escape_double_and_unescape_single": _escape_double_and_unescape_single,
+    "_smart_quote": _smart_quote,
+    "_inline": _inline,
+}
+
+
 def _encode_edit_function(
     function: collections.abc.Callable[[TokenStream], TokenStream]
 ) -> str:
-    if function is _escape_single:
-        return "_escape_single"
-    if function is _escape_single_and_unescape_double:
-        return "_escape_single_and_unescape_double"
-    if function is _escape_double:
-        return "_escape_double"
-    if function is _escape_double_and_unescape_single:
-        return "_escape_double_and_unescape_single"
-    if function is _smart_quote:
-        return "_smart_quote"
-    if function is _inline:
-        return "_inline"
-    raise ValueError(f"Unknown edit function '{repr(function)}'")
+    global edit_functions
+    for name, edit_function in edit_functions.items():
+        if function is edit_function:
+            return name
+    raise ValueError(function)
 
 
 def _decode_edit_function(
-    function_name: str,
+    name: str,
 ) -> collections.abc.Callable[[TokenStream], TokenStream]:
-    if function_name is "_escape_single":
-        return _escape_single
-    if function_name is "_escape_single_and_unescape_double":
-        return _escape_single_and_unescape_double
-    if function_name is "_escape_double":
-        return _escape_double
-    if function_name is "_escape_double_and_unescape_single":
-        return _escape_double_and_unescape_single
-    if function_name is "_smart_quote":
-        return _smart_quote
-    if function_name is "_inline":
-        return _inline
-    raise ValueError(f"Unknown edit function '{function_name}'")
+    global edit_functions
+    edit_function = edit_functions.get(name, None)
+    if edit_function:
+        return edit_function
+    raise ValueError(name)
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Edit(Doc):
-    function: collections.abc.Callable[[TokenStream], TokenStream] = dataclasses.field(
-        metadata=dataclasses_json.config(
-            encoder=_encode_edit_function,
-            decoder=_decode_edit_function,
-        )
-    )
+    function: collections.abc.Callable[[TokenStream], TokenStream]
     doc: Doc
 
+    @property
     def width_hint(self) -> WidthHint:
         # NOTE: function should not significantly alter the width
-        return self.doc.width_hint()
+        return self.doc.width_hint
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        return {
+            "type": "Edit",
+            "function": _encode_edit_function(self.function),
+            "doc": self.doc.to_dict(),
+        }
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Edit":
+        function = kvs.get("function", None)
+        doc = kvs.get("doc", None)
+        if function is not None and doc is not None:
+            return Edit(_decode_edit_function(function), Doc.from_dict(doc))
+        raise ValueError(kvs)
 
 
 ESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"\\'")
@@ -599,16 +706,14 @@ def inline(doc: Doc) -> Doc:
 ################################################################################
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
-class RowInfo:
+class RowInfo(dataclasses_json.DataClassJsonMixin):
     table_type: typing.Optional[str]
     hpad: Text
     hsep: Text
     min_col_widths: tuple[typing.Optional[int], ...]
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class Row(Doc, collections.abc.Iterable[Doc]):
     cells: tuple[Doc, ...]
@@ -628,16 +733,35 @@ class Row(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.cells)
 
+    @property  # type: ignore
+    @functools.cache
     def width_hint(self) -> WidthHint:
         width_hint = WidthHint()
         for cell in more_itertools.intersperse(self.info.hsep, self.cells):
             # NOTE: sum the length of the first line of each cell
-            width_hint = width_hint + cell.width_hint().width
+            width_hint = width_hint + cell.width_hint.width
         # NOTE: rows always end the line
         return WidthHint(width_hint.width, True)
 
+    def to_dict(self) -> dict[str, typing.Any]:
+        return {
+            "type": "Row",
+            "cells": [doc.to_dict() for doc in self.cells],
+            "info": self.info.to_dict(),
+        }
 
-@dataclasses_json.dataclass_json
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Row":
+        cells = kvs.get("cells", None)
+        info = kvs.get("info", None)
+        if cells is not None and info is not None:
+            return Row(
+                cells=tuple(Doc.from_dict(cell) for cell in cells),
+                info=RowInfo.from_dict(info),
+            )
+        raise ValueError(kvs)
+
+
 @dataclasses.dataclass(frozen=True)
 class Table(Doc, collections.abc.Iterable[Row]):
     rows: tuple[Row, ...]
@@ -651,12 +775,26 @@ class Table(Doc, collections.abc.Iterable[Row]):
     def __iter__(self) -> collections.abc.Iterator[Row]:
         return iter(self.rows)
 
+    @property
     def width_hint(self) -> WidthHint:
         if self.rows:
             # NOTE: only process the first row
-            return self.rows[0].width_hint()
+            return self.rows[0].width_hint  # type: ignore
         else:
             return WidthHint()
+
+    def to_dict(self) -> dict[str, typing.Any]:
+        return {
+            "type": "Table",
+            "rows": [doc.to_dict() for doc in self.rows],
+        }
+
+    @staticmethod
+    def from_dict(kvs: dict[str, typing.Any]) -> "Table":
+        rows = kvs.get("rows", None)
+        if rows is not None:
+            return Table(rows=tuple(Row.from_dict(row) for row in rows))
+        raise ValueError(kvs)
 
 
 def row(
@@ -689,7 +827,6 @@ def table(rows: collections.abc.Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
-@dataclasses_json.dataclass_json
 @dataclasses.dataclass(frozen=True)
 class RowCandidate:
     doc: Doc

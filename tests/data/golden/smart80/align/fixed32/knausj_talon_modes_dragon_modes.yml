@@ -2,24 +2,32 @@ input:
   doc:
     docs:
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: defines
-    - text: ' '
+      type: Text
+    - type: Space
     - text: modes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: specific
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Dragon.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - cells:
       - docs:
         - text: speech.engine
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: dragon
+        type: Text
       info:
         hpad:
           text: ' '
@@ -28,11 +36,16 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: all
+        type: Text
       info:
         hpad:
           text: ' '
@@ -41,64 +54,83 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: wakes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Dragon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Mac,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: deactivates
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: speech
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: dragon
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.dragon_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: dragon
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.dragon_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -107,60 +139,81 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: sleep
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dragon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Mac,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: activates
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: speech
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: talon
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.talon_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: talon
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.talon_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -169,15 +222,26 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  # defines modes specific to Dragon.
+output: '# defines modes specific to Dragon.
+
   speech.engine:                   dragon
+
   mode:                            all
+
   -
+
   # wakes Dragon on Mac, deactivates talon speech commands
+
   dragon mode:                     user.dragon_mode()
+
   # sleep dragon on Mac, activates talon speech commands
+
   talon mode:                      user.talon_mode()
+
+  '

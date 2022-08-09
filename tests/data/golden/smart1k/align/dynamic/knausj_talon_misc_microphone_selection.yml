@@ -2,49 +2,64 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.microphone_selection_toggle
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: microphone
-              - text: ' '
+                type: Text
+              - type: Space
               - text: show
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.microphone_selection_toggle
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -52,44 +67,62 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: close
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.microphone_selection_hide
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: microphone
-              - text: ' '
+                type: Text
+              - type: Space
               - text: close
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.microphone_selection_hide
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -97,54 +130,80 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: pick
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: number_small
+              type: Text
             - text: '>'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.microphone_select
+                  type: Text
                 - text: (
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: microphone
-              - text: ' '
+                type: Text
+              - type: Space
               - text: pick
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: number_small
+                type: Text
               - text: '>'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.microphone_select
+                  type: Text
                 - text: (
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -152,24 +211,36 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.microphone_selection_toggle
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -177,23 +248,33 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: close
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.microphone_selection_hide
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -201,28 +282,42 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: microphone
-            - text: ' '
+              type: Text
+            - type: Space
             - text: pick
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: number_small
+              type: Text
             - text: '>'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.microphone_select
+                type: Text
               - text: (
+                type: Text
               - text: number_small
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -230,11 +325,19 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  -
+output: '-
+
   ^microphone show$:                user.microphone_selection_toggle()
+
   ^microphone close$:               user.microphone_selection_hide()
+
   ^microphone pick <number_small>$: user.microphone_select(number_small)
+
+  '

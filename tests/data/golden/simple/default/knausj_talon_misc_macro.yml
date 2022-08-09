@@ -2,43 +2,54 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: macro
-        - text: ' '
+          type: Text
+        - type: Space
         - text: record
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.macro_record
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: macro
-          - text: ' '
+            type: Text
+          - type: Space
           - text: record
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.macro_record
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -46,40 +57,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: macro
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stop
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.macro_stop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: macro
-          - text: ' '
+            type: Text
+          - type: Space
           - text: stop
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.macro_stop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -87,40 +112,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: macro
-        - text: ' '
+          type: Text
+        - type: Space
         - text: play
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.macro_play
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: macro
-          - text: ' '
+            type: Text
+          - type: Space
           - text: play
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.macro_play
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -128,14 +167,11 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: ShortestLines
-output: |
-  -
-  macro record:
-      user.macro_record()
-  macro stop:
-      user.macro_stop()
-  macro play:
-      user.macro_play()
+output: "-\nmacro record:\n    user.macro_record()\nmacro stop:\n    user.macro_stop()\n\
+  macro play:\n    user.macro_play()\n"

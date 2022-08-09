@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.file_manager
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,46 +17,58 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: title
-            - text: ' '
+              type: Text
+            - type: Space
             - text: force
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_refresh_title
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: title
-              - text: ' '
+                type: Text
+              - type: Space
               - text: force
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_refresh_title
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -60,40 +76,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_toggle_pickers
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: manager
-              - text: ' '
+                type: Text
+              - type: Space
               - text: show
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_toggle_pickers
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -101,40 +131,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: close
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_hide_pickers
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: manager
-              - text: ' '
+                type: Text
+              - type: Space
               - text: close
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_hide_pickers
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -142,40 +186,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: refresh
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_update_lists
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: manager
-              - text: ' '
+                type: Text
+              - type: Space
               - text: refresh
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_update_lists
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -183,46 +241,66 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.system_path
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: system_path
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.system_path
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: system_path
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -230,40 +308,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: back
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_go_back
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: back
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_go_back
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -271,40 +363,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: forward
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_go_forward
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: forward
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_go_forward
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -312,52 +418,74 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: (
+              type: Text
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: parent
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: daddy
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_parent
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: (
+                type: Text
               - text: go
-              - text: ' '
+                type: Text
+              - type: Space
               - text: parent
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: daddy
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_parent
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -365,22 +493,32 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: title
-            - text: ' '
+              type: Text
+            - type: Space
             - text: force
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_refresh_title
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -388,21 +526,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_toggle_pickers
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -410,21 +556,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: close
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_hide_pickers
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -432,21 +586,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: manager
-            - text: ' '
+              type: Text
+            - type: Space
             - text: refresh
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_update_lists
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -454,24 +616,35 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.system_path
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_directory
+                type: Text
               - text: (
+                type: Text
               - text: system_path
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -479,21 +652,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: back
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_go_back
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -501,21 +682,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: forward
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_go_forward
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -523,27 +712,39 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: (
+              type: Text
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
             - text: parent
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: daddy
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_parent
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -551,91 +752,132 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
     - text: ^
+      type: Text
     - text: follow
-    - text: ' '
+      type: Text
+    - type: Space
     - text: numb
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: directory
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.file_manager_get_directory_by_index
+          type: Text
         - text: (
+          type: Text
         - text: number_small
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.file_manager_open_directory
+          type: Text
         - text: (
+          type: Text
         - text: directory
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: follow
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_directories
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_directories
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: follow
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.file_manager_directories
+                type: Text
               - text: '}'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_open_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_directories
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -643,66 +885,100 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: (
+              type: Text
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cell
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_directories
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_select_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_directories
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: (
+                type: Text
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: cell
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: folder
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.file_manager_directories
+                type: Text
               - text: '}'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_select_directory
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_directories
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -710,27 +986,42 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: follow
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_directories
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_open_directory
+                type: Text
               - text: (
+                type: Text
               - text: file_manager_directories
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -738,34 +1029,52 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: (
+              type: Text
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cell
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_directories
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_select_directory
+                type: Text
               - text: (
+                type: Text
               - text: file_manager_directories
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -773,167 +1082,239 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
     - text: ^
+      type: Text
     - text: open
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: file
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.file_manager_get_file_by_index
+          type: Text
         - text: (
+          type: Text
         - text: number_small
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.file_manager_open_file
+          type: Text
         - text: (
+          type: Text
         - text: file
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: ^
+      type: Text
     - text: folder
-    - text: ' '
+      type: Text
+    - type: Space
     - text: numb
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: directory
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.file_manager_get_directory_by_index
+          type: Text
         - text: (
+          type: Text
         - text: number_small
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.file_manager_select_directory
+          type: Text
         - text: (
+          type: Text
         - text: directory
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: ^
+      type: Text
     - text: file
-    - text: ' '
+      type: Text
+    - type: Space
     - text: numb
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: file
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.file_manager_get_file_by_index
+          type: Text
         - text: (
+          type: Text
         - text: number_small
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.file_manager_select_file
+          type: Text
         - text: (
+          type: Text
         - text: file
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_files
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_select_file
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_files
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: file
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.file_manager_files
+                type: Text
               - text: '}'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_select_file
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_files
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -941,66 +1322,100 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: ^
+              type: Text
             - text: (
+              type: Text
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cell
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_files
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_select_file
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_files
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: ^
+                type: Text
               - text: (
+                type: Text
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: cell
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: file
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.file_manager_files
+                type: Text
               - text: '}'
+                type: Text
               - text: $
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_select_file
+                  type: Text
                 - text: (
+                  type: Text
                 - text: file_manager_files
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1008,27 +1423,42 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_files
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_select_file
+                type: Text
               - text: (
+                type: Text
               - text: file_manager_files
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1036,34 +1466,52 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: ^
+              type: Text
             - text: (
+              type: Text
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: cell
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.file_manager_files
+              type: Text
             - text: '}'
+              type: Text
             - text: $
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_select_file
+                type: Text
               - text: (
+                type: Text
               - text: file_manager_files
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1071,61 +1519,83 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: new
-    - text: ' '
+      type: Text
+    - type: Space
     - text: folder
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: folder
-        - text: ' '
+          type: Text
+        - type: Space
         - text: new
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.file_manager_new_folder
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: folder
-          - text: ' '
+            type: Text
+          - type: Space
           - text: new
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.file_manager_new_folder
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1133,51 +1603,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: show
-    - text: ' '
+      type: Text
+    - type: Space
     - text: properties
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: properties
-        - text: ' '
+          type: Text
+        - type: Space
         - text: show
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.file_manager_show_properties
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: properties
-          - text: ' '
+            type: Text
+          - type: Space
           - text: show
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.file_manager_show_properties
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1185,57 +1668,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: open
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
-    - text: ' '
+      type: Text
+    - type: Space
     - text: at
-    - text: ' '
+      type: Text
+    - type: Space
     - text: location
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: terminal
-            - text: ' '
+              type: Text
+            - type: Space
             - text: here
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_terminal_here
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: terminal
-              - text: ' '
+                type: Text
+              - type: Space
               - text: here
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_terminal_here
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1243,40 +1741,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_next_folder_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: folder
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_next_folder_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1284,40 +1796,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_previous_folder_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: folder
-              - text: ' '
+                type: Text
+              - type: Space
               - text: last
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_previous_folder_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1325,40 +1851,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_next_file_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: file
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_next_file_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1366,40 +1906,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.file_manager_previous_file_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: file
-              - text: ' '
+                type: Text
+              - type: Space
               - text: last
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.file_manager_previous_file_page
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1407,22 +1961,32 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: terminal
-            - text: ' '
+              type: Text
+            - type: Space
             - text: here
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_terminal_here
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1430,21 +1994,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_next_folder_page
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1452,21 +2024,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: folder
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_previous_folder_page
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1474,21 +2054,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_next_file_page
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1496,21 +2084,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: file
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.file_manager_previous_file_page
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1518,46 +2114,32 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.file_manager
-  -
-  title force:           user.file_manager_refresh_title()
-  manager show:          user.file_manager_toggle_pickers()
-  manager close:         user.file_manager_hide_pickers()
-  manager refresh:       user.file_manager_update_lists()
-  go <user.system_path>: user.file_manager_open_directory(system_path)
-  go back:               user.file_manager_go_back()
-  go forward:            user.file_manager_go_forward()
-  (go parent | daddy):   user.file_manager_open_parent()
-  ^follow numb <number_small>$:
-      directory = user.file_manager_get_directory_by_index(number_small - 1)
-      user.file_manager_open_directory(directory)
-  ^follow {user.file_manager_directories}$:                 user.file_manager_open_directory(file_manager_directories)
-  ^(select | cell) folder {user.file_manager_directories}$: user.file_manager_select_directory(file_manager_directories)
-  ^open <number_small>$:
-      file = user.file_manager_get_file_by_index(number_small - 1)
-      user.file_manager_open_file(file)
-  ^folder numb <number_small>$:
-      directory = user.file_manager_get_directory_by_index(number_small - 1)
-      user.file_manager_select_directory(directory)
-  ^file numb <number_small>$:
-      file = user.file_manager_get_file_by_index(number_small - 1)
-      user.file_manager_select_file(file)
-  ^file {user.file_manager_files}$:                 user.file_manager_select_file(file_manager_files)
-  ^(select | cell) file {user.file_manager_files}$: user.file_manager_select_file(file_manager_files)
-
-  # new folder
-  folder new <user.text>: user.file_manager_new_folder(text)
-
-  # show properties
-  properties show: user.file_manager_show_properties()
-
-  # open terminal at location
-  terminal here: user.file_manager_terminal_here()
-  folder next:   user.file_manager_next_folder_page()
-  folder last:   user.file_manager_previous_folder_page()
-  file next:     user.file_manager_next_file_page()
-  file last:     user.file_manager_previous_file_page()
+output: "tag: user.file_manager\n-\ntitle force:           user.file_manager_refresh_title()\n\
+  manager show:          user.file_manager_toggle_pickers()\nmanager close:      \
+  \   user.file_manager_hide_pickers()\nmanager refresh:       user.file_manager_update_lists()\n\
+  go <user.system_path>: user.file_manager_open_directory(system_path)\ngo back: \
+  \              user.file_manager_go_back()\ngo forward:            user.file_manager_go_forward()\n\
+  (go parent | daddy):   user.file_manager_open_parent()\n^follow numb <number_small>$:\n\
+  \    directory = user.file_manager_get_directory_by_index(number_small - 1)\n  \
+  \  user.file_manager_open_directory(directory)\n^follow {user.file_manager_directories}$:\
+  \                 user.file_manager_open_directory(file_manager_directories)\n^(select\
+  \ | cell) folder {user.file_manager_directories}$: user.file_manager_select_directory(file_manager_directories)\n\
+  ^open <number_small>$:\n    file = user.file_manager_get_file_by_index(number_small\
+  \ - 1)\n    user.file_manager_open_file(file)\n^folder numb <number_small>$:\n \
+  \   directory = user.file_manager_get_directory_by_index(number_small - 1)\n   \
+  \ user.file_manager_select_directory(directory)\n^file numb <number_small>$:\n \
+  \   file = user.file_manager_get_file_by_index(number_small - 1)\n    user.file_manager_select_file(file)\n\
+  ^file {user.file_manager_files}$:                 user.file_manager_select_file(file_manager_files)\n\
+  ^(select | cell) file {user.file_manager_files}$: user.file_manager_select_file(file_manager_files)\n\
+  \n# new folder\nfolder new <user.text>: user.file_manager_new_folder(text)\n\n#\
+  \ show properties\nproperties show: user.file_manager_show_properties()\n\n# open\
+  \ terminal at location\nterminal here: user.file_manager_terminal_here()\nfolder\
+  \ next:   user.file_manager_next_folder_page()\nfolder last:   user.file_manager_previous_folder_page()\n\
+  file next:     user.file_manager_next_file_page()\nfile last:     user.file_manager_previous_file_page()\n"

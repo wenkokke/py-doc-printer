@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_imperative
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,40 +17,50 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: block
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_block
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: block
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_block
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -54,40 +68,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_if
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_if
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -95,44 +123,60 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: else
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_else_if
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: else
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_else_if
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -140,40 +184,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: else
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_else
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: else
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_else
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -181,40 +239,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: while
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_while
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: while
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_while
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -222,40 +294,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: loop
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_infinite_loop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: loop
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_infinite_loop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -263,40 +349,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: for
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_for
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: for
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_for
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -304,44 +404,60 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: for
-        - text: ' '
+          type: Text
+        - type: Space
         - text: in
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_for_each
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: for
-          - text: ' '
+            type: Text
+          - type: Space
           - text: in
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_for_each
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -349,40 +465,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: switch
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_switch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: switch
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_switch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -390,40 +520,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: case
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_case
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: case
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_case
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -431,40 +575,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: do
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_do
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: do
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_do
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -472,40 +630,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: goto
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_go_to
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: goto
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_go_to
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -513,40 +685,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: return
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_state_return
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: return
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_state_return
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -554,40 +740,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: break
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_break
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: break
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_break
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -595,40 +795,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: next
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_next
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: next
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_next
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -636,24 +850,44 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.code_imperative
+output: 'tag: user.code_imperative
+
   -
+
   block: user.code_block()
+
   state if: user.code_state_if()
+
   state else if: user.code_state_else_if()
+
   state else: user.code_state_else()
+
   state while: user.code_state_while()
+
   state loop: user.code_state_infinite_loop()
+
   state for: user.code_state_for()
+
   state for in: user.code_state_for_each()
+
   state switch: user.code_state_switch()
+
   state case: user.code_state_case()
+
   state do: user.code_state_do()
+
   state goto: user.code_state_go_to()
+
   state return: user.code_state_return()
+
   state break: user.code_break()
+
   state next: user.code_next()
+
+  '

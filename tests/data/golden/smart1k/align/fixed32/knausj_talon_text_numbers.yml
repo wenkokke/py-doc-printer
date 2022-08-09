@@ -4,10 +4,15 @@ input:
     - cells:
       - docs:
         - text: not
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.mouse_grid_showing
+        type: Text
       info:
         hpad:
           text: ' '
@@ -16,50 +21,68 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.number_string
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: number_string
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.number_string
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: number_string
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -68,10 +91,16 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  not tag:                         user.mouse_grid_showing
+output: 'not tag:                         user.mouse_grid_showing
+
   -
+
   <user.number_string>:            "{number_string}"
+
+  '

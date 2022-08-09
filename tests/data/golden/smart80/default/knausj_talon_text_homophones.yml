@@ -2,49 +2,66 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: phones
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.homophones_canonical
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.homophones_show
+              type: Text
             - text: (
+              type: Text
             - text: homophones_canonical
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: phones
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.homophones_canonical
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.homophones_show
+              type: Text
             - text: (
+              type: Text
             - text: homophones_canonical
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -52,40 +69,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: phones
-        - text: ' '
+          type: Text
+        - type: Space
         - text: that
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.homophones_show_selection
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: phones
-          - text: ' '
+            type: Text
+          - type: Space
           - text: that
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.homophones_show_selection
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -93,50 +124,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: phones
-        - text: ' '
+          type: Text
+        - type: Space
         - text: force
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.homophones_canonical
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.homophones_force_show
+              type: Text
             - text: (
+              type: Text
             - text: homophones_canonical
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: phones
-          - text: ' '
+            type: Text
+          - type: Space
           - text: force
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.homophones_canonical
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.homophones_force_show
+              type: Text
             - text: (
+              type: Text
             - text: homophones_canonical
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -144,40 +197,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: phones
-        - text: ' '
+          type: Text
+        - type: Space
         - text: force
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.homophones_force_show_selection
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: phones
-          - text: ' '
+            type: Text
+          - type: Space
           - text: force
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.homophones_force_show_selection
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -185,40 +252,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: phones
-        - text: ' '
+          type: Text
+        - type: Space
         - text: hide
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.homophones_hide
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: phones
-          - text: ' '
+            type: Text
+          - type: Space
           - text: hide
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.homophones_hide
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -226,158 +307,189 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: phones
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.select_word
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.homophones_show_selection
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: phones
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.ordinals
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: ' '
+      type: Text
+    - type: Space
     - text: left
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: n
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ordinals
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.words_left
+          type: Text
         - text: (
+          type: Text
         - text: n
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.extend_word_left
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.homophones_show_selection
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: phones
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.ordinals
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: ' '
+      type: Text
+    - type: Space
     - text: right
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: n
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ordinals
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.words_right
+          type: Text
         - text: (
+          type: Text
         - text: n
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '-'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.extend_word_right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.homophones_show_selection
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  -
-  phones <user.homophones_canonical>: user.homophones_show(homophones_canonical)
-  phones that: user.homophones_show_selection()
-  phones force <user.homophones_canonical>:
-      user.homophones_force_show(homophones_canonical)
-  phones force: user.homophones_force_show_selection()
-  phones hide: user.homophones_hide()
-  phones word:
-      edit.select_word()
-      user.homophones_show_selection()
-  phones [<user.ordinals>] word left:
-      n = ordinals or 1
-      user.words_left(n - 1)
-      edit.extend_word_left()
-      user.homophones_show_selection()
-  phones [<user.ordinals>] word right:
-      n = ordinals or 1
-      user.words_right(n - 1)
-      edit.extend_word_right()
-      user.homophones_show_selection()
+output: "-\nphones <user.homophones_canonical>: user.homophones_show(homophones_canonical)\n\
+  phones that: user.homophones_show_selection()\nphones force <user.homophones_canonical>:\n\
+  \    user.homophones_force_show(homophones_canonical)\nphones force: user.homophones_force_show_selection()\n\
+  phones hide: user.homophones_hide()\nphones word:\n    edit.select_word()\n    user.homophones_show_selection()\n\
+  phones [<user.ordinals>] word left:\n    n = ordinals or 1\n    user.words_left(n\
+  \ - 1)\n    edit.extend_word_left()\n    user.homophones_show_selection()\nphones\
+  \ [<user.ordinals>] word right:\n    n = ordinals or 1\n    user.words_right(n -\
+  \ 1)\n    edit.extend_word_right()\n    user.homophones_show_selection()\n"

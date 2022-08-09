@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: user.running
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: amethyst
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,48 +17,62 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-j"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-j"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -62,42 +80,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: previous
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-k"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: previous
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-k"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -105,23 +139,34 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-j"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -129,22 +174,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: previous
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-k"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -152,56 +206,76 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
-    - text: ' '
+      type: Text
+    - type: Space
     - text: move
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'desk:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: key("ctrl-alt-shift-h")
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: full
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-d"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: full
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-d"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -209,42 +283,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: tall
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-a"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: tall
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-a"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -252,42 +342,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: middle
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-`"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: middle
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-`"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -295,46 +401,64 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: move
-            - text: ' '
+              type: Text
+            - type: Space
             - text: main
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-enter"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: move
-              - text: ' '
+                type: Text
+              - type: Space
               - text: main
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-enter"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -342,42 +466,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: grow
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-l"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: grow
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-l"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -385,42 +525,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shrink
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-h"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: shrink
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-h"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -428,42 +584,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: reevaluate
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-z"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: window
-              - text: ' '
+                type: Text
+              - type: Space
               - text: reevaluate
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: '"alt-shift-z"'
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -471,23 +643,34 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: full
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-d"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -495,22 +678,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: tall
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-a"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -518,22 +710,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: middle
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-`"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -541,24 +742,34 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: move
-            - text: ' '
+              type: Text
+            - type: Space
             - text: main
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-enter"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -566,22 +777,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: grow
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-l"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -589,22 +809,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shrink
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-h"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -612,22 +841,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: window
-            - text: ' '
+              type: Text
+            - type: Space
             - text: reevaluate
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: '"alt-shift-z"'
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -635,19 +873,35 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  user.running: amethyst
+output: 'user.running: amethyst
+
   -
+
   window next:     key("alt-shift-j")
+
   window previous: key("alt-shift-k")
+
   # window move desk: key("ctrl-alt-shift-h")
+
   window full:       key("alt-shift-d")
+
   window tall:       key("alt-shift-a")
+
   window middle:     key("alt-shift-`")
+
   window move main:  key("alt-shift-enter")
+
   window grow:       key("alt-shift-l")
+
   window shrink:     key("alt-shift-h")
+
   window reevaluate: key("alt-shift-z")
+
+  '

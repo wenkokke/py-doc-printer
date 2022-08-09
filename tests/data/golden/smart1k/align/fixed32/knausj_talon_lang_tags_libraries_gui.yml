@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_libraries_gui
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,160 +18,211 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'NOTE:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: This
-    - text: ' '
+      type: Text
+    - type: Space
     - text: file
-    - text: ' '
+      type: Text
+    - type: Space
     - text: does
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: define
-    - text: ' '
+      type: Text
+    - type: Space
     - text: any
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: as
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: vary
-    - text: ' '
+      type: Text
+    - type: Space
     - text: from
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: language
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: language,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: e.g.,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Python
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uses
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '''import'','
-    - text: ' '
+      type: Text
+    - type: Space
     - text: C
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uses
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '''include'','
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: R
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uses
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '''library'','
-    - text: ' '
+      type: Text
+    - type: Space
     - text: etcetera.
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'TODO:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: If
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ever
-    - text: ' '
+      type: Text
+    - type: Space
     - text: becomes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: possible,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: we
-    - text: ' '
+      type: Text
+    - type: Space
     - text: should
-    - text: ' '
+      type: Text
+    - type: Space
     - text: abstract
-    - text: ' '
+      type: Text
+    - type: Space
     - text: over
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: using
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: variable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: which
-    - text: ' '
+      type: Text
+    - type: Space
     - text: can
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: set
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: context-specific
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag:                             user.code_libraries_gui
+output: 'tag:                             user.code_libraries_gui
+
   -
+
   # NOTE: This file does not define any commands, as the commands vary from
-  #       language to language, e.g., Python uses 'import', C uses 'include',
-  #       R uses 'library', etcetera.
+
+  #       language to language, e.g., Python uses ''import'', C uses ''include'',
+
+  #       R uses ''library'', etcetera.
+
 
   # TODO: If this ever becomes possible, we should abstract over these commands
+
   #       using a variable which can be set to the context-specific word.
+
+  '

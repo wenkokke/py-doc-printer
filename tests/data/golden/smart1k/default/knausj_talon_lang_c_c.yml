@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.c
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,310 +17,372 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_imperative
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_line
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_block_c_like
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_bool
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_null
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_functions
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_functions_common
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_libraries
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_libraries_gui
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_array
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_bitwise
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_pointer
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: 'settings():'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.code_private_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_private_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: whether
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - text: not
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: use
-        - text: ' '
+          type: Text
+        - type: Space
         - text: uint_8
-        - text: ' '
+          type: Text
+        - type: Space
         - text: style
-        - text: ' '
+          type: Text
+        - type: Space
         - text: datatypes
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
-        - text: ' '
-        - text: ' '
-        - text: ' '
+          type: Text
+        - type: Space
+        - type: Space
+        - type: Space
+        - type: Space
         - text: user.use_stdint_datatypes
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'NOTE:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: migrated
-    - text: ' '
+      type: Text
+    - type: Space
     - text: from
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: as
-    - text: ' '
+      type: Text
+    - type: Space
     - text: they
-    - text: ' '
+      type: Text
+    - type: Space
     - text: were
-    - text: ' '
+      type: Text
+    - type: Space
     - text: only
-    - text: ' '
+      type: Text
+    - type: Space
     - text: used
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: though
-    - text: ' '
+      type: Text
+    - type: Space
     - text: once
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cpp
-    - text: ' '
+      type: Text
+    - type: Space
     - text: support
-    - text: ' '
+      type: Text
+    - type: Space
     - text: is
-    - text: ' '
+      type: Text
+    - type: Space
     - text: added,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: perhaps
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: ' '
+      type: Text
+    - type: Space
     - text: should
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: migrated
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: together
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: below
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: include
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: include
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -324,66 +390,96 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: include
-        - text: ' '
+          type: Text
+        - type: Space
         - text: system
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: <
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '>'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: include
-          - text: ' '
+            type: Text
+          - type: Space
           - text: system
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: <
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '>'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -391,66 +487,96 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: include
-        - text: ' '
+          type: Text
+        - type: Space
         - text: local
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '"'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '"'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: include
-          - text: ' '
+            type: Text
+          - type: Space
           - text: local
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '#include'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '"'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '"'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -458,54 +584,76 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: type
-        - text: ' '
+          type: Text
+        - type: Space
         - text: deaf
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: typedef
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: type
-          - text: ' '
+            type: Text
+          - type: Space
           - text: deaf
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: typedef
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -513,132 +661,177 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: state
-    - text: ' '
+      type: Text
+    - type: Space
     - text: type
-    - text: ' '
+      type: Text
+    - type: Space
     - text: deaf
-    - text: ' '
+      type: Text
+    - type: Space
     - text: struct
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: typedef
-            - text: ' '
+              type: Text
+            - type: Space
             - text: struct
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: \n
+              type: Text
             - text: \n
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.up
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '''tab'''
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: create
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: preprocessor
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: as
-    - text: ' '
+      type: Text
+    - type: Space
     - text: they
-    - text: ' '
+      type: Text
+    - type: Space
     - text: will
-    - text: ' '
+      type: Text
+    - type: Space
     - text: match
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cpp,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: etc
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: define
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#define'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: define
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#define'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -646,44 +839,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: undefine
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#undef'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: undefine
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#undef'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -691,48 +898,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
-        - text: ' '
+          type: Text
+        - type: Space
         - text: define
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#ifdef'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
-          - text: ' '
+            type: Text
+          - type: Space
           - text: define
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#ifdef'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -740,67 +963,86 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: preprocessor
-    - text: ' '
+      type: Text
+    - type: Space
     - text: instead
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pre?
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: pre
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#if'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: pre
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#if'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -808,44 +1050,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: error
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#error'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: error
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#error'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -853,52 +1109,70 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: pre
-        - text: ' '
+          type: Text
+        - type: Space
         - text: else
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#elif'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: pre
-          - text: ' '
+            type: Text
+          - type: Space
           - text: else
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#elif'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -906,48 +1180,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: pre
-        - text: ' '
+          type: Text
+        - type: Space
         - text: end
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#endif'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: pre
-          - text: ' '
+            type: Text
+          - type: Space
           - text: end
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#endif'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -955,44 +1245,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: pragma
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '#pragma'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: pragma
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '#pragma'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1000,46 +1304,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: default
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: 'default:'
+                  type: Text
                 - text: \n
+                  type: Text
                 - text: break;
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: default
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: 'default:'
+                  type: Text
                 - text: \n
+                  type: Text
                 - text: break;
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1047,300 +1369,406 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: control
-    - text: ' '
+      type: Text
+    - type: Space
     - text: flow
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: best
-    - text: ' '
+      type: Text
+    - type: Space
     - text: used
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: push
-    - text: ' '
+      type: Text
+    - type: Space
     - text: like
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: below
-    - text: ' '
+      type: Text
+    - type: Space
     - text: example
-    - text: ' '
+      type: Text
+    - type: Space
     - text: may
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: work
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: editors
-    - text: ' '
+      type: Text
+    - type: Space
     - text: that
-    - text: ' '
+      type: Text
+    - type: Space
     - text: automatically
-    - text: ' '
+      type: Text
+    - type: Space
     - text: add
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: closing
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bracket
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: so
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uncomment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: two
-    - text: ' '
+      type: Text
+    - type: Space
     - text: lines
-    - text: ' '
+      type: Text
+    - type: Space
     - text: and
-    - text: ' '
+      type: Text
+    - type: Space
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: out
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: rest
-    - text: ' '
+      type: Text
+    - type: Space
     - text: accordingly
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: push
-    - text: ' '
+      type: Text
+    - type: Space
     - text: brackets
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.line_end
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: insert("{")
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: key(enter)
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.left
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: enter
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: enter
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.up
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Declare
-    - text: ' '
+      type: Text
+    - type: Space
     - text: variables
-    - text: ' '
+      type: Text
+    - type: Space
     - text: or
-    - text: ' '
+      type: Text
+    - type: Space
     - text: structs
-    - text: ' '
+      type: Text
+    - type: Space
     - text: etc.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Ex.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: int
-    - text: ' '
+      type: Text
+    - type: Space
     - text: myList
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: <
+      type: Text
     - text: user.c_variable
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: phrase
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: c_variable
+              type: Text
             - text: '}'
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: phrase
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE,NO_SPACES
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.c_variable
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.letter
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_variable
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: letter
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.c_variable
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.letter
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_variable
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: letter
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1348,67 +1776,91 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Ex.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (int
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '*)'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: cast
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.c_cast
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_cast
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: cast
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.c_cast
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_cast
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1416,58 +1868,84 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: standard
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cast
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.stdint_cast
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: stdint_cast
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: standard
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cast
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.stdint_cast
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: stdint_cast
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1475,46 +1953,66 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.c_types
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_types
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.c_types
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_types
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1522,46 +2020,66 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.c_pointers
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_pointers
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.c_pointers
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_pointers
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1569,46 +2087,66 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.c_keywords
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_keywords
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.c_keywords
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_keywords
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1616,46 +2154,66 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.c_signed
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_signed
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.c_signed
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: c_signed
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1663,50 +2221,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: standard
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.stdint_types
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: stdint_types
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: standard
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.stdint_types
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: stdint_types
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1714,62 +2294,90 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: int
-        - text: ' '
+          type: Text
+        - type: Space
         - text: main
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: int
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: main(
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: )
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: int
-          - text: ' '
+            type: Text
+          - type: Space
           - text: main
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: int
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: main(
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: )
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1777,43 +2385,55 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: includes
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_toggle_libraries
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: includes
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_toggle_libraries
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1821,129 +2441,89 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: include
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.code_libraries
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.code_insert_library
+          type: Text
         - text: (
+          type: Text
         - text: code_libraries
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: end
-        - text: ' '
+          type: Text
+        - type: Space
         - text: enter
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.c
-  -
-  tag(): user.code_imperative
-
-  tag(): user.code_comment_line
-  tag(): user.code_comment_block_c_like
-  tag(): user.code_data_bool
-  tag(): user.code_data_null
-  tag(): user.code_functions
-  tag(): user.code_functions_common
-  tag(): user.code_libraries
-  tag(): user.code_libraries_gui
-  tag(): user.code_operators_array
-  tag(): user.code_operators_assignment
-  tag(): user.code_operators_bitwise
-  tag(): user.code_operators_math
-  tag(): user.code_operators_pointer
-
-  settings():
-      user.code_private_function_formatter = "SNAKE_CASE"
-      user.code_protected_function_formatter = "SNAKE_CASE"
-      user.code_public_function_formatter = "SNAKE_CASE"
-      user.code_private_variable_formatter = "SNAKE_CASE"
-      user.code_protected_variable_formatter = "SNAKE_CASE"
-      user.code_public_variable_formatter = "SNAKE_CASE"
-      # whether or not to use uint_8 style datatypes
-      #    user.use_stdint_datatypes = 1
-
-  # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
-  state include: insert("#include ")
-  state include system: user.insert_between("#include <", ">")
-  state include local: user.insert_between('#include "', '"')
-  state type deaf: insert("typedef ")
-  state type deaf struct:
-      insert("typedef struct")
-      insert("{\n\n}")
-      edit.up()
-      key('tab')
-
-  # XXX - create a preprocessor tag for these, as they will match cpp, etc
-  state define: "#define "
-  state undefine: "#undef "
-  state if define: "#ifdef "
-
-  # XXX - preprocessor instead of pre?
-  state pre if: "#if "
-  state error: "#error "
-  state pre else if: "#elif "
-  state pre end: "#endif "
-  state pragma: "#pragma "
-  state default: "default:\nbreak;"
-
-  # control flow
-  # best used with a push like command
-  # the below example may not work in editors that automatically add the closing bracket
-  # if so uncomment the two lines and comment out the rest accordingly
-  push brackets:
-      edit.line_end()
-      # insert("{")
-      # key(enter)
-      insert("{}")
-      edit.left()
-      key(enter)
-      key(enter)
-      edit.up()
-
-  # Declare variables or structs etc.
-  # Ex. * int myList
-  <user.c_variable> <phrase>:
-      insert("{c_variable} ")
-      insert(user.formatted_text(phrase, "PRIVATE_CAMEL_CASE,NO_SPACES"))
-
-  <user.c_variable> <user.letter>: insert("{c_variable} {letter} ")
-
-  # Ex. (int *)
-  cast to <user.c_cast>: "{c_cast}"
-  standard cast to <user.stdint_cast>: "{stdint_cast}"
-  <user.c_types>: "{c_types}"
-  <user.c_pointers>: "{c_pointers}"
-  <user.c_keywords>: "{c_keywords}"
-  <user.c_signed>: "{c_signed}"
-  standard <user.stdint_types>: "{stdint_types}"
-  int main: user.insert_between("int main(", ")")
-
-  toggle includes: user.code_toggle_libraries()
-  include <user.code_libraries>:
-      user.code_insert_library(code_libraries, "")
-      key(end enter)
+output: "tag: user.c\n-\ntag(): user.code_imperative\n\ntag(): user.code_comment_line\n\
+  tag(): user.code_comment_block_c_like\ntag(): user.code_data_bool\ntag(): user.code_data_null\n\
+  tag(): user.code_functions\ntag(): user.code_functions_common\ntag(): user.code_libraries\n\
+  tag(): user.code_libraries_gui\ntag(): user.code_operators_array\ntag(): user.code_operators_assignment\n\
+  tag(): user.code_operators_bitwise\ntag(): user.code_operators_math\ntag(): user.code_operators_pointer\n\
+  \nsettings():\n    user.code_private_function_formatter = \"SNAKE_CASE\"\n    user.code_protected_function_formatter\
+  \ = \"SNAKE_CASE\"\n    user.code_public_function_formatter = \"SNAKE_CASE\"\n \
+  \   user.code_private_variable_formatter = \"SNAKE_CASE\"\n    user.code_protected_variable_formatter\
+  \ = \"SNAKE_CASE\"\n    user.code_public_variable_formatter = \"SNAKE_CASE\"\n \
+  \   # whether or not to use uint_8 style datatypes\n    #    user.use_stdint_datatypes\
+  \ = 1\n\n# NOTE: migrated from generic, as they were only used here, though once\
+  \ cpp support is added, perhaps these should be migrated to a tag together with\
+  \ the commands below\nstate include: insert(\"#include \")\nstate include system:\
+  \ user.insert_between(\"#include <\", \">\")\nstate include local: user.insert_between('#include\
+  \ \"', '\"')\nstate type deaf: insert(\"typedef \")\nstate type deaf struct:\n \
+  \   insert(\"typedef struct\")\n    insert(\"{\\n\\n}\")\n    edit.up()\n    key('tab')\n\
+  \n# XXX - create a preprocessor tag for these, as they will match cpp, etc\nstate\
+  \ define: \"#define \"\nstate undefine: \"#undef \"\nstate if define: \"#ifdef \"\
+  \n\n# XXX - preprocessor instead of pre?\nstate pre if: \"#if \"\nstate error: \"\
+  #error \"\nstate pre else if: \"#elif \"\nstate pre end: \"#endif \"\nstate pragma:\
+  \ \"#pragma \"\nstate default: \"default:\\nbreak;\"\n\n# control flow\n# best used\
+  \ with a push like command\n# the below example may not work in editors that automatically\
+  \ add the closing bracket\n# if so uncomment the two lines and comment out the rest\
+  \ accordingly\npush brackets:\n    edit.line_end()\n    # insert(\"{\")\n    # key(enter)\n\
+  \    insert(\"{}\")\n    edit.left()\n    key(enter)\n    key(enter)\n    edit.up()\n\
+  \n# Declare variables or structs etc.\n# Ex. * int myList\n<user.c_variable> <phrase>:\n\
+  \    insert(\"{c_variable} \")\n    insert(user.formatted_text(phrase, \"PRIVATE_CAMEL_CASE,NO_SPACES\"\
+  ))\n\n<user.c_variable> <user.letter>: insert(\"{c_variable} {letter} \")\n\n# Ex.\
+  \ (int *)\ncast to <user.c_cast>: \"{c_cast}\"\nstandard cast to <user.stdint_cast>:\
+  \ \"{stdint_cast}\"\n<user.c_types>: \"{c_types}\"\n<user.c_pointers>: \"{c_pointers}\"\
+  \n<user.c_keywords>: \"{c_keywords}\"\n<user.c_signed>: \"{c_signed}\"\nstandard\
+  \ <user.stdint_types>: \"{stdint_types}\"\nint main: user.insert_between(\"int main(\"\
+  , \")\")\n\ntoggle includes: user.code_toggle_libraries()\ninclude <user.code_libraries>:\n\
+  \    user.code_insert_library(code_libraries, \"\")\n    key(end enter)\n"

@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: command
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: dictation
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,80 +34,114 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: vocab
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: ']'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: vocab
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: ']'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -106,108 +149,158 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Automatically
-    - text: ' '
+      type: Text
+    - type: Space
     - text: adds
-    - text: ' '
+      type: Text
+    - type: Space
     - text: possessive
-    - text: ' '
+      type: Text
+    - type: Space
     - text: form
-    - text: ' '
+      type: Text
+    - type: Space
     - text: by
-    - text: ' '
+      type: Text
+    - type: Space
     - text: appending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"''s".'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: name
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: vocab
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: ']'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: name
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: name
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: vocab
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: ']'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: name
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -215,110 +308,161 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Automatically
-    - text: ' '
+      type: Text
+    - type: Space
     - text: adds
-    - text: ' '
+      type: Text
+    - type: Space
     - text: plural
-    - text: ' '
+      type: Text
+    - type: Space
     - text: form
-    - text: ' '
+      type: Text
+    - type: Space
     - text: by
-    - text: ' '
+      type: Text
+    - type: Space
     - text: simply
-    - text: ' '
+      type: Text
+    - type: Space
     - text: appending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"s".'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: noun
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: vocab
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: ']'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: noun
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: noun
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: vocab
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: ']'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_vocabulary
+              type: Text
             - text: (
+              type: Text
             - text: phrase
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: noun
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -326,60 +470,88 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: replacements
-        - text: ' '
+          type: Text
+        - type: Space
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: replacements
-          - text: ' '
+            type: Text
+          - type: Space
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -387,92 +559,134 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Automatically
-    - text: ' '
+      type: Text
+    - type: Space
     - text: adds
-    - text: ' '
+      type: Text
+    - type: Space
     - text: possessive
-    - text: ' '
+      type: Text
+    - type: Space
     - text: form
-    - text: ' '
+      type: Text
+    - type: Space
     - text: by
-    - text: ' '
+      type: Text
+    - type: Space
     - text: appending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"''s".'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: name
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: replacements
-        - text: ' '
+          type: Text
+        - type: Space
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: name
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: name
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: replacements
-          - text: ' '
+            type: Text
+          - type: Space
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: name
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -480,94 +694,137 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Automatically
-    - text: ' '
+      type: Text
+    - type: Space
     - text: adds
-    - text: ' '
+      type: Text
+    - type: Space
     - text: plural
-    - text: ' '
+      type: Text
+    - type: Space
     - text: form
-    - text: ' '
+      type: Text
+    - type: Space
     - text: by
-    - text: ' '
+      type: Text
+    - type: Space
     - text: simply
-    - text: ' '
+      type: Text
+    - type: Space
     - text: appending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"s".'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: noun
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: replacements
-        - text: ' '
+          type: Text
+        - type: Space
         - text: as
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: noun
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: noun
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: replacements
-          - text: ' '
+            type: Text
+          - type: Space
           - text: as
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.add_selection_to_words_to_replace
+              type: Text
             - text: (
+              type: Text
             - text: phrase
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: noun
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -575,26 +832,19 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: ShortestLines
-output: |
-  mode: command
-  mode: dictation
-  -
-  copy to vocab [as <phrase>]$:
-      user.add_selection_to_vocabulary(phrase or "")
-  # Automatically adds possessive form by appending "'s".
-  copy name to vocab [as <phrase>]$:
-      user.add_selection_to_vocabulary(phrase or "", "name")
-  # Automatically adds plural form by simply appending "s".
-  copy noun to vocab [as <phrase>]$:
-      user.add_selection_to_vocabulary(phrase or "", "noun")
-  copy to replacements as <phrase>$:
-      user.add_selection_to_words_to_replace(phrase)
-  # Automatically adds possessive form by appending "'s".
-  copy name to replacements as <phrase>$:
-      user.add_selection_to_words_to_replace(phrase, "name")
-  # Automatically adds plural form by simply appending "s".
-  copy noun to replacements as <phrase>$:
-      user.add_selection_to_words_to_replace(phrase, "noun")
+output: "mode: command\nmode: dictation\n-\ncopy to vocab [as <phrase>]$:\n    user.add_selection_to_vocabulary(phrase\
+  \ or \"\")\n# Automatically adds possessive form by appending \"'s\".\ncopy name\
+  \ to vocab [as <phrase>]$:\n    user.add_selection_to_vocabulary(phrase or \"\"\
+  , \"name\")\n# Automatically adds plural form by simply appending \"s\".\ncopy noun\
+  \ to vocab [as <phrase>]$:\n    user.add_selection_to_vocabulary(phrase or \"\"\
+  , \"noun\")\ncopy to replacements as <phrase>$:\n    user.add_selection_to_words_to_replace(phrase)\n\
+  # Automatically adds possessive form by appending \"'s\".\ncopy name to replacements\
+  \ as <phrase>$:\n    user.add_selection_to_words_to_replace(phrase, \"name\")\n\
+  # Automatically adds plural form by simply appending \"s\".\ncopy noun to replacements\
+  \ as <phrase>$:\n    user.add_selection_to_words_to_replace(phrase, \"noun\")\n"

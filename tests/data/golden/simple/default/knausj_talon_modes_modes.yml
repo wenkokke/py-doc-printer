@@ -4,10 +4,15 @@ input:
     - cells:
       - docs:
         - text: not
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: sleep
+        type: Text
       info:
         hpad:
           text: ' '
@@ -15,118 +20,142 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: ^
+      type: Text
     - text: dictation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mode
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mode.disable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: sleep
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mode.disable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: command
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mode.enable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: dictation
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.code_clear_language_mode
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mode.disable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: user.gdb
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: ^
+      type: Text
     - text: command
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mode
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mode.disable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: sleep
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mode.disable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: dictation
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mode.enable
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: command
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: ShortestLines
-output: |
-  not mode: sleep
-  -
-  ^dictation mode$:
-      mode.disable("sleep")
-      mode.disable("command")
-      mode.enable("dictation")
-      user.code_clear_language_mode()
-      mode.disable("user.gdb")
-  ^command mode$:
-      mode.disable("sleep")
-      mode.disable("dictation")
-      mode.enable("command")
+output: "not mode: sleep\n-\n^dictation mode$:\n    mode.disable(\"sleep\")\n    mode.disable(\"\
+  command\")\n    mode.enable(\"dictation\")\n    user.code_clear_language_mode()\n\
+  \    mode.disable(\"user.gdb\")\n^command mode$:\n    mode.disable(\"sleep\")\n\
+  \    mode.disable(\"dictation\")\n    mode.enable(\"command\")\n"

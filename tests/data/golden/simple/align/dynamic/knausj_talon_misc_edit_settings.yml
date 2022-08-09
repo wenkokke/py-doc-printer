@@ -2,48 +2,54 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: customize
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '{'
+      type: Text
     - text: user.talon_settings_csv
+      type: Text
     - text: '}'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.edit_text_file
+          type: Text
         - text: (
+          type: Text
         - text: talon_settings_csv
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 500ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.file_end
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  -
-  customize {user.talon_settings_csv}:
-      user.edit_text_file(talon_settings_csv)
-      sleep(500ms)
-      edit.file_end()
+output: "-\ncustomize {user.talon_settings_csv}:\n    user.edit_text_file(talon_settings_csv)\n\
+  \    sleep(500ms)\n    edit.file_end()\n"

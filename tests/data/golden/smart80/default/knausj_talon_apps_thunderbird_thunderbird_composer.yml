@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: thunderbird_composer
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,76 +17,104 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mail
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: draft
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mail
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: message
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: save
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: s
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: draft
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mail
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: message
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: save
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: s
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -90,66 +122,96 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: draft
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mail
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: message
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: print
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: p
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: draft
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mail
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: message
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: print
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: p
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -157,66 +219,96 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: draft
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mail
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: message
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: send
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: enter
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: draft
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mail
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: message
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: send
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: enter
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -224,48 +316,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: layout
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: contacts
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: f9
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: contacts
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: f9
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -273,72 +381,102 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: navigation
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: go
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: inbox
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: thunderbird
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: main
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: '1'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: go
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: inbox
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: thunderbird
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: main
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: '1'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -346,52 +484,70 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: edit
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: cite
-        - text: ' '
+          type: Text
+        - type: Space
         - text: paste
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-o
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: cite
-          - text: ' '
+            type: Text
+          - type: Space
           - text: paste
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-o
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -399,58 +555,84 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: unformatted
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: raw
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: paste
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-v
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: unformatted
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: raw
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: paste
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-v
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -458,46 +640,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: link
-        - text: ' '
+          type: Text
+        - type: Space
         - text: new
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: k
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: link
-          - text: ' '
+            type: Text
+          - type: Space
           - text: new
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: k
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -505,46 +705,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: link
-        - text: ' '
+          type: Text
+        - type: Space
         - text: delete
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-k
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: link
-          - text: ' '
+            type: Text
+          - type: Space
           - text: delete
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.thunderbird_mod
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: shift-k
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -552,22 +770,40 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  app: thunderbird_composer
+output: 'app: thunderbird_composer
+
   -
+
   # mail
+
   (draft | mail | message) save: user.thunderbird_mod("s")
+
   (draft | mail | message) print: user.thunderbird_mod("p")
+
   (draft | mail | message) send: user.thunderbird_mod("enter")
+
   # layout
+
   toggle contacts: key(f9)
+
   # navigation
+
   go (inbox | thunderbird | main): user.thunderbird_mod("1")
+
   # edit
+
   cite paste: user.thunderbird_mod("shift-o")
+
   (unformatted | raw) paste: user.thunderbird_mod("shift-v")
+
   link new: user.thunderbird_mod("k")
+
   link delete: user.thunderbird_mod("shift-k")
+
+  '

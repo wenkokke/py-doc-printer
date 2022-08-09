@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.find_and_replace
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,52 +17,66 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: this
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -66,50 +84,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: this
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -117,46 +157,62 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -164,50 +220,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -215,40 +293,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: case
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_toggle_match_by_case
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: case
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_toggle_match_by_case
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -256,40 +348,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: word
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_toggle_match_by_word
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: word
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_toggle_match_by_word
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -297,40 +403,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: expression
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_toggle_match_by_regex
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: expression
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_toggle_match_by_regex
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -338,40 +458,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_next
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_next
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -379,40 +513,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: previous
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.find_previous
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: previous
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.find_previous
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -420,66 +568,96 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.replace
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: or
-                - text: ' '
+                  type: Text
+                - type: Space
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: replace
-              - text: ' '
+                type: Text
+              - type: Space
               - text: this
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.replace
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: or
-                - text: ' '
+                  type: Text
+                - type: Space
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -487,46 +665,62 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.replace_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: replace
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.replace_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -534,50 +728,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.replace_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: replace
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.replace_everywhere
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -585,44 +801,60 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: confirm
-            - text: ' '
+              type: Text
+            - type: Space
             - text: that
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.replace_confirm
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: replace
-              - text: ' '
+                type: Text
+              - type: Space
               - text: confirm
-              - text: ' '
+                type: Text
+              - type: Space
               - text: that
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.replace_confirm
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -630,44 +862,60 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: confirm
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.replace_confirm_all
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: replace
-              - text: ' '
+                type: Text
+              - type: Space
               - text: confirm
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.replace_confirm_all
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -675,25 +923,36 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find
+                type: Text
               - text: (
+                type: Text
               - doc:
-                  text: ''
+                  type: Empty
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -701,26 +960,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find
+                type: Text
               - text: (
+                type: Text
               - text: text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -728,24 +999,33 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_everywhere
+                type: Text
               - text: (
+                type: Text
               - doc:
-                  text: ''
+                  type: Empty
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -753,26 +1033,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_everywhere
+                type: Text
               - text: (
+                type: Text
               - text: text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -780,21 +1072,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: case
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_toggle_match_by_case
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -802,21 +1102,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: word
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_toggle_match_by_word
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -824,21 +1132,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: expression
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_toggle_match_by_regex
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -846,21 +1162,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_next
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -868,21 +1192,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: previous
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.find_previous
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -890,34 +1222,50 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.replace
+                type: Text
               - text: (
+                type: Text
               - text: text
-              - text: ' '
+                type: Text
+              - type: Space
               - text: or
-              - text: ' '
+                type: Text
+              - type: Space
               - doc:
-                  text: ''
+                  type: Empty
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -925,24 +1273,33 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.replace_everywhere
+                type: Text
               - text: (
+                type: Text
               - doc:
-                  text: ''
+                  type: Empty
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -950,26 +1307,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.replace_everywhere
+                type: Text
               - text: (
+                type: Text
               - text: text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -977,23 +1346,32 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: confirm
-            - text: ' '
+              type: Text
+            - type: Space
             - text: that
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.replace_confirm
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1001,23 +1379,32 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: replace
-            - text: ' '
+              type: Text
+            - type: Space
             - text: confirm
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.replace_confirm_all
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1025,670 +1412,904 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: quick
-    - text: ' '
+      type: Text
+    - type: Space
     - text: replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: modeled
-    - text: ' '
+      type: Text
+    - type: Space
     - text: after
-    - text: ' '
+      type: Text
+    - type: Space
     - text: jetbrains
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: clear
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.delete
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: clear
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.delete
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: clear
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.delete
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: clear
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.delete
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: code.toggle_comment
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: code.toggle_comment
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: code.toggle_comment
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: code.toggle_comment
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: go
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: go
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: go
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: go
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clip
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: clip.text
+          type: Text
         - text: (
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: paste
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.paste
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: paste
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.paste
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_previous_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.paste
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.select_next_occurrence
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.paste
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - alts:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: over
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.select_previous_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: last
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: over
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.select_previous_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1696,58 +2317,86 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: over
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.select_next_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: over
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.select_next_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1755,50 +2404,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
-            - text: ' '
+              type: Text
+            - type: Space
             - text: clip
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.select_previous_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: clip.text
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: last
-              - text: ' '
+                type: Text
+              - type: Space
               - text: clip
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.select_previous_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: clip.text
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1806,50 +2477,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
-            - text: ' '
+              type: Text
+            - type: Space
             - text: clip
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.select_next_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: clip.text
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: select
-              - text: ' '
+                type: Text
+              - type: Space
               - text: next
-              - text: ' '
+                type: Text
+              - type: Space
               - text: clip
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.select_next_occurrence
+                  type: Text
                 - text: (
+                  type: Text
                 - text: clip.text
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -1857,31 +2550,48 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: over
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.select_previous_occurrence
+                type: Text
               - text: (
+                type: Text
               - text: text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1889,30 +2599,45 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: over
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.select_next_occurrence
+                type: Text
               - text: (
+                type: Text
               - text: text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1920,26 +2645,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last
-            - text: ' '
+              type: Text
+            - type: Space
             - text: clip
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.select_previous_occurrence
+                type: Text
               - text: (
+                type: Text
               - text: clip.text
+                type: Text
               - text: (
+                type: Text
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1947,26 +2684,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: select
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next
-            - text: ' '
+              type: Text
+            - type: Space
             - text: clip
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.select_next_occurrence
+                type: Text
               - text: (
+                type: Text
               - text: clip.text
+                type: Text
               - text: (
+                type: Text
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -1974,92 +2723,42 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.find_and_replace
-  -
-  hunt this:                  user.find("")
-  hunt this <user.text>:      user.find(text)
-  hunt all:                   user.find_everywhere("")
-  hunt all <user.text>:       user.find_everywhere(text)
-  hunt case:                  user.find_toggle_match_by_case()
-  hunt word:                  user.find_toggle_match_by_word()
-  hunt expression:            user.find_toggle_match_by_regex()
-  hunt next:                  user.find_next()
-  hunt previous:              user.find_previous()
-  replace this [<user.text>]: user.replace(text or "")
-  replace all:                user.replace_everywhere("")
-  replace <user.text> all:    user.replace_everywhere(text)
-  replace confirm that:       user.replace_confirm()
-  replace confirm all:        user.replace_confirm_all()
-
-  # quick replace commands, modeled after jetbrains
-  clear last <user.text> [over]:
-      user.select_previous_occurrence(text)
-      sleep(100ms)
-      edit.delete()
-  clear next <user.text> [over]:
-      user.select_next_occurrence(text)
-      sleep(100ms)
-      edit.delete()
-  clear last clip:
-      user.select_previous_occurrence(clip.text())
-      edit.delete()
-  clear next clip:
-      user.select_next_occurrence(clip.text())
-      sleep(100ms)
-      edit.delete()
-  comment last <user.text> [over]:
-      user.select_previous_occurrence(text)
-      sleep(100ms)
-      code.toggle_comment()
-  comment last clip:
-      user.select_previous_occurrence(clip.text())
-      sleep(100ms)
-      code.toggle_comment()
-  comment next <user.text> [over]:
-      user.select_next_occurrence(text)
-      sleep(100ms)
-      code.toggle_comment()
-  comment next clip:
-      user.select_next_occurrence(clip.text())
-      sleep(100ms)
-      code.toggle_comment()
-  go last <user.text> [over]:
-      user.select_previous_occurrence(text)
-      sleep(100ms)
-      edit.right()
-  go last clip:
-      user.select_previous_occurrence(clip.text())
-      sleep(100ms)
-      edit.right()
-  go next <user.text> [over]:
-      user.select_next_occurrence(text)
-      edit.right()
-  go next clip:
-      user.select_next_occurrence(clip.text())
-      edit.right()
-  paste last <user.text> [over]:
-      user.select_previous_occurrence(text)
-      sleep(100ms)
-      edit.right()
-      edit.paste()
-  paste next <user.text> [over]:
-      user.select_next_occurrence(text)
-      sleep(100ms)
-      edit.right()
-      edit.paste()
-  replace last <user.text> [over]:
-      user.select_previous_occurrence(text)
-      sleep(100ms)
-      edit.paste()
-  replace next <user.text> [over]:
-      user.select_next_occurrence(text)
-      sleep(100ms)
-      edit.paste()
-  select last <user.text> [over]: user.select_previous_occurrence(text)
-  select next <user.text> [over]: user.select_next_occurrence(text)
-  select last clip:               user.select_previous_occurrence(clip.text())
-  select next clip:               user.select_next_occurrence(clip.text())
+output: "tag: user.find_and_replace\n-\nhunt this:                  user.find(\"\"\
+  )\nhunt this <user.text>:      user.find(text)\nhunt all:                   user.find_everywhere(\"\
+  \")\nhunt all <user.text>:       user.find_everywhere(text)\nhunt case:        \
+  \          user.find_toggle_match_by_case()\nhunt word:                  user.find_toggle_match_by_word()\n\
+  hunt expression:            user.find_toggle_match_by_regex()\nhunt next:      \
+  \            user.find_next()\nhunt previous:              user.find_previous()\n\
+  replace this [<user.text>]: user.replace(text or \"\")\nreplace all:           \
+  \     user.replace_everywhere(\"\")\nreplace <user.text> all:    user.replace_everywhere(text)\n\
+  replace confirm that:       user.replace_confirm()\nreplace confirm all:       \
+  \ user.replace_confirm_all()\n\n# quick replace commands, modeled after jetbrains\n\
+  clear last <user.text> [over]:\n    user.select_previous_occurrence(text)\n    sleep(100ms)\n\
+  \    edit.delete()\nclear next <user.text> [over]:\n    user.select_next_occurrence(text)\n\
+  \    sleep(100ms)\n    edit.delete()\nclear last clip:\n    user.select_previous_occurrence(clip.text())\n\
+  \    edit.delete()\nclear next clip:\n    user.select_next_occurrence(clip.text())\n\
+  \    sleep(100ms)\n    edit.delete()\ncomment last <user.text> [over]:\n    user.select_previous_occurrence(text)\n\
+  \    sleep(100ms)\n    code.toggle_comment()\ncomment last clip:\n    user.select_previous_occurrence(clip.text())\n\
+  \    sleep(100ms)\n    code.toggle_comment()\ncomment next <user.text> [over]:\n\
+  \    user.select_next_occurrence(text)\n    sleep(100ms)\n    code.toggle_comment()\n\
+  comment next clip:\n    user.select_next_occurrence(clip.text())\n    sleep(100ms)\n\
+  \    code.toggle_comment()\ngo last <user.text> [over]:\n    user.select_previous_occurrence(text)\n\
+  \    sleep(100ms)\n    edit.right()\ngo last clip:\n    user.select_previous_occurrence(clip.text())\n\
+  \    sleep(100ms)\n    edit.right()\ngo next <user.text> [over]:\n    user.select_next_occurrence(text)\n\
+  \    edit.right()\ngo next clip:\n    user.select_next_occurrence(clip.text())\n\
+  \    edit.right()\npaste last <user.text> [over]:\n    user.select_previous_occurrence(text)\n\
+  \    sleep(100ms)\n    edit.right()\n    edit.paste()\npaste next <user.text> [over]:\n\
+  \    user.select_next_occurrence(text)\n    sleep(100ms)\n    edit.right()\n   \
+  \ edit.paste()\nreplace last <user.text> [over]:\n    user.select_previous_occurrence(text)\n\
+  \    sleep(100ms)\n    edit.paste()\nreplace next <user.text> [over]:\n    user.select_next_occurrence(text)\n\
+  \    sleep(100ms)\n    edit.paste()\nselect last <user.text> [over]: user.select_previous_occurrence(text)\n\
+  select next <user.text> [over]: user.select_next_occurrence(text)\nselect last clip:\
+  \               user.select_previous_occurrence(clip.text())\nselect next clip:\
+  \               user.select_next_occurrence(clip.text())\n"

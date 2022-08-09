@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.homophones
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,105 +18,131 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: choose
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: result
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.homophones_select
+          type: Text
         - text: (
+          type: Text
         - text: number_small
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: result
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.homophones_hide
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: choose
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.formatters
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number_small
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: result
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.homophones_select
+          type: Text
         - text: (
+          type: Text
         - text: number_small
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: result
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: formatters
+          type: Text
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.homophones_hide
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  mode:                            user.homophones
-  -
-  choose <number_small>:
-      result = user.homophones_select(number_small)
-      insert(result)
-      user.homophones_hide()
-  choose <user.formatters> <number_small>:
-      result = user.homophones_select(number_small)
-      insert(user.formatted_text(result, formatters))
-      user.homophones_hide()
+output: "mode:                            user.homophones\n-\nchoose <number_small>:\n\
+  \    result = user.homophones_select(number_small)\n    insert(result)\n    user.homophones_hide()\n\
+  choose <user.formatters> <number_small>:\n    result = user.homophones_select(number_small)\n\
+  \    insert(user.formatted_text(result, formatters))\n    user.homophones_hide()\n"

@@ -2,81 +2,111 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-1'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: because
-    - text: ' '
+      type: Text
+    - type: Space
     - text: we
-    - text: ' '
+      type: Text
+    - type: Space
     - text: are
-    - text: ' '
+      type: Text
+    - type: Space
     - text: repeating,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: so
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: initial
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: ' '
+      type: Text
+    - type: Space
     - text: counts
-    - text: ' '
+      type: Text
+    - type: Space
     - text: as
-    - text: ' '
+      type: Text
+    - type: Space
     - text: one
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.ordinals
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: ordinals
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.ordinals
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: ordinals
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -85,54 +115,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: number_small
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: times
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: number_small
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: number_small
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: times
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: number_small
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -141,54 +195,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: repeat
-        - text: ' '
+          type: Text
+        - type: Space
         - text: that
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: twice
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: repeat
-          - text: ' '
+            type: Text
+          - type: Space
           - text: that
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: twice
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -197,58 +275,86 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: repeat
-        - text: ' '
+          type: Text
+        - type: Space
         - text: that
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number_small
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: times
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: number_small
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: repeat
-          - text: ' '
+            type: Text
+          - type: Space
           - text: that
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number_small
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: times
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: core.repeat_command
+              type: Text
             - text: (
+              type: Text
             - text: number_small
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -257,13 +363,22 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  -
+output: '-
+
   # -1 because we are repeating, so the initial command counts as one
+
   <user.ordinals>:                 core.repeat_command(ordinals - 1)
+
   <number_small> times:            core.repeat_command(number_small - 1)
+
   (repeat that | twice):           core.repeat_command(1)
+
   repeat that <number_small> [times]: core.repeat_command(number_small)
+
+  '

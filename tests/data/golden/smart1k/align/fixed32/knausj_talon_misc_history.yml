@@ -2,43 +2,54 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: history
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.history_toggle
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: history
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.history_toggle
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -47,44 +58,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: history
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.history_disable
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: history
-          - text: ' '
+            type: Text
+          - type: Space
           - text: close
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.history_disable
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -93,44 +120,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: history
-        - text: ' '
+          type: Text
+        - type: Space
         - text: clear
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.history_clear
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: history
-          - text: ' '
+            type: Text
+          - type: Space
           - text: clear
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.history_clear
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -139,44 +182,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: history
-        - text: ' '
+          type: Text
+        - type: Space
         - text: less
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.history_less
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: history
-          - text: ' '
+            type: Text
+          - type: Space
           - text: less
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.history_less
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -185,44 +244,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: history
-        - text: ' '
+          type: Text
+        - type: Space
         - text: more
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.history_more
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: history
-          - text: ' '
+            type: Text
+          - type: Space
           - text: more
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.history_more
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -231,13 +306,22 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  -
+output: '-
+
   command history:                 user.history_toggle()
+
   command history close:           user.history_disable()
+
   command history clear:           user.history_clear()
+
   command history less:            user.history_less()
+
   command history more:            user.history_more()
+
+  '

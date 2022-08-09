@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: windows_terminal
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,188 +17,223 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: makes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic_terminal
-    - text: ' '
+      type: Text
+    - type: Space
     - text: available
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: activates
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: implementation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands/functions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic_terminal
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.generic_windows_shell
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: makes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: certain
-    - text: ' '
+      type: Text
+    - type: Space
     - text: applications
-    - text: ' '
+      type: Text
+    - type: Space
     - text: available
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: can
-    - text: ' '
+      type: Text
+    - type: Space
     - text: deactivate
-    - text: ' '
+      type: Text
+    - type: Space
     - text: them
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: do
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: application
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.git
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.anaconda
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.kubectl
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.tabs
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'TODO:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: file_manager
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.splits
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - alts:
       - docs:
         - text: settings
-        - text: ' '
+          type: Text
+        - type: Space
         - text: open
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-,
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: settings
-          - text: ' '
+            type: Text
+          - type: Space
           - text: open
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-,
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -202,42 +241,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-left
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-left
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -245,42 +300,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-right
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-right
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -288,42 +359,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: up
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-up
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: up
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-up
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -331,42 +418,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: down
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-down
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: down
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-alt-shift-down
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -374,42 +477,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: term
-        - text: ' '
+          type: Text
+        - type: Space
         - text: menu
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-f1
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: term
-          - text: ' '
+            type: Text
+          - type: Space
           - text: menu
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-f1
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -417,43 +536,55 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: find
-        - text: ' '
+          type: Text
+        - type: Space
         - text: it
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: edit.find
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: find
-          - text: ' '
+            type: Text
+          - type: Space
           - text: it
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: edit.find
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -461,114 +592,121 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: find
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: phrase
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: handle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: consecutive
-        - text: ' '
+          type: Text
+        - type: Space
         - text: finds
-        - text: ' '
+          type: Text
+        - type: Space
         - text: by
-        - text: ' '
+          type: Text
+        - type: Space
         - text: first
-        - text: ' '
+          type: Text
+        - type: Space
         - text: escaping
-        - text: ' '
+          type: Text
+        - type: Space
         - text: out
-        - text: ' '
+          type: Text
+        - type: Space
         - text: of
-        - text: ' '
+          type: Text
+        - type: Space
         - text: any
-        - text: ' '
+          type: Text
+        - type: Space
         - text: previous
-        - text: ' '
+          type: Text
+        - type: Space
         - text: one
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: escape
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: make
-        - text: ' '
+          type: Text
+        - type: Space
         - text: it
-        - text: ' '
+          type: Text
+        - type: Space
         - text: so
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: edit.find
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: phrase
+              type: Text
             - text: '}'
+              type: Text
             - text: \n
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  app: windows_terminal
-  -
-  # makes the commands in generic_terminal available
-  tag(): terminal
-
-  # activates the implementation of the commands/functions in generic_terminal
-  tag(): user.generic_windows_shell
-
-  # makes commands for certain applications available
-  # you can deactivate them if you do not use the application
-  tag(): user.git
-  tag(): user.anaconda
-  # tag(): user.kubectl
-
-  tag(): user.tabs
-  # TODO: file_manager
-  tag(): user.splits
-
-  settings open: key(ctrl-,)
-  focus left: key(ctrl-alt-shift-left)
-  focus right: key(ctrl-alt-shift-right)
-  focus up: key(ctrl-alt-shift-up)
-  focus down: key(ctrl-alt-shift-down)
-  term menu: key(ctrl-shift-f1)
-
-  find it: edit.find()
-
-  find it <phrase>$:
-      # handle consecutive finds by first escaping out of any previous one
-      key(escape)
-      # make it so
-      edit.find("{phrase}\n")
+output: "app: windows_terminal\n-\n# makes the commands in generic_terminal available\n\
+  tag(): terminal\n\n# activates the implementation of the commands/functions in generic_terminal\n\
+  tag(): user.generic_windows_shell\n\n# makes commands for certain applications available\n\
+  # you can deactivate them if you do not use the application\ntag(): user.git\ntag():\
+  \ user.anaconda\n# tag(): user.kubectl\n\ntag(): user.tabs\n# TODO: file_manager\n\
+  tag(): user.splits\n\nsettings open: key(ctrl-,)\nfocus left: key(ctrl-alt-shift-left)\n\
+  focus right: key(ctrl-alt-shift-right)\nfocus up: key(ctrl-alt-shift-up)\nfocus\
+  \ down: key(ctrl-alt-shift-down)\nterm menu: key(ctrl-shift-f1)\n\nfind it: edit.find()\n\
+  \nfind it <phrase>$:\n    # handle consecutive finds by first escaping out of any\
+  \ previous one\n    key(escape)\n    # make it so\n    edit.find(\"{phrase}\\n\"\
+  )\n"

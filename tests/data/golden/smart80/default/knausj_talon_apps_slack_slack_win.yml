@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: windows
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: linux
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,11 +34,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: slack
+        type: Text
       info:
         hpad:
           text: ' '
@@ -37,92 +51,119 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'todo:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: some
-    - text: ' '
+      type: Text
+    - type: Space
     - text: sort
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: plugin,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: consolidate
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: teams
-    - text: ' '
+      type: Text
+    - type: Space
     - text: or
-    - text: ' '
+      type: Text
+    - type: Space
     - text: something?
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.messaging
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.emoji
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Workspaces
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: workspace
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"ctrl-{number}"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: workspace
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"ctrl-{number}"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -130,68 +171,98 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Channel
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: channel
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: info
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-i
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: channel
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: info
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-i
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -199,60 +270,84 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Navigation
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: next
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-`
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: next
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-`
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -260,58 +355,86 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: section
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: zone
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: next
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: f6
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: section
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: zone
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: next
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: f6
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -319,66 +442,98 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: section
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: zone
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: previous
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: last
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-f6
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: section
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: zone
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: previous
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: last
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-f6
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -386,62 +541,92 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: direct
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: messages
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-k
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: direct
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: messages
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-k
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -449,54 +634,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: threads
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-t
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: threads
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-t
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -504,82 +713,124 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: history
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: next
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: back
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: backward
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: alt-left
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: history
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: next
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: back
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: backward
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: alt-left
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -587,54 +838,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: forward
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: alt-right
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: forward
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: alt-right
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -642,58 +917,86 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: element
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bit
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: next
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: tab
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: element
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bit
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: next
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: tab
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -701,66 +1004,98 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: element
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bit
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: previous
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: last
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-tab
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: element
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bit
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: previous
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: last
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-tab
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -768,70 +1103,104 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: my
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stuff
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: activity
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-m
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: my
-          - text: ' '
+            type: Text
+          - type: Space
           - text: stuff
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: activity
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-m
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -839,54 +1208,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: directory
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-e
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: directory
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-e
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -894,74 +1287,112 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: starred
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: items
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stars
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-s
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: starred
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: items
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: stars
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-s
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -969,62 +1400,92 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: unread
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: messages
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-a
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: unread
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: messages
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-a
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1032,48 +1493,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Messaging
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: grab
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-up
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: grab
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-up
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1081,42 +1558,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: grab
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-down
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: grab
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-down
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1124,42 +1617,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: add
-        - text: ' '
+          type: Text
+        - type: Space
         - text: line
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-enter
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: add
-          - text: ' '
+            type: Text
+          - type: Space
           - text: line
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: shift-enter
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1167,90 +1676,131 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"(slack'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: lack)
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (slap
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: slaw
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'slapper):'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '[key(cmd-right)'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: key(shift-enter")],
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: react
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: reaction
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-\
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: react
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: reaction
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-\
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1258,54 +1808,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: insert
-        - text: ' '
+          type: Text
+        - type: Space
         - text: command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: commandify
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-c
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: insert
-          - text: ' '
+            type: Text
+          - type: Space
           - text: command
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: commandify
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-c
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1313,46 +1887,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: insert
-        - text: ' '
+          type: Text
+        - type: Space
         - text: code
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: '```'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: insert
-          - text: ' '
+            type: Text
+          - type: Space
           - text: code
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: '```'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1360,82 +1952,124 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: bull
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bullet
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bulleted
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: list
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-8
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: bull
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bullet
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bulleted
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: list
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-8
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1443,74 +2077,112 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: number
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: numbered
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: list
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-7
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: number
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: numbered
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: list
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-7
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1518,66 +2190,98 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: quotes
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: quotation
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-9
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: quotes
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: quotation
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-9
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1585,38 +2289,52 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: bold
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-b
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: bold
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-b
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1624,50 +2342,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: italic
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: italicize
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-i
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: italic
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: italicize
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-i
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1675,50 +2415,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: strike
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: strikethrough
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-x
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: strike
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: strikethrough
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-x
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1726,54 +2488,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: snippet
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-enter
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: snippet
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-enter
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1781,64 +2567,92 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Calls
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: '['
+          type: Text
         - text: toggle
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mute
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: unmute
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: m
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: '['
+            type: Text
           - text: toggle
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mute
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: unmute
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: m
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1846,66 +2660,100 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: '['
+          type: Text
         - text: toggle
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: video
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: v
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: '['
+            type: Text
           - text: toggle
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: video
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: v
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1913,54 +2761,78 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: invite
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: a
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: invite
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: a
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1968,60 +2840,84 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Miscellaneous
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: slack
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lack
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shortcuts
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-/
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: slack
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lack
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shortcuts
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-/
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2029,50 +2925,72 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: emote
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: text
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: emote
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: text
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2080,46 +2998,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
-        - text: ' '
+          type: Text
+        - type: Space
         - text: sidebar
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-d
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
-          - text: ' '
+            type: Text
+          - type: Space
           - text: sidebar
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-shift-d
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2127,46 +3063,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
-        - text: ' '
+          type: Text
+        - type: Space
         - text: sidebar
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-.
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
-          - text: ' '
+            type: Text
+          - type: Space
           - text: sidebar
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-.
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2174,368 +3128,460 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: DEPRECATED
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: (
+      type: Text
     - text: move
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: focus
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''focus'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: focus'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-`
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: '['
+      type: Text
     - text: next
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: section
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: zone
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''section'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: section'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: f6
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: (
+      type: Text
     - text: previous
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: section
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: zone
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''section'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''last'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: section'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: shift-f6
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: '['
+      type: Text
     - text: next
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: element
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bit
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''element'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''next'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: element'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: tab
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: (
+      type: Text
     - text: previous
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: last
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: element
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bit
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''element'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: last'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''last'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: element'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: shift-tab
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  os: windows
-  os: linux
-  app: slack
-  # todo: some sort of plugin, consolidate with teams or something?
-  -
-  tag(): user.messaging
-  tag(): user.emoji
-  # Workspaces
-  workspace <number>: key("ctrl-{number}")
-  # Channel
-  (slack | lack) [channel] info: key(ctrl-shift-i)
-  # Navigation
-  focus (move | next): key(ctrl-`)
-  (section | zone) [next]: key(f6)
-  (section | zone) (previous | last): key(shift-f6)
-  (slack | lack) [direct] messages: key(ctrl-shift-k)
-  (slack | lack) threads: key(ctrl-shift-t)
-  (slack | lack) (history [next] | back | backward): key(alt-left)
-  (slack | lack) forward: key(alt-right)
-  (element | bit) [next]: key(tab)
-  (element | bit) (previous | last): key(shift-tab)
-  (slack | lack) (my stuff | activity): key(ctrl-shift-m)
-  (slack | lack) directory: key(ctrl-shift-e)
-  (slack | lack) (starred [items] | stars): key(ctrl-shift-s)
-  (slack | lack) unread [messages]: key(ctrl-shift-a)
-  # Messaging
-  grab left: key(shift-up)
-  grab right: key(shift-down)
-  add line: key(shift-enter)
-  # "(slack | lack) (slap | slaw | slapper): [key(cmd-right) key(shift-enter")],
-  (slack | lack) (react | reaction): key(ctrl-shift-\)
-  (insert command | commandify): key(ctrl-shift-c)
-  insert code: insert("```")
-  (slack | lack) (bull | bullet | bulleted) [list]: key(ctrl-shift-8)
-  (slack | lack) (number | numbered) [list]: key(ctrl-shift-7)
-  (slack | lack) (quotes | quotation): key(ctrl-shift-9)
-  bold: key(ctrl-b)
-  (italic | italicize): key(ctrl-i)
-  (strike | strikethrough): key(ctrl-shift-x)
-  (slack | lack) snippet: key(ctrl-shift-enter)
-  # Calls
-  ([toggle] mute | unmute): key(m)
-  (slack | lack) ([toggle] video): key(v)
-  (slack | lack) invite: key(a)
-  # Miscellaneous
-  (slack | lack) shortcuts: key(ctrl-/)
-  emote <user.text>: "{text}"
-  toggle left sidebar: key(ctrl-shift-d)
-  toggle right sidebar: key(ctrl-.)
-
-  # DEPRECATED
-  (move | next) focus:
-      app.notify("please use the voice command 'focus next' instead of 'next focus'")
-      key(ctrl-`)
-  [next] (section | zone):
-      app.notify("please use the voice command 'section next' instead of 'next section'")
-      key(f6)
-  (previous | last) (section | zone):
-      app.notify("please use the voice command 'section last' instead of 'last section'")
-      key(shift-f6)
-  [next] (element | bit):
-      app.notify("please use the voice command 'element next' instead of 'next element'")
-      key(tab)
-  (previous | last) (element | bit):
-      app.notify("please use the voice command 'element last' instead of 'last element'")
-      key(shift-tab)
+output: "os: windows\nos: linux\napp: slack\n# todo: some sort of plugin, consolidate\
+  \ with teams or something?\n-\ntag(): user.messaging\ntag(): user.emoji\n# Workspaces\n\
+  workspace <number>: key(\"ctrl-{number}\")\n# Channel\n(slack | lack) [channel]\
+  \ info: key(ctrl-shift-i)\n# Navigation\nfocus (move | next): key(ctrl-`)\n(section\
+  \ | zone) [next]: key(f6)\n(section | zone) (previous | last): key(shift-f6)\n(slack\
+  \ | lack) [direct] messages: key(ctrl-shift-k)\n(slack | lack) threads: key(ctrl-shift-t)\n\
+  (slack | lack) (history [next] | back | backward): key(alt-left)\n(slack | lack)\
+  \ forward: key(alt-right)\n(element | bit) [next]: key(tab)\n(element | bit) (previous\
+  \ | last): key(shift-tab)\n(slack | lack) (my stuff | activity): key(ctrl-shift-m)\n\
+  (slack | lack) directory: key(ctrl-shift-e)\n(slack | lack) (starred [items] | stars):\
+  \ key(ctrl-shift-s)\n(slack | lack) unread [messages]: key(ctrl-shift-a)\n# Messaging\n\
+  grab left: key(shift-up)\ngrab right: key(shift-down)\nadd line: key(shift-enter)\n\
+  # \"(slack | lack) (slap | slaw | slapper): [key(cmd-right) key(shift-enter\")],\n\
+  (slack | lack) (react | reaction): key(ctrl-shift-\\)\n(insert command | commandify):\
+  \ key(ctrl-shift-c)\ninsert code: insert(\"```\")\n(slack | lack) (bull | bullet\
+  \ | bulleted) [list]: key(ctrl-shift-8)\n(slack | lack) (number | numbered) [list]:\
+  \ key(ctrl-shift-7)\n(slack | lack) (quotes | quotation): key(ctrl-shift-9)\nbold:\
+  \ key(ctrl-b)\n(italic | italicize): key(ctrl-i)\n(strike | strikethrough): key(ctrl-shift-x)\n\
+  (slack | lack) snippet: key(ctrl-shift-enter)\n# Calls\n([toggle] mute | unmute):\
+  \ key(m)\n(slack | lack) ([toggle] video): key(v)\n(slack | lack) invite: key(a)\n\
+  # Miscellaneous\n(slack | lack) shortcuts: key(ctrl-/)\nemote <user.text>: \"{text}\"\
+  \ntoggle left sidebar: key(ctrl-shift-d)\ntoggle right sidebar: key(ctrl-.)\n\n\
+  # DEPRECATED\n(move | next) focus:\n    app.notify(\"please use the voice command\
+  \ 'focus next' instead of 'next focus'\")\n    key(ctrl-`)\n[next] (section | zone):\n\
+  \    app.notify(\"please use the voice command 'section next' instead of 'next section'\"\
+  )\n    key(f6)\n(previous | last) (section | zone):\n    app.notify(\"please use\
+  \ the voice command 'section last' instead of 'last section'\")\n    key(shift-f6)\n\
+  [next] (element | bit):\n    app.notify(\"please use the voice command 'element\
+  \ next' instead of 'next element'\")\n    key(tab)\n(previous | last) (element |\
+  \ bit):\n    app.notify(\"please use the voice command 'element last' instead of\
+  \ 'last element'\")\n    key(shift-tab)\n"

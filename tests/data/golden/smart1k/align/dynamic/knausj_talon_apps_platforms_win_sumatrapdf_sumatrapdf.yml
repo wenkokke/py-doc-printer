@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: sumatrapdf
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,36 +17,43 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Set
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tags
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.pages
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.tabs
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  app: sumatrapdf
+output: 'app: sumatrapdf
+
   -
+
   # Set tags
+
   tag(): user.pages
+
   tag(): user.tabs
+
+  '

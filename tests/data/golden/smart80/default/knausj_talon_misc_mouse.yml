@@ -2,43 +2,54 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: control
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_toggle_control_mouse
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: control
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mouse
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_toggle_control_mouse
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -46,40 +57,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: zoom
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_toggle_zoom_mouse
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: zoom
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mouse
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_toggle_zoom_mouse
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -87,40 +112,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: camera
-        - text: ' '
+          type: Text
+        - type: Space
         - text: overlay
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_toggle_camera_overlay
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: camera
-          - text: ' '
+            type: Text
+          - type: Space
           - text: overlay
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_toggle_camera_overlay
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -128,40 +167,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: run
-        - text: ' '
+          type: Text
+        - type: Space
         - text: calibration
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_calibrate
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: run
-          - text: ' '
+            type: Text
+          - type: Space
           - text: calibration
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_calibrate
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -169,565 +222,712 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: touch
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: '0'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
-        - text: ' '
+          type: Text
+        - type: Space
         - text: open
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: End
-        - text: ' '
+          type: Text
+        - type: Space
         - text: any
-        - text: ' '
+          type: Text
+        - type: Space
         - text: open
-        - text: ' '
+          type: Text
+        - type: Space
         - text: drags
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: Touch
-        - text: ' '
+          type: Text
+        - type: Space
         - text: automatically
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ends
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
-        - text: ' '
+          type: Text
+        - type: Space
         - text: drags
-        - text: ' '
+          type: Text
+        - type: Space
         - text: so
-        - text: ' '
+          type: Text
+        - type: Space
         - text: this
-        - text: ' '
+          type: Text
+        - type: Space
         - text: is
-        - text: ' '
+          type: Text
+        - type: Space
         - text: for
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
-        - text: ' '
+          type: Text
+        - type: Space
         - text: drags
-        - text: ' '
+          type: Text
+        - type: Space
         - text: specifically
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_drag_end
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: righty
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
-        - text: ' '
+          type: Text
+        - type: Space
         - text: open
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: mid
-    - text: ' '
+      type: Text
+    - type: Space
     - text: click
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: '2'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: see
-    - text: ' '
+      type: Text
+    - type: Space
     - text: keys.py
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: modifiers.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: defaults
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: control
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: option
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '='
-    - text: ' '
+      type: Text
+    - type: Space
     - text: alt
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: shift
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: super
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '='
-    - text: ' '
+      type: Text
+    - type: Space
     - text: windows
-    - text: ' '
+      type: Text
+    - type: Space
     - text: key
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: <
+      type: Text
     - text: user.modifiers
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: touch
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"{modifiers}:down"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: '0'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"{modifiers}:up"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: <
+      type: Text
     - text: user.modifiers
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: righty
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"{modifiers}:down"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"{modifiers}:up"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: (
+      type: Text
     - text: dub
-    - text: ' '
+      type: Text
+    - type: Space
     - text: click
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: duke
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: (
+      type: Text
     - text: trip
-    - text: ' '
+      type: Text
+    - type: Space
     - text: click
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: trip
-    - text: ' '
+      type: Text
+    - type: Space
     - text: lick
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: mouse_click
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: left
-    - text: ' '
+      type: Text
+    - type: Space
     - text: drag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: drag
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_drag
+          type: Text
         - text: (
+          type: Text
         - text: '0'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: right
-    - text: ' '
+      type: Text
+    - type: Space
     - text: drag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: righty
-    - text: ' '
+      type: Text
+    - type: Space
     - text: drag
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_drag
+          type: Text
         - text: (
+          type: Text
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
-        - text: ' '
+          type: Text
+        - type: Space
         - text: the
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: grid
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_close
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: end
-        - text: ' '
+          type: Text
+        - type: Space
         - text: drag
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: drag
-        - text: ' '
+          type: Text
+        - type: Space
         - text: end
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_drag_end
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: end
-          - text: ' '
+            type: Text
+          - type: Space
           - text: drag
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: drag
-          - text: ' '
+            type: Text
+          - type: Space
           - text: end
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_drag_end
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -735,40 +935,54 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: down
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_down
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: down
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_down
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -776,75 +990,103 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: down
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_down
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tiny
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: down
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_down
+              type: Text
             - text: (
+              type: Text
             - text: '0.2'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tiny
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: down
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_down
+              type: Text
             - text: (
+              type: Text
             - text: '0.2'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -852,70 +1094,94 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tiny
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: down
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_down
+          type: Text
         - text: (
+          type: Text
         - text: '0.2'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: downer
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_down_continuous
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: downer
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_down_continuous
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -923,65 +1189,85 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: downer
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_down_continuous
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: up
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_up
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: up
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_up
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -989,71 +1275,95 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: up
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_up
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tiny
-        - text: ' '
+          type: Text
+        - type: Space
         - text: up
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_up
+              type: Text
             - text: (
+              type: Text
             - text: '0.2'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tiny
-          - text: ' '
+            type: Text
+          - type: Space
           - text: up
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_up
+              type: Text
             - text: (
+              type: Text
             - text: '0.2'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1061,68 +1371,90 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tiny
-    - text: ' '
+      type: Text
+    - type: Space
     - text: up
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_up
+          type: Text
         - text: (
+          type: Text
         - text: '0.2'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: upper
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_up_continuous
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: upper
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_up_continuous
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1130,65 +1462,85 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: upper
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_up_continuous
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: gaze
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_gaze_scroll
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: gaze
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_gaze_scroll
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1196,65 +1548,85 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: gaze
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_gaze_scroll
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stop
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_stop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: stop
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_stop
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1262,65 +1634,85 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: stop
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_stop
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_left
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_left
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1328,71 +1720,95 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: left
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_left
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tiny
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_left
+              type: Text
             - text: (
+              type: Text
             - text: '0.5'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tiny
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_left
+              type: Text
             - text: (
+              type: Text
             - text: '0.5'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1400,68 +1816,90 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tiny
-    - text: ' '
+      type: Text
+    - type: Space
     - text: left
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_left
+          type: Text
         - text: (
+          type: Text
         - text: '0.5'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_right
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_right
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1469,71 +1907,95 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: right
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_right
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: wheel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tiny
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.mouse_scroll_right
+              type: Text
             - text: (
+              type: Text
             - text: '0.5'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: wheel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tiny
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.mouse_scroll_right
+              type: Text
             - text: (
+              type: Text
             - text: '0.5'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1541,72 +2003,96 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: wheel
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tiny
-    - text: ' '
+      type: Text
+    - type: Space
     - text: right
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.mouse_move_center_active_window
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.mouse_scroll_right
+          type: Text
         - text: (
+          type: Text
         - text: '0.5'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: copy
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mouse
-        - text: ' '
+          type: Text
+        - type: Space
         - text: position
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.copy_mouse_position
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: copy
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mouse
-          - text: ' '
+            type: Text
+          - type: Space
           - text: position
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.copy_mouse_position
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1614,176 +2100,124 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: curse
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'no'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: Command
-        - text: ' '
+          type: Text
+        - type: Space
         - text: added
-        - text: ' '
+          type: Text
+        - type: Space
         - text: 2021-12-13,
-        - text: ' '
+          type: Text
+        - type: Space
         - text: can
-        - text: ' '
+          type: Text
+        - type: Space
         - text: remove
-        - text: ' '
+          type: Text
+        - type: Space
         - text: after
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '2022-06-01'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: Please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: activate
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: user.mouse_cursor_commands_enable
-            - text: ' '
+              type: Text
+            - type: Space
             - text: tag
-            - text: ' '
+              type: Text
+            - type: Space
             - text: to
-            - text: ' '
+              type: Text
+            - type: Space
             - text: enable
-            - text: ' '
+              type: Text
+            - type: Space
             - text: this
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  -
-  control mouse: user.mouse_toggle_control_mouse()
-  zoom mouse: user.mouse_toggle_zoom_mouse()
-  camera overlay: user.mouse_toggle_camera_overlay()
-  run calibration: user.mouse_calibrate()
-  touch:
-      mouse_click(0)
-      # close the mouse grid if open
-      user.grid_close()
-      # End any open drags
-      # Touch automatically ends left drags so this is for right drags specifically
-      user.mouse_drag_end()
-
-  righty:
-      mouse_click(1)
-      # close the mouse grid if open
-      user.grid_close()
-
-  mid click:
-      mouse_click(2)
-      # close the mouse grid
-      user.grid_close()
-
-  # see keys.py for modifiers.
-  # defaults
-  # command
-  # control
-  # option = alt
-  # shift
-  # super = windows key
-  <user.modifiers> touch:
-      key("{modifiers}:down")
-      mouse_click(0)
-      key("{modifiers}:up")
-      # close the mouse grid
-      user.grid_close()
-  <user.modifiers> righty:
-      key("{modifiers}:down")
-      mouse_click(1)
-      key("{modifiers}:up")
-      # close the mouse grid
-      user.grid_close()
-  (dub click | duke):
-      mouse_click()
-      mouse_click()
-      # close the mouse grid
-      user.grid_close()
-  (trip click | trip lick):
-      mouse_click()
-      mouse_click()
-      mouse_click()
-      # close the mouse grid
-      user.grid_close()
-  left drag | drag:
-      user.mouse_drag(0)
-      # close the mouse grid
-      user.grid_close()
-  right drag | righty drag:
-      user.mouse_drag(1)
-      # close the mouse grid
-      user.grid_close()
-  end drag | drag end: user.mouse_drag_end()
-  wheel down: user.mouse_scroll_down()
-  wheel down here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_down()
-  wheel tiny [down]: user.mouse_scroll_down(0.2)
-  wheel tiny [down] here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_down(0.2)
-  wheel downer: user.mouse_scroll_down_continuous()
-  wheel downer here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_down_continuous()
-  wheel up: user.mouse_scroll_up()
-  wheel up here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_up()
-  wheel tiny up: user.mouse_scroll_up(0.2)
-  wheel tiny up here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_up(0.2)
-  wheel upper: user.mouse_scroll_up_continuous()
-  wheel upper here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_up_continuous()
-  wheel gaze: user.mouse_gaze_scroll()
-  wheel gaze here:
-      user.mouse_move_center_active_window()
-      user.mouse_gaze_scroll()
-  wheel stop: user.mouse_scroll_stop()
-  wheel stop here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_stop()
-  wheel left: user.mouse_scroll_left()
-  wheel left here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_left()
-  wheel tiny left: user.mouse_scroll_left(0.5)
-  wheel tiny left here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_left(0.5)
-  wheel right: user.mouse_scroll_right()
-  wheel right here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_right()
-  wheel tiny right: user.mouse_scroll_right(0.5)
-  wheel tiny right here:
-      user.mouse_move_center_active_window()
-      user.mouse_scroll_right(0.5)
-  copy mouse position: user.copy_mouse_position()
-  curse no:
-      # Command added 2021-12-13, can remove after 2022-06-01
-      app.notify("Please activate the user.mouse_cursor_commands_enable tag to enable this command")
+output: "-\ncontrol mouse: user.mouse_toggle_control_mouse()\nzoom mouse: user.mouse_toggle_zoom_mouse()\n\
+  camera overlay: user.mouse_toggle_camera_overlay()\nrun calibration: user.mouse_calibrate()\n\
+  touch:\n    mouse_click(0)\n    # close the mouse grid if open\n    user.grid_close()\n\
+  \    # End any open drags\n    # Touch automatically ends left drags so this is\
+  \ for right drags specifically\n    user.mouse_drag_end()\n\nrighty:\n    mouse_click(1)\n\
+  \    # close the mouse grid if open\n    user.grid_close()\n\nmid click:\n    mouse_click(2)\n\
+  \    # close the mouse grid\n    user.grid_close()\n\n# see keys.py for modifiers.\n\
+  # defaults\n# command\n# control\n# option = alt\n# shift\n# super = windows key\n\
+  <user.modifiers> touch:\n    key(\"{modifiers}:down\")\n    mouse_click(0)\n   \
+  \ key(\"{modifiers}:up\")\n    # close the mouse grid\n    user.grid_close()\n<user.modifiers>\
+  \ righty:\n    key(\"{modifiers}:down\")\n    mouse_click(1)\n    key(\"{modifiers}:up\"\
+  )\n    # close the mouse grid\n    user.grid_close()\n(dub click | duke):\n    mouse_click()\n\
+  \    mouse_click()\n    # close the mouse grid\n    user.grid_close()\n(trip click\
+  \ | trip lick):\n    mouse_click()\n    mouse_click()\n    mouse_click()\n    #\
+  \ close the mouse grid\n    user.grid_close()\nleft drag | drag:\n    user.mouse_drag(0)\n\
+  \    # close the mouse grid\n    user.grid_close()\nright drag | righty drag:\n\
+  \    user.mouse_drag(1)\n    # close the mouse grid\n    user.grid_close()\nend\
+  \ drag | drag end: user.mouse_drag_end()\nwheel down: user.mouse_scroll_down()\n\
+  wheel down here:\n    user.mouse_move_center_active_window()\n    user.mouse_scroll_down()\n\
+  wheel tiny [down]: user.mouse_scroll_down(0.2)\nwheel tiny [down] here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_down(0.2)\nwheel downer: user.mouse_scroll_down_continuous()\n\
+  wheel downer here:\n    user.mouse_move_center_active_window()\n    user.mouse_scroll_down_continuous()\n\
+  wheel up: user.mouse_scroll_up()\nwheel up here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_up()\nwheel tiny up: user.mouse_scroll_up(0.2)\nwheel tiny\
+  \ up here:\n    user.mouse_move_center_active_window()\n    user.mouse_scroll_up(0.2)\n\
+  wheel upper: user.mouse_scroll_up_continuous()\nwheel upper here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_up_continuous()\nwheel gaze: user.mouse_gaze_scroll()\nwheel\
+  \ gaze here:\n    user.mouse_move_center_active_window()\n    user.mouse_gaze_scroll()\n\
+  wheel stop: user.mouse_scroll_stop()\nwheel stop here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_stop()\nwheel left: user.mouse_scroll_left()\nwheel left\
+  \ here:\n    user.mouse_move_center_active_window()\n    user.mouse_scroll_left()\n\
+  wheel tiny left: user.mouse_scroll_left(0.5)\nwheel tiny left here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_left(0.5)\nwheel right: user.mouse_scroll_right()\nwheel\
+  \ right here:\n    user.mouse_move_center_active_window()\n    user.mouse_scroll_right()\n\
+  wheel tiny right: user.mouse_scroll_right(0.5)\nwheel tiny right here:\n    user.mouse_move_center_active_window()\n\
+  \    user.mouse_scroll_right(0.5)\ncopy mouse position: user.copy_mouse_position()\n\
+  curse no:\n    # Command added 2021-12-13, can remove after 2022-06-01\n    app.notify(\"\
+  Please activate the user.mouse_cursor_commands_enable tag to enable this command\"\
+  )\n"

@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: apple_terminal
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,179 +17,213 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: makes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic_terminal
-    - text: ' '
+      type: Text
+    - type: Space
     - text: available
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: activates
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: implementation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands/functions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic_terminal
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.generic_unix_shell
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: makes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: certain
-    - text: ' '
+      type: Text
+    - type: Space
     - text: applications
-    - text: ' '
+      type: Text
+    - type: Space
     - text: available
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: can
-    - text: ' '
+      type: Text
+    - type: Space
     - text: deactivate
-    - text: ' '
+      type: Text
+    - type: Space
     - text: them
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: do
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: application
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.git
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.anaconda
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.kubectl
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'TODO:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: explain
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.tabs
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.file_manager
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: suspend
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-z
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: suspend
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: ctrl-z
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -193,53 +231,47 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: resume
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: fg
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: enter
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  app: apple_terminal
-  -
-  # makes the commands in generic_terminal available
-  tag(): terminal
-
-  # activates the implementation of the commands/functions in generic_terminal
-  tag(): user.generic_unix_shell
-
-  # makes commands for certain applications available
-  # you can deactivate them if you do not use the application
-  tag(): user.git
-  tag(): user.anaconda
-  tag(): user.kubectl
-
-  # TODO: explain
-  tag(): user.tabs
-  tag(): user.file_manager
-  suspend: key(ctrl-z)
-  resume:
-      insert("fg")
-      key(enter)
+output: "app: apple_terminal\n-\n# makes the commands in generic_terminal available\n\
+  tag(): terminal\n\n# activates the implementation of the commands/functions in generic_terminal\n\
+  tag(): user.generic_unix_shell\n\n# makes commands for certain applications available\n\
+  # you can deactivate them if you do not use the application\ntag(): user.git\ntag():\
+  \ user.anaconda\ntag(): user.kubectl\n\n# TODO: explain\ntag(): user.tabs\ntag():\
+  \ user.file_manager\nsuspend: key(ctrl-z)\nresume:\n    insert(\"fg\")\n    key(enter)\n"

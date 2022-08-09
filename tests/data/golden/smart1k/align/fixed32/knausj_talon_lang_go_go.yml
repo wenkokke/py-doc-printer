@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.go
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,40 +18,48 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: variadic
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: '...'
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: variadic
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: '...'
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -56,46 +68,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: logical
-        - text: ' '
+          type: Text
+        - type: Space
         - text: and
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '&&'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: logical
-          - text: ' '
+            type: Text
+          - type: Space
           - text: and
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '&&'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -104,46 +130,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: logical
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '||'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: logical
-          - text: ' '
+            type: Text
+          - type: Space
           - text: or
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '||'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -152,82 +192,109 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Many
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: ' '
+      type: Text
+    - type: Space
     - text: add
-    - text: ' '
+      type: Text
+    - type: Space
     - text: extra
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terrible
-    - text: ' '
+      type: Text
+    - type: Space
     - text: spacing
-    - text: ' '
+      type: Text
+    - type: Space
     - text: under
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: assumption
-    - text: ' '
+      type: Text
+    - type: Space
     - text: that
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: gofmt/goimports
-    - text: ' '
+      type: Text
+    - type: Space
     - text: will
-    - text: ' '
+      type: Text
+    - type: Space
     - text: erase
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: comment
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: //
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: comment
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: //
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -236,170 +303,223 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '['
+      type: Text
     - text: line
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"cmd-right"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: //
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: sentence
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"add'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <user.text>
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '[over]:'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: key("cmd-right")
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: text_with_leading("
-    - text: ' '
+      type: Text
+    - type: Space
     - text: //
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '")'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ']'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"[state]'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'context:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: insert("ctx")
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: funk
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: func
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: fun
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: func
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: funk
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: func
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: fun
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: func
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -408,72 +528,106 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: function
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: Annette
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: init
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: over
+          type: Text
         - text: ']'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: func
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init()
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: function
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: Annette
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: init
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: over
+            type: Text
           - text: ']'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: func
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init()
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -482,159 +636,216 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: function
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: func
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: (
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: method
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: meth
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: var
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: var
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: var
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: var
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -643,203 +854,262 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: variable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: var
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: insert("
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '")'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: type
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
-            text: ' '
+            type: Space
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"set'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <user.text>
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '[over]:'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: insert(user.formatted_text(text,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"PRIVATE_CAMEL_CASE"))'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: insert("
-    - text: ' '
+      type: Text
+    - type: Space
     - text: :=
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '")'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: sleep(100ms)
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ']'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: break
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: break
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: break
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: break
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -848,58 +1118,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: chan
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: channel
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: chan
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: chan
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: channel
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: chan
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -908,44 +1200,58 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: go
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: go
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: go
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: go
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -954,44 +1260,58 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: if
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: if
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1000,140 +1320,198 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: if
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: spawn
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: go
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: else
-        - text: ' '
+          type: Text
+        - type: Space
         - text: if
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: else
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: if
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: else
-          - text: ' '
+            type: Text
+          - type: Space
           - text: if
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: else
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: if
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1142,97 +1520,131 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: else
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: else
-            - text: ' '
+              type: Text
+            - type: Space
             - text: if
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: else
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: else
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: else
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: else
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1241,99 +1653,134 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: else
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: else
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"enter"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: while
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: while
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: while
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: while
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1342,90 +1789,122 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: while
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: while
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: for
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: for
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: for
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: for
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1434,94 +1913,128 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: for
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: for
-        - text: ' '
+          type: Text
+        - type: Space
         - text: range
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: forr
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: for
-          - text: ' '
+            type: Text
+          - type: Space
           - text: range
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: forr
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1530,86 +2043,116 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: range
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: forr
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: format
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: fmt
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: format
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: fmt
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1618,88 +2161,119 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: format
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: fmt.
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: switch
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: switch
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: switch
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: switch
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1708,90 +2282,122 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: switch
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: switch
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: select
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: select
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: select
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: select
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1800,72 +2406,98 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"select'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <user.text>:insert("select
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"),'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: insert(user.formatted_text(text,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"PRIVATE_CAMEL_CASE")]'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: const
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: constant
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: const
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: const
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: constant
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: const
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1874,92 +2506,124 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: constant
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: const
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: case
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: case
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: case
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: case
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1968,44 +2632,58 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: default
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'default:'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: default
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'default:'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2014,92 +2692,124 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: case
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: case
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: type
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: type
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: type
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: type
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2108,89 +2818,123 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: type
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: type
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: 'true'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'true'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: 'true'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'true'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2199,46 +2943,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: 'false'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'false'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: 'false'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: 'false'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2247,160 +3005,225 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: state
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: start
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: struct
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: struck
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: struct
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"enter"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: (
+      type: Text
     - text: struct
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: struck
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: struct
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"enter"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: state
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: empty
-        - text: ' '
+          type: Text
+        - type: Space
         - text: interface
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: interface
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: state
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: empty
-          - text: ' '
+            type: Text
+          - type: Space
           - text: interface
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: interface
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2409,132 +3232,177 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: state
-    - text: ' '
+      type: Text
+    - type: Space
     - text: interface
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"enter"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: interface
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: interface
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"enter"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: string
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: string
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: string
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: string
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2543,64 +3411,92 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: state
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: int
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: integer
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ant
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: int
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: state
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: int
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: integer
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: ant
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: int
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2609,44 +3505,58 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: slice
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '[]'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: slice
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '[]'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2655,40 +3565,52 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: slice
-        - text: ' '
+          type: Text
+        - type: Space
         - text: of
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: '[]'
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: slice
-          - text: ' '
+            type: Text
+          - type: Space
           - text: of
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: '[]'
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2697,56 +3619,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: state
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: 'no'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: nil
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: nil
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: state
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: 'no'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: nil
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: nil
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2755,74 +3701,104 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: int
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: integer
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ant
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: sixty
-        - text: ' '
+          type: Text
+        - type: Space
         - text: four
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: int64
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: int
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: integer
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: ant
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: sixty
-          - text: ' '
+            type: Text
+          - type: Space
           - text: four
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: int64
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2831,60 +3807,86 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '`'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '`'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tag
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: '`'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '`'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2893,122 +3895,164 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: field
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.insert_between
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
-            - text: ' '
+            - type: Space
             - text: '`'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: '`'
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: snake
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
-            text: ' '
+            type: Space
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: return
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: return
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: return
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: return
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3017,104 +4061,142 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: return
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: return
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: map
-        - text: ' '
+          type: Text
+        - type: Space
         - text: of
-        - text: ' '
+          type: Text
+        - type: Space
         - text: string
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: string
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: map[string]string
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: map
-          - text: ' '
+            type: Text
+          - type: Space
           - text: of
-          - text: ' '
+            type: Text
+          - type: Space
           - text: string
-          - text: ' '
+            type: Text
+          - type: Space
           - text: to
-          - text: ' '
+            type: Text
+          - type: Space
           - text: string
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: map[string]string
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3123,102 +4205,136 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: map
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: map[
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"right"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: receive
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: <-
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: receive
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: <-
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3227,36 +4343,46 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: make
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: make(
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: make
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: make(
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3265,186 +4391,259 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: loggers
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: logrus.
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PUBLIC_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: length
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: len(
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: append
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: append(
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: air
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: err
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 text: err
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: air
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: err
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 text: err
+                type: Text
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3453,42 +4652,54 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: error
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: err
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: error
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
-                - text: ' '
+                - type: Space
                 - text: err
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3497,492 +4708,497 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: loop
-    - text: ' '
+      type: Text
+    - type: Space
     - text: over
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: forr
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: item
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: value
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: ':'
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: address
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: '&'
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: pointer
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: '*'
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: swipe
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"right"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag:                             user.go
-  -
-  variadic:                        "..."
-  logical and:                     " && "
-  logical or:                      " || "
-  # Many of these add extra terrible spacing under the assumption that
-  # gofmt/goimports will erase it.
-  state comment:                   "// "
-  [line] comment <user.text>:
-      key("cmd-right")
-      insert(" // ")
-      insert(user.formatted_text(text, "sentence"))
-
-  # "add comment <user.text> [over]:
-  #     key("cmd-right")
-  #     text_with_leading(" // ")
-  # ]
-  # "[state] context: insert("ctx")
-  state (funk | func | fun):       "func "
-  function (Annette | init) [over]: "func init() {\n"
-  function <user.text> [over]:
-      insert("func ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-      insert("(")
-      sleep(100ms)
-
-  method <user.text> [over]:
-      insert("meth ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-      sleep(100ms)
-
-  state var:                       "var "
-  variable [<user.text>] [over]:
-      insert("var ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-      # insert(" ")
-      sleep(100ms)
-
-  of type [<user.text>] [over]:
-      insert(" ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  # "set <user.text> [over]:
-  #     insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-  #     insert(" := ")
-  #     sleep(100ms)
-  # ]
-  state break:                     "break"
-  state (chan | channel):          " chan "
-  state go:                        "go "
-  state if:                        "if "
-  if <user.text> [over]:
-      insert("if ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-  spawn <user.text> [over]:
-      insert("go ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-  state else if:                   " else if "
-  else if <user.text> [over]:
-      insert(" else if ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state else:                      " else "
-  else <user.text> [over]:
-      insert(" else {")
-      key("enter")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state while:                     "while "
-  while <user.text> [over]:
-      insert("while ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state for:                       "for "
-  for <user.text> [over]:
-      insert("for ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state for range:                 "forr "
-  range <user.text> [over]:
-      insert("forr ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state format:                    "fmt"
-  format <user.text> [over]:
-      insert("fmt.")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-
-  state switch:                    "switch "
-  switch <user.text> [over]:
-      insert("switch ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state select:                    "select "
-  # "select <user.text>:insert("select "), insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE")]
-  state (const | constant):        " const "
-  constant <user.text> [over]:
-      insert("const ")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-
-  state case:                      " case "
-  state default:                   " default:"
-  case <user.text> [over]:
-      insert("case ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state type:                      " type "
-  type <user.text> [over]:
-      insert("type ")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-  state true:                      " true "
-  state false:                     " false "
-  state (start | struct | struck):
-      insert(" struct {")
-      key("enter")
-  (struct | struck) <user.text> [over]:
-      insert(" struct {")
-      key("enter")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-
-  [state] empty interface:         " interface{} "
-  state interface:
-      insert(" interface {")
-      key("enter")
-  interface <user.text> [over]:
-      insert(" interface {")
-      key("enter")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-
-  state string:                    " string "
-  [state] (int | integer | ant):   "int"
-  state slice:                     " []"
-  slice of:                        "[]"
-  [state] (no | nil):              "nil"
-  state (int | integer | ant) sixty four: " int64 "
-  state tag:                       user.insert_between(" `", "`")
-  field tag <user.text> [over]:
-      user.insert_between(" `", "`")
-      sleep(100ms)
-      insert(user.formatted_text(text, "snake"))
-      insert(" ")
-      sleep(100ms)
-
-  state return:                    " return "
-  return <user.text> [over]:
-      insert("return ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  map of string to string:         " map[string]string "
-  map of <user.text> [over]:
-      insert("map[")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-      key("right")
-      sleep(100ms)
-
-  receive:                         " <- "
-  make:                            "make("
-  loggers [<user.text>] [over]:
-      insert("logrus.")
-      insert(user.formatted_text(text, "PUBLIC_CAMEL_CASE"))
-
-  length <user.text> [over]:
-      insert("len(")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  append <user.text> [over]:
-      insert("append(")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  state (air | err):               "err"
-  error:                           " err "
-  loop over [<user.text>] [over]:
-      insert("forr ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  item <user.text> [over]:
-      insert(", ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  value <user.text> [over]:
-      insert(": ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  address of [<user.text>] [over]:
-      insert("&")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  pointer to [<user.text>] [over]:
-      insert("*")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
-
-  swipe [<user.text>] [over]:
-      key("right")
-      insert(", ")
-      insert(user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+output: "tag:                             user.go\n-\nvariadic:                  \
+  \      \"...\"\nlogical and:                     \" && \"\nlogical or:         \
+  \             \" || \"\n# Many of these add extra terrible spacing under the assumption\
+  \ that\n# gofmt/goimports will erase it.\nstate comment:                   \"//\
+  \ \"\n[line] comment <user.text>:\n    key(\"cmd-right\")\n    insert(\" // \")\n\
+  \    insert(user.formatted_text(text, \"sentence\"))\n\n# \"add comment <user.text>\
+  \ [over]:\n#     key(\"cmd-right\")\n#     text_with_leading(\" // \")\n# ]\n# \"\
+  [state] context: insert(\"ctx\")\nstate (funk | func | fun):       \"func \"\nfunction\
+  \ (Annette | init) [over]: \"func init() {\\n\"\nfunction <user.text> [over]:\n\
+  \    insert(\"func \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n    insert(\"(\")\n    sleep(100ms)\n\nmethod <user.text> [over]:\n    insert(\"\
+  meth \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))\n    sleep(100ms)\n\
+  \nstate var:                       \"var \"\nvariable [<user.text>] [over]:\n  \
+  \  insert(\"var \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n    # insert(\" \")\n    sleep(100ms)\n\nof type [<user.text>] [over]:\n   \
+  \ insert(\" \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))\n\
+  \n# \"set <user.text> [over]:\n#     insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n#     insert(\" := \")\n#     sleep(100ms)\n# ]\nstate break:              \
+  \       \"break\"\nstate (chan | channel):          \" chan \"\nstate go:      \
+  \                  \"go \"\nstate if:                        \"if \"\nif <user.text>\
+  \ [over]:\n    insert(\"if \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\nspawn <user.text> [over]:\n    insert(\"go \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\nstate else if:                   \" else if \"\nelse\
+  \ if <user.text> [over]:\n    insert(\" else if \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nstate else:                      \" else \"\nelse\
+  \ <user.text> [over]:\n    insert(\" else {\")\n    key(\"enter\")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nstate while:                     \"while \"\nwhile\
+  \ <user.text> [over]:\n    insert(\"while \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nstate for:                       \"for \"\nfor <user.text>\
+  \ [over]:\n    insert(\"for \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n\nstate for range:                 \"forr \"\nrange <user.text> [over]:\n  \
+  \  insert(\"forr \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n\nstate format:                    \"fmt\"\nformat <user.text> [over]:\n   \
+  \ insert(\"fmt.\")\n    insert(user.formatted_text(text, \"PUBLIC_CAMEL_CASE\"))\n\
+  \nstate switch:                    \"switch \"\nswitch <user.text> [over]:\n   \
+  \ insert(\"switch \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n\nstate select:                    \"select \"\n# \"select <user.text>:insert(\"\
+  select \"), insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\")]\nstate (const\
+  \ | constant):        \" const \"\nconstant <user.text> [over]:\n    insert(\"const\
+  \ \")\n    insert(user.formatted_text(text, \"PUBLIC_CAMEL_CASE\"))\n\nstate case:\
+  \                      \" case \"\nstate default:                   \" default:\"\
+  \ncase <user.text> [over]:\n    insert(\"case \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nstate type:                      \" type \"\ntype\
+  \ <user.text> [over]:\n    insert(\"type \")\n    insert(user.formatted_text(text,\
+  \ \"PUBLIC_CAMEL_CASE\"))\nstate true:                      \" true \"\nstate false:\
+  \                     \" false \"\nstate (start | struct | struck):\n    insert(\"\
+  \ struct {\")\n    key(\"enter\")\n(struct | struck) <user.text> [over]:\n    insert(\"\
+  \ struct {\")\n    key(\"enter\")\n    insert(user.formatted_text(text, \"PUBLIC_CAMEL_CASE\"\
+  ))\n\n[state] empty interface:         \" interface{} \"\nstate interface:\n   \
+  \ insert(\" interface {\")\n    key(\"enter\")\ninterface <user.text> [over]:\n\
+  \    insert(\" interface {\")\n    key(\"enter\")\n    insert(user.formatted_text(text,\
+  \ \"PUBLIC_CAMEL_CASE\"))\n\nstate string:                    \" string \"\n[state]\
+  \ (int | integer | ant):   \"int\"\nstate slice:                     \" []\"\nslice\
+  \ of:                        \"[]\"\n[state] (no | nil):              \"nil\"\n\
+  state (int | integer | ant) sixty four: \" int64 \"\nstate tag:                \
+  \       user.insert_between(\" `\", \"`\")\nfield tag <user.text> [over]:\n    user.insert_between(\"\
+  \ `\", \"`\")\n    sleep(100ms)\n    insert(user.formatted_text(text, \"snake\"\
+  ))\n    insert(\" \")\n    sleep(100ms)\n\nstate return:                    \" return\
+  \ \"\nreturn <user.text> [over]:\n    insert(\"return \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nmap of string to string:         \" map[string]string\
+  \ \"\nmap of <user.text> [over]:\n    insert(\"map[\")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n    key(\"right\")\n    sleep(100ms)\n\nreceive:   \
+  \                      \" <- \"\nmake:                            \"make(\"\nloggers\
+  \ [<user.text>] [over]:\n    insert(\"logrus.\")\n    insert(user.formatted_text(text,\
+  \ \"PUBLIC_CAMEL_CASE\"))\n\nlength <user.text> [over]:\n    insert(\"len(\")\n\
+  \    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))\n\nappend <user.text>\
+  \ [over]:\n    insert(\"append(\")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n\nstate (air | err):               \"err\"\nerror:                         \
+  \  \" err \"\nloop over [<user.text>] [over]:\n    insert(\"forr \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\nitem <user.text> [over]:\n    insert(\", \")\n   \
+  \ insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))\n\nvalue <user.text>\
+  \ [over]:\n    insert(\": \")\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"\
+  ))\n\naddress of [<user.text>] [over]:\n    insert(\"&\")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n\npointer to [<user.text>] [over]:\n    insert(\"*\"\
+  )\n    insert(user.formatted_text(text, \"PRIVATE_CAMEL_CASE\"))\n\nswipe [<user.text>]\
+  \ [over]:\n    key(\"right\")\n    insert(\", \")\n    insert(user.formatted_text(text,\
+  \ \"PRIVATE_CAMEL_CASE\"))\n"

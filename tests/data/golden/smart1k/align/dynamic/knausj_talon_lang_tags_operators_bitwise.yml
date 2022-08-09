@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_operators_bitwise
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,62 +17,81 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bitwise
-    - text: ' '
+      type: Text
+    - type: Space
     - text: operators
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: '['
+              type: Text
             - text: op
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
-            - text: ' '
+              type: Text
+            - type: Space
             - text: and
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_operator_bitwise_and
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: '['
+                type: Text
               - text: op
+                type: Text
               - text: ']'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: bitwise
-              - text: ' '
+                type: Text
+              - type: Space
               - text: and
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_operator_bitwise_and
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -76,48 +99,68 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: '['
+              type: Text
             - text: op
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_operator_bitwise_or
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: '['
+                type: Text
               - text: op
+                type: Text
               - text: ']'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: bitwise
-              - text: ' '
+                type: Text
+              - type: Space
               - text: or
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_operator_bitwise_or
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -125,26 +168,39 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: '['
+              type: Text
             - text: op
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
-            - text: ' '
+              type: Text
+            - type: Space
             - text: and
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_operator_bitwise_and
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -152,25 +208,36 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: '['
+              type: Text
             - text: op
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_operator_bitwise_or
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -178,107 +245,152 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'TODO:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: split
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: ' '
+      type: Text
+    - type: Space
     - text: out
-    - text: ' '
+      type: Text
+    - type: Space
     - text: into
-    - text: ' '
+      type: Text
+    - type: Space
     - text: separate
-    - text: ' '
+      type: Text
+    - type: Space
     - text: logical
-    - text: ' '
+      type: Text
+    - type: Space
     - text: and
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bitwise
-    - text: ' '
+      type: Text
+    - type: Space
     - text: operator
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: ex
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: exclusive
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_operator_bitwise_exclusive_or
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: (
+                type: Text
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: logical
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: bitwise
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: ex
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: exclusive
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: or
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_operator_bitwise_exclusive_or
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -286,80 +398,118 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: left
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: left
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_operator_bitwise_left_shift
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: (
+                type: Text
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: logical
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: bitwise
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: left
-              - text: ' '
+                type: Text
+              - type: Space
               - text: shift
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: shift
-              - text: ' '
+                type: Text
+              - type: Space
               - text: left
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_operator_bitwise_left_shift
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -367,80 +517,118 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: right
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: right
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_operator_bitwise_right_shift
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: (
+                type: Text
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: logical
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: bitwise
+                type: Text
               - text: )
-              - text: ' '
+                type: Text
+              - type: Space
               - text: (
+                type: Text
               - text: right
-              - text: ' '
+                type: Text
+              - type: Space
               - text: shift
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '|'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: shift
-              - text: ' '
+                type: Text
+              - type: Space
               - text: right
+                type: Text
               - text: )
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_operator_bitwise_right_shift
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -448,40 +636,61 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: ex
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: exclusive
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_operator_bitwise_exclusive_or
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -489,41 +698,61 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: left
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: left
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_operator_bitwise_left_shift
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -531,41 +760,61 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: (
+              type: Text
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: logical
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: bitwise
+              type: Text
             - text: )
-            - text: ' '
+              type: Text
+            - type: Space
             - text: (
+              type: Text
             - text: right
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '|'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: shift
-            - text: ' '
+              type: Text
+            - type: Space
             - text: right
+              type: Text
             - text: )
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_operator_bitwise_right_shift
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -573,17 +822,30 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.code_operators_bitwise
+output: 'tag: user.code_operators_bitwise
+
   -
+
   # bitwise operators
+
   [op] bitwise and: user.code_operator_bitwise_and()
+
   [op] bitwise or:  user.code_operator_bitwise_or()
 
+
   # TODO: split these out into separate logical and bitwise operator commands
+
   (op | logical | bitwise) (ex | exclusive) or:         user.code_operator_bitwise_exclusive_or()
+
   (op | logical | bitwise) (left shift | shift left):   user.code_operator_bitwise_left_shift()
+
   (op | logical | bitwise) (right shift | shift right): user.code_operator_bitwise_right_shift()
+
+  '

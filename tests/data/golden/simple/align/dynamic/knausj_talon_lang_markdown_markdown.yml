@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.markdown
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,50 +17,62 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: one
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '#'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: one
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '#'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -64,44 +80,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: two
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '##'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: two
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '##'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -109,44 +139,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: three
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '###'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: three
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '###'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -154,44 +198,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: four
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '####'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: four
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '####'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -199,44 +257,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: five
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '#####'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: five
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '#####'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -244,44 +316,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: six
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: '######'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: level
-              - text: ' '
+                type: Text
+              - type: Space
               - text: six
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: '######'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -289,24 +375,34 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: one
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '#'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -314,23 +410,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: two
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '##'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -338,23 +442,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: three
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '###'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -362,23 +474,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: four
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '####'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -386,23 +506,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: five
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '#####'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -410,23 +538,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: level
-            - text: ' '
+              type: Text
+            - type: Space
             - text: six
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: '######'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -434,67 +570,71 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: '{'
+      type: Text
     - text: user.markdown_code_block_language
+      type: Text
     - text: '}'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: block
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - doc:
             docs:
             - text: '```'
+              type: Text
             - text: '{'
+              type: Text
             - text: markdown_code_block_language
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: enter:2
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - doc:
             text: '```'
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: up
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  tag: user.markdown
-  -
-  level one:   "# "
-  level two:   "## "
-  level three: "### "
-  level four:  "#### "
-  level five:  "##### "
-  level six:   "###### "
-
-  {user.markdown_code_block_language} block:
-      "```{markdown_code_block_language}"
-      key(enter:2)
-      "```"
-      key(up)
+output: "tag: user.markdown\n-\nlevel one:   \"# \"\nlevel two:   \"## \"\nlevel three:\
+  \ \"### \"\nlevel four:  \"#### \"\nlevel five:  \"##### \"\nlevel six:   \"######\
+  \ \"\n\n{user.markdown_code_block_language} block:\n    \"```{markdown_code_block_language}\"\
+  \n    key(enter:2)\n    \"```\"\n    key(up)\n"

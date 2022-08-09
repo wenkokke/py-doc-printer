@@ -2,46 +2,65 @@ input:
   doc:
     docs:
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'NOTE:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: If
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: want
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: i3wm
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: must
-    - text: ' '
+      type: Text
+    - type: Space
     - text: enable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: settings.talon.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'ex:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '`tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.i3wm`
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: linux
+        type: Text
       info:
         hpad:
           text: ' '
@@ -50,11 +69,16 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.i3wm
+        type: Text
       info:
         hpad:
           text: ' '
@@ -63,72 +87,104 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number_small
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number_small
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -137,60 +193,86 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ten
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '10'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: ten
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '10'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -199,68 +281,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: flip
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: flipper
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: back_and_forth
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: flip
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: flipper
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: back_and_forth
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -269,56 +383,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: next
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: next
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -327,56 +465,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: prev
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: prev
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -385,71 +547,101 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: left
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: left
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -458,68 +650,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: right
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: right
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -528,68 +752,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: up
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: up
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: up
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: up
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -598,68 +854,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: down
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: down
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: down
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: down
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -668,76 +956,114 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: kill
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: murder
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: kill
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: kill
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: murder
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: kill
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -746,68 +1072,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stacking
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: stacking
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: stacking
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: stacking
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -816,72 +1174,106 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: default
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: toggle
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: default
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: toggle
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -890,68 +1282,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tabbed
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: tabbed
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: tabbed
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: layout
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: tabbed
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -960,63 +1384,87 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: reload
-        - text: ' '
+          type: Text
+        - type: Space
         - text: i
-        - text: ' '
+          type: Text
+        - type: Space
         - text: three
-        - text: ' '
+          type: Text
+        - type: Space
         - text: config
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: reload
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: reload
-          - text: ' '
+            type: Text
+          - type: Space
           - text: i
-          - text: ' '
+            type: Text
+          - type: Space
           - text: three
-          - text: ' '
+            type: Text
+          - type: Space
           - text: config
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: reload
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1025,56 +1473,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: restart
-        - text: ' '
+          type: Text
+        - type: Space
         - text: i
-        - text: ' '
+          type: Text
+        - type: Space
         - text: three
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: restart
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: restart
-          - text: ' '
+            type: Text
+          - type: Space
           - text: i
-          - text: ' '
+            type: Text
+          - type: Space
           - text: three
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: restart
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1083,67 +1555,95 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: full
-        - text: ' '
+          type: Text
+        - type: Space
         - text: screen
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: scuba
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fullscreen
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: full
-          - text: ' '
+            type: Text
+          - type: Space
           - text: screen
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: scuba
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fullscreen
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1152,56 +1652,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: floating
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: floating
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: toggle
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: floating
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: floating
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: toggle
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1210,56 +1734,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: floating
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mode_toggle
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: floating
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mode_toggle
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1268,60 +1816,86 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: center
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: position
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: center
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: center
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: position
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: center
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1330,56 +1904,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: resize
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mode
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '"resize"'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: resize
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mode
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '"resize"'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1388,56 +1986,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: parent
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: parent
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: parent
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: parent
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1446,56 +2068,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: focus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: child
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: child
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: focus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: child
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: focus
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: child
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1504,443 +2150,599 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: resize
-    - text: ' '
+      type: Text
+    - type: Space
     - text: helpers
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: grow
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: mode
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '"resize"'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: right:10
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: down:10
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: escape
-        - text: ' '
+          type: Text
+        - type: Space
         - text: resize
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: escape
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: center
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 200ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: move
-            - text: ' '
+              type: Text
+            - type: Space
             - text: position
-            - text: ' '
+              type: Text
+            - type: Space
             - text: center
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: resize
-    - text: ' '
+      type: Text
+    - type: Space
     - text: helpers
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: shrink
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: mode
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '"resize"'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: left:10
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: up:10
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: escape
-        - text: ' '
+          type: Text
+        - type: Space
         - text: resize
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: escape
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: center
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 200ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: move
-            - text: ' '
+              type: Text
+            - type: Space
             - text: position
-            - text: ' '
+              type: Text
+            - type: Space
             - text: center
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: horizontal
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: shell
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: split
-            - text: ' '
+              type: Text
+            - type: Space
             - text: h
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.i3wm_shell
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: vertical
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: shell
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: split
-            - text: ' '
+              type: Text
+            - type: Space
             - text: v
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.i3wm_shell
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: just
-    - text: ' '
+      type: Text
+    - type: Space
     - text: replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: shuffle
-    - text: ' '
+      type: Text
+    - type: Space
     - text: eventually?
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: like
-    - text: ' '
+      type: Text
+    - type: Space
     - text: also
-    - text: ' '
+      type: Text
+    - type: Space
     - text: need
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: match
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: to
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: port
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number_small
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: to
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: port
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number_small
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '{'
+                  type: Text
                 - text: number_small
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1949,112 +2751,170 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: to
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: port
-        - text: ' '
+          type: Text
+        - type: Space
         - text: ten
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '10'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: to
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: port
-          - text: ' '
+            type: Text
+          - type: Space
           - text: ten
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: number
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '10'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2063,108 +2923,164 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: to
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: last
-        - text: ' '
+          type: Text
+        - type: Space
         - text: port
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: back_and_forth
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: to
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: last
-          - text: ' '
+            type: Text
+          - type: Space
           - text: port
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: container
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: to
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: workspace
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: back_and_forth
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2173,84 +3089,126 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: left
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: left
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2259,84 +3217,126 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: right
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: right
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2345,84 +3345,126 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: up
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: up
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: up
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: up
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2431,84 +3473,126 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: shuffle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: down
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: down
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: shuffle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: down
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: down
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2517,71 +3601,101 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: horizontal
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: h
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: horizontal
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: h
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2590,68 +3704,100 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: window
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: vertical
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: v
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: window
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: vertical
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: split
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: v
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2660,59 +3806,81 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: make
-        - text: ' '
+          type: Text
+        - type: Space
         - text: scratch
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: scratchpad
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: make
-          - text: ' '
+            type: Text
+          - type: Space
           - text: scratch
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: move
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: scratchpad
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2721,72 +3889,108 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: (
+          type: Text
         - text: show
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: hide
+          type: Text
         - text: )
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: scratch
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: scratchpad
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: show
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: (
+            type: Text
           - text: show
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: hide
+            type: Text
           - text: )
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: scratch
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.system_command
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: i3-msg
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: scratchpad
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: show
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2795,110 +3999,148 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: scratch
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scratchpad
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scratchpad
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: ' '
+      type: Text
+    - type: Space
     - text: rely
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user
-    - text: ' '
+      type: Text
+    - type: Space
     - text: settings
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mod
-    - text: ' '
+      type: Text
+    - type: Space
     - text: key.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: see
-    - text: ' '
+      type: Text
+    - type: Space
     - text: i3wm.py
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Actions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: class
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: launch
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.i3wm_launch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: launch
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.i3wm_launch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2907,78 +4149,106 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: launch
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.i3wm_launch
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 100ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: text
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: lock
-        - text: ' '
+          type: Text
+        - type: Space
         - text: screen
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.i3wm_launch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: lock
-          - text: ' '
+            type: Text
+          - type: Space
           - text: screen
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.i3wm_launch
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -2987,55 +4257,75 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: launch
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shell
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: koopa
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.i3wm_shell
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: launch
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shell
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: koopa
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.i3wm_shell
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -3044,164 +4334,147 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: new
-    - text: ' '
+      type: Text
+    - type: Space
     - text: scratch
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: shell
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.i3wm_shell
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: sleep
+          type: Text
         - text: (
+          type: Text
         - text: 200ms
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: move
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scratchpad
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.system_command
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: i3-msg
-            - text: ' '
+              type: Text
+            - type: Space
             - text: scratchpad
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  # NOTE: If you want to use i3wm you must enable the tag settings.talon. ex: `tag(): user.i3wm`
-  os:                              linux
-  tag:                             user.i3wm
-  -
-  port <number_small>:             user.system_command("i3-msg workspace number {number_small}")
-  port ten:                        user.system_command("i3-msg workspace number 10")
-  (port flip | flipper):           user.system_command("i3-msg workspace back_and_forth")
-  port right:                      user.system_command("i3-msg workspace next")
-  port left:                       user.system_command("i3-msg workspace prev")
-
-  (win | window) left:             user.system_command("i3-msg focus left")
-  (win | window) right:            user.system_command("i3-msg focus right")
-  (win | window) up:               user.system_command("i3-msg focus up")
-  (win | window) down:             user.system_command("i3-msg focus down")
-  ((win | window) kill | murder):  user.system_command("i3-msg kill")
-  (win | window) stacking:         user.system_command("i3-msg layout stacking")
-  (win | window) default:          user.system_command("i3-msg layout toggle split")
-  (win | window) tabbed:           user.system_command("i3-msg layout tabbed")
-
-  reload i three config:           user.system_command("i3-msg reload")
-  restart i three:                 user.system_command("i3-msg restart")
-
-  (full screen | scuba):           user.system_command("i3-msg fullscreen")
-  toggle floating:                 user.system_command("i3-msg floating toggle")
-  focus floating:                  user.system_command("i3-msg focus mode_toggle")
-  center window:                   user.system_command("i3-msg move position center")
-  resize mode:                     user.system_command('i3-msg mode "resize"')
-  focus parent:                    user.system_command("i3-msg focus parent")
-  focus child:                     user.system_command("i3-msg focus child")
-
-  # resize helpers
-  grow window:
-      user.system_command('i3-msg mode "resize"')
-      key(right:10)
-      key(down:10)
-      # escape resize mode
-      key(escape)
-      # center window
-      sleep(200ms)
-      user.system_command("i3-msg move position center")
-
-  # resize helpers
-  shrink window:
-      user.system_command('i3-msg mode "resize"')
-      key(left:10)
-      key(up:10)
-      # escape resize mode
-      key(escape)
-      # center window
-      sleep(200ms)
-      user.system_command("i3-msg move position center")
-
-  horizontal (shell | terminal):
-      user.system_command("i3-msg split h")
-      user.i3wm_shell()
-
-  vertical (shell | terminal):
-      user.system_command("i3-msg split v")
-      user.i3wm_shell()
-
-  # XXX - just replace with shuffle eventually?
-  # XXX - like also need to match the generic talon commands
-  (shuffle | move (win | window) [to] port) <number_small>: user.system_command("i3-msg move container to workspace number {number_small}")
-  (shuffle | move (win | window) [to] port ten): user.system_command("i3-msg move container to workspace number 10")
-  (shuffle | move (win | window) [to] last port): user.system_command("i3-msg move container to workspace back_and_forth")
-  (shuffle | move (win | window) left): user.system_command("i3-msg move left")
-  (shuffle | move (win | window) right): user.system_command("i3-msg move right")
-  (shuffle | move (win | window) up): user.system_command("i3-msg move up")
-  (shuffle | move (win | window) down): user.system_command("i3-msg move down")
-
-  (win | window) horizontal:       user.system_command("i3-msg split h")
-  (win | window) vertical:         user.system_command("i3-msg split v")
-
-  make scratch:                    user.system_command("i3-msg move scratchpad")
-  [(show | hide)] scratch:         user.system_command("i3-msg scratchpad show")
-  next scratch:
-      user.system_command("i3-msg scratchpad show")
-      user.system_command("i3-msg scratchpad show")
-
-  # these rely on the user settings for the mod key. see i3wm.py Actions class
-  launch:                          user.i3wm_launch()
-  launch <user.text>:
-      user.i3wm_launch()
-      sleep(100ms)
-      insert("{text}")
-  lock screen:                     user.i3wm_launch()
-
-  (launch shell | koopa):          user.i3wm_shell()
-
-  new scratch (shell | window):
-      user.i3wm_shell()
-      sleep(200ms)
-      user.system_command("i3-msg move scratchpad")
-      user.system_command("i3-msg scratchpad show")
+output: "# NOTE: If you want to use i3wm you must enable the tag settings.talon. ex:\
+  \ `tag(): user.i3wm`\nos:                              linux\ntag:             \
+  \                user.i3wm\n-\nport <number_small>:             user.system_command(\"\
+  i3-msg workspace number {number_small}\")\nport ten:                        user.system_command(\"\
+  i3-msg workspace number 10\")\n(port flip | flipper):           user.system_command(\"\
+  i3-msg workspace back_and_forth\")\nport right:                      user.system_command(\"\
+  i3-msg workspace next\")\nport left:                       user.system_command(\"\
+  i3-msg workspace prev\")\n\n(win | window) left:             user.system_command(\"\
+  i3-msg focus left\")\n(win | window) right:            user.system_command(\"i3-msg\
+  \ focus right\")\n(win | window) up:               user.system_command(\"i3-msg\
+  \ focus up\")\n(win | window) down:             user.system_command(\"i3-msg focus\
+  \ down\")\n((win | window) kill | murder):  user.system_command(\"i3-msg kill\"\
+  )\n(win | window) stacking:         user.system_command(\"i3-msg layout stacking\"\
+  )\n(win | window) default:          user.system_command(\"i3-msg layout toggle split\"\
+  )\n(win | window) tabbed:           user.system_command(\"i3-msg layout tabbed\"\
+  )\n\nreload i three config:           user.system_command(\"i3-msg reload\")\nrestart\
+  \ i three:                 user.system_command(\"i3-msg restart\")\n\n(full screen\
+  \ | scuba):           user.system_command(\"i3-msg fullscreen\")\ntoggle floating:\
+  \                 user.system_command(\"i3-msg floating toggle\")\nfocus floating:\
+  \                  user.system_command(\"i3-msg focus mode_toggle\")\ncenter window:\
+  \                   user.system_command(\"i3-msg move position center\")\nresize\
+  \ mode:                     user.system_command('i3-msg mode \"resize\"')\nfocus\
+  \ parent:                    user.system_command(\"i3-msg focus parent\")\nfocus\
+  \ child:                     user.system_command(\"i3-msg focus child\")\n\n# resize\
+  \ helpers\ngrow window:\n    user.system_command('i3-msg mode \"resize\"')\n   \
+  \ key(right:10)\n    key(down:10)\n    # escape resize mode\n    key(escape)\n \
+  \   # center window\n    sleep(200ms)\n    user.system_command(\"i3-msg move position\
+  \ center\")\n\n# resize helpers\nshrink window:\n    user.system_command('i3-msg\
+  \ mode \"resize\"')\n    key(left:10)\n    key(up:10)\n    # escape resize mode\n\
+  \    key(escape)\n    # center window\n    sleep(200ms)\n    user.system_command(\"\
+  i3-msg move position center\")\n\nhorizontal (shell | terminal):\n    user.system_command(\"\
+  i3-msg split h\")\n    user.i3wm_shell()\n\nvertical (shell | terminal):\n    user.system_command(\"\
+  i3-msg split v\")\n    user.i3wm_shell()\n\n# XXX - just replace with shuffle eventually?\n\
+  # XXX - like also need to match the generic talon commands\n(shuffle | move (win\
+  \ | window) [to] port) <number_small>: user.system_command(\"i3-msg move container\
+  \ to workspace number {number_small}\")\n(shuffle | move (win | window) [to] port\
+  \ ten): user.system_command(\"i3-msg move container to workspace number 10\")\n\
+  (shuffle | move (win | window) [to] last port): user.system_command(\"i3-msg move\
+  \ container to workspace back_and_forth\")\n(shuffle | move (win | window) left):\
+  \ user.system_command(\"i3-msg move left\")\n(shuffle | move (win | window) right):\
+  \ user.system_command(\"i3-msg move right\")\n(shuffle | move (win | window) up):\
+  \ user.system_command(\"i3-msg move up\")\n(shuffle | move (win | window) down):\
+  \ user.system_command(\"i3-msg move down\")\n\n(win | window) horizontal:      \
+  \ user.system_command(\"i3-msg split h\")\n(win | window) vertical:         user.system_command(\"\
+  i3-msg split v\")\n\nmake scratch:                    user.system_command(\"i3-msg\
+  \ move scratchpad\")\n[(show | hide)] scratch:         user.system_command(\"i3-msg\
+  \ scratchpad show\")\nnext scratch:\n    user.system_command(\"i3-msg scratchpad\
+  \ show\")\n    user.system_command(\"i3-msg scratchpad show\")\n\n# these rely on\
+  \ the user settings for the mod key. see i3wm.py Actions class\nlaunch:        \
+  \                  user.i3wm_launch()\nlaunch <user.text>:\n    user.i3wm_launch()\n\
+  \    sleep(100ms)\n    insert(\"{text}\")\nlock screen:                     user.i3wm_launch()\n\
+  \n(launch shell | koopa):          user.i3wm_shell()\n\nnew scratch (shell | window):\n\
+  \    user.i3wm_shell()\n    sleep(200ms)\n    user.system_command(\"i3-msg move\
+  \ scratchpad\")\n    user.system_command(\"i3-msg scratchpad show\")\n"

@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_operators_lambda
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,179 +18,218 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: In
-    - text: ' '
+      type: Text
+    - type: Space
     - text: many
-    - text: ' '
+      type: Text
+    - type: Space
     - text: languages,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: anonymous
-    - text: ' '
+      type: Text
+    - type: Space
     - text: functions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: aren't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: merely
-    - text: ' '
+      type: Text
+    - type: Space
     - text: infix
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'syntax:'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: Haskell
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
     - text: '''\x'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bla'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: OCaml
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '''fun'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: x
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bla'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: Rust
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '''|x|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '{'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bla
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '}'''
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Therefore
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: revision
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: ' '
+      type: Text
+    - type: Space
     - text: may
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: order.
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: syntax
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: anonymous
-    - text: ' '
+      type: Text
+    - type: Space
     - text: functions
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: lambda
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_lambda
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: lambda
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_lambda
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -195,19 +238,33 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag:                             user.code_operators_lambda
+output: 'tag:                             user.code_operators_lambda
+
   -
-  # In many languages, anonymous functions aren't merely infix syntax:
+
+  # In many languages, anonymous functions aren''t merely infix syntax:
+
   #
-  #       Haskell  '\x -> bla'
-  #       OCaml    'fun x -> bla'
-  #       Rust     '|x| { bla }'
+
+  #       Haskell  ''\x -> bla''
+
+  #       OCaml    ''fun x -> bla''
+
+  #       Rust     ''|x| { bla }''
+
   #
+
   # Therefore a revision of this command may be in order.
 
+
   # syntax for anonymous functions
+
   op lambda:                       user.code_operator_lambda()
+
+  '

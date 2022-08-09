@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_functions
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,320 +17,426 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Default
-    - text: ' '
+      type: Text
+    - type: Space
     - text: implementation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: capture
-    - text: ' '
+      type: Text
+    - type: Space
     - text: listens
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: following
-    - text: ' '
+      type: Text
+    - type: Space
     - text: keywords
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: any
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'order:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: private
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pro
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pub
-    - text: ' '
+      type: Text
+    - type: Space
     - text: static
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: The
-    - text: ' '
+      type: Text
+    - type: Space
     - text: default
-    - text: ' '
+      type: Text
+    - type: Space
     - text: action
-    - text: ' '
+      type: Text
+    - type: Space
     - text: implementation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: looks
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: token
-    - text: ' '
+      type: Text
+    - type: Space
     - text: combination
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: left
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: is
-    - text: ' '
+      type: Text
+    - type: Space
     - text: added
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: searchability)
-    - text: ' '
+      type: Text
+    - type: Space
     - text: and
-    - text: ' '
+      type: Text
+    - type: Space
     - text: calls
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: function
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'right:'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_default_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: private
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_private_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pro
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_protected_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pub
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_public_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: static
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_private_static_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: private
-    - text: ' '
+      type: Text
+    - type: Space
     - text: static
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_private_static_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pro
-    - text: ' '
+      type: Text
+    - type: Space
     - text: static
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_protected_static_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
-    - text: ' '
-    - text: ' '
+      type: Text
+    - type: Space
+    - type: Space
+    - type: Space
     - text: '*'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pub
-    - text: ' '
+      type: Text
+    - type: Space
     - text: static
-    - text: ' '
+      type: Text
+    - type: Space
     - text: funky
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ->
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code_public_static_function
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: ^
+          type: Text
         - text: '{'
+          type: Text
         - text: user.code_function_modifier
+          type: Text
         - text: '}'
+          type: Text
         - text: '*'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: funky
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_modified_function
+              type: Text
             - text: (
+              type: Text
             - text: code_function_modifier_list
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '0'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: ^
+            type: Text
           - text: '{'
+            type: Text
           - text: user.code_function_modifier
+            type: Text
           - text: '}'
+            type: Text
           - text: '*'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: funky
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_modified_function
+              type: Text
             - text: (
+              type: Text
             - text: code_function_modifier_list
-            - text: ' '
+              type: Text
+            - type: Space
             - text: or
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '0'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -334,67 +444,90 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: annotating
-    - text: ' '
+      type: Text
+    - type: Space
     - text: function
-    - text: ' '
+      type: Text
+    - type: Space
     - text: parameters
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: is
-            - text: ' '
+              type: Text
+            - type: Space
             - text: type
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.code_type
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_insert_type_annotation
+                  type: Text
                 - text: (
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: is
-              - text: ' '
+                type: Text
+              - type: Space
               - text: type
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.code_type
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_insert_type_annotation
+                  type: Text
                 - text: (
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -402,54 +535,80 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: returns
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: type
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.code_type
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_insert_return_type
+                  type: Text
                 - text: (
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: returns
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: type
+                type: Text
               - text: ']'
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.code_type
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_insert_return_type
+                  type: Text
                 - text: (
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -457,27 +616,41 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: is
-            - text: ' '
+              type: Text
+            - type: Space
             - text: type
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.code_type
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_insert_type_annotation
+                type: Text
               - text: (
+                type: Text
               - text: code_type
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -485,28 +658,42 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: returns
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: type
+              type: Text
             - text: ']'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.code_type
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_insert_return_type
+                type: Text
               - text: (
+                type: Text
               - text: code_type
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -514,63 +701,86 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic
-    - text: ' '
+      type: Text
+    - type: Space
     - text: reference
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: types
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: type
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.code_type
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - text: code_type
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: type
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.code_type
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - text: code_type
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -578,32 +788,59 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.code_functions
+output: 'tag: user.code_functions
+
   -
+
   # Default implementation of capture listens for the following keywords in any
+
   # order: private pro pub static
+
   #
+
   # The default action implementation looks for the token combination on the left
+
   # (funky is added here for searchability) and calls the function on the right:
+
   #
+
   #   * funky -> code_default_function
+
   #   * private funky -> code_private_function
+
   #   * pro funky -> code_protected_function
+
   #   * pub funky -> code_public_function
+
   #   * static funky -> code_private_static_function
+
   #   * private static funky -> code_private_static_function
+
   #   * pro static funky -> code_protected_static_function
+
   #   * pub static funky -> code_public_static_function
+
   #
-  ^{user.code_function_modifier}* funky <user.text>$: user.code_modified_function(code_function_modifier_list or 0, text)
+
+  ^{user.code_function_modifier}* funky <user.text>$: user.code_modified_function(code_function_modifier_list
+  or 0, text)
+
 
   # for annotating function parameters
+
   is type <user.code_type>:        user.code_insert_type_annotation(code_type)
+
   returns [type] <user.code_type>: user.code_insert_return_type(code_type)
 
+
   # for generic reference of types
+
   type <user.code_type>: insert(code_type)
+
+  '

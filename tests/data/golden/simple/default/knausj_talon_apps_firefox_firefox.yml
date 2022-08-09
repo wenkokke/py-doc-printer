@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: firefox
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,105 +17,122 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: browser
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.tabs
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: tab
-    - text: ' '
+      type: Text
+    - type: Space
     - text: search
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: browser.focus_address
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '%'
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: tab
-    - text: ' '
+      type: Text
+    - type: Space
     - text: search
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: $
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: browser.focus_address
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '%'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: text
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: down
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: ShortestLines
-output: |
-  app: firefox
-  -
-  tag(): browser
-  tag(): user.tabs
-  tab search:
-      browser.focus_address()
-      insert("% ")
-  tab search <user.text>$:
-      browser.focus_address()
-      insert("% {text}")
-      key(down)
+output: "app: firefox\n-\ntag(): browser\ntag(): user.tabs\ntab search:\n    browser.focus_address()\n\
+  \    insert(\"% \")\ntab search <user.text>$:\n    browser.focus_address()\n   \
+  \ insert(\"% {text}\")\n    key(down)\n"

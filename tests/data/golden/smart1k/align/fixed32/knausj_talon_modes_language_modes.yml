@@ -2,53 +2,74 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: ^
+          type: Text
         - text: force
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.language_mode
+          type: Text
         - text: '}'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_set_language_mode
+              type: Text
             - text: (
+              type: Text
             - text: language_mode
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: ^
+            type: Text
           - text: force
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.language_mode
+            type: Text
           - text: '}'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_set_language_mode
+              type: Text
             - text: (
+              type: Text
             - text: language_mode
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -57,48 +78,68 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: ^
+          type: Text
         - text: clear
-        - text: ' '
+          type: Text
+        - type: Space
         - text: language
-        - text: ' '
+          type: Text
+        - type: Space
         - text: modes
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_clear_language_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: ^
+            type: Text
           - text: clear
-          - text: ' '
+            type: Text
+          - type: Space
           - text: language
-          - text: ' '
+            type: Text
+          - type: Space
           - text: modes
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_clear_language_mode
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -107,54 +148,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: enable
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: debug
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: mode.enable
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: user.gdb
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: enable
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: debug
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: mode.enable
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: user.gdb
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -163,50 +228,70 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: disable
-        - text: ' '
+          type: Text
+        - type: Space
         - text: debug
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: mode.disable
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: user.gdb
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: disable
-          - text: ' '
+            type: Text
+          - type: Space
           - text: debug
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: mode.disable
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: user.gdb
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -215,12 +300,20 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  -
+output: '-
+
   ^force {user.language_mode}$:    user.code_set_language_mode(language_mode)
+
   ^clear language modes$:          user.code_clear_language_mode()
+
   [enable] debug mode:             mode.enable("user.gdb")
+
   disable debug mode:              mode.disable("user.gdb")
+
+  '

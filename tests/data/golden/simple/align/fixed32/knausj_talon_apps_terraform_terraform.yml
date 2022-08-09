@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: terminal
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,13 +18,19 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: and
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.terraform_client
+        type: Text
       info:
         hpad:
           text: ' '
@@ -29,44 +39,54 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: terraform
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -75,51 +95,65 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: apply
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: apply
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: apply
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: apply
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -128,48 +162,64 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: destroy
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: destroy
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: destroy
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: destroy
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -178,56 +228,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: format
-        - text: ' '
+          type: Text
+        - type: Space
         - text: recursive
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fmt
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -recursive
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: format
-          - text: ' '
+            type: Text
+          - type: Space
           - text: recursive
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fmt
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -recursive
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -236,48 +308,66 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: format
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fmt
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: format
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: fmt
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -286,46 +376,62 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: help
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -help
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: help
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -help
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -334,56 +440,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: init
-        - text: ' '
+          type: Text
+        - type: Space
         - text: upgrade
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -upgrade
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: init
-          - text: ' '
+            type: Text
+          - type: Space
           - text: upgrade
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -upgrade
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -392,48 +520,66 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: init
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: init
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: init
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -442,48 +588,66 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: plan
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: plan
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: plan
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: plan
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -492,56 +656,76 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: move
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: state
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mv
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: move
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: state
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mv
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -550,48 +734,66 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: terraform
-        - text: ' '
+          type: Text
+        - type: Space
         - text: validate
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: validate
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: terraform
-          - text: ' '
+            type: Text
+          - type: Space
           - text: validate
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: terraform
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: validate
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -600,22 +802,39 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  tag:                             terminal
+output: 'tag:                             terminal
+
   and tag:                         user.terraform_client
+
   -
+
   terraform:                       "terraform "
 
+
   terraform apply:                 "terraform apply "
+
   terraform destroy:               "terraform destroy "
+
   terraform format recursive:      "terraform fmt -recursive\n"
+
   terraform format:                "terraform fmt\n"
+
   terraform help:                  "terraform -help"
+
   terraform init upgrade:          "terraform init -upgrade\n"
+
   terraform init:                  "terraform init\n"
+
   terraform plan:                  "terraform plan\n"
+
   terraform state move:            "terraform state mv "
+
   terraform validate:              "terraform validate\n"
+
+  '

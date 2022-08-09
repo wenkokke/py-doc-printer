@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: user.draft_editor_running
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: 'True'
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,13 +17,19 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: not
-        - text: ' '
+          type: Text
+        - type: Space
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.draft_editor_app_focused
+        type: Text
       info:
         hpad:
           text: ' '
@@ -27,44 +37,56 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: draft
-        - text: ' '
+          type: Text
+        - type: Space
         - text: this
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_editor_open
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: draft
-          - text: ' '
+            type: Text
+          - type: Space
           - text: this
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_editor_open
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -72,144 +94,170 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: draft
-    - text: ' '
+      type: Text
+    - type: Space
     - text: all
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.select_all
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.draft_editor_open
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: draft
-    - text: ' '
+      type: Text
+    - type: Space
     - text: line
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.select_line
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.draft_editor_open
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: draft
-    - text: ' '
+      type: Text
+    - type: Space
     - text: top
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.extend_file_start
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.draft_editor_open
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: draft
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bottom
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: edit.extend_file_end
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.draft_editor_open
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: draft
-        - text: ' '
+          type: Text
+        - type: Space
         - text: submit
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_editor_paste_last
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: draft
-          - text: ' '
+            type: Text
+          - type: Space
           - text: submit
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_editor_paste_last
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -217,28 +265,15 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  user.draft_editor_running: True
-  not tag: user.draft_editor_app_focused
-  -
-  draft this: user.draft_editor_open()
-
-  draft all:
-      edit.select_all()
-      user.draft_editor_open()
-
-  draft line:
-      edit.select_line()
-      user.draft_editor_open()
-
-  draft top:
-      edit.extend_file_start()
-      user.draft_editor_open()
-
-  draft bottom:
-      edit.extend_file_end()
-      user.draft_editor_open()
-  draft submit: user.draft_editor_paste_last()
+output: "user.draft_editor_running: True\nnot tag: user.draft_editor_app_focused\n\
+  -\ndraft this: user.draft_editor_open()\n\ndraft all:\n    edit.select_all()\n \
+  \   user.draft_editor_open()\n\ndraft line:\n    edit.select_line()\n    user.draft_editor_open()\n\
+  \ndraft top:\n    edit.extend_file_start()\n    user.draft_editor_open()\n\ndraft\
+  \ bottom:\n    edit.extend_file_end()\n    user.draft_editor_open()\ndraft submit:\
+  \ user.draft_editor_paste_last()\n"

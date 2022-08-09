@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.terraform
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,101 +17,117 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_block_c_like
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_line
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_bool
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_null
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_imperative
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_lambda
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - alts:
       - docs:
         - text: state
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.terraform_module_block
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_terraform_module_block
+              type: Text
             - text: (
+              type: Text
             - text: user.terraform_module_block
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: state
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.terraform_module_block
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_terraform_module_block
+              type: Text
             - text: (
+              type: Text
             - text: user.terraform_module_block
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -115,49 +135,67 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: resource
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_terraform_resource
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: resource
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_terraform_resource
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -165,57 +203,81 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - alts:
       - docs:
         - text: data
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: source
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_terraform_data_source
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: data
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: source
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_terraform_data_source
+              type: Text
             - text: (
+              type: Text
             - text: text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -223,92 +285,127 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '['
+      type: Text
     - text: state
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: prop
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '{'
+      type: Text
     - text: user.terraform_common_property
+      type: Text
     - text: '}'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: user.terraform_common_property
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.code_operator_assignment
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - alts:
       - docs:
         - text: type
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.code_type
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: type
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.code_type
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: code_type
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -316,30 +413,17 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.terraform
-  -
-  tag(): user.code_comment_block_c_like
-  tag(): user.code_comment_line
-  tag(): user.code_data_bool
-  tag(): user.code_data_null
-  tag(): user.code_imperative
-  tag(): user.code_operators_assignment
-  tag(): user.code_operators_lambda
-  tag(): user.code_operators_math
-
-  state {user.terraform_module_block}:
-      user.code_terraform_module_block(user.terraform_module_block)
-
-  resource <user.text>: user.code_terraform_resource(text)
-
-  data [source] <user.text>: user.code_terraform_data_source(text)
-
-  [state] prop {user.terraform_common_property}:
-      insert(user.terraform_common_property)
-      user.code_operator_assignment()
-
-  type {user.code_type}: insert("{code_type}")
+output: "tag: user.terraform\n-\ntag(): user.code_comment_block_c_like\ntag(): user.code_comment_line\n\
+  tag(): user.code_data_bool\ntag(): user.code_data_null\ntag(): user.code_imperative\n\
+  tag(): user.code_operators_assignment\ntag(): user.code_operators_lambda\ntag():\
+  \ user.code_operators_math\n\nstate {user.terraform_module_block}:\n    user.code_terraform_module_block(user.terraform_module_block)\n\
+  \nresource <user.text>: user.code_terraform_resource(text)\n\ndata [source] <user.text>:\
+  \ user.code_terraform_data_source(text)\n\n[state] prop {user.terraform_common_property}:\n\
+  \    insert(user.terraform_common_property)\n    user.code_operator_assignment()\n\
+  \ntype {user.code_type}: insert(\"{code_type}\")\n"

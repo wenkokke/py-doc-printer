@@ -2,57 +2,78 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: date
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%Y-%m-%d'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: date
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%Y-%m-%d'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -60,56 +81,82 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: date
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%Y-%m-%d'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: date
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
-              - text: ' '
+                type: Text
+              - type: Space
               - text: UTC
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     text: '%Y-%m-%d'
+                    type: Text
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -117,58 +164,86 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: timestamp
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -176,66 +251,98 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: high
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resolution
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S.%f'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: timestamp
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
-              - text: ' '
+                type: Text
+              - type: Space
               - text: high
-              - text: ' '
+                type: Text
+              - type: Space
               - text: resolution
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S.%f'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -243,62 +350,92 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: timestamp
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
-              - text: ' '
+                type: Text
+              - type: Space
               - text: UTC
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -306,70 +443,104 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
-            - text: ' '
+              type: Text
+            - type: Space
             - text: high
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resolution
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S.%f'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: timestamp
-              - text: ' '
+                type: Text
+              - type: Space
               - text: insert
-              - text: ' '
+                type: Text
+              - type: Space
               - text: UTC
-              - text: ' '
+                type: Text
+              - type: Space
               - text: high
-              - text: ' '
+                type: Text
+              - type: Space
               - text: resolution
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.time_format_utc
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '%Y-%m-%d'
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: '%H:%M:%S.%f'
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -377,28 +548,43 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: date
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format
+                type: Text
               - text: (
+                type: Text
               - doc:
                   text: '%Y-%m-%d'
+                  type: Text
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -406,29 +592,43 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: date
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format_utc
+                type: Text
               - text: (
+                type: Text
               - doc:
                   text: '%Y-%m-%d'
+                  type: Text
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -436,30 +636,45 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '%Y-%m-%d'
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: '%H:%M:%S'
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -467,34 +682,51 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: high
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resolution
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '%Y-%m-%d'
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: '%H:%M:%S.%f'
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -502,32 +734,48 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format_utc
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '%Y-%m-%d'
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: '%H:%M:%S'
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -535,36 +783,54 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: timestamp
-            - text: ' '
+              type: Text
+            - type: Space
             - text: insert
-            - text: ' '
+              type: Text
+            - type: Space
             - text: UTC
-            - text: ' '
+              type: Text
+            - type: Space
             - text: high
-            - text: ' '
+              type: Text
+            - type: Space
             - text: resolution
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - text: user.time_format_utc
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '%Y-%m-%d'
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: '%H:%M:%S.%f'
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -572,14 +838,25 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  -
+output: '-
+
   date insert:                          insert(user.time_format("%Y-%m-%d"))
+
   date insert UTC:                      insert(user.time_format_utc("%Y-%m-%d"))
+
   timestamp insert:                     insert(user.time_format("%Y-%m-%d %H:%M:%S"))
+
   timestamp insert high resolution:     insert(user.time_format("%Y-%m-%d %H:%M:%S.%f"))
+
   timestamp insert UTC:                 insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
+
   timestamp insert UTC high resolution: insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))
+
+  '

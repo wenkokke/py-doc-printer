@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: termite
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,15 +17,22 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: and
-        - text: ' '
+          type: Text
+        - type: Space
         - text: not
-        - text: ' '
+          type: Text
+        - type: Space
         - text: win.title
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: /VIM/
+        type: Text
       info:
         hpad:
           text: ' '
@@ -29,131 +40,160 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: comment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: or
-    - text: ' '
+      type: Text
+    - type: Space
     - text: remove
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tags
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: ' '
+      type: Text
+    - type: Space
     - text: sets
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: don't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: want
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: termite
-    - text: ' '
+      type: Text
+    - type: Space
     - text: doesn't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: support
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: file_manager
-    - text: ' '
+      type: Text
+    - type: Space
     - text: stuff
-    - text: ' '
+      type: Text
+    - type: Space
     - text: yet
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.file_manager
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.kubectl
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.git
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.taskwarrior
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Selection
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mode
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: shell
-        - text: ' '
+          type: Text
+        - type: Space
         - text: yank
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"y"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: shell
-          - text: ' '
+            type: Text
+          - type: Space
           - text: yank
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"y"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -161,42 +201,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: shell
-        - text: ' '
+          type: Text
+        - type: Space
         - text: select
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"ctrl-shift-space"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: shell
-          - text: ' '
+            type: Text
+          - type: Space
           - text: select
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"ctrl-shift-space"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -204,42 +260,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: shell
-        - text: ' '
+          type: Text
+        - type: Space
         - text: insert
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"escape"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: shell
-          - text: ' '
+            type: Text
+          - type: Space
           - text: insert
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"escape"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -247,42 +319,58 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: visual
-        - text: ' '
+          type: Text
+        - type: Space
         - text: line
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"v"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: visual
-          - text: ' '
+            type: Text
+          - type: Space
           - text: line
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"v"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -290,46 +378,64 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: visual
-        - text: ' '
+          type: Text
+        - type: Space
         - text: line
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"V"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: visual
-          - text: ' '
+            type: Text
+          - type: Space
           - text: line
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mode
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: key
+              type: Text
             - text: (
+              type: Text
             - text: '"V"'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -337,24 +443,43 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  app: termite
+output: 'app: termite
+
   and not win.title: /VIM/
+
   -
-  # comment or remove tags for command sets you don't want
-  # termite doesn't support the file_manager stuff yet
+
+  # comment or remove tags for command sets you don''t want
+
+  # termite doesn''t support the file_manager stuff yet
+
   # tag(): user.file_manager
+
   tag(): user.kubectl
+
   tag(): user.git
+
   tag(): user.taskwarrior
+
   tag(): terminal
 
+
   # Selection mode
+
   shell yank: key("y")
+
   shell select: key("ctrl-shift-space")
+
   shell insert: key("escape")
+
   visual line: key("v")
+
   visual line mode: key("V")
+
+  '

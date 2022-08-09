@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.vimscript
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,319 +17,409 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_imperative
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_line
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: revisit
-    - text: ' '
+      type: Text
+    - type: Space
     - text: these
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'settings():'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.code_private_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_private_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: SNAKE_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: VIM
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Script
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Specific
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: assign
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.vimscript_scope
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: variable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: var
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: let
-            - text: ' '
+              type: Text
+            - type: Space
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: vimscript_scope
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.code_private_variable_formatter
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.vimscript_scope
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: variable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: var
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: over
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: vimscript_scope
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.code_private_variable_formatter
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: see
-    - text: ' '
+      type: Text
+    - type: Space
     - text: lang/vimscript/vimscript.py
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: list
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: user.vimscript_functions
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: vimscript_functions
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: user.vimscript_functions
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: vimscript_functions
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -333,67 +427,85 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: XXX
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '-'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: possibly
-    - text: ' '
+      type: Text
+    - type: Space
     - text: overlap
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: some
-    - text: ' '
+      type: Text
+    - type: Space
     - text: programming.talon
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
                     - text: command!
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: command
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
                     - text: command!
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -401,44 +513,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: if
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     text: endif
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: end
-              - text: ' '
+                type: Text
+              - type: Space
               - text: if
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     text: endif
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -446,44 +572,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: for
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     text: endfor
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: end
-              - text: ' '
+                type: Text
+              - type: Space
               - text: for
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     text: endfor
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -491,44 +631,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: while
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     text: endwhile
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: end
-              - text: ' '
+                type: Text
+              - type: Space
               - text: while
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     text: endwhile
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -536,44 +690,58 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: function
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     text: endfunction
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: end
-              - text: ' '
+                type: Text
+              - type: Space
               - text: function
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     text: endfunction
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -581,40 +749,52 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: continue
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     text: continue
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: continue
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     text: continue
+                    type: Text
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -622,24 +802,34 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
                   - text: command!
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -647,23 +837,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: if
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   text: endif
+                  type: Text
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -671,23 +869,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: for
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   text: endfor
+                  type: Text
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -695,23 +901,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: while
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   text: endwhile
+                  type: Text
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -719,23 +933,31 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: end
-            - text: ' '
+              type: Text
+            - type: Space
             - text: function
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   text: endfunction
+                  type: Text
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -743,21 +965,28 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: continue
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   text: continue
+                  type: Text
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -765,45 +994,26 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.vimscript
-  -
-  tag(): user.code_imperative
-  tag(): user.code_operators_assignment
-  tag(): user.code_operators_math
-  tag(): user.code_comment_line
-
-  # XXX - revisit these
-  settings():
-      user.code_private_function_formatter = "SNAKE_CASE"
-      user.code_protected_function_formatter = "SNAKE_CASE"
-      user.code_public_function_formatter = "SNAKE_CASE"
-      user.code_private_variable_formatter = "SNAKE_CASE"
-      user.code_protected_variable_formatter = "SNAKE_CASE"
-      user.code_public_variable_formatter = "SNAKE_CASE"
-
-  #
-  # VIM Script Specific
-  #
-  assign [<user.vimscript_scope>] (variable | var) [<user.text>] [over]:
-      insert("let ")
-      insert(vimscript_scope or "")
-      user.code_private_variable_formatter(text)
-
-  [<user.vimscript_scope>] (variable | var) [<user.text>] [over]:
-      insert(vimscript_scope or "")
-      user.code_private_variable_formatter(text)
-
-  # see lang/vimscript/vimscript.py for list
-  <user.vimscript_functions>: insert("{vimscript_functions} ")
-
-  # XXX - possibly overlap with some programming.talon
-  state command:      "command! "
-  state end if:       "endif"
-  state end for:      "endfor"
-  state end while:    "endwhile"
-  state end function: "endfunction"
-  state continue:     "continue"
+output: "tag: user.vimscript\n-\ntag(): user.code_imperative\ntag(): user.code_operators_assignment\n\
+  tag(): user.code_operators_math\ntag(): user.code_comment_line\n\n# XXX - revisit\
+  \ these\nsettings():\n    user.code_private_function_formatter = \"SNAKE_CASE\"\n\
+  \    user.code_protected_function_formatter = \"SNAKE_CASE\"\n    user.code_public_function_formatter\
+  \ = \"SNAKE_CASE\"\n    user.code_private_variable_formatter = \"SNAKE_CASE\"\n\
+  \    user.code_protected_variable_formatter = \"SNAKE_CASE\"\n    user.code_public_variable_formatter\
+  \ = \"SNAKE_CASE\"\n\n#\n# VIM Script Specific\n#\nassign [<user.vimscript_scope>]\
+  \ (variable | var) [<user.text>] [over]:\n    insert(\"let \")\n    insert(vimscript_scope\
+  \ or \"\")\n    user.code_private_variable_formatter(text)\n\n[<user.vimscript_scope>]\
+  \ (variable | var) [<user.text>] [over]:\n    insert(vimscript_scope or \"\")\n\
+  \    user.code_private_variable_formatter(text)\n\n# see lang/vimscript/vimscript.py\
+  \ for list\n<user.vimscript_functions>: insert(\"{vimscript_functions} \")\n\n#\
+  \ XXX - possibly overlap with some programming.talon\nstate command:      \"command!\
+  \ \"\nstate end if:       \"endif\"\nstate end for:      \"endfor\"\nstate end while:\
+  \    \"endwhile\"\nstate end function: \"endfunction\"\nstate continue:     \"continue\"\
+  \n"

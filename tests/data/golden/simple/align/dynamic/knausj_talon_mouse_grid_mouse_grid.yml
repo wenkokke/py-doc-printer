@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.mouse_grid_enabled
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,71 +17,88 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: M
-    - text: ' '
+      type: Text
+    - type: Space
     - text: grid
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app.notify
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: please
-            - text: ' '
+              type: Text
+            - type: Space
             - text: use
-            - text: ' '
+              type: Text
+            - type: Space
             - text: the
-            - text: ' '
+              type: Text
+            - type: Space
             - text: voice
-            - text: ' '
+              type: Text
+            - type: Space
             - text: command
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''mouse'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: grid'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: instead
-            - text: ' '
+              type: Text
+            - type: Space
             - text: of
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '''m'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: grid'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_select_screen
+          type: Text
         - text: (
+          type: Text
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.grid_activate
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  tag: user.mouse_grid_enabled
-  -
-  M grid:
-      app.notify("please use the voice command 'mouse grid' instead of 'm grid'")
-      user.grid_select_screen(1)
-      user.grid_activate()
+output: "tag: user.mouse_grid_enabled\n-\nM grid:\n    app.notify(\"please use the\
+  \ voice command 'mouse grid' instead of 'm grid'\")\n    user.grid_select_screen(1)\n\
+  \    user.grid_activate()\n"

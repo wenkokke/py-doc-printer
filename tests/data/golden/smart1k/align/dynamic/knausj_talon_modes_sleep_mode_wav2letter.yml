@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: mode
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: sleep
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: speech.engine
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: wav2letter
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,106 +34,145 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: exists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: solely
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: prevent
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: from
-    - text: ' '
+      type: Text
+    - type: Space
     - text: waking
-    - text: ' '
+      type: Text
+    - type: Space
     - text: up
-    - text: ' '
+      type: Text
+    - type: Space
     - text: super
-    - text: ' '
+      type: Text
+    - type: Space
     - text: easily
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: sleep
-    - text: ' '
+      type: Text
+    - type: Space
     - text: mode
-    - text: ' '
+      type: Text
+    - type: Space
     - text: at
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: moment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: wav2letter
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: probably
-    - text: ' '
+      type: Text
+    - type: Space
     - text: shouldn't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: have
-    - text: ' '
+      type: Text
+    - type: Space
     - text: any
-    - text: ' '
+      type: Text
+    - type: Space
     - text: other
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: here
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: skip
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: skip
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -132,13 +180,23 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  mode: sleep
+output: 'mode: sleep
+
   speech.engine: wav2letter
+
   -
-  # this exists solely to prevent talon from waking up super easily in sleep mode at the moment with wav2letter
-  # you probably shouldn't have any other commands here
+
+  # this exists solely to prevent talon from waking up super easily in sleep mode
+  at the moment with wav2letter
+
+  # you probably shouldn''t have any other commands here
+
   <phrase>: skip()
+
+  '

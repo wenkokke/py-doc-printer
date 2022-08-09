@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_operators_assignment
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,77 +18,95 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_bitwise
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: equals
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: assign
+          type: Text
         - text: )
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: equals
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: assign
+            type: Text
           - text: )
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -93,71 +115,96 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: combined
-    - text: ' '
+      type: Text
+    - type: Space
     - text: computation
-    - text: ' '
+      type: Text
+    - type: Space
     - text: and
-    - text: ' '
+      type: Text
+    - type: Space
     - text: assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: minus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: subtract
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_subtraction_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: minus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: subtract
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_subtraction_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -166,56 +213,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: plus
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: add
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_addition_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: plus
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: add
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_addition_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -224,56 +295,80 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: times
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: multiply
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_multiplication_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: times
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: multiply
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_multiplication_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -282,44 +377,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: divide
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_division_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: divide
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_division_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -328,44 +439,60 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mod
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_modulo_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: mod
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_modulo_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -374,44 +501,62 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: op
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: increment
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_increment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: op
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: increment
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_increment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -420,91 +565,128 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: bitwise
-    - text: ' '
+      type: Text
+    - type: Space
     - text: operators
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: logical
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bitwise
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: ex
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: exclusive
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_bitwise_exclusive_or_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: logical
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bitwise
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: ex
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: exclusive
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: or
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_bitwise_exclusive_or_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -513,88 +695,132 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: (
+          type: Text
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: logical
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bitwise
+          type: Text
         - text: )
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: left
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shift
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shift
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_bitwise_left_shift_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: (
+            type: Text
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: logical
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bitwise
+            type: Text
           - text: )
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: left
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shift
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shift
-          - text: ' '
+            type: Text
+          - type: Space
           - text: left
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_bitwise_left_shift_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -603,88 +829,132 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '['
+          type: Text
         - text: (
+          type: Text
         - text: op
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: logical
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: bitwise
+          type: Text
         - text: )
+          type: Text
         - text: ']'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: right
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shift
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: shift
-        - text: ' '
+          type: Text
+        - type: Space
         - text: right
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: equals
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_operator_bitwise_right_shift_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '['
+            type: Text
           - text: (
+            type: Text
           - text: op
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: logical
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: bitwise
+            type: Text
           - text: )
+            type: Text
           - text: ']'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: right
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shift
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: shift
-          - text: ' '
+            type: Text
+          - type: Space
           - text: right
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: equals
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_operator_bitwise_right_shift_assignment
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -693,27 +963,47 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  tag:                             user.code_operators_assignment
+output: 'tag:                             user.code_operators_assignment
+
   -
+
   tag(): user.code_operators_math
+
   tag(): user.code_operators_bitwise
 
+
   # assignment
+
   op (equals | assign):            user.code_operator_assignment()
 
+
   # combined computation and assignment
+
   op (minus | subtract) equals:    user.code_operator_subtraction_assignment()
+
   op (plus | add) equals:          user.code_operator_addition_assignment()
+
   op (times | multiply) equals:    user.code_operator_multiplication_assignment()
+
   op divide equals:                user.code_operator_division_assignment()
+
   op mod equals:                   user.code_operator_modulo_assignment()
+
   [op] increment:                  user.code_operator_increment()
 
+
   # bitwise operators
+
   (op | logical | bitwise) (ex | exclusive) or equals: user.code_operator_bitwise_exclusive_or_assignment()
+
   [(op | logical | bitwise)] (left shift | shift left) equals: user.code_operator_bitwise_left_shift_assignment()
+
   [(op | logical | bitwise)] (right shift | shift right) equals: user.code_operator_bitwise_right_shift_assignment()
+
+  '

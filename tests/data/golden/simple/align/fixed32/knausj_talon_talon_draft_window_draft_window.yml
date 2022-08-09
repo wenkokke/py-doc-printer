@@ -2,39 +2,55 @@ input:
   doc:
     docs:
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: These
-    - text: ' '
+      type: Text
+    - type: Space
     - text: are
-    - text: ' '
+      type: Text
+    - type: Space
     - text: active
-    - text: ' '
+      type: Text
+    - type: Space
     - text: when
-    - text: ' '
+      type: Text
+    - type: Space
     - text: we
-    - text: ' '
+      type: Text
+    - type: Space
     - text: have
-    - text: ' '
+      type: Text
+    - type: Space
     - text: focus
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: draft
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - cells:
       - docs:
         - text: title
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - docs:
         - text: Talon
-        - text: ' '
+          type: Text
+        - type: Space
         - text: Draft
+          type: Text
+        type: Cat
       info:
         hpad:
           text: ' '
@@ -43,206 +59,282 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'settings():'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: Enable
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '''Smart'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: dictation
-        - text: ' '
+          type: Text
+        - type: Space
         - text: mode',
-        - text: ' '
+          type: Text
+        - type: Space
         - text: see
-        - text: ' '
+          type: Text
+        - type: Space
         - text: https://github.com/knausj85/knausj_talon/pull/356
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.context_sensitive_dictation
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: single
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: phrase
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: replace
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.text
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.draft_select
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: draft_anchor
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: result
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: user.formatted_text
+          type: Text
         - text: (
+          type: Text
         - text: text
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: NOOP
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - text: result
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Position
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cursor
-    - text: ' '
+      type: Text
+    - type: Space
     - text: before
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: pre
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cursor
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cursor
-        - text: ' '
+          type: Text
+        - type: Space
         - text: before
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.draft_anchor
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_position_caret
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: pre
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cursor
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cursor
-          - text: ' '
+            type: Text
+          - type: Space
           - text: before
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.draft_anchor
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_position_caret
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -251,93 +343,136 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Position
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cursor
-    - text: ' '
+      type: Text
+    - type: Space
     - text: after
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: post
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cursor
-        - text: ' '
+          type: Text
+        - type: Space
         - text: after
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.draft_anchor
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_position_caret
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: post
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cursor
-          - text: ' '
+            type: Text
+          - type: Space
           - text: after
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.draft_anchor
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_position_caret
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -346,83 +481,120 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Select
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: whole
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: take
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: select
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.draft_anchor
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_select
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: take
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: select
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.draft_anchor
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_select
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -431,125 +603,191 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Select
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: range
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: words
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: (
+          type: Text
         - text: take
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: select
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.draft_anchor
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: (
+          type: Text
         - text: through
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '|'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: past
+          type: Text
         - text: )
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.draft_anchor
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.draft_select
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor_1
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor_2
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: (
+            type: Text
           - text: take
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: select
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.draft_anchor
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: (
+            type: Text
           - text: through
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '|'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: past
+            type: Text
           - text: )
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.draft_anchor
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.draft_select
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor_1
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: draft_anchor_2
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -558,299 +796,369 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Delete
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: (
+      type: Text
     - text: change
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: chuck
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clear
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.draft_select
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: draft_anchor
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: backspace
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Delete
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: range
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: words
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: (
+      type: Text
     - text: change
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: chuck
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: clear
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: through
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: past
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.draft_select
+          type: Text
         - text: (
+          type: Text
         - text: draft_anchor_1
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: draft_anchor_2
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: backspace
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: reformat
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: <
+      type: Text
     - text: user.formatters
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: word
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.draft_select
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: '{'
+              type: Text
             - text: draft_anchor
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
+          type: Edit
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.formatters_reformat_selection
+          type: Text
         - text: (
+          type: Text
         - text: user.formatters
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
-    - text: '
-
-        '
+      type: Nest
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: reformat
-    - text: ' '
+      type: Text
+    - type: Space
     - text: range
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: <
+      type: Text
     - text: user.formatters
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: through
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: past
+      type: Text
     - text: )
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.draft_anchor
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.draft_select
+          type: Text
         - text: (
+          type: Text
         - text: draft_anchor_1
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: draft_anchor_2
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '1'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.formatters_reformat_selection
+          type: Text
         - text: (
+          type: Text
         - text: user.formatters
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  # These are active when we have focus on the draft window
-  title:                           Talon Draft
-  -
-  settings():
-      # Enable 'Smart dictation mode', see https://github.com/knausj85/knausj_talon/pull/356
-      user.context_sensitive_dictation = 1
-
-  # Replace a single word with a phrase
-  replace <user.draft_anchor> with <user.text>:
-      user.draft_select("{draft_anchor}")
-      result = user.formatted_text(text, "NOOP")
-      insert(result)
-
-  # Position cursor before word
-  (pre | cursor | cursor before) <user.draft_anchor>: user.draft_position_caret("{draft_anchor}")
-
-  # Position cursor after word
-  (post | cursor after) <user.draft_anchor>: user.draft_position_caret("{draft_anchor}", 1)
-
-  # Select a whole word
-  (take | select) <user.draft_anchor>: user.draft_select("{draft_anchor}")
-
-  # Select a range of words
-  (take | select) <user.draft_anchor> (through | past) <user.draft_anchor>: user.draft_select("{draft_anchor_1}", "{draft_anchor_2}")
-
-  # Delete a word
-  (change | chuck | clear) <user.draft_anchor>:
-      user.draft_select("{draft_anchor}", "", 1)
-      key(backspace)
-
-  # Delete a range of words
-  (change | chuck | clear) <user.draft_anchor> (through | past) <user.draft_anchor>:
-      user.draft_select(draft_anchor_1, draft_anchor_2, 1)
-      key(backspace)
-
-  # reformat word
-  <user.formatters> word <user.draft_anchor>:
-      user.draft_select("{draft_anchor}", "", 1)
-      user.formatters_reformat_selection(user.formatters)
-
-  # reformat range
-  <user.formatters> <user.draft_anchor> (through | past) <user.draft_anchor>:
-      user.draft_select(draft_anchor_1, draft_anchor_2, 1)
-      user.formatters_reformat_selection(user.formatters)
+output: "# These are active when we have focus on the draft window\ntitle:       \
+  \                    Talon Draft\n-\nsettings():\n    # Enable 'Smart dictation\
+  \ mode', see https://github.com/knausj85/knausj_talon/pull/356\n    user.context_sensitive_dictation\
+  \ = 1\n\n# Replace a single word with a phrase\nreplace <user.draft_anchor> with\
+  \ <user.text>:\n    user.draft_select(\"{draft_anchor}\")\n    result = user.formatted_text(text,\
+  \ \"NOOP\")\n    insert(result)\n\n# Position cursor before word\n(pre | cursor\
+  \ | cursor before) <user.draft_anchor>: user.draft_position_caret(\"{draft_anchor}\"\
+  )\n\n# Position cursor after word\n(post | cursor after) <user.draft_anchor>: user.draft_position_caret(\"\
+  {draft_anchor}\", 1)\n\n# Select a whole word\n(take | select) <user.draft_anchor>:\
+  \ user.draft_select(\"{draft_anchor}\")\n\n# Select a range of words\n(take | select)\
+  \ <user.draft_anchor> (through | past) <user.draft_anchor>: user.draft_select(\"\
+  {draft_anchor_1}\", \"{draft_anchor_2}\")\n\n# Delete a word\n(change | chuck |\
+  \ clear) <user.draft_anchor>:\n    user.draft_select(\"{draft_anchor}\", \"\", 1)\n\
+  \    key(backspace)\n\n# Delete a range of words\n(change | chuck | clear) <user.draft_anchor>\
+  \ (through | past) <user.draft_anchor>:\n    user.draft_select(draft_anchor_1, draft_anchor_2,\
+  \ 1)\n    key(backspace)\n\n# reformat word\n<user.formatters> word <user.draft_anchor>:\n\
+  \    user.draft_select(\"{draft_anchor}\", \"\", 1)\n    user.formatters_reformat_selection(user.formatters)\n\
+  \n# reformat range\n<user.formatters> <user.draft_anchor> (through | past) <user.draft_anchor>:\n\
+  \    user.draft_select(draft_anchor_1, draft_anchor_2, 1)\n    user.formatters_reformat_selection(user.formatters)\n"

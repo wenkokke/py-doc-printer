@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.code_libraries_gui_showing
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,140 +17,191 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: The
-    - text: ' '
+      type: Text
+    - type: Space
     - text: show
-    - text: ' '
+      type: Text
+    - type: Space
     - text: functions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: have
-    - text: ' '
+      type: Text
+    - type: Space
     - text: language
-    - text: ' '
+      type: Text
+    - type: Space
     - text: specific
-    - text: ' '
+      type: Text
+    - type: Space
     - text: names,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: e.g.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: toggle
-    - text: ' '
+      type: Text
+    - type: Space
     - text: imports
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Python
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: but
-    - text: ' '
+      type: Text
+    - type: Space
     - text: let's
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: generic
-    - text: ' '
+      type: Text
+    - type: Space
     - text: name
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: close
-    - text: ' '
+      type: Text
+    - type: Space
     - text: one.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Having
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it
-    - text: ' '
+      type: Text
+    - type: Space
     - text: behind
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: allows
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: closed
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: even
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: your
-    - text: ' '
+      type: Text
+    - type: Space
     - text: editor
-    - text: ' '
+      type: Text
+    - type: Space
     - text: isn't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: visible.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: toggle
-        - text: ' '
+          type: Text
+        - type: Space
         - text: libraries
-        - text: ' '
+          type: Text
+        - type: Space
         - text: close
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_toggle_libraries
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: toggle
-          - text: ' '
+            type: Text
+          - type: Space
           - text: libraries
-          - text: ' '
+            type: Text
+          - type: Space
           - text: close
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_toggle_libraries
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -154,14 +209,13 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: ShortestLines
-output: |
-  tag: user.code_libraries_gui_showing
-  -
-  # The show functions for this have language specific names, e.g. toggle imports for Python
-  # but let's use a generic name for the close one. Having it behind this tag allows it to be closed
-  # even if your editor isn't visible.
-  toggle libraries close:
-      user.code_toggle_libraries()
+output: "tag: user.code_libraries_gui_showing\n-\n# The show functions for this have\
+  \ language specific names, e.g. toggle imports for Python\n# but let's use a generic\
+  \ name for the close one. Having it behind this tag allows it to be closed\n# even\
+  \ if your editor isn't visible.\ntoggle libraries close:\n    user.code_toggle_libraries()\n"

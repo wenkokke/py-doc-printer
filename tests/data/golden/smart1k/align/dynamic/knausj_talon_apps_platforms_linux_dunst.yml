@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: linux
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,48 +17,62 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: show
-            - text: ' '
+              type: Text
+            - type: Space
             - text: notifications
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: ctrl-`
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: show
-              - text: ' '
+                type: Text
+              - type: Space
               - text: notifications
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: key
+                  type: Text
                 - text: (
+                  type: Text
                 - text: ctrl-`
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -62,56 +80,82 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: dismiss
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: notifications
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.system_command
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: dunstctl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: close
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: dismiss
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: notifications
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.system_command
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: dunstctl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: close
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -119,60 +163,88 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: dismiss
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: notifications
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.system_command
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: dunstctl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: close-all
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: dismiss
-              - text: ' '
+                type: Text
+              - type: Space
               - text: all
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '['
+                type: Text
               - text: notifications
+                type: Text
               - text: ']'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.system_command
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: dunstctl
-                    - text: ' '
+                      type: Text
+                    - type: Space
                     - text: close-all
+                      type: Text
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -180,23 +252,34 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: show
-            - text: ' '
+              type: Text
+            - type: Space
             - text: notifications
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: key
+                type: Text
               - text: (
+                type: Text
               - text: ctrl-`
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -204,29 +287,43 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: dismiss
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: notifications
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.system_command
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: dunstctl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: close
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -234,31 +331,46 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: dismiss
-            - text: ' '
+              type: Text
+            - type: Space
             - text: all
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '['
+              type: Text
             - text: notifications
+              type: Text
             - text: ']'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.system_command
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: dunstctl
-                  - text: ' '
+                    type: Text
+                  - type: Space
                   - text: close-all
+                    type: Text
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -266,55 +378,78 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dunce
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'pause:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.system_command('notify-send
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"DUNST_COMMAND_PAUSE"'')'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dunce
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'resume:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.system_command('notify-send
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"DUNST_COMMAND_RESUME"'')'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: test
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'notification:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.system_command('notify-send
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"Hello'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: from
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Talon"')
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  os: linux
+output: 'os: linux
+
   -
+
   show notifications:          key(ctrl-`)
+
   dismiss [notifications]:     user.system_command("dunstctl close")
+
   dismiss all [notifications]: user.system_command("dunstctl close-all")
-  # dunce pause: user.system_command('notify-send "DUNST_COMMAND_PAUSE"')
-  # dunce resume: user.system_command('notify-send "DUNST_COMMAND_RESUME"')
-  # test notification: user.system_command('notify-send "Hello from Talon"')
+
+  # dunce pause: user.system_command(''notify-send "DUNST_COMMAND_PAUSE"'')
+
+  # dunce resume: user.system_command(''notify-send "DUNST_COMMAND_RESUME"'')
+
+  # test notification: user.system_command(''notify-send "Hello from Talon"'')
+
+  '

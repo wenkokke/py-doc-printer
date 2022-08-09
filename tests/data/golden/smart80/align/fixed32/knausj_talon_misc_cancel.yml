@@ -2,75 +2,100 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: allows
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: prevent
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command
-    - text: ' '
+      type: Text
+    - type: Space
     - text: executing
-    - text: ' '
+      type: Text
+    - type: Space
     - text: by
-    - text: ' '
+      type: Text
+    - type: Space
     - text: ending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"cancel'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cancel"
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: cancel
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cancel
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: skip
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: cancel
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cancel
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: skip
+              type: Text
             - text: (
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -79,161 +104,233 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: actual
-    - text: ' '
+      type: Text
+    - type: Space
     - text: behavior
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"cancel'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cancel"
-    - text: ' '
+      type: Text
+    - type: Space
     - text: is
-    - text: ' '
+      type: Text
+    - type: Space
     - text: implemented
-    - text: ' '
+      type: Text
+    - type: Space
     - text: in
-    - text: ' '
+      type: Text
+    - type: Space
     - text: code/cancel.py;
-    - text: ' '
+      type: Text
+    - type: Space
     - text: if
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: want
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: different
-    - text: ' '
+      type: Text
+    - type: Space
     - text: phrase
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: must
-    - text: ' '
+      type: Text
+    - type: Space
     - text: also
-    - text: ' '
+      type: Text
+    - type: Space
     - text: change
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cancel_phrase
-    - text: ' '
+      type: Text
+    - type: Space
     - text: there.
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: allows
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: say
-    - text: ' '
+      type: Text
+    - type: Space
     - text: something
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (eg
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: human)
-    - text: ' '
+      type: Text
+    - type: Space
     - text: that
-    - text: ' '
+      type: Text
+    - type: Space
     - text: you
-    - text: ' '
+      type: Text
+    - type: Space
     - text: don't
-    - text: ' '
+      type: Text
+    - type: Space
     - text: want
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: hear,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: eg
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '"ignore'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: hey
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Jerry"
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: ignore
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '['
+          type: Text
         - text: <
+          type: Text
         - text: phrase
+          type: Text
         - text: '>'
+          type: Text
         - text: ']'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: app.notify
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: Command
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: ignored
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: ignore
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '['
+            type: Text
           - text: <
+            type: Text
           - text: phrase
+            type: Text
           - text: '>'
+            type: Text
           - text: ']'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: app.notify
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: Command
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: ignored
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -242,14 +339,25 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  -
-  # allows you to prevent a command executing by ending it with "cancel cancel"
-  cancel cancel$:                  skip()
-  # the actual behavior of "cancel cancel" is implemented in code/cancel.py; if you want to use a different phrase you must also change cancel_phrase there.
+output: '-
 
-  # allows you to say something (eg to a human) that you don't want talon to hear, eg "ignore hey Jerry"
+  # allows you to prevent a command executing by ending it with "cancel cancel"
+
+  cancel cancel$:                  skip()
+
+  # the actual behavior of "cancel cancel" is implemented in code/cancel.py; if you
+  want to use a different phrase you must also change cancel_phrase there.
+
+
+  # allows you to say something (eg to a human) that you don''t want talon to hear,
+  eg "ignore hey Jerry"
+
   ignore [<phrase>]$:              app.notify("Command ignored")
+
+  '

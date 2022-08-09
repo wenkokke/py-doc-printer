@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.snippets
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,52 +17,70 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - alts:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.snippets
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.snippet_insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.snippets
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: snip
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.snippets
+                type: Text
               - text: '}'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.snippet_insert
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.snippets
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -66,50 +88,72 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.snippet_search
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: snip
-              - text: ' '
+                type: Text
+              - type: Space
               - text: hunt
-              - text: ' '
+                type: Text
+              - type: Space
               - text: <
+                type: Text
               - text: user.text
+                type: Text
               - text: '>'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.snippet_search
+                  type: Text
                 - text: (
+                  type: Text
                 - text: user.text
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -117,46 +161,62 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: hunt
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.snippet_search
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: snip
-              - text: ' '
+                type: Text
+              - type: Space
               - text: hunt
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.snippet_search
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
-                    text: ''
+                    type: Empty
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -164,40 +224,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: create
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.snippet_create
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: snip
-              - text: ' '
+                type: Text
+              - type: Space
               - text: create
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.snippet_create
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -205,40 +279,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.snippet_toggle
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: snip
-              - text: ' '
+                type: Text
+              - type: Space
               - text: show
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.snippet_toggle
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -246,25 +334,38 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.snippets
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.snippet_insert
+                type: Text
               - text: (
+                type: Text
               - text: user.snippets
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -272,26 +373,38 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: hunt
-            - text: ' '
+              type: Text
+            - type: Space
             - text: <
+              type: Text
             - text: user.text
+              type: Text
             - text: '>'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.snippet_search
+                type: Text
               - text: (
+                type: Text
               - text: user.text
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -299,24 +412,33 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: hunt
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.snippet_search
+                type: Text
               - text: (
+                type: Text
               - doc:
-                  text: ''
+                  type: Empty
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -324,21 +446,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: create
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.snippet_create
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -346,21 +476,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: snip
-            - text: ' '
+              type: Text
+            - type: Space
             - text: show
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.snippet_toggle
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -368,14 +506,25 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
+        type: Table
+      type: Alt
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.snippets
+output: 'tag: user.snippets
+
   -
+
   snip {user.snippets}:  user.snippet_insert(user.snippets)
+
   snip hunt <user.text>: user.snippet_search(user.text)
+
   snip hunt:             user.snippet_search("")
+
   snip create:           user.snippet_create()
+
   snip show:             user.snippet_toggle()
+
+  '

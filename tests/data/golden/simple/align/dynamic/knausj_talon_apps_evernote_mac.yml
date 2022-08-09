@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: evernote
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: mac
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,53 +34,58 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'settings():'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: '#'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: Necessary
-        - text: ' '
+          type: Text
+        - type: Space
         - text: to
-        - text: ' '
+          type: Text
+        - type: Space
         - text: stop
-        - text: ' '
+          type: Text
+        - type: Space
         - text: commands
-        - text: ' '
+          type: Text
+        - type: Space
         - text: like
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '''slap'''
-        - text: ' '
+          type: Text
+        - type: Space
         - text: getting
-        - text: ' '
+          type: Text
+        - type: Space
         - text: jumbled
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key_wait
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '9.0'
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  app: evernote
-  os: mac
-  -
-  settings():
-      # Necessary to stop commands like 'slap' getting jumbled
-      key_wait = 9.0
+output: "app: evernote\nos: mac\n-\nsettings():\n    # Necessary to stop commands\
+  \ like 'slap' getting jumbled\n    key_wait = 9.0\n"

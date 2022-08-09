@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.scala
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,216 +17,251 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_imperative
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_object_oriented
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_line
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_block_c_like
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_bool
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_data_null
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_functions
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_libraries
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_array
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_bitwise
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_lambda
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - text: 'settings():'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: user.code_private_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_function_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_private_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_protected_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.code_public_variable_formatter
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
             text: PRIVATE_CAMEL_CASE
+            type: Text
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.scala_modifier
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: user.scala_modifier
+                      type: Text
                     - text: '}'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.scala_modifier
+                type: Text
               - text: '}'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: user.scala_modifier
+                      type: Text
                     - text: '}'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -230,58 +269,86 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.scala_keyword
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: scala_keyword
+                      type: Text
                     - text: '}'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: '{'
+                type: Text
               - text: user.scala_keyword
+                type: Text
               - text: '}'
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: insert
+                  type: Text
                 - text: (
+                  type: Text
                 - doc:
                     docs:
                     - text: '{'
+                      type: Text
                     - text: scala_keyword
+                      type: Text
                     - text: '}'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
+                  type: Edit
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -289,50 +356,66 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: right
-            - text: ' '
+              type: Text
+            - type: Space
             - text: arrow
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: ->
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: right
-              - text: ' '
+                type: Text
+              - type: Space
               - text: arrow
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: ->
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -340,50 +423,66 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: left
-            - text: ' '
+              type: Text
+            - type: Space
             - text: arrow
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: <-
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: left
-              - text: ' '
+                type: Text
+              - type: Space
               - text: arrow
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: <-
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -391,50 +490,66 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plus
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plus
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: ++
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: plus
-              - text: ' '
+                type: Text
+              - type: Space
               - text: plus
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: ++
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -442,46 +557,60 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: subtype
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: '<:'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: op
-              - text: ' '
+                type: Text
+              - type: Space
               - text: subtype
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - doc:
                     docs:
-                    - text: ' '
+                    - type: Space
                     - text: '<:'
-                    - text: ' '
+                      type: Text
+                    - type: Space
+                    type: Cat
                   function: _smart_quote
-                - text: '
-
-                    '
+                  type: Edit
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -489,40 +618,54 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
         - alts:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: match
+              type: Text
             - text: ':'
+              type: Text
             - doc:
                 docs:
-                - text: '
-
-                    '
+                - type: Line
                 - text: user.code_state_switch
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               indent: 4
               overlap: false
+              type: Nest
+            type: Cat
           - cells:
             - docs:
               - text: state
-              - text: ' '
+                type: Text
+              - type: Space
               - text: match
+                type: Text
               - text: ':'
+                type: Text
+              type: Cat
             - doc:
                 docs:
                 - text: user.code_state_switch
+                  type: Text
                 - text: (
+                  type: Text
                 - text: )
-                - text: '
-
-                    '
+                  type: Text
+                - type: Line
+                type: Cat
               function: _inline
+              type: Edit
             info:
               hpad:
                 text: ' '
@@ -530,31 +673,48 @@ input:
                 text: ' '
               min_col_widths: []
               table_type: command
+            type: Row
+          type: Alt
+        type: Cat
       - rows:
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.scala_modifier
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '{'
+                    type: Text
                   - text: user.scala_modifier
+                    type: Text
                   - text: '}'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -562,30 +722,45 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: user.scala_keyword
+              type: Text
             - text: '}'
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: insert
+                type: Text
               - text: (
+                type: Text
               - doc:
                   docs:
                   - text: '{'
+                    type: Text
                   - text: scala_keyword
+                    type: Text
                   - text: '}'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
+                type: Edit
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -593,26 +768,35 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: right
-            - text: ' '
+              type: Text
+            - type: Space
             - text: arrow
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
-                  - text: ' '
+                  - type: Space
                   - text: ->
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -620,26 +804,35 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: left
-            - text: ' '
+              type: Text
+            - type: Space
             - text: arrow
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
-                  - text: ' '
+                  - type: Space
                   - text: <-
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -647,26 +840,35 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plus
-            - text: ' '
+              type: Text
+            - type: Space
             - text: plus
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
-                  - text: ' '
+                  - type: Space
                   - text: ++
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -674,24 +876,32 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: op
-            - text: ' '
+              type: Text
+            - type: Space
             - text: subtype
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - doc:
                   docs:
-                  - text: ' '
+                  - type: Space
                   - text: '<:'
-                  - text: ' '
+                    type: Text
+                  - type: Space
+                  type: Cat
                 function: _smart_quote
-              - text: '
-
-                  '
+                type: Edit
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -699,21 +909,29 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
+          type: Row
         - cells:
           - docs:
             - text: state
-            - text: ' '
+              type: Text
+            - type: Space
             - text: match
+              type: Text
             - text: ':'
+              type: Text
+            type: Cat
           - doc:
               docs:
               - text: user.code_state_switch
+                type: Text
               - text: (
+                type: Text
               - text: )
-              - text: '
-
-                  '
+                type: Text
+              - type: Line
+              type: Cat
             function: _inline
+            type: Edit
           info:
             hpad:
               text: ' '
@@ -721,76 +939,67 @@ input:
               text: ' '
             min_col_widths: []
             table_type: command
-    - text: '
-
-        '
+          type: Row
+        type: Table
+      type: Alt
+    - type: Line
     - text: block
-    - text: ' '
+      type: Text
+    - type: Space
     - text: string
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: insert
+          type: Text
         - text: (
+          type: Text
         - doc:
             text: '""""""'
+            type: Text
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"left'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left
-        - text: ' '
+          type: Text
+        - type: Space
         - text: left"
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag: user.scala
-  -
-  tag(): user.code_imperative
-  tag(): user.code_object_oriented
-
-  tag(): user.code_comment_line
-  tag(): user.code_comment_block_c_like
-  tag(): user.code_data_bool
-  tag(): user.code_data_null
-  tag(): user.code_functions
-  tag(): user.code_libraries
-  tag(): user.code_operators_array
-  tag(): user.code_operators_assignment
-  tag(): user.code_operators_bitwise
-  tag(): user.code_operators_lambda
-  tag(): user.code_operators_math
-
-  settings():
-      user.code_private_function_formatter = "PRIVATE_CAMEL_CASE"
-      user.code_protected_function_formatter = "PRIVATE_CAMEL_CASE"
-      user.code_public_function_formatter = "PRIVATE_CAMEL_CASE"
-      user.code_private_variable_formatter = "PRIVATE_CAMEL_CASE"
-      user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
-      user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
-  state {user.scala_modifier}: insert("{user.scala_modifier} ")
-  state {user.scala_keyword}:  insert("{scala_keyword} ")
-  op right arrow:              " -> "
-  op left arrow:               " <- "
-  op plus plus:                " ++ "
-  op subtype:                  " <: "
-  state match:                 user.code_state_switch()
-
-  block string:
-      insert('""""""')
-      key("left left left")
+output: "tag: user.scala\n-\ntag(): user.code_imperative\ntag(): user.code_object_oriented\n\
+  \ntag(): user.code_comment_line\ntag(): user.code_comment_block_c_like\ntag(): user.code_data_bool\n\
+  tag(): user.code_data_null\ntag(): user.code_functions\ntag(): user.code_libraries\n\
+  tag(): user.code_operators_array\ntag(): user.code_operators_assignment\ntag():\
+  \ user.code_operators_bitwise\ntag(): user.code_operators_lambda\ntag(): user.code_operators_math\n\
+  \nsettings():\n    user.code_private_function_formatter = \"PRIVATE_CAMEL_CASE\"\
+  \n    user.code_protected_function_formatter = \"PRIVATE_CAMEL_CASE\"\n    user.code_public_function_formatter\
+  \ = \"PRIVATE_CAMEL_CASE\"\n    user.code_private_variable_formatter = \"PRIVATE_CAMEL_CASE\"\
+  \n    user.code_protected_variable_formatter = \"PRIVATE_CAMEL_CASE\"\n    user.code_public_variable_formatter\
+  \ = \"PRIVATE_CAMEL_CASE\"\nstate {user.scala_modifier}: insert(\"{user.scala_modifier}\
+  \ \")\nstate {user.scala_keyword}:  insert(\"{scala_keyword} \")\nop right arrow:\
+  \              \" -> \"\nop left arrow:               \" <- \"\nop plus plus:  \
+  \              \" ++ \"\nop subtype:                  \" <: \"\nstate match:   \
+  \              user.code_state_switch()\n\nblock string:\n    insert('\"\"\"\"\"\
+  \"')\n    key(\"left left left\")\n"

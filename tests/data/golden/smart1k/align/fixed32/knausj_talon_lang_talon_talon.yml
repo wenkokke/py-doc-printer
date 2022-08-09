@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.talon
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,179 +18,229 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_math
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_operators_assignment
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_comment_line
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.code_functions_common
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uncomment
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.talon_populate_lists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: activate
-    - text: ' '
+      type: Text
+    - type: Space
     - text: talon-specific
-    - text: ' '
+      type: Text
+    - type: Space
     - text: lists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: of
-    - text: ' '
+      type: Text
+    - type: Space
     - text: actions,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: scopes,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: modes
-    - text: ' '
+      type: Text
+    - type: Space
     - text: etcetera.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Do
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: enable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dragon,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: as
-    - text: ' '
+      type: Text
+    - type: Space
     - text: it
-    - text: ' '
+      type: Text
+    - type: Space
     - text: will
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: unusable.
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: conformer,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: latency
-    - text: ' '
+      type: Text
+    - type: Space
     - text: increase
-    - text: ' '
+      type: Text
+    - type: Space
     - text: may
-    - text: ' '
+      type: Text
+    - type: Space
     - text: also
-    - text: ' '
+      type: Text
+    - type: Space
     - text: be
-    - text: ' '
+      type: Text
+    - type: Space
     - text: unacceptable
-    - text: ' '
+      type: Text
+    - type: Space
     - text: depending
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'on'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: your
-    - text: ' '
+      type: Text
+    - type: Space
     - text: cpu
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: see
-    - text: ' '
+      type: Text
+    - type: Space
     - text: https://github.com/knausj85/knausj_talon/issues/600
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.talon_populate_lists
-    - text: '
-
-        '
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    - type: Line
     - alts:
       - docs:
         - text: dot
-        - text: ' '
+          type: Text
+        - type: Space
         - text: talon
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: .talon
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: dot
-          - text: ' '
+            type: Text
+          - type: Space
           - text: talon
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: .talon
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -195,70 +249,98 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: defintion
-    - text: ' '
+      type: Text
+    - type: Space
     - text: blocks
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: the
-    - text: ' '
+      type: Text
+    - type: Space
     - text: context
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: action
-        - text: ' '
+          type: Text
+        - type: Space
         - text: block
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: action(
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '):'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: action
-          - text: ' '
+            type: Text
+          - type: Space
           - text: block
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.insert_between
+              type: Text
             - text: (
+              type: Text
             - doc:
                 text: action(
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
                 text: '):'
+                type: Text
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -267,52 +349,76 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: setting
-        - text: ' '
+          type: Text
+        - type: Space
         - text: block
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'settings():'
+                  type: Text
                 - text: \n
+                  type: Text
                 - text: \t
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: setting
-          - text: ' '
+            type: Text
+          - type: Space
           - text: block
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'settings():'
+                  type: Text
                 - text: \n
+                  type: Text
                 - text: \t
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -321,62 +427,92 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: setting
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.talon_settings
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.paste
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: talon_settings
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '='
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: setting
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.talon_settings
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.paste
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: talon_settings
+                  type: Text
                 - text: '}'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: '='
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -385,62 +521,87 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: context
-    - text: ' '
+      type: Text
+    - type: Space
     - text: requirements
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: win
-        - text: ' '
+          type: Text
+        - type: Space
         - text: require
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: windows
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: win
-          - text: ' '
+            type: Text
+          - type: Space
           - text: require
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: windows
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -449,54 +610,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: mac
-        - text: ' '
+          type: Text
+        - type: Space
         - text: require
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mac
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: mac
-          - text: ' '
+            type: Text
+          - type: Space
           - text: require
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: mac
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -505,54 +690,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: linux
-        - text: ' '
+          type: Text
+        - type: Space
         - text: require
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: linux
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: linux
-          - text: ' '
+            type: Text
+          - type: Space
           - text: require
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'os:'
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: linux
+                  type: Text
                 - text: \n
+                  type: Text
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -561,50 +770,70 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: title
-        - text: ' '
+          type: Text
+        - type: Space
         - text: require
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'win.title:'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: title
-          - text: ' '
+            type: Text
+          - type: Space
           - text: require
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: 'win.title:'
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -613,256 +842,363 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: application
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: require
+      type: Text
     - text: ']'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: '{'
+      type: Text
     - text: user.talon_apps
+      type: Text
     - text: '}'
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: app
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: talon_apps
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.paste
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: 'app:'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: app
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mode
-    - text: ' '
+      type: Text
+    - type: Space
     - text: require
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: '{'
+      type: Text
     - text: user.talon_modes
+      type: Text
     - text: '}'
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: mode
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: talon_modes
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.paste
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: 'mode:'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: mode
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: require
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: '{'
+      type: Text
     - text: user.talon_tags
+      type: Text
     - text: '}'
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: tag
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: talon_tags
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.paste
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: 'tag:'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: tag
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: set
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '['
+      type: Text
     - text: '{'
+      type: Text
     - text: user.talon_tags
+      type: Text
     - text: '}'
+      type: Text
     - text: ']'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: tag
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: talon_tags
-        - text: ' '
+          type: Text
+        - type: Space
         - text: or
-        - text: ' '
+          type: Text
+        - type: Space
         - doc:
-            text: ''
+            type: Empty
           function: _smart_quote
-        - text: '
-
-            '
+          type: Edit
+        - type: Line
         - text: user.paste
+          type: Text
         - text: (
+          type: Text
         - doc:
             docs:
             - text: 'tag():'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '{'
+              type: Text
             - text: tag
+              type: Text
             - text: '}'
+              type: Text
+            type: Cat
           function: _smart_quote
+          type: Edit
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: requires
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.talon_populate_lists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: do
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dragon
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: list
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.talon_lists
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{{'
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: talon_lists
+                  type: Text
                 - text: '}}'
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: list
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.talon_lists
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{{'
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: talon_lists
+                  type: Text
                 - text: '}}'
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -871,74 +1207,107 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: requires
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.talon_populate_lists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag.
-    - text: ' '
+      type: Text
+    - type: Space
     - text: do
-    - text: ' '
+      type: Text
+    - type: Space
     - text: not
-    - text: ' '
+      type: Text
+    - type: Space
     - text: use
-    - text: ' '
+      type: Text
+    - type: Space
     - text: with
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dragon
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: capture
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.talon_captures
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: <
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: talon_captures
+                  type: Text
                 - text: '}'
+                  type: Text
                 - text: '>'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: capture
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.talon_captures
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: <
+                  type: Text
                 - text: '{'
+                  type: Text
                 - text: talon_captures
+                  type: Text
                 - text: '}'
+                  type: Text
                 - text: '>'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -947,71 +1316,97 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: commands
-    - text: ' '
+      type: Text
+    - type: Space
     - text: for
-    - text: ' '
+      type: Text
+    - type: Space
     - text: dictating
-    - text: ' '
+      type: Text
+    - type: Space
     - text: key
-    - text: ' '
+      type: Text
+    - type: Space
     - text: combos
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: key
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.keys
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: over
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: keys
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: key
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.keys
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: over
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: keys
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1020,54 +1415,78 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: key
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.modifiers
+          type: Text
         - text: '>'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: over
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: modifiers
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: key
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.modifiers
+            type: Text
           - text: '>'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: over
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: '{'
+                  type: Text
                 - text: modifiers
+                  type: Text
                 - text: '}'
+                  type: Text
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1076,77 +1495,109 @@ input:
           min_col_widths:
           - 32
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: all
-    - text: ' '
+      type: Text
+    - type: Space
     - text: actions
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (requires
-    - text: ' '
+      type: Text
+    - type: Space
     - text: uncommenting
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.talon_populate_lists
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tag
-    - text: ' '
+      type: Text
+    - type: Space
     - text: above)
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: funk
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.talon_actions
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_insert_function
+              type: Text
             - text: (
+              type: Text
             - text: talon_actions
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: funk
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.talon_actions
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_insert_function
+              type: Text
             - text: (
+              type: Text
             - text: talon_actions
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1155,68 +1606,98 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: funk
-        - text: ' '
+          type: Text
+        - type: Space
         - text: cell
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_select_function
+              type: Text
             - text: (
+              type: Text
             - text: number
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: funk
-          - text: ' '
+            type: Text
+          - type: Space
           - text: cell
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_select_function
+              type: Text
             - text: (
+              type: Text
             - text: number
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - doc:
-                text: ''
+                type: Empty
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1225,60 +1706,90 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: funk
-        - text: ' '
+          type: Text
+        - type: Space
         - text: wrap
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.code_common_function
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_insert_function
+              type: Text
             - text: (
+              type: Text
             - text: code_common_function
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: funk
-          - text: ' '
+            type: Text
+          - type: Space
           - text: wrap
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.code_common_function
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_insert_function
+              type: Text
             - text: (
+              type: Text
             - text: code_common_function
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1287,68 +1798,102 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: funk
-        - text: ' '
+          type: Text
+        - type: Space
         - text: wrap
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: number
+          type: Text
         - text: '>'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.code_select_function
+              type: Text
             - text: (
+              type: Text
             - text: number
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: funk
-          - text: ' '
+            type: Text
+          - type: Space
           - text: wrap
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: number
+            type: Text
           - text: '>'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.code_select_function
+              type: Text
             - text: (
+              type: Text
             - text: number
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '-'
-            - text: ' '
+              type: Text
+            - type: Space
             - text: '1'
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: edit.selected_text
+              type: Text
             - text: (
+              type: Text
             - text: )
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -1357,55 +1902,37 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  tag:                             user.talon
-  -
-  tag(): user.code_operators_math
-  tag(): user.code_operators_assignment
-  tag(): user.code_comment_line
-  tag(): user.code_functions_common
-  # uncomment user.talon_populate_lists tag to activate talon-specific lists of actions, scopes, modes etcetera.
-  # Do not enable this tag with dragon, as it will be unusable.
-  # with conformer, the latency increase may also be unacceptable depending on your cpu
-  # see https://github.com/knausj85/knausj_talon/issues/600
-  # tag(): user.talon_populate_lists
-
-  dot talon:                       insert(".talon")
-  # defintion blocks for the context
-  action block:                    user.insert_between("action(", "):")
-  setting block:                   insert("settings():\n\t")
-  setting {user.talon_settings}:   user.paste("{talon_settings} = ")
-  # context requirements
-  win require:                     insert("os: windows\n")
-  mac require:                     insert("os: mac\n")
-  linux require:                   insert("os: linux\n")
-  title require:                   insert("win.title: ")
-  application [require] [{user.talon_apps}]:
-      app = talon_apps or ""
-      user.paste("app: {app}")
-  mode require [{user.talon_modes}]:
-      mode = talon_modes or ""
-      user.paste("mode: {mode}")
-  tag require [{user.talon_tags}]:
-      tag = talon_tags or ""
-      user.paste("tag: {tag}")
-  tag set [{user.talon_tags}]:
-      tag = talon_tags or ""
-      user.paste("tag(): {tag}")
-  # requires user.talon_populate_lists tag. do not use with dragon
-  list {user.talon_lists}:         "{{{talon_lists}}}"
-  # requires user.talon_populate_lists tag. do not use with dragon
-  capture {user.talon_captures}:   "<{talon_captures}>"
-
-  # commands for dictating key combos
-  key <user.keys> over:            "{keys}"
-  key <user.modifiers> over:       "{modifiers}"
-
-  # all actions (requires uncommenting user.talon_populate_lists tag above)
-  funk {user.talon_actions}:       user.code_insert_function(talon_actions, edit.selected_text())
-  funk cell <number>:              user.code_select_function(number - 1, "")
-  funk wrap <user.code_common_function>: user.code_insert_function(code_common_function, edit.selected_text())
-  funk wrap <number>:              user.code_select_function(number - 1, edit.selected_text())
+output: "tag:                             user.talon\n-\ntag(): user.code_operators_math\n\
+  tag(): user.code_operators_assignment\ntag(): user.code_comment_line\ntag(): user.code_functions_common\n\
+  # uncomment user.talon_populate_lists tag to activate talon-specific lists of actions,\
+  \ scopes, modes etcetera.\n# Do not enable this tag with dragon, as it will be unusable.\n\
+  # with conformer, the latency increase may also be unacceptable depending on your\
+  \ cpu\n# see https://github.com/knausj85/knausj_talon/issues/600\n# tag(): user.talon_populate_lists\n\
+  \ndot talon:                       insert(\".talon\")\n# defintion blocks for the\
+  \ context\naction block:                    user.insert_between(\"action(\", \"\
+  ):\")\nsetting block:                   insert(\"settings():\\n\\t\")\nsetting {user.talon_settings}:\
+  \   user.paste(\"{talon_settings} = \")\n# context requirements\nwin require:  \
+  \                   insert(\"os: windows\\n\")\nmac require:                   \
+  \  insert(\"os: mac\\n\")\nlinux require:                   insert(\"os: linux\\\
+  n\")\ntitle require:                   insert(\"win.title: \")\napplication [require]\
+  \ [{user.talon_apps}]:\n    app = talon_apps or \"\"\n    user.paste(\"app: {app}\"\
+  )\nmode require [{user.talon_modes}]:\n    mode = talon_modes or \"\"\n    user.paste(\"\
+  mode: {mode}\")\ntag require [{user.talon_tags}]:\n    tag = talon_tags or \"\"\n\
+  \    user.paste(\"tag: {tag}\")\ntag set [{user.talon_tags}]:\n    tag = talon_tags\
+  \ or \"\"\n    user.paste(\"tag(): {tag}\")\n# requires user.talon_populate_lists\
+  \ tag. do not use with dragon\nlist {user.talon_lists}:         \"{{{talon_lists}}}\"\
+  \n# requires user.talon_populate_lists tag. do not use with dragon\ncapture {user.talon_captures}:\
+  \   \"<{talon_captures}>\"\n\n# commands for dictating key combos\nkey <user.keys>\
+  \ over:            \"{keys}\"\nkey <user.modifiers> over:       \"{modifiers}\"\n\
+  \n# all actions (requires uncommenting user.talon_populate_lists tag above)\nfunk\
+  \ {user.talon_actions}:       user.code_insert_function(talon_actions, edit.selected_text())\n\
+  funk cell <number>:              user.code_select_function(number - 1, \"\")\nfunk\
+  \ wrap <user.code_common_function>: user.code_insert_function(code_common_function,\
+  \ edit.selected_text())\nfunk wrap <number>:              user.code_select_function(number\
+  \ - 1, edit.selected_text())\n"

@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: linux
+        type: Text
       info:
         hpad:
           text: ' '
@@ -13,11 +17,16 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: tag
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: user.tmux
+        type: Text
       info:
         hpad:
           text: ' '
@@ -25,44 +34,54 @@ input:
           text: ' '
         min_col_widths: []
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: mux
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: mux
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
-            - text: '
-
-                '
+              type: Edit
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -70,69 +89,92 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
-    - text: '
-
-        '
+        type: Row
+      type: Alt
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: session
-    - text: ' '
+      type: Text
+    - type: Space
     - text: management
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: mux
-        - text: ' '
+          type: Text
+        - type: Space
         - text: new
-        - text: ' '
+          type: Text
+        - type: Space
         - text: session
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: new
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: mux
-          - text: ' '
+            type: Text
+          - type: Space
           - text: new
-          - text: ' '
+            type: Text
+          - type: Space
           - text: session
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: new
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -140,114 +182,155 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: sessions
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: s
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: name
-    - text: ' '
+      type: Text
+    - type: Space
     - text: session
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: $
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - alts:
       - docs:
         - text: mux
-        - text: ' '
+          type: Text
+        - type: Space
         - text: kill
-        - text: ' '
+          type: Text
+        - type: Space
         - text: session
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: kill-session
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -t
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: mux
-          - text: ' '
+            type: Text
+          - type: Space
           - text: kill
-          - text: ' '
+            type: Text
+          - type: Space
           - text: session
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: insert
+              type: Text
             - text: (
+              type: Text
             - doc:
                 docs:
                 - text: tmux
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: kill-session
-                - text: ' '
+                  type: Text
+                - type: Space
                 - text: -t
-                - text: ' '
+                  type: Text
+                - type: Space
+                type: Cat
               function: _smart_quote
+              type: Edit
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -255,430 +338,503 @@ input:
             text: ' '
           min_col_widths: []
           table_type: command
+        type: Row
+      type: Alt
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
-    - text: ' '
+      type: Text
+    - type: Space
     - text: management
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: new
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: c
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: number
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '''{number}'''
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: previous
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: p
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: n
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: rename
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ','
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: close
-    - text: ' '
+      type: Text
+    - type: Space
     - text: window
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '&'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pane
-    - text: ' '
+      type: Text
+    - type: Space
     - text: management
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: split
-    - text: ' '
+      type: Text
+    - type: Space
     - text: horizontal
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '%'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: split
-    - text: ' '
+      type: Text
+    - type: Space
     - text: vertical
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: '"'
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: next
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pane
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: o
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: move
-    - text: ' '
+      type: Text
+    - type: Space
     - text: <
+      type: Text
     - text: user.arrow_key
+      type: Text
     - text: '>'
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: arrow_key
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: close
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pane
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: x
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Say
-    - text: ' '
+      type: Text
+    - type: Space
     - text: a
-    - text: ' '
+      type: Text
+    - type: Space
     - text: number
-    - text: ' '
+      type: Text
+    - type: Space
     - text: right
-    - text: ' '
+      type: Text
+    - type: Space
     - text: after
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
-    - text: ' '
+      type: Text
+    - type: Space
     - text: command,
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: switch
-    - text: ' '
+      type: Text
+    - type: Space
     - text: to
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pane
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: mux
-    - text: ' '
+      type: Text
+    - type: Space
     - text: pane
-    - text: ' '
+      type: Text
+    - type: Space
     - text: numbers
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: ctrl-b
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: key
+          type: Text
         - text: (
+          type: Text
         - text: q
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: null
   renderer: simple
   simple_layout: LongestLines
-output: |
-  os: linux
-  tag: user.tmux
-  -
-  mux: "tmux "
-
-  # session management
-  mux new session: insert("tmux new ")
-  mux sessions:
-      key(ctrl-b)
-      key(s)
-  mux name session:
-      key(ctrl-b)
-      key($)
-  mux kill session: insert("tmux kill-session -t ")
-  # window management
-  mux new window:
-      key(ctrl-b)
-      key(c)
-  mux window <number>:
-      key(ctrl-b)
-      key('{number}')
-  mux previous window:
-      key(ctrl-b)
-      key(p)
-  mux next window:
-      key(ctrl-b)
-      key(n)
-  mux rename window:
-      key(ctrl-b)
-      key(,)
-  mux close window:
-      key(ctrl-b)
-      key(&)
-  # pane management
-  mux split horizontal:
-      key(ctrl-b)
-      key(%)
-  mux split vertical:
-      key(ctrl-b)
-      key(")
-  mux next pane:
-      key(ctrl-b)
-      key(o)
-  mux move <user.arrow_key>:
-      key(ctrl-b)
-      key(arrow_key)
-  mux close pane:
-      key(ctrl-b)
-      key(x)
-  # Say a number right after this command, to switch to pane
-  mux pane numbers:
-      key(ctrl-b)
-      key(q)
+output: "os: linux\ntag: user.tmux\n-\nmux: \"tmux \"\n\n# session management\nmux\
+  \ new session: insert(\"tmux new \")\nmux sessions:\n    key(ctrl-b)\n    key(s)\n\
+  mux name session:\n    key(ctrl-b)\n    key($)\nmux kill session: insert(\"tmux\
+  \ kill-session -t \")\n# window management\nmux new window:\n    key(ctrl-b)\n \
+  \   key(c)\nmux window <number>:\n    key(ctrl-b)\n    key('{number}')\nmux previous\
+  \ window:\n    key(ctrl-b)\n    key(p)\nmux next window:\n    key(ctrl-b)\n    key(n)\n\
+  mux rename window:\n    key(ctrl-b)\n    key(,)\nmux close window:\n    key(ctrl-b)\n\
+  \    key(&)\n# pane management\nmux split horizontal:\n    key(ctrl-b)\n    key(%)\n\
+  mux split vertical:\n    key(ctrl-b)\n    key(\")\nmux next pane:\n    key(ctrl-b)\n\
+  \    key(o)\nmux move <user.arrow_key>:\n    key(ctrl-b)\n    key(arrow_key)\nmux\
+  \ close pane:\n    key(ctrl-b)\n    key(x)\n# Say a number right after this command,\
+  \ to switch to pane\nmux pane numbers:\n    key(ctrl-b)\n    key(q)\n"

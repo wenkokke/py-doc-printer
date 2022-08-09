@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: os
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: mac
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,11 +18,16 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: iterm2
+        type: Text
       info:
         hpad:
           text: ' '
@@ -27,69 +36,83 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: terminal
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'todo:'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: filemanager
-    - text: ' '
+      type: Text
+    - type: Space
     - text: support
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.file_manager
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.generic_unix_shell
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.git
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.kubectl
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.tabs
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    type: Cat
   max_line_width: 1000
   renderer: smart
   simple_layout: null
-output: |
-  os:                              mac
+output: 'os:                              mac
+
   app:                             iterm2
+
   -
+
   tag(): terminal
+
   # todo: filemanager support
+
   # tag(): user.file_manager
+
   tag(): user.generic_unix_shell
+
   tag(): user.git
+
   tag(): user.kubectl
+
   tag(): user.tabs
+
+  '

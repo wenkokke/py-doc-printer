@@ -2,49 +2,66 @@ input:
   doc:
     docs:
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - alts:
       - docs:
         - text: open
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '{'
+          type: Text
         - text: user.website
+          type: Text
         - text: '}'
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.open_url
+              type: Text
             - text: (
+              type: Text
             - text: website
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: open
-          - text: ' '
+            type: Text
+          - type: Space
           - text: '{'
+            type: Text
           - text: user.website
+            type: Text
           - text: '}'
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.open_url
+              type: Text
             - text: (
+              type: Text
             - text: website
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -53,62 +70,94 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - alts:
       - docs:
         - text: '{'
+          type: Text
         - text: user.search_engine
+          type: Text
         - text: '}'
-        - text: ' '
+          type: Text
+        - type: Space
         - text: hunt
-        - text: ' '
+          type: Text
+        - type: Space
         - text: <
+          type: Text
         - text: user.text
+          type: Text
         - text: '>'
+          type: Text
         - text: $
+          type: Text
         - text: ':'
+          type: Text
         - doc:
             docs:
-            - text: '
-
-                '
+            - type: Line
             - text: user.search_with_search_engine
+              type: Text
             - text: (
+              type: Text
             - text: search_engine
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: user.text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           indent: 4
           overlap: false
+          type: Nest
+        type: Cat
       - cells:
         - docs:
           - text: '{'
+            type: Text
           - text: user.search_engine
+            type: Text
           - text: '}'
-          - text: ' '
+            type: Text
+          - type: Space
           - text: hunt
-          - text: ' '
+            type: Text
+          - type: Space
           - text: <
+            type: Text
           - text: user.text
+            type: Text
           - text: '>'
+            type: Text
           - text: $
+            type: Text
           - text: ':'
+            type: Text
+          type: Cat
         - doc:
             docs:
             - text: user.search_with_search_engine
+              type: Text
             - text: (
+              type: Text
             - text: search_engine
+              type: Text
             - text: ','
-            - text: ' '
+              type: Text
+            - type: Space
             - text: user.text
+              type: Text
             - text: )
-            - text: '
-
-                '
+              type: Text
+            - type: Line
+            type: Cat
           function: _inline
+          type: Edit
         info:
           hpad:
             text: ' '
@@ -117,53 +166,68 @@ input:
           min_col_widths:
           - 32
           table_type: command
+        type: Row
+      type: Alt
     - text: '{'
+      type: Text
     - text: user.search_engine
+      type: Text
     - text: '}'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: (
+      type: Text
     - text: that
-    - text: ' '
+      type: Text
+    - type: Space
     - text: '|'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: this
+      type: Text
     - text: )
+      type: Text
     - text: ':'
+      type: Text
     - doc:
         docs:
-        - text: '
-
-            '
+        - type: Line
         - text: text
-        - text: ' '
+          type: Text
+        - type: Space
         - text: '='
-        - text: ' '
+          type: Text
+        - type: Space
         - text: edit.selected_text
+          type: Text
         - text: (
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
         - text: user.search_with_search_engine
+          type: Text
         - text: (
+          type: Text
         - text: search_engine
+          type: Text
         - text: ','
-        - text: ' '
+          type: Text
+        - type: Space
         - text: text
+          type: Text
         - text: )
-        - text: '
-
-            '
+          type: Text
+        - type: Line
+        type: Cat
       indent: 4
       overlap: false
+      type: Nest
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  -
-  open {user.website}:             user.open_url(website)
-  {user.search_engine} hunt <user.text>$:
-      user.search_with_search_engine(search_engine, user.text)
-  {user.search_engine} (that | this):
-      text = edit.selected_text()
-      user.search_with_search_engine(search_engine, text)
+output: "-\nopen {user.website}:             user.open_url(website)\n{user.search_engine}\
+  \ hunt <user.text>$:\n    user.search_with_search_engine(search_engine, user.text)\n\
+  {user.search_engine} (that | this):\n    text = edit.selected_text()\n    user.search_with_search_engine(search_engine,\
+  \ text)\n"

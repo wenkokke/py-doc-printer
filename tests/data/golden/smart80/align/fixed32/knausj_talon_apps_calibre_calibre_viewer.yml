@@ -4,8 +4,12 @@ input:
     - cells:
       - docs:
         - text: app
+          type: Text
         - text: ':'
+          type: Text
+        type: Cat
       - text: calibre_viewer
+        type: Text
       info:
         hpad:
           text: ' '
@@ -14,36 +18,43 @@ input:
         min_col_widths:
         - 32
         table_type: match
+      type: Row
     - text: '-'
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: '#'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: Set
-    - text: ' '
+      type: Text
+    - type: Space
     - text: tags
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.pages
-    - text: '
-
-        '
+      type: Text
+    - type: Line
     - text: 'tag():'
-    - text: ' '
+      type: Text
+    - type: Space
     - text: user.chapters
-    - text: '
-
-        '
+      type: Text
+    - type: Line
+    type: Cat
   max_line_width: 80
   renderer: smart
   simple_layout: null
-output: |
-  app:                             calibre_viewer
+output: 'app:                             calibre_viewer
+
   -
+
   # Set tags
+
   tag(): user.pages
+
   tag(): user.chapters
+
+  '
