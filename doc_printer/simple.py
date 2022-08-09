@@ -136,14 +136,22 @@ class SimpleDocRenderer(DocRenderer):
     def is_buffering(self) -> bool:
         return bool(self.position_stack)
 
-    def buffer_line(self, token_stream: TokenStream) -> tuple[TokenBuffer, TokenStream]:
+    def buffer_line(
+        self, token_stream: TokenStream
+    ) -> tuple[TokenBuffer, typing.Optional[TokenStream]]:
+        succeeded: bool = False
         token_buffer: TokenBuffer = []
         with self.buffering():
             for token in token_stream:
                 token_buffer.append(token)
                 if token is Line:
+                    succeeded = True
                     break
-        return (token_buffer, token_stream)
+        if succeeded:
+            return (token_buffer, token_stream)
+        else:
+            assert tuple(token_stream) == ()
+            return (token_buffer, None)
 
     def buffer_stream(self, token_stream: TokenStream) -> TokenBuffer:
         with self.buffering():
