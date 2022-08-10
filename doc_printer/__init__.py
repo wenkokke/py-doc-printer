@@ -18,6 +18,8 @@ from .doc import Table as Table
 from .doc import Text as Text
 from .doc import Token as Token
 from .doc import TokenStream as TokenStream
+from .doc import Unknown as Unknown
+from .doc import WidthHint as WidthHint
 from .doc import alt as alt
 from .doc import angles as angles
 from .doc import braces as braces

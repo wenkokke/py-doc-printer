@@ -14,27 +14,67 @@ DocLike = typing.Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]  #
 DocClassWithUnpack = type[collections.abc.Iterable["Doc"]]
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class WidthHint:
     width: int = 0
     end_of_line: bool = False
 
-    def __add__(self, other: typing.Union[int, "Doc", "WidthHint"]) -> "WidthHint":
-        if self.end_of_line:
+    def __add__(
+        self, other: typing.Union[None, int, "WidthHint", "Doc"]
+    ) -> "WidthHint":
+        if self.end_of_line or other is None:
             return self
-        else:
-            if isinstance(other, int):
-                other = WidthHint(other)
-            if isinstance(other, Doc):
-                other = other.width_hint
-            return WidthHint(self.width + other.width, other.end_of_line)
+        if isinstance(other, int):
+            other = WidthHint(other)
+        if isinstance(other, Doc):
+            other = other.width_hint
+        return WidthHint(self.width + other.width, other.end_of_line)
 
-    def __radd__(self, other: typing.Union[int, "Doc", "WidthHint"]) -> "WidthHint":
+    def __radd__(
+        self, other: typing.Union[None, int, "WidthHint", "Doc"]
+    ) -> "WidthHint":
+        if other is None:
+            return self
         if isinstance(other, int):
             other = WidthHint(other)
         if isinstance(other, Doc):
             other = other.width_hint
         return other.__add__(self)
+
+    @classmethod
+    def intern(cls, name: str, *, width: int, end_of_line: bool) -> "WidthHint":
+        if not hasattr(cls, name):
+            instance = super().__new__(WidthHint)
+            object.__setattr__(instance, "width", width)
+            object.__setattr__(instance, "end_of_line", end_of_line)
+            setattr(cls, name, instance)
+        return getattr(cls, name)
+
+    @classmethod
+    def intern_Unknown(cls) -> "WidthHint":
+        return cls.intern("Unknown", width=0, end_of_line=False)
+
+    def is_Unknown(self) -> bool:
+        return self is self.__class__.intern_Unknown()
+
+    def __new__(cls, width: int = 0, end_of_line: bool = False) -> "WidthHint":
+        if (
+            width == cls.intern_Unknown().width
+            and end_of_line is cls.intern_Unknown().end_of_line
+        ):
+            return cls.intern_Unknown()
+        instance = super().__new__(WidthHint)
+        object.__setattr__(instance, "width", width)
+        object.__setattr__(instance, "end_of_line", end_of_line)
+        return instance
+
+    def __repr__(self) -> str:
+        if self.is_Unknown():
+            return "Unknown"
+        return f"WidthHint(width={self.width}, end_of_line={self.end_of_line})"
+
+
+Unknown = WidthHint.intern_Unknown()
 
 
 class Doc(abc.ABC):
@@ -136,7 +176,7 @@ class Doc(abc.ABC):
 ################################################################################
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Text(Doc):
     """
     A single line of text.
@@ -163,7 +203,7 @@ class Text(Doc):
         )
 
     @classmethod
-    def intern(cls, name: str, text: str) -> "Text":
+    def intern(cls, name: str, *, text: str) -> "Text":
         if not hasattr(cls, name):
             instance = super().__new__(Text)
             object.__setattr__(instance, "text", text)
@@ -172,21 +212,21 @@ class Text(Doc):
 
     @classmethod
     def intern_Empty(cls) -> "Text":
-        return cls.intern("Empty", "")
+        return cls.intern("Empty", text="")
 
     def is_Empty(self) -> bool:
         return self is self.__class__.intern_Empty()
 
     @classmethod
     def intern_Space(cls) -> "Text":
-        return cls.intern("Space", " ")
+        return cls.intern("Space", text=" ")
 
     def is_Space(self) -> bool:
         return self is self.__class__.intern_Space()
 
     @classmethod
     def intern_Line(cls) -> "Text":
-        return cls.intern("Line", "\n")
+        return cls.intern("Line", text="\n")
 
     def is_Line(self) -> bool:
         return self is self.__class__.intern_Line()
@@ -220,8 +260,7 @@ class Text(Doc):
             return "Line"
         return f"Text(text={self.text})"
 
-    @property  # type: ignore
-    @functools.cache
+    @property
     def width_hint(self) -> WidthHint:
         if self is Line:
             return WidthHint(width=0, end_of_line=True)
@@ -272,7 +311,7 @@ TokenStream = collections.abc.Iterator[Token]
 ################################################################################
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Cat(Doc, collections.abc.Iterable[Doc]):
     """
     Concatenated documents.
@@ -293,12 +332,11 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.docs)
 
-    @property  # type: ignore
-    @functools.cache
+    @property
     def width_hint(self) -> WidthHint:
-        width_hint = WidthHint()
+        width_hint = Unknown
         for doc in self.docs:
-            width_hint = width_hint + doc
+            width_hint = width_hint + doc.width_hint
             if width_hint.end_of_line:
                 return width_hint  # short-circuit
         return width_hint
@@ -375,7 +413,7 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Alt(Doc, collections.abc.Iterable[Doc]):
     """
     Alternatives for the document layout.
@@ -385,7 +423,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
     alts: tuple[Doc, ...]
 
     @classmethod
-    def intern(cls, name: str, alts: tuple[Doc, ...]) -> "Alt":
+    def intern(cls, name: str, *, alts: tuple[Doc, ...]) -> "Alt":
         if not hasattr(cls, name):
             instance = super().__new__(Alt)
             object.__setattr__(instance, "alts", alts)
@@ -394,14 +432,14 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
 
     @classmethod
     def intern_Fail(cls) -> "Alt":
-        return cls.intern("Fail", ())
+        return cls.intern("Fail", alts=())
 
     def is_Fail(self) -> bool:
         return self is self.__class__.intern_Fail()
 
     @classmethod
     def intern_SoftLine(cls) -> "Alt":
-        return cls.intern("SoftLine", (Line, Empty))
+        return cls.intern("SoftLine", alts=(Line, Space))
 
     def is_SoftLine(self) -> bool:
         return self is self.__class__.intern_SoftLine()
@@ -436,7 +474,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
         if self.alts:  # i.e., self is not Fail
             return self.alts[0].width_hint
         else:
-            return WidthHint()  # TODO: raise exception?
+            return Unknown  # TODO: raise exception?
 
     def to_dict(self) -> dict[str, typing.Any]:
         if self.is_Fail():
@@ -481,7 +519,7 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Nest(Doc):
     """
     Indented documents.
@@ -610,7 +648,7 @@ def _decode_edit_function(
     raise ValueError(name)
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Edit(Doc):
     function: collections.abc.Callable[[TokenStream], TokenStream]
     doc: Doc
@@ -706,7 +744,7 @@ def inline(doc: Doc) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class RowInfo(dataclasses_json.DataClassJsonMixin):
     table_type: typing.Optional[str]
     hpad: Text
@@ -714,7 +752,7 @@ class RowInfo(dataclasses_json.DataClassJsonMixin):
     min_col_widths: tuple[typing.Optional[int], ...]
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Row(Doc, collections.abc.Iterable[Doc]):
     cells: tuple[Doc, ...]
     info: RowInfo
@@ -733,15 +771,14 @@ class Row(Doc, collections.abc.Iterable[Doc]):
     def __iter__(self) -> collections.abc.Iterator[Doc]:
         return iter(self.cells)
 
-    @property  # type: ignore
-    @functools.cache
+    @property
     def width_hint(self) -> WidthHint:
-        width_hint = WidthHint()
+        width_hint: int = 0
         for cell in more_itertools.intersperse(self.info.hsep, self.cells):
             # NOTE: sum the length of the first line of each cell
             width_hint = width_hint + cell.width_hint.width
         # NOTE: rows always end the line
-        return WidthHint(width_hint.width, True)
+        return WidthHint(width_hint, True)
 
     def to_dict(self) -> dict[str, typing.Any]:
         return {
@@ -762,7 +799,7 @@ class Row(Doc, collections.abc.Iterable[Doc]):
         raise ValueError(kvs)
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class Table(Doc, collections.abc.Iterable[Row]):
     rows: tuple[Row, ...]
 
@@ -779,9 +816,9 @@ class Table(Doc, collections.abc.Iterable[Row]):
     def width_hint(self) -> WidthHint:
         if self.rows:
             # NOTE: only process the first row
-            return self.rows[0].width_hint  # type: ignore
+            return self.rows[0].width_hint
         else:
-            return WidthHint()
+            return Unknown
 
     def to_dict(self) -> dict[str, typing.Any]:
         return {
@@ -827,7 +864,7 @@ def table(rows: collections.abc.Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass  # (frozen=True)
 class RowCandidate:
     doc: Doc
 

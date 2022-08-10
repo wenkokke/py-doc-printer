@@ -28,12 +28,12 @@ repository = "https://github.com/wenkokke/py-doc-printer"
 [tool.setuptools.package-data]
 doc_printer = ["py.typed"]
 
-[pytest]
-testpaths = "tests"
-
 [tool.pytest.ini_options]
 enable_assertion_pass_hook = true
 filterwarnings = ["ignore::DeprecationWarning:.*:"]
+minversion = "6.0"
+addopts = "--benchmark-autosave"
+testpaths = ["tests"]
 
 [tool.bumpver]
 current_version = "0.14.0"

@@ -1,6 +1,13 @@
 from doc_printer import *
 
 
+def test_WidthHint_intern_Unknown():
+    assert Unknown is WidthHint(0, False)
+    assert Unknown is WidthHint.intern_Unknown()
+    assert Unknown.is_Unknown()
+    assert repr(Unknown) == "Unknown"
+
+
 def test_Text_intern_Empty():
     assert Empty is Text("")
     assert Empty is Text.intern_Empty()
@@ -30,7 +37,7 @@ def test_Alt_intern_Fail():
 
 
 def test_Alt_intern_SoftLine():
-    assert SoftLine is Alt(alts=(Line, Empty))
+    assert SoftLine is Alt(alts=(Line, Space))
     assert SoftLine is Alt.intern_SoftLine()
     assert SoftLine.is_SoftLine()
     assert repr(SoftLine) == "SoftLine"
