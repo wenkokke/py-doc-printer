@@ -22,6 +22,7 @@ dataclasses_json = "^0.5.7"
 more_itertools = "^8.13.0"
 bumpver = { version = "*", optional = true }
 pytest = { version = "^7.1.2", optional = true }
+pytest-benchmark = { version = "^3.4.1", optional = true }
 pytest-golden = { version = "^0.2.2", optional = true }
 Sphinx = { version = "^5.1.1", optional = true }
 sphinx-bootstrap-theme = { version = "^0.8.1", optional = true }
@@ -30,7 +31,7 @@ tox = { version = "^3.25.1", optional = true }
 [tool.poetry.extras]
 dev = ["bumpver"]
 docs = ["Sphinx", "sphinx-bootstrap-theme"]
-test = ["bumpver", "pytest", "pytest-golden"]
+test = ["bumpver", "pytest", "pytest-benchmark", "pytest-golden"]
 
 [tool.pytest.ini_options]
 enable_assertion_pass_hook = true
