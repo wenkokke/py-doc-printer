@@ -1,22 +1,23 @@
-# Sphinx Docs
+build:
+	poetry build
 
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = doc-source
-BUILDDIR      = _build
+build-doc:
+	poetry install -E docs
+	poetry run sphinx-build -M "html" "docs" "docs/_build"
 
-html: Makefile
-	@$(SPHINXBUILD) -M "html" "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+serve:
+	@(cd docs/_build/html && npx browser-sync -ss)
 
-# Bump versions
+test:
+	tox --skip-missing-interpreters
 
-patch:
-	bumpver update --patch
+bump-patch:
+	@poetry run bumpver update --patch
 
-minor:
-	bumpver update --minor
+bump-minor:
+	@poetry run bumpver update --minor
 
-major:
-	bumpver update --major
+bump-major:
+	@poetry run bumpver update --major
 
-.PHONY: patch minor major
+.PHONY: build build-doc serve test bump-patch bump-minor bump-major
