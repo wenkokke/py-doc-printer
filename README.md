@@ -1,6 +1,6 @@
 # Document Printer
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/wenkokke/py-doc-printer/CI) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/wenkokke/py-doc-printer) ![PyPI](https://img.shields.io/pypi/v/doc-printer)
+![GitHub Workflow Status](https://github.com/wenkokke/py-doc-printer/actions/workflows/build.yml/badge.svg) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/wenkokke/py-doc-printer) ![PyPI](https://img.shields.io/pypi/v/doc-printer)
 
 A Wadler-Leijen Pretty Printer in Python.
 
