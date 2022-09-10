@@ -34,6 +34,12 @@ jobs:
       - name: Build & Test
         run: tox --skip-missing-interpreters
 
+  build-doc:
+    name: Build Doc
+    needs: [build]
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/build-doc.yml
+
   release:
     name: Release
     needs: [build]
