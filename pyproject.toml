@@ -29,9 +29,15 @@ sphinx-bootstrap-theme = { version = "^0.8.1", optional = true }
 tox = { version = "^3.25.1", optional = true }
 
 [tool.poetry.extras]
-dev = ["bumpver"]
 docs = ["Sphinx", "sphinx-bootstrap-theme"]
 test = ["bumpver", "pytest", "pytest-benchmark", "pytest-golden"]
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^0.971"
+tox = "^3.25.1"
+black = "^22.8.0"
+isort = "^5.10.1"
+flake8 = "^5.0.4"
 
 [tool.pytest.ini_options]
 enable_assertion_pass_hook = true
