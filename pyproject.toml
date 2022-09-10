@@ -81,5 +81,5 @@ extras =
   test
 commands =
   bumpver update --patch --dry --no-fetch
-  pytest -k 'not failing' --benchmark-disable tests/
+  pytest -x -k 'not failing' --benchmark-disable tests/
 """
