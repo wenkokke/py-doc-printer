@@ -1,6 +1,7 @@
 import collections.abc
 import contextlib
 import dataclasses
+import functools
 
 from .doc import *
 from .simple import *
@@ -15,10 +16,7 @@ class SmartDocRenderer(SimpleDocRenderer):
     max_line_width: int = 80
 
     def render(self, doc: Doc) -> TokenStream:
-        if isinstance(doc, Alt) and len(doc.alts) > 1:
-            yield from self.render_with_lookahead(doc.alts)
-        else:
-            yield from self.render_simple(doc)
+        yield from self.render_with_lookahead(doc)
 
     ###########################################################################
     # Strict Mode & Raising Errors when Max Line Width is Exceeded
@@ -40,10 +38,24 @@ class SmartDocRenderer(SimpleDocRenderer):
         finally:
             self.on_emit.remove(self.strict_emit)
 
-    def render_with_lookahead(self, alts: tuple[Doc, ...]) -> TokenStream:
-        fallback, *rest = alts
+    @functools.singledispatchmethod
+    def render_with_lookahead(
+        self, doc: Doc, *, width_hint: WidthHint = Unknown
+    ) -> TokenStream:
+        yield from self.render_simple(doc)
+
+    @render_with_lookahead.register
+    def _(self, doc: Cat, *, width_hint: WidthHint = Unknown) -> TokenStream:
+        for subdoc_width_hint, subdoc in zip(
+            doc.width_hints(initial=width_hint), doc.docs
+        ):
+            yield from self.render_with_lookahead(subdoc, width_hint=subdoc_width_hint)
+
+    @render_with_lookahead.register
+    def _(self, doc: Alt, *, width_hint: WidthHint = Unknown) -> TokenStream:
+        fallback, *alts = doc.alts
         succeeded = False
-        for alt in reversed(rest):
+        for alt in reversed(alts):
             with self.strict():
                 try:
                     token_stream = self.render_simple(alt)

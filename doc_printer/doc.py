@@ -341,10 +341,11 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
                 return width_hint  # short-circuit
         return width_hint
 
-    @property
-    def width_hints(self) -> collections.abc.Iterator[WidthHint]:
+    def width_hints(
+        self, *, initial: WidthHint = Unknown
+    ) -> collections.abc.Iterator[WidthHint]:
         yield from reversed(
-            list(itertools.accumulate(reversed(self.docs), initial=Unknown))
+            list(itertools.accumulate(reversed(self.docs), initial=initial))
         )
 
     def to_dict(self) -> dict[str, typing.Any]:

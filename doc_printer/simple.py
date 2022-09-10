@@ -24,7 +24,7 @@ class SimpleDocRenderer(DocRenderer):
 
     @functools.singledispatchmethod
     def render_simple(self, doc: Doc) -> TokenStream:
-        raise TypeError(type(doc))
+        raise TypeError(type(doc), doc)
 
     @render_simple.register
     def _(self, doc: Text) -> TokenStream:
