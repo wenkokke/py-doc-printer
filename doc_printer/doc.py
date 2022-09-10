@@ -1,8 +1,8 @@
 import abc
 import collections.abc
 import dataclasses
-import functools
 import itertools
+import operator
 import re
 import typing
 
@@ -340,6 +340,12 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
             if width_hint.end_of_line:
                 return width_hint  # short-circuit
         return width_hint
+
+    @property
+    def width_hints(self) -> collections.abc.Iterator[WidthHint]:
+        yield from reversed(
+            list(itertools.accumulate(reversed(self.docs), initial=Unknown))
+        )
 
     def to_dict(self) -> dict[str, typing.Any]:
         return {
