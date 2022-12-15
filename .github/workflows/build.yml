@@ -33,7 +33,7 @@ jobs:
 
       - name: Build & Test
         run: |
-          poetry install --all-extras
+          poetry install -E test
           poetry run bumpver update --patch --dry --no-fetch
           poetry run pytest -x -k 'not failing' --benchmark-disable tests/
 
