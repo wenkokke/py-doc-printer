@@ -11,7 +11,6 @@ TokenBuffer = list[Token]
 
 @dataclasses.dataclass
 class CellBuffer(collections.abc.Iterable[Token]):
-
     hpad: Token
     width: int = 0
     buffer: TokenBuffer = dataclasses.field(default_factory=list, init=False)
