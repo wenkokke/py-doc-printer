@@ -17,25 +17,36 @@ defaults:
 
 jobs:
   build:
-    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version[0] }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.9", "3.10"]
+        python-version:
+          - ["3.9", "py39"]
+          - ["3.10", "py310"]
+          - ["3.11", "py311"]
+
     runs-on: ${{ matrix.os }}
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Python
         uses: ./.github/actions/setup-python
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version[0] }}
+          cache: "pip"
+          cache-dependency-path: "requirements-ci.txt"
+
+      - name: Setup requirements
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-ci.txt
 
       - name: Build & Test
         run: |
-          poetry install -E test
-          poetry run bumpver update --patch --dry --no-fetch
-          poetry run pytest -x -k 'not failing' --benchmark-disable tests/
+          pipx run --spec tox==4.4.6 \
+            tox run -e ${{ matrix.python-version[1] }}
 
   build-doc:
     name: Build Doc
