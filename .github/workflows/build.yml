@@ -44,9 +44,7 @@ jobs:
           python -m pip install -r requirements-ci.txt
 
       - name: Build & Test
-        run: |
-          pipx run --spec tox==4.4.6 \
-            tox run -e ${{ matrix.python-version[1] }}
+        run: tox run -e ${{ matrix.python-version[1] }}
 
   build-doc:
     name: Build Doc
