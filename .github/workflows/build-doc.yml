@@ -30,7 +30,6 @@ jobs:
 
       - name: Build Doc
         run: |
-          pip install .[docs]
           sphinx-build -M "html" "docs" "docs/_build"
 
       - name: Deploy Doc
