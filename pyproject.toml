@@ -49,8 +49,9 @@ push = true
 "docs/conf.py" = ['release = "{version}"']
 
 [tool.mypy]
-python_version = 3.9
+python_version = 3.8
 strict = true
+implicit_reexport = false
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
@@ -65,7 +66,7 @@ where = ["src"]
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py39, py310, py311, docs
+envlist = py38, py39, py310, py311, docs
 isolated_build = true
 
 [testenv]

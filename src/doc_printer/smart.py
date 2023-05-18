@@ -1,7 +1,7 @@
-import collections.abc
-import contextlib
 import functools
+from contextlib import contextmanager
 from dataclasses import dataclass, field
+from typing import Iterator
 
 from .doc import *
 from .simple import *
@@ -30,8 +30,8 @@ class SmartDocRenderer(SimpleDocRenderer):
         else:
             return token
 
-    @contextlib.contextmanager
-    def strict(self) -> collections.abc.Iterator[None]:
+    @contextmanager
+    def strict(self) -> Iterator[None]:
         self.on_emit.append(self.strict_emit)
         try:
             yield None

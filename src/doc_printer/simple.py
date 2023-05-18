@@ -1,10 +1,9 @@
-import collections.abc
-import contextlib
+from contextlib import contextmanager
 import enum
 import functools
 import itertools
-from typing import Optional
 from dataclasses import dataclass, field
+from typing import List, Tuple, Optional, Iterator
 
 from .abc import *
 from .doc import *
@@ -99,7 +98,7 @@ class SimpleDocRenderer(DocRenderer):
     # Emitting Tokens & Tracking Position
     ###########################################################################
 
-    on_emit: list[OnEmit] = field(default_factory=list)
+    on_emit: List[OnEmit] = field(default_factory=list)
 
     line: int = field(default=0, init=False)
     column: int = field(default=0, init=False)
@@ -120,10 +119,10 @@ class SimpleDocRenderer(DocRenderer):
     # Buffering
     ###########################################################################
 
-    position_stack: list[tuple[int, int]] = field(default_factory=list, init=False)
+    position_stack: List[Tuple[int, int]] = field(default_factory=list, init=False)
 
-    @contextlib.contextmanager
-    def buffering(self) -> collections.abc.Iterator[None]:
+    @contextmanager
+    def buffering(self) -> Iterator[None]:
         self.position_stack.append((self.line, self.column))
         try:
             yield None
@@ -138,7 +137,7 @@ class SimpleDocRenderer(DocRenderer):
 
     def buffer_line(
         self, token_stream: TokenStream
-    ) -> tuple[TokenBuffer, Optional[TokenStream]]:
+    ) -> Tuple[TokenBuffer, Optional[TokenStream]]:
         succeeded: bool = False
         token_buffer: TokenBuffer = []
         with self.buffering():

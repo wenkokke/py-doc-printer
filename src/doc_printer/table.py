@@ -1,16 +1,14 @@
-import collections.abc
-from dataclasses import dataclass, field
 import itertools
-from typing import Any, Optional
+from dataclasses import dataclass, field
+from typing import Any, Iterable, Iterator, List, Optional, Tuple
 
-from .abc import OnEmit
 from .doc import Line, Token, TokenStream
 
-TokenBuffer = list[Token]
+TokenBuffer = List[Token]
 
 
 @dataclass
-class CellBuffer(collections.abc.Iterable[Token]):
+class CellBuffer(Iterable[Token]):
     hpad: Token
     width: int = 0
     buffer: TokenBuffer = field(default_factory=list, init=False)
@@ -32,7 +30,7 @@ class CellBuffer(collections.abc.Iterable[Token]):
         self.min_width += len(token)
         self.buffer.append(token)
 
-    def extend(self, tokens: collections.abc.Iterable[Token]) -> None:
+    def extend(self, tokens: Iterable[Token]) -> None:
         for token in tokens:
             self.append(token)
 
@@ -49,11 +47,11 @@ class CellBuffer(collections.abc.Iterable[Token]):
 
 
 @dataclass
-class RowBuffer(collections.abc.Iterable[CellBuffer]):
+class RowBuffer(Iterable[CellBuffer]):
     hsep: Token
-    min_col_widths: tuple[Optional[int], ...]
+    min_col_widths: Tuple[Optional[int], ...]
     min_n_cols: int = field(default=0, init=False)
-    buffer: list[CellBuffer] = field(default_factory=list, init=False)
+    buffer: List[CellBuffer] = field(default_factory=list, init=False)
 
     def __post_init__(self, **rest: Any) -> None:
         assert self.hsep is not Line
@@ -62,7 +60,7 @@ class RowBuffer(collections.abc.Iterable[CellBuffer]):
         self.min_n_cols += 1
         self.buffer.append(cell)
 
-    def extend(self, cells: collections.abc.Iterable[CellBuffer]) -> None:
+    def extend(self, cells: Iterable[CellBuffer]) -> None:
         for cell in cells:
             self.append(cell)
 
@@ -83,14 +81,14 @@ class RowBuffer(collections.abc.Iterable[CellBuffer]):
             except IndexError:
                 pass
 
-    def append_min_col_widths(self, min_col_widths: tuple[Optional[int], ...]) -> None:
+    def append_min_col_widths(self, min_col_widths: Tuple[Optional[int], ...]) -> None:
         self.min_n_cols = max(self.min_n_cols, len(min_col_widths))
         self.min_col_widths = tuple(
             max(w1 or 0, w2 or 0)
             for (w1, w2) in itertools.zip_longest(self.min_col_widths, min_col_widths)
         )
 
-    def __iter__(self) -> collections.abc.Iterator[CellBuffer]:
+    def __iter__(self) -> Iterator[CellBuffer]:
         return iter(self.buffer)
 
 
@@ -98,8 +96,8 @@ class RowBuffer(collections.abc.Iterable[CellBuffer]):
 class TableBuffer:
     n_cols: int = field(default=0, init=False)
     n_rows: int = field(default=0, init=False)
-    buffer: list[RowBuffer] = field(default_factory=list, init=False)
-    col_widths: tuple[int, ...] = field(default_factory=tuple, init=False)
+    buffer: List[RowBuffer] = field(default_factory=list, init=False)
+    col_widths: Tuple[int, ...] = field(default_factory=tuple, init=False)
 
     def append(self, row: RowBuffer) -> None:
         self.n_cols = max(self.n_cols, row.min_n_cols)
@@ -108,7 +106,7 @@ class TableBuffer:
         self.append_min_col_widths(tuple(cell.min_width for cell in row))
         self.append_min_col_widths(row.min_col_widths)
 
-    def extend(self, rows: collections.abc.Iterable[RowBuffer]) -> None:
+    def extend(self, rows: Iterable[RowBuffer]) -> None:
         for row in rows:
             self.append(row)
 
@@ -122,7 +120,7 @@ class TableBuffer:
             self.buffer[i].append_min_col_widths(self.col_widths)
             self.buffer[i].update()
 
-    def append_min_col_widths(self, min_col_widths: tuple[Optional[int], ...]) -> None:
+    def append_min_col_widths(self, min_col_widths: Tuple[Optional[int], ...]) -> None:
         if not self.col_widths:
             self.col_widths = tuple(w or 0 for w in min_col_widths)
         else:
@@ -131,5 +129,5 @@ class TableBuffer:
                 for (w1, w2) in itertools.zip_longest(self.col_widths, min_col_widths)
             )
 
-    def __iter__(self) -> collections.abc.Iterator[RowBuffer]:
+    def __iter__(self) -> Iterator[RowBuffer]:
         return iter(self.buffer)
