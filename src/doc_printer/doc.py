@@ -1,6 +1,5 @@
 import abc
 import re
-import sys
 from dataclasses import dataclass
 from typing import (
     Any,
@@ -16,6 +15,7 @@ from typing import (
     Type,
     Union,
     cast,
+    Pattern,
 )
 
 from dataclasses_json import DataClassJsonMixin
@@ -185,6 +185,8 @@ class Doc(metaclass=abc.ABCMeta):
 # Text and Tokens
 ################################################################################
 
+
+StrPattern: TypeAlias = Pattern[str]
 
 @dataclass
 class Text(Doc):

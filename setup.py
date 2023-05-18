@@ -8,6 +8,7 @@ def main():
             [
                 "src/doc_printer/_compat_itertools.py",
                 "src/doc_printer/_compat_singledispatchmethod.py",
+                "src/doc_printer/_compat_strpattern.py",
             ]
         )
     )
