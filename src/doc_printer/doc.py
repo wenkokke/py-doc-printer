@@ -186,9 +186,6 @@ class Doc(metaclass=abc.ABCMeta):
 ################################################################################
 
 
-StrPattern: TypeAlias = Pattern[str]
-
-
 @final
 @dataclass
 class Text(Doc):
