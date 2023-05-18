@@ -2,7 +2,7 @@ import itertools
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Iterator, List, Optional, Tuple
 
-from .doc import Line, Token, TokenStream
+from ..doc import Line, Token, TokenStream
 
 TokenBuffer = List[Token]
 

@@ -2,9 +2,9 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Iterator
 
-from ._compat_singledispatchmethod import singledispatchmethod
-from .doc import *
-from .simple import *
+from .._compat_singledispatchmethod import singledispatchmethod
+from ..doc import Alt, Cat, Doc, Token, TokenStream, Unknown, WidthHint
+from .simple import SimpleDocRenderer
 
 
 class LineWidthExceeded(Exception):

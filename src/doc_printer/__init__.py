@@ -1,6 +1,3 @@
-from .abc import DocRenderer as DocRenderer
-from .abc import OnEmit as OnEmit
-from .abc import RenderError as RenderError
 from .doc import Alt as Alt
 from .doc import Cat as Cat
 from .doc import Doc as Doc
@@ -35,7 +32,10 @@ from .doc import row as row
 from .doc import single_quote as single_quote
 from .doc import smart_quote as smart_quote
 from .doc import table as table
-from .simple import SimpleDocRenderer as SimpleDocRenderer
-from .simple import SimpleLayout as SimpleLayout
-from .smart import LineWidthExceeded as LineWidthExceeded
-from .smart import SmartDocRenderer as SmartDocRenderer
+from .doc_renderer.abc import DocRenderer as DocRenderer
+from .doc_renderer.abc import OnEmit as OnEmit
+from .doc_renderer.abc import RenderError as RenderError
+from .doc_renderer.simple import SimpleDocRenderer as SimpleDocRenderer
+from .doc_renderer.simple import SimpleLayout as SimpleLayout
+from .doc_renderer.smart import LineWidthExceeded as LineWidthExceeded
+from .doc_renderer.smart import SmartDocRenderer as SmartDocRenderer

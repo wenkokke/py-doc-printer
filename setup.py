@@ -8,6 +8,11 @@ def main() -> None:
             [
                 "src/doc_printer/_compat_itertools.py",
                 "src/doc_printer/_compat_singledispatchmethod.py",
+                "src/doc_printer/doc_renderer/abc.py",
+                # "src/doc_printer/doc.py",
+                "src/doc_printer/doc_renderer/simple.py",
+                "src/doc_printer/doc_renderer/smart.py",
+                "src/doc_printer/doc_renderer/table.py",
             ]
         )
     )

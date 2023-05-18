@@ -1,8 +1,8 @@
 import abc
 from typing import Callable, Iterable
 
-from ._compat_itertools import chain
-from .doc import *
+from .._compat_itertools import chain
+from ..doc import Doc, Token, TokenStream
 
 
 class RenderError(Exception):
