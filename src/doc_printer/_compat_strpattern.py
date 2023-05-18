@@ -1,7 +1,7 @@
 import re
 import sys
-from typing_extensions import TypeAlias
 
+from typing_extensions import TypeAlias
 
 if sys.version_info < (3, 9):
     StrPattern: TypeAlias = re.Pattern
