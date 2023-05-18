@@ -1,7 +1,7 @@
 import abc
-import collections.abc
-import itertools
+from typing import Callable, Iterable
 
+from ._compat_itertools import chain
 from .doc import *
 
 
@@ -9,7 +9,7 @@ class RenderError(Exception):
     pass
 
 
-OnEmit = collections.abc.Callable[[Token], Token]
+OnEmit = Callable[[Token], Token]
 
 
 class DocRenderer(abc.ABC):
@@ -22,5 +22,5 @@ class DocRenderer(abc.ABC):
         Render a document as a stream of tokens.
         """
 
-    def render_stream(self, docs: collections.abc.Iterable[Doc]) -> TokenStream:
-        yield from itertools.chain.from_iterable(map(self.render, docs))
+    def render_stream(self, docs: Iterable[Doc]) -> TokenStream:
+        yield from chain.from_iterable(map(self.render, docs))

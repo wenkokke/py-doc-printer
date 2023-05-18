@@ -1,4 +1,4 @@
-import pytest
+from pytest import mark
 from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_golden.plugin import GoldenTestFixture
 
@@ -11,8 +11,8 @@ from doc_printer import (
 )
 
 
-@pytest.mark.golden_test("data/golden/**/*.yml")
-def test_golden(benchmark: BenchmarkFixture, golden: GoldenTestFixture):
+@mark.golden_test("data/golden/**/*.yml")
+def test_golden(benchmark: BenchmarkFixture, golden: GoldenTestFixture) -> None:
     doc_renderer: DocRenderer
     if golden["input"]["renderer"] == "simple":
         simple_layout = SimpleLayout[golden["input"]["simple_layout"]]

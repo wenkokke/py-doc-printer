@@ -1,10 +1,10 @@
-from contextlib import contextmanager
 import enum
-import functools
-import itertools
+from contextlib import contextmanager
 from dataclasses import dataclass, field
-from typing import List, Tuple, Optional, Iterator
+from typing import Iterator, List, Optional, Tuple
 
+from ._compat_itertools import repeat
+from ._compat_singledispatchmethod import singledispatchmethod
 from .abc import *
 from .doc import *
 from .table import *
@@ -22,7 +22,7 @@ class SimpleDocRenderer(DocRenderer):
     def render(self, doc: Doc) -> TokenStream:
         yield from self.render_simple(doc)
 
-    @functools.singledispatchmethod
+    @singledispatchmethod
     def render_simple(self, doc: Doc) -> TokenStream:
         raise TypeError(type(doc), doc)
 
@@ -92,7 +92,7 @@ class SimpleDocRenderer(DocRenderer):
     ###########################################################################
 
     def padding(self, amount: int) -> TokenStream:
-        yield from map(self.emit, itertools.repeat(Space, amount))
+        yield from map(self.emit, repeat(Space, amount))
 
     ###########################################################################
     # Emitting Tokens & Tracking Position

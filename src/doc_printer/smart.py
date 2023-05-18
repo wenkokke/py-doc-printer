@@ -1,8 +1,8 @@
-import functools
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Iterator
 
+from ._compat_singledispatchmethod import singledispatchmethod
 from .doc import *
 from .simple import *
 
@@ -38,7 +38,7 @@ class SmartDocRenderer(SimpleDocRenderer):
         finally:
             self.on_emit.remove(self.strict_emit)
 
-    @functools.singledispatchmethod
+    @singledispatchmethod
     def render_with_lookahead(
         self, doc: Doc, *, width_hint: WidthHint = Unknown
     ) -> TokenStream:

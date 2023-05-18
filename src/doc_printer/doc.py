@@ -1,7 +1,7 @@
 import abc
-import itertools
 import re
 from dataclasses import dataclass
+import sys
 from typing import (
     Any,
     Callable,
@@ -16,10 +16,11 @@ from typing import (
     Union,
     cast,
 )
+
+from dataclasses_json import DataClassJsonMixin
 from typing_extensions import TypeAlias
 
-import more_itertools
-from dataclasses_json import DataClassJsonMixin
+from ._compat_itertools import accumulate, groupby, intersperse
 
 DocLike: TypeAlias = Union[None, str, "Doc", Iterable["DocLike"]]
 
@@ -85,7 +86,7 @@ class WidthHint:
 Unknown: WidthHint = WidthHint.intern_Unknown()
 
 
-class Doc(abc.ABC):
+class Doc(metaclass=abc.ABCMeta):
     def then(self, other: DocLike) -> "Doc":
         """
         Compose two documents.
@@ -101,7 +102,7 @@ class Doc(abc.ABC):
         #       not between Docs which are already part of a Cat.
         #       The call to cat then flattens out any existing Cats,
         #       without inserting additional separators.
-        return cat(more_itertools.intersperse(self, splat(others)))
+        return cat(intersperse(self, splat(others)))
 
     @property
     @abc.abstractmethod
@@ -183,6 +184,11 @@ class Doc(abc.ABC):
 # Text and Tokens
 ################################################################################
 
+if sys.version_info < (3, 8):
+    _StrPattern: TypeAlias = re.Pattern
+else:
+    _StrPattern: TypeAlias = re.Pattern[str]
+
 
 @dataclass
 class Text(Doc):
@@ -192,8 +198,8 @@ class Text(Doc):
 
     text: str
 
-    RE_ONE_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s")
-    RE_ANY_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s+")
+    RE_ONE_WHITESPACE: ClassVar[_StrPattern] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: ClassVar[_StrPattern] = re.compile(r"\s+")
 
     @classmethod
     def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
@@ -351,9 +357,7 @@ class Cat(Doc, Iterable[Doc]):
         return width_hint
 
     def width_hints(self, *, initial: WidthHint = Unknown) -> Iterator[WidthHint]:
-        yield from reversed(
-            list(itertools.accumulate(reversed(self.docs), initial=initial))
-        )
+        yield from reversed(list(accumulate(reversed(self.docs), initial=initial)))
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -686,28 +690,28 @@ class Edit(Doc):
         raise ValueError(kvs)
 
 
-ESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"\\'")
+ESCAPED_SINGLE_QUOTE: _StrPattern = re.compile(r"\\'")
 
 
 def unescape_single(token: Token) -> Token:
     return Text(ESCAPED_SINGLE_QUOTE.sub(r"'", token.text))
 
 
-UNESCAPED_SINGLE_QUOTE: re.Pattern[str] = re.compile(r"(?<!\\)'")
+UNESCAPED_SINGLE_QUOTE: _StrPattern = re.compile(r"(?<!\\)'")
 
 
 def escape_single(token: Token) -> Token:
     return Text(UNESCAPED_SINGLE_QUOTE.sub(r"\'", token.text))
 
 
-ESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'\\"')
+ESCAPED_DOUBLE_QUOTE: _StrPattern = re.compile(r'\\"')
 
 
 def unescape_double(token: Token) -> Token:
     return Text(ESCAPED_DOUBLE_QUOTE.sub(r'"', token.text))
 
 
-UNESCAPED_DOUBLE_QUOTE: re.Pattern[str] = re.compile(r'(?<!\\)"')
+UNESCAPED_DOUBLE_QUOTE: _StrPattern = re.compile(r'(?<!\\)"')
 
 
 def escape_double(token: Token) -> Token:
@@ -757,7 +761,7 @@ def inline(doc: Doc) -> Doc:
 
 
 @dataclass
-class RowInfo(DataClassJsonMixin):
+class RowInfo(DataClassJsonMixin):  # type: ignore[misc]
     table_type: Optional[str]
     hpad: Text
     hsep: Text
@@ -786,7 +790,7 @@ class Row(Doc, Iterable[Doc]):
     @property
     def width_hint(self) -> WidthHint:
         width_hint: int = 0
-        for cell in more_itertools.intersperse(self.info.hsep, self.cells):
+        for cell in intersperse(self.info.hsep, self.cells):
             # NOTE: sum the length of the first line of each cell
             width_hint = width_hint + cell.width_hint.width
         # NOTE: rows always end the line
@@ -922,7 +926,7 @@ def create_table(*doclike: DocLike) -> Optional[Table]:
 
 def create_tables(docs: Iterator[Doc], *, separator: Text = Line) -> Iterator[Doc]:
     row_candidates = map(RowCandidate, docs)
-    table_candidates = itertools.groupby(row_candidates, key=lambda rc: rc.table_type)
+    table_candidates = groupby(row_candidates, key=lambda rc: rc.table_type)
     for _, group in table_candidates:
         subdocs, subrows = zip(*group)
         table = create_table(subrows)
