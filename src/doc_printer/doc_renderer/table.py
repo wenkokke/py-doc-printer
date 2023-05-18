@@ -4,14 +4,24 @@ from typing import Any, Iterable, Iterator, List, Optional, Tuple
 
 from typing_extensions import TypeAlias, final
 
-from ..doc import Line, Token, TokenStream
+from ..doc import Line, Text, Token, TokenStream
+
+__all__: List[str] = [
+    "Text",
+    "Token",
+    "TokenStream",
+    "TokenBuffer",
+    "CellBuffer",
+    "RowBuffer",
+    "TableBuffer",
+]
 
 TokenBuffer: TypeAlias = List[Token]
 
 
 @final
 @dataclass
-class CellBuffer(Iterable[Token]):
+class CellBuffer:
     hpad: Token
     width: int = 0
     buffer: TokenBuffer = field(default_factory=list, init=False)
@@ -21,8 +31,7 @@ class CellBuffer(Iterable[Token]):
     def min_width(self) -> int:
         return self._min_width
 
-    @min_width.setter
-    def min_width(self, min_width: int) -> None:
+    def set_min_width(self, min_width: int) -> None:
         self.width = max(min_width, self.width)
         self._min_width = min_width
 
@@ -30,7 +39,7 @@ class CellBuffer(Iterable[Token]):
         assert self.hpad is not Line
 
     def append(self, token: Token) -> None:
-        self.min_width += len(token)
+        self.set_min_width(self.min_width + len(token))
         self.buffer.append(token)
 
     def extend(self, tokens: Iterable[Token]) -> None:
@@ -51,7 +60,7 @@ class CellBuffer(Iterable[Token]):
 
 @final
 @dataclass
-class RowBuffer(Iterable[CellBuffer]):
+class RowBuffer:
     hsep: Token
     min_col_widths: Tuple[Optional[int], ...]
     min_n_cols: int = field(default=0, init=False)

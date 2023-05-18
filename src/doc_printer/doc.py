@@ -22,9 +22,49 @@ from typing_extensions import TypeAlias, final
 
 from ._compat_itertools import accumulate, groupby, intersperse
 
-DocLike: TypeAlias = Optional[Union[str, "Doc", Iterable["DocLike"]]]
-
-DocClassWithUnpack: TypeAlias = Type[Iterable["Doc"]]
+__all__: List[str] = [
+    "DocLike",
+    "DocClassWithUnpack",
+    "WidthHint",
+    "Unknown",
+    "Doc",
+    "Text",
+    "Cat",
+    "Alt",
+    "Nest",
+    "Edit",
+    "RowInfo",
+    "Row",
+    "Table",
+    "RowCandidate",
+    "splat",
+    "cat",
+    "parens",
+    "brackets",
+    "braces",
+    "angles",
+    "alt",
+    "nest",
+    "unescape_single",
+    "escape_single",
+    "unescape_double",
+    "escape_double",
+    "single_quote",
+    "double_quote",
+    "smart_quote",
+    "inline",
+    "row",
+    "table",
+    "create_table",
+    "create_tables",
+    "Empty",
+    "Space",
+    "Line",
+    "Token",
+    "TokenStream",
+    "Fail",
+    "SoftLine",
+]
 
 
 @final
@@ -85,6 +125,11 @@ class WidthHint:
 
 
 Unknown: WidthHint = WidthHint.intern_Unknown()
+
+
+DocLike: TypeAlias = Optional[Union[str, "Doc", Iterable["DocLike"]]]
+
+DocClassWithUnpack: TypeAlias = Type[Iterable["Doc"]]
 
 
 class Doc(metaclass=abc.ABCMeta):
@@ -316,7 +361,6 @@ Line: Text = Text.intern_Line()
 Token: TypeAlias = Text
 
 TokenStream: TypeAlias = Iterator[Token]
-
 
 ################################################################################
 # Concatenation

@@ -1,12 +1,17 @@
 from contextlib import contextmanager
 from dataclasses import dataclass, field
-from typing import Iterator
+from typing import Iterator, List
 
 from typing_extensions import final
 
 from .._compat_singledispatchmethod import singledispatchmethod
 from ..doc import Alt, Cat, Doc, Token, TokenStream, Unknown, WidthHint
 from .simple import SimpleDocRenderer
+
+__all__: List[str] = [
+    "LineWidthExceeded",
+    "SmartDocRenderer",
+]
 
 
 class LineWidthExceeded(Exception):

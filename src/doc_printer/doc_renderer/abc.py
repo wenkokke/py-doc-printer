@@ -1,11 +1,16 @@
 import abc
-from typing import Callable, Iterable
+from typing import Callable, Iterable, List
 
 from mypy_extensions import mypyc_attr
-from typing_extensions import final
 
 from .._compat_itertools import chain
 from ..doc import Doc, Token, TokenStream
+
+__all__: List[str] = [
+    "RenderError",
+    "OnEmit",
+    "DocRenderer",
+]
 
 
 class RenderError(Exception):
