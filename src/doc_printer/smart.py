@@ -1,7 +1,7 @@
 import collections.abc
 import contextlib
-import dataclasses
 import functools
+from dataclasses import dataclass, field
 
 from .doc import *
 from .simple import *
@@ -11,7 +11,7 @@ class LineWidthExceeded(Exception):
     pass
 
 
-@dataclasses.dataclass
+@dataclass
 class SmartDocRenderer(SimpleDocRenderer):
     max_line_width: int = 80
 
@@ -22,7 +22,7 @@ class SmartDocRenderer(SimpleDocRenderer):
     # Strict Mode & Raising Errors when Max Line Width is Exceeded
     ###########################################################################
 
-    is_strict: bool = dataclasses.field(default=False, init=False)
+    is_strict: bool = field(default=False, init=False)
 
     def strict_emit(self, token: Token) -> Token:
         if self.column + len(token) > self.max_line_width:

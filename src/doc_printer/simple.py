@@ -1,9 +1,10 @@
 import collections.abc
 import contextlib
-import dataclasses
 import enum
 import functools
 import itertools
+from typing import Optional
+from dataclasses import dataclass, field
 
 from .abc import *
 from .doc import *
@@ -15,7 +16,7 @@ class SimpleLayout(enum.IntEnum):
     LongestLines = -1  # Always pick the last alternative
 
 
-@dataclasses.dataclass
+@dataclass
 class SimpleDocRenderer(DocRenderer):
     simple_layout: SimpleLayout = SimpleLayout.ShortestLines
 
@@ -98,10 +99,10 @@ class SimpleDocRenderer(DocRenderer):
     # Emitting Tokens & Tracking Position
     ###########################################################################
 
-    on_emit: list[OnEmit] = dataclasses.field(default_factory=list)
+    on_emit: list[OnEmit] = field(default_factory=list)
 
-    line: int = dataclasses.field(default=0, init=False)
-    column: int = dataclasses.field(default=0, init=False)
+    line: int = field(default=0, init=False)
+    column: int = field(default=0, init=False)
 
     def emit(self, token: Token) -> Token:
         # Invoke all callbacks
@@ -119,9 +120,7 @@ class SimpleDocRenderer(DocRenderer):
     # Buffering
     ###########################################################################
 
-    position_stack: list[tuple[int, int]] = dataclasses.field(
-        default_factory=list, init=False
-    )
+    position_stack: list[tuple[int, int]] = field(default_factory=list, init=False)
 
     @contextlib.contextmanager
     def buffering(self) -> collections.abc.Iterator[None]:
@@ -139,7 +138,7 @@ class SimpleDocRenderer(DocRenderer):
 
     def buffer_line(
         self, token_stream: TokenStream
-    ) -> tuple[TokenBuffer, typing.Optional[TokenStream]]:
+    ) -> tuple[TokenBuffer, Optional[TokenStream]]:
         succeeded: bool = False
         token_buffer: TokenBuffer = []
         with self.buffering():

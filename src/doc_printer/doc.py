@@ -1,27 +1,24 @@
 import abc
 import collections.abc
-import dataclasses
+from dataclasses import dataclass
 import itertools
-import operator
 import re
-import typing
+from typing import Any, ClassVar, Optional, Union, cast
+from dataclasses_json import DataClassJsonMixin
 
-import dataclasses_json
 import more_itertools
 
-DocLike = typing.Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]  # type: ignore
+DocLike = Union[None, str, "Doc", collections.abc.Iterable["DocLike"]]
 
 DocClassWithUnpack = type[collections.abc.Iterable["Doc"]]
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class WidthHint:
     width: int = 0
     end_of_line: bool = False
 
-    def __add__(
-        self, other: typing.Union[None, int, "WidthHint", "Doc"]
-    ) -> "WidthHint":
+    def __add__(self, other: Union[None, int, "WidthHint", "Doc"]) -> "WidthHint":
         if self.end_of_line or other is None:
             return self
         if isinstance(other, int):
@@ -30,9 +27,7 @@ class WidthHint:
             other = other.width_hint
         return WidthHint(self.width + other.width, other.end_of_line)
 
-    def __radd__(
-        self, other: typing.Union[None, int, "WidthHint", "Doc"]
-    ) -> "WidthHint":
+    def __radd__(self, other: Union[None, int, "WidthHint", "Doc"]) -> "WidthHint":
         if other is None:
             return self
         if isinstance(other, int):
@@ -48,7 +43,7 @@ class WidthHint:
             object.__setattr__(instance, "width", width)
             object.__setattr__(instance, "end_of_line", end_of_line)
             setattr(cls, name, instance)
-        return getattr(cls, name)
+        return cast(WidthHint, getattr(cls, name))
 
     @classmethod
     def intern_Unknown(cls) -> "WidthHint":
@@ -103,11 +98,11 @@ class Doc(abc.ABC):
         """
 
     @abc.abstractmethod
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         pass
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Doc":
+    def from_dict(kvs: dict[str, Any]) -> "Doc":
         type_name = kvs["type"]
         if type_name in ["Text", "Empty", "Space", "Line"]:
             return Text.from_dict(kvs)
@@ -176,7 +171,7 @@ class Doc(abc.ABC):
 ################################################################################
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Text(Doc):
     """
     A single line of text.
@@ -184,8 +179,8 @@ class Text(Doc):
 
     text: str
 
-    RE_ONE_WHITESPACE: typing.ClassVar[re.Pattern[str]] = re.compile(r"\s")
-    RE_ANY_WHITESPACE: typing.ClassVar[re.Pattern[str]] = re.compile(r"\s+")
+    RE_ONE_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: ClassVar[re.Pattern[str]] = re.compile(r"\s+")
 
     @classmethod
     def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
@@ -208,7 +203,7 @@ class Text(Doc):
             instance = super().__new__(Text)
             object.__setattr__(instance, "text", text)
             setattr(cls, name, instance)
-        return getattr(cls, name)
+        return cast(Text, getattr(cls, name))
 
     @classmethod
     def intern_Empty(cls) -> "Text":
@@ -270,7 +265,7 @@ class Text(Doc):
     def __len__(self) -> int:
         return len(self.text)
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         if self.is_Empty():
             return {"type": "Empty"}
         if self.is_Space():
@@ -280,7 +275,7 @@ class Text(Doc):
         return {"type": "Text", "text": self.text}
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Text":
+    def from_dict(kvs: dict[str, Any]) -> "Text":
         type_name = kvs.get("type", None)
         if type_name == "Empty":
             return Empty
@@ -311,7 +306,7 @@ TokenStream = collections.abc.Iterator[Token]
 ################################################################################
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Cat(Doc, collections.abc.Iterable[Doc]):
     """
     Concatenated documents.
@@ -319,7 +314,7 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
 
     docs: tuple[Doc, ...]
 
-    def __post_init__(self, **rest) -> None:
+    def __post_init__(self, **rest: Any) -> None:
         # Invariant: None of docs is an instance of Cat.
         assert all(
             not isinstance(doc, Cat) for doc in self.docs
@@ -348,14 +343,14 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
             list(itertools.accumulate(reversed(self.docs), initial=initial))
         )
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "type": "Cat",
             "docs": [doc.to_dict() for doc in self.docs],
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Cat":
+    def from_dict(kvs: dict[str, Any]) -> "Cat":
         docs = kvs.get("docs", None)
         if docs is not None:
             return Cat(docs=tuple(map(Doc.from_dict, docs)))
@@ -364,7 +359,7 @@ class Cat(Doc, collections.abc.Iterable[Doc]):
 
 def splat(
     doclike: DocLike,
-    unpack: typing.Union[DocClassWithUnpack, tuple[DocClassWithUnpack, ...]] = (),
+    unpack: Union[DocClassWithUnpack, tuple[DocClassWithUnpack, ...]] = (),
 ) -> collections.abc.Iterator["Doc"]:
     """
     Iterate over the elements any document-like object.
@@ -377,7 +372,7 @@ def splat(
         yield from splat(Text.lines(doclike), unpack=unpack)
     elif isinstance(doclike, Doc):
         if isinstance(doclike, unpack):
-            yield from typing.cast(collections.abc.Iterable["Doc"], doclike)
+            yield from cast(collections.abc.Iterable["Doc"], doclike)
         else:
             yield doclike
     else:
@@ -420,7 +415,7 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Alt(Doc, collections.abc.Iterable[Doc]):
     """
     Alternatives for the document layout.
@@ -435,7 +430,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
             instance = super().__new__(Alt)
             object.__setattr__(instance, "alts", alts)
             setattr(cls, name, instance)
-        return getattr(cls, name)
+        return cast(Alt, getattr(cls, name))
 
     @classmethod
     def intern_Fail(cls) -> "Alt":
@@ -483,7 +478,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
         else:
             return Unknown  # TODO: raise exception?
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         if self.is_Fail():
             return {"type": "Fail"}
         if self.is_SoftLine():
@@ -494,7 +489,7 @@ class Alt(Doc, collections.abc.Iterable[Doc]):
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Alt":
+    def from_dict(kvs: dict[str, Any]) -> "Alt":
         type_name = kvs.get("type", None)
         if type_name == "Fail":
             return Fail
@@ -526,7 +521,7 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Nest(Doc):
     """
     Indented documents.
@@ -536,7 +531,7 @@ class Nest(Doc):
     doc: Doc
     overlap: bool = False
 
-    def __post_init__(self, **rest) -> None:
+    def __post_init__(self, **rest: Any) -> None:
         # Invariant: The doc is not Nest
         assert not isinstance(self.doc, Nest), f"Nest contains Nest:\n{repr(self)}"
         # Invariant: The doc is not Empty
@@ -552,7 +547,7 @@ class Nest(Doc):
         else:
             return self.doc.width_hint
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "type": "Nest",
             "indent": self.indent,
@@ -561,7 +556,7 @@ class Nest(Doc):
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Nest":
+    def from_dict(kvs: dict[str, Any]) -> "Nest":
         indent = kvs.get("indent", None)
         doc = kvs.get("doc", None)
         overlap = kvs.get("overlap", None)
@@ -655,7 +650,7 @@ def _decode_edit_function(
     raise ValueError(name)
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Edit(Doc):
     function: collections.abc.Callable[[TokenStream], TokenStream]
     doc: Doc
@@ -665,7 +660,7 @@ class Edit(Doc):
         # NOTE: function should not significantly alter the width
         return self.doc.width_hint
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "type": "Edit",
             "function": _encode_edit_function(self.function),
@@ -673,7 +668,7 @@ class Edit(Doc):
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Edit":
+    def from_dict(kvs: dict[str, Any]) -> "Edit":
         function = kvs.get("function", None)
         doc = kvs.get("doc", None)
         if function is not None and doc is not None:
@@ -751,26 +746,26 @@ def inline(doc: Doc) -> Doc:
 ################################################################################
 
 
-@dataclasses.dataclass  # (frozen=True)
-class RowInfo(dataclasses_json.DataClassJsonMixin):
-    table_type: typing.Optional[str]
+@dataclass
+class RowInfo(DataClassJsonMixin):
+    table_type: Optional[str]
     hpad: Text
     hsep: Text
-    min_col_widths: tuple[typing.Optional[int], ...]
+    min_col_widths: tuple[Optional[int], ...]
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Row(Doc, collections.abc.Iterable[Doc]):
     cells: tuple[Doc, ...]
     info: RowInfo
 
-    def __post_init__(self, **rest) -> None:
+    def __post_init__(self, **rest: Any) -> None:
         # Invariant: None of cells is an instance of Row.
         assert all(
             not isinstance(cell, Row) for cell in self.cells
         ), f"Row contains Row:\n{repr(self)}"
         # Invariant: The hpad text has width 1.
-        assert self.info.hpad.text is not Empty, f"Row hpad is Empty:\n'{repr(self)}'"
+        assert self.info.hpad is not Empty, f"Row hpad is Empty:\n'{repr(self)}'"
         assert (
             len(self.info.hpad.text) == 1
         ), f"Row hpad is more than one character:\n'{repr(self)}'"
@@ -787,7 +782,7 @@ class Row(Doc, collections.abc.Iterable[Doc]):
         # NOTE: rows always end the line
         return WidthHint(width_hint, True)
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "type": "Row",
             "cells": [doc.to_dict() for doc in self.cells],
@@ -795,7 +790,7 @@ class Row(Doc, collections.abc.Iterable[Doc]):
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Row":
+    def from_dict(kvs: dict[str, Any]) -> "Row":
         cells = kvs.get("cells", None)
         info = kvs.get("info", None)
         if cells is not None and info is not None:
@@ -806,11 +801,11 @@ class Row(Doc, collections.abc.Iterable[Doc]):
         raise ValueError(kvs)
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class Table(Doc, collections.abc.Iterable[Row]):
     rows: tuple[Row, ...]
 
-    def __post_init__(self, **rest) -> None:
+    def __post_init__(self, **rest: Any) -> None:
         # Invariant: All of rows are an instance of Table.
         assert all(
             isinstance(row, Row) for row in self.rows
@@ -827,14 +822,14 @@ class Table(Doc, collections.abc.Iterable[Row]):
         else:
             return Unknown
 
-    def to_dict(self) -> dict[str, typing.Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "type": "Table",
             "rows": [doc.to_dict() for doc in self.rows],
         }
 
     @staticmethod
-    def from_dict(kvs: dict[str, typing.Any]) -> "Table":
+    def from_dict(kvs: dict[str, Any]) -> "Table":
         rows = kvs.get("rows", None)
         if rows is not None:
             return Table(rows=tuple(Row.from_dict(row) for row in rows))
@@ -843,10 +838,10 @@ class Table(Doc, collections.abc.Iterable[Row]):
 
 def row(
     *doclike: DocLike,
-    table_type: typing.Optional[str] = None,
-    hpad: typing.Union[str, Text] = Space,
-    hsep: typing.Union[str, Text] = Space,
-    min_col_widths: tuple[typing.Optional[int], ...] = (),
+    table_type: Optional[str] = None,
+    hpad: Union[str, Text] = Space,
+    hsep: Union[str, Text] = Space,
+    min_col_widths: tuple[Optional[int], ...] = (),
 ) -> Doc:
     # Ensure padding and separators are Text
     if isinstance(hpad, str):
@@ -871,12 +866,12 @@ def table(rows: collections.abc.Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
-@dataclasses.dataclass  # (frozen=True)
+@dataclass
 class RowCandidate:
     doc: Doc
 
     @property
-    def row(self) -> typing.Optional[Row]:
+    def row(self) -> Optional[Row]:
         if isinstance(self.doc, Row):
             return self.doc
         if isinstance(self.doc, Alt):
@@ -886,17 +881,17 @@ class RowCandidate:
         return None
 
     @property
-    def table_type(self) -> typing.Union[bool, str]:
+    def table_type(self) -> Union[bool, str]:
         if self.row:
             return self.row.info.table_type or True
         return False
 
-    def __iter__(self) -> collections.abc.Iterator[typing.Union[Doc, Row, None]]:
+    def __iter__(self) -> collections.abc.Iterator[Union[Doc, Row, None]]:
         yield self.doc
         yield self.row
 
 
-def create_table(*doclike: DocLike) -> typing.Optional[Table]:
+def create_table(*doclike: DocLike) -> Optional[Table]:
     buffer: list[Row] = []
     previous_doc_was_row: bool = False
     row_candidates = map(RowCandidate, splat(doclike))
