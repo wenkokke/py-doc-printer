@@ -15,7 +15,6 @@ from typing import (
     Type,
     Union,
     cast,
-    Pattern,
 )
 
 from dataclasses_json import DataClassJsonMixin
@@ -187,6 +186,7 @@ class Doc(metaclass=abc.ABCMeta):
 
 
 StrPattern: TypeAlias = Pattern[str]
+
 
 @dataclass
 class Text(Doc):
