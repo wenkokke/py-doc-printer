@@ -12,7 +12,7 @@ def main() -> None:
                 "src/doc_printer/doc_renderer/abc.py",
                 # "src/doc_printer/doc_renderer/simple.py",
                 # "src/doc_printer/doc_renderer/smart.py",
-                # "src/doc_printer/doc_renderer/table.py",
+                "src/doc_printer/doc_renderer/table.py",
             ]
         )
     )
