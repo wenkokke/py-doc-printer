@@ -2,11 +2,14 @@ import itertools
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Iterator, List, Optional, Tuple
 
+from typing_extensions import TypeAlias, final
+
 from ..doc import Line, Token, TokenStream
 
-TokenBuffer = List[Token]
+TokenBuffer: TypeAlias = List[Token]
 
 
+@final
 @dataclass
 class CellBuffer(Iterable[Token]):
     hpad: Token
@@ -46,6 +49,7 @@ class CellBuffer(Iterable[Token]):
         return iter(self.buffer)
 
 
+@final
 @dataclass
 class RowBuffer(Iterable[CellBuffer]):
     hsep: Token
@@ -92,6 +96,7 @@ class RowBuffer(Iterable[CellBuffer]):
         return iter(self.buffer)
 
 
+@final
 @dataclass
 class TableBuffer:
     n_cols: int = field(default=0, init=False)

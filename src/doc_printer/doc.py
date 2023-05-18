@@ -18,7 +18,7 @@ from typing import (
 )
 
 from dataclasses_json import DataClassJsonMixin
-from typing_extensions import TypeAlias
+from typing_extensions import TypeAlias, final
 
 from ._compat_itertools import accumulate, groupby, intersperse
 
@@ -27,6 +27,7 @@ DocLike: TypeAlias = Optional[Union[str, "Doc", Iterable["DocLike"]]]
 DocClassWithUnpack: TypeAlias = Type[Iterable["Doc"]]
 
 
+@final
 @dataclass
 class WidthHint:
     width: int = 0
@@ -188,6 +189,7 @@ class Doc(metaclass=abc.ABCMeta):
 StrPattern: TypeAlias = Pattern[str]
 
 
+@final
 @dataclass
 class Text(Doc):
     """
@@ -324,6 +326,7 @@ TokenStream: TypeAlias = Iterator[Token]
 ################################################################################
 
 
+@final
 @dataclass
 class Cat(Doc, Iterable[Doc]):
     """
@@ -429,6 +432,7 @@ def angles(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
+@final
 @dataclass
 class Alt(Doc, Iterable[Doc]):
     """
@@ -535,6 +539,7 @@ def alt(*doclike: DocLike) -> Doc:
 ################################################################################
 
 
+@final
 @dataclass
 class Nest(Doc):
     """
@@ -662,6 +667,7 @@ def _decode_edit_function(
     raise ValueError(name)
 
 
+@final
 @dataclass
 class Edit(Doc):
     function: Callable[[TokenStream], TokenStream]
@@ -758,6 +764,7 @@ def inline(doc: Doc) -> Doc:
 ################################################################################
 
 
+@final
 @dataclass
 class RowInfo(DataClassJsonMixin):  # type: ignore[misc]
     table_type: Optional[str]
@@ -766,6 +773,7 @@ class RowInfo(DataClassJsonMixin):  # type: ignore[misc]
     min_col_widths: Tuple[Optional[int], ...]
 
 
+@final
 @dataclass
 class Row(Doc, Iterable[Doc]):
     cells: Tuple[Doc, ...]
@@ -813,6 +821,7 @@ class Row(Doc, Iterable[Doc]):
         raise ValueError(kvs)
 
 
+@final
 @dataclass
 class Table(Doc, Iterable[Row]):
     rows: Tuple[Row, ...]
@@ -878,6 +887,7 @@ def table(rows: Iterator[Row]) -> Doc:
     return Table(tuple(rows))
 
 
+@final
 @dataclass
 class RowCandidate:
     doc: Doc

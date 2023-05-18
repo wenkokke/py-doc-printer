@@ -3,6 +3,9 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Iterator, List, Optional, Tuple
 
+from mypy_extensions import mypyc_attr
+from typing_extensions import final
+
 from .._compat_itertools import repeat
 from .._compat_singledispatchmethod import singledispatchmethod
 from ..doc import (
@@ -23,11 +26,13 @@ from .abc import DocRenderer, OnEmit, RenderError
 from .table import CellBuffer, RowBuffer, TableBuffer, TokenBuffer
 
 
+@final
 class SimpleLayout(enum.IntEnum):
     ShortestLines = 0  # Always pick the first alternative
     LongestLines = -1  # Always pick the last alternative
 
 
+@mypyc_attr(allow_interpreted_subclasses=True)
 @dataclass
 class SimpleDocRenderer(DocRenderer):
     simple_layout: SimpleLayout = SimpleLayout.ShortestLines

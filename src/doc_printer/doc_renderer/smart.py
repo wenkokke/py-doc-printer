@@ -2,6 +2,8 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from typing import Iterator
 
+from typing_extensions import final
+
 from .._compat_singledispatchmethod import singledispatchmethod
 from ..doc import Alt, Cat, Doc, Token, TokenStream, Unknown, WidthHint
 from .simple import SimpleDocRenderer
@@ -11,6 +13,7 @@ class LineWidthExceeded(Exception):
     pass
 
 
+@final
 @dataclass
 class SmartDocRenderer(SimpleDocRenderer):
     max_line_width: int = 80

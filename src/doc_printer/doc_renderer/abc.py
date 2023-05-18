@@ -1,6 +1,9 @@
 import abc
 from typing import Callable, Iterable
 
+from mypy_extensions import mypyc_attr
+from typing_extensions import final
+
 from .._compat_itertools import chain
 from ..doc import Doc, Token, TokenStream
 
@@ -12,7 +15,8 @@ class RenderError(Exception):
 OnEmit = Callable[[Token], Token]
 
 
-class DocRenderer(abc.ABC):
+@mypyc_attr(allow_interpreted_subclasses=True)
+class DocRenderer(metaclass=abc.ABCMeta):
     def to_str(self, doc: Doc) -> str:
         return "".join(token.text for token in self.render(doc))
 
