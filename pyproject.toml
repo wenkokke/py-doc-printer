@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45"]
+requires = ["setuptools>=45", "mypy >=1.2.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -64,9 +64,6 @@ test-extras = "test"
 [tool.cibuildwheel.macos]
 # Skip trying to test arm64 builds on Intel Macs
 test-skip = "*-macosx_arm64 *-macosx_universal2:arm64"
-
-[tool.cibuildwheel.config-settings]
---build-option = "--use-mypyc"
 
 [tool.mypy]
 python_version = 3.7
