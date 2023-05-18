@@ -21,8 +21,9 @@ from dataclasses_json import DataClassJsonMixin
 from typing_extensions import TypeAlias
 
 from ._compat_itertools import accumulate, groupby, intersperse
+from ._compat_strpattern import StrPattern
 
-DocLike: TypeAlias = Union[None, str, "Doc", Iterable["DocLike"]]
+DocLike: TypeAlias = Optional[Union[str, "Doc", Iterable["DocLike"]]]
 
 DocClassWithUnpack: TypeAlias = Type[Iterable["Doc"]]
 
@@ -184,12 +185,6 @@ class Doc(metaclass=abc.ABCMeta):
 # Text and Tokens
 ################################################################################
 
-if sys.version_info < (3, 8):
-    _StrPattern: TypeAlias = re.Pattern
-else:
-    _StrPattern: TypeAlias = re.Pattern[str]
-
-
 @dataclass
 class Text(Doc):
     """
@@ -198,8 +193,8 @@ class Text(Doc):
 
     text: str
 
-    RE_ONE_WHITESPACE: ClassVar[_StrPattern] = re.compile(r"\s")
-    RE_ANY_WHITESPACE: ClassVar[_StrPattern] = re.compile(r"\s+")
+    RE_ONE_WHITESPACE: ClassVar[StrPattern] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: ClassVar[StrPattern] = re.compile(r"\s+")
 
     @classmethod
     def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
@@ -690,28 +685,28 @@ class Edit(Doc):
         raise ValueError(kvs)
 
 
-ESCAPED_SINGLE_QUOTE: _StrPattern = re.compile(r"\\'")
+ESCAPED_SINGLE_QUOTE: StrPattern = re.compile(r"\\'")
 
 
 def unescape_single(token: Token) -> Token:
     return Text(ESCAPED_SINGLE_QUOTE.sub(r"'", token.text))
 
 
-UNESCAPED_SINGLE_QUOTE: _StrPattern = re.compile(r"(?<!\\)'")
+UNESCAPED_SINGLE_QUOTE: StrPattern = re.compile(r"(?<!\\)'")
 
 
 def escape_single(token: Token) -> Token:
     return Text(UNESCAPED_SINGLE_QUOTE.sub(r"\'", token.text))
 
 
-ESCAPED_DOUBLE_QUOTE: _StrPattern = re.compile(r'\\"')
+ESCAPED_DOUBLE_QUOTE: StrPattern = re.compile(r'\\"')
 
 
 def unescape_double(token: Token) -> Token:
     return Text(ESCAPED_DOUBLE_QUOTE.sub(r'"', token.text))
 
 
-UNESCAPED_DOUBLE_QUOTE: _StrPattern = re.compile(r'(?<!\\)"')
+UNESCAPED_DOUBLE_QUOTE: StrPattern = re.compile(r'(?<!\\)"')
 
 
 def escape_double(token: Token) -> Token:
