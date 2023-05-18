@@ -1,7 +1,7 @@
 import abc
 import re
-from dataclasses import dataclass
 import sys
+from dataclasses import dataclass
 from typing import (
     Any,
     Callable,
@@ -11,6 +11,7 @@ from typing import (
     Iterator,
     List,
     Optional,
+    Pattern,
     Tuple,
     Type,
     Union,
@@ -21,7 +22,6 @@ from dataclasses_json import DataClassJsonMixin
 from typing_extensions import TypeAlias
 
 from ._compat_itertools import accumulate, groupby, intersperse
-from ._compat_strpattern import StrPattern
 
 DocLike: TypeAlias = Optional[Union[str, "Doc", Iterable["DocLike"]]]
 
@@ -185,6 +185,7 @@ class Doc(metaclass=abc.ABCMeta):
 # Text and Tokens
 ################################################################################
 
+
 @dataclass
 class Text(Doc):
     """
@@ -193,8 +194,8 @@ class Text(Doc):
 
     text: str
 
-    RE_ONE_WHITESPACE: ClassVar[StrPattern] = re.compile(r"\s")
-    RE_ANY_WHITESPACE: ClassVar[StrPattern] = re.compile(r"\s+")
+    RE_ONE_WHITESPACE: ClassVar[Pattern[str]] = re.compile(r"\s")
+    RE_ANY_WHITESPACE: ClassVar[Pattern[str]] = re.compile(r"\s+")
 
     @classmethod
     def words(cls, text: str, *, collapse_whitespace: bool = False) -> Doc:
@@ -685,28 +686,28 @@ class Edit(Doc):
         raise ValueError(kvs)
 
 
-ESCAPED_SINGLE_QUOTE: StrPattern = re.compile(r"\\'")
+ESCAPED_SINGLE_QUOTE: Pattern[str] = re.compile(r"\\'")
 
 
 def unescape_single(token: Token) -> Token:
     return Text(ESCAPED_SINGLE_QUOTE.sub(r"'", token.text))
 
 
-UNESCAPED_SINGLE_QUOTE: StrPattern = re.compile(r"(?<!\\)'")
+UNESCAPED_SINGLE_QUOTE: Pattern[str] = re.compile(r"(?<!\\)'")
 
 
 def escape_single(token: Token) -> Token:
     return Text(UNESCAPED_SINGLE_QUOTE.sub(r"\'", token.text))
 
 
-ESCAPED_DOUBLE_QUOTE: StrPattern = re.compile(r'\\"')
+ESCAPED_DOUBLE_QUOTE: Pattern[str] = re.compile(r'\\"')
 
 
 def unescape_double(token: Token) -> Token:
     return Text(ESCAPED_DOUBLE_QUOTE.sub(r'"', token.text))
 
 
-UNESCAPED_DOUBLE_QUOTE: StrPattern = re.compile(r'(?<!\\)"')
+UNESCAPED_DOUBLE_QUOTE: Pattern[str] = re.compile(r'(?<!\\)"')
 
 
 def escape_double(token: Token) -> Token:

@@ -1,9 +1,10 @@
 import sys
-from typing import List
-from more_itertools import intersperse as intersperse
-from itertools import groupby as groupby
 from itertools import chain as chain
+from itertools import groupby as groupby
 from itertools import repeat as repeat
+from typing import List
+
+from more_itertools import intersperse as intersperse
 
 ################################################################################
 # Export List
@@ -25,10 +26,11 @@ if sys.version_info >= (3, 8):
     from itertools import accumulate as accumulate
 
 elif sys.version_info < (3, 8) and sys.version_info >= (3, 7):
-    from typing import Any, Callable, Iterable, Iterator, Optional
-    from typing_extensions import TypeVar
-    from itertools import accumulate as _accumulate
     import operator
+    from itertools import accumulate as _accumulate
+    from typing import Any, Callable, Iterable, Iterator, Optional
+
+    from typing_extensions import TypeVar
 
     _T = TypeVar("_T")
 
@@ -44,9 +46,10 @@ elif sys.version_info < (3, 8) and sys.version_info >= (3, 7):
             yield from _accumulate(iterable, func=func)
 
 elif sys.version_info < (3, 7):
-    from typing import Any, Callable, Iterable, Iterator, Optional
-    from typing_extensions import TypeVar
     import operator
+    from typing import Any, Callable, Iterable, Iterator, Optional
+
+    from typing_extensions import TypeVar
 
     _T = TypeVar("_T")
 
