@@ -1,12 +1,15 @@
-import setuptools
 import mypyc.build
+import setuptools
+
 
 def main():
     setuptools.setup(
-        ext_modules=mypyc.build.mypycify([
-            'src/doc_printer/_compat_itertools.py',
-            'src/doc_printer/_compat_singledispatchmethod.py',
-        ])
+        ext_modules=mypyc.build.mypycify(
+            [
+                "src/doc_printer/_compat_itertools.py",
+                "src/doc_printer/_compat_singledispatchmethod.py",
+            ]
+        )
     )
 
 
