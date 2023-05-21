@@ -35,4 +35,7 @@ repos:
     rev: "v1.3.0"
     hooks:
       - id: mypy
+        additional_dependencies:
+          - "pytest"
+          - "pytest_golden"
         exclude: "^src/doc_printer/_compat_singledispatchmethod\\.py$"
