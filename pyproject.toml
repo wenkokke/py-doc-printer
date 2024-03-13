@@ -20,8 +20,9 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
-requires-python = ">=3.7.1,<3.12"
+requires-python = ">=3.7.1,<3.13"
 dependencies = [
   "dataclasses_json >=0.5.7,<0.7",
   "tree_sitter >=0.20,<0.21",
@@ -53,7 +54,7 @@ push = true
 "docs/conf.py" = ['release = "{version}"']
 
 [tool.mypy]
-python_version = 3.7
+python_version = "3.7"
 strict = true
 implicit_reexport = false
 ignore_missing_imports = true
@@ -70,7 +71,7 @@ where = ["src"]
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py37, py38, py39, py310, py311, docs
+envlist = py37, py38, py39, py310, py311, py312, docs
 isolated_build = true
 
 [testenv]
