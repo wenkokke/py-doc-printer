@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=4468db6d" />
     <script src="_static/documentation_options.js?v=4befc426"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -82,7 +82,137 @@
 
 <div class="container">
   <div class="row">
-    <div class="body col-md-12 content" role="main">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Document Printer</a><ul>
+<li><a class="reference internal" href="#documents">Documents</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Doc"><code class="docutils literal notranslate"><span class="pre">Doc</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.DocLike"><code class="docutils literal notranslate"><span class="pre">DocLike</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#basic-tokens">Basic tokens</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Text"><code class="docutils literal notranslate"><span class="pre">Text</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Text.lines"><code class="docutils literal notranslate"><span class="pre">Text.lines()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Text.words"><code class="docutils literal notranslate"><span class="pre">Text.words()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doc_printer.doc.Empty"><code class="docutils literal notranslate"><span class="pre">Empty</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Space"><code class="docutils literal notranslate"><span class="pre">Space</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Line"><code class="docutils literal notranslate"><span class="pre">Line</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#concatenating-documents">Concatenating documents</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Doc.__truediv__"><code class="docutils literal notranslate"><span class="pre">Doc.__truediv__()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Doc.__floordiv__"><code class="docutils literal notranslate"><span class="pre">Doc.__floordiv__()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Doc.then"><code class="docutils literal notranslate"><span class="pre">Doc.then()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Doc.join"><code class="docutils literal notranslate"><span class="pre">Doc.join()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.cat"><code class="docutils literal notranslate"><span class="pre">cat()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Cat"><code class="docutils literal notranslate"><span class="pre">Cat</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#parentheses">Parentheses</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.parens"><code class="docutils literal notranslate"><span class="pre">parens()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.brackets"><code class="docutils literal notranslate"><span class="pre">brackets()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.braces"><code class="docutils literal notranslate"><span class="pre">braces()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.angles"><code class="docutils literal notranslate"><span class="pre">angles()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.single_quote"><code class="docutils literal notranslate"><span class="pre">single_quote()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.double_quote"><code class="docutils literal notranslate"><span class="pre">double_quote()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.smart_quote"><code class="docutils literal notranslate"><span class="pre">smart_quote()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alternative-layout-options">Alternative layout options</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Doc.__or__"><code class="docutils literal notranslate"><span class="pre">Doc.__or__()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.alt"><code class="docutils literal notranslate"><span class="pre">alt()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Alt"><code class="docutils literal notranslate"><span class="pre">Alt</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Fail"><code class="docutils literal notranslate"><span class="pre">Fail</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.SoftLine"><code class="docutils literal notranslate"><span class="pre">SoftLine</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#identation">Identation</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.nest"><code class="docutils literal notranslate"><span class="pre">nest()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Nest"><code class="docutils literal notranslate"><span class="pre">Nest</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alignment">Alignment</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.row"><code class="docutils literal notranslate"><span class="pre">row()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.table"><code class="docutils literal notranslate"><span class="pre">table()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.create_tables"><code class="docutils literal notranslate"><span class="pre">create_tables()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.RowInfo"><code class="docutils literal notranslate"><span class="pre">RowInfo</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.RowInfo.hpad"><code class="docutils literal notranslate"><span class="pre">RowInfo.hpad</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.RowInfo.hsep"><code class="docutils literal notranslate"><span class="pre">RowInfo.hsep</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.RowInfo.table_type"><code class="docutils literal notranslate"><span class="pre">RowInfo.table_type</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doc_printer.doc.Row"><code class="docutils literal notranslate"><span class="pre">Row</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rendering">Rendering</a><ul>
+<li><a class="reference internal" href="#doc_printer.doc.Token"><code class="docutils literal notranslate"><span class="pre">Token</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.doc.TokenStream"><code class="docutils literal notranslate"><span class="pre">TokenStream</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.abc.DocRenderer"><code class="docutils literal notranslate"><span class="pre">DocRenderer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.abc.DocRenderer.render"><code class="docutils literal notranslate"><span class="pre">DocRenderer.render()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.abc.DocRenderer.to_str"><code class="docutils literal notranslate"><span class="pre">DocRenderer.to_str()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rendering-naively">Rendering Naively</a><ul>
+<li><a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer"><code class="docutils literal notranslate"><span class="pre">SimpleDocRenderer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer.render_simple"><code class="docutils literal notranslate"><span class="pre">SimpleDocRenderer.render_simple()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rendering-tables">Rendering Tables</a><ul>
+<li><a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer.buffer_table"><code class="docutils literal notranslate"><span class="pre">SimpleDocRenderer.buffer_table()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.simple.SimpleDocRenderer.buffer_row"><code class="docutils literal notranslate"><span class="pre">SimpleDocRenderer.buffer_row()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.TableBuffer"><code class="docutils literal notranslate"><span class="pre">TableBuffer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.table.TableBuffer.append"><code class="docutils literal notranslate"><span class="pre">TableBuffer.append()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.TableBuffer.extend"><code class="docutils literal notranslate"><span class="pre">TableBuffer.extend()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.TableBuffer.render"><code class="docutils literal notranslate"><span class="pre">TableBuffer.render()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.TableBuffer.update"><code class="docutils literal notranslate"><span class="pre">TableBuffer.update()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doc_printer.table.RowBuffer"><code class="docutils literal notranslate"><span class="pre">RowBuffer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.table.RowBuffer.append"><code class="docutils literal notranslate"><span class="pre">RowBuffer.append()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.RowBuffer.extend"><code class="docutils literal notranslate"><span class="pre">RowBuffer.extend()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.RowBuffer.render"><code class="docutils literal notranslate"><span class="pre">RowBuffer.render()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#doc_printer.table.CellBuffer"><code class="docutils literal notranslate"><span class="pre">CellBuffer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.table.CellBuffer.append"><code class="docutils literal notranslate"><span class="pre">CellBuffer.append()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.CellBuffer.extend"><code class="docutils literal notranslate"><span class="pre">CellBuffer.extend()</span></code></a></li>
+<li><a class="reference internal" href="#doc_printer.table.CellBuffer.render"><code class="docutils literal notranslate"><span class="pre">CellBuffer.render()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rendering-with-lookahead">Rendering with Lookahead</a><ul>
+<li><a class="reference internal" href="#doc_printer.smart.SmartDocRenderer"><code class="docutils literal notranslate"><span class="pre">SmartDocRenderer</span></code></a><ul>
+<li><a class="reference internal" href="#doc_printer.smart.SmartDocRenderer.render_with_lookahead"><code class="docutils literal notranslate"><span class="pre">SmartDocRenderer.render_with_lookahead()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
       
   <section id="document-printer">
 <h1>Document Printer<a class="headerlink" href="#document-printer" title="Link to this heading">¶</a></h1>
@@ -106,7 +236,7 @@
 <li><p>a sequence of things that can be coerced into documents.</p></li>
 </ul>
 <p>Strings are converted using <a class="reference internal" href="#doc_printer.doc.Text.lines" title="doc_printer.doc.Text.lines"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Text.lines()</span></code></a>.
-alias of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><code class="xref py py-class docutils literal notranslate"><span class="pre">Doc</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<a class="reference internal" href="#doc_printer.doc.DocLike" title="doc_printer.doc.DocLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocLike</span></code></a>]]]</p>
+alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> | <a class="reference internal" href="#doc_printer.doc.Doc" title="doc_printer.doc.Doc"><code class="xref py py-class docutils literal notranslate"><span class="pre">Doc</span></code></a> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<a class="reference internal" href="#doc_printer.doc.DocLike" title="doc_printer.doc.DocLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocLike</span></code></a>] | <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd></dl>
 
 </div></blockquote>
@@ -543,7 +673,7 @@ You can create tables using <a class="reference internal" href="#doc_printer.doc
     </p>
     <p>
         &copy; Copyright 2022, Wen Kokke.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br/>
     </p>
   </div>
 </footer>
