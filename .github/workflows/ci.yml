@@ -38,7 +38,7 @@ jobs:
 
       - # Required to run job via act: https://github.com/nektos/act
         name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           cache: "pip"
           cache-dependency-path: "./requirements-ci.txt"
@@ -85,7 +85,7 @@ jobs:
 
       - # Required to run job via act: https://github.com/nektos/act
         name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           cache: "pip"
           cache-dependency-path: "./requirements-ci.txt"
@@ -120,7 +120,7 @@ jobs:
 
       - # Required to run job via act: https://github.com/nektos/act
         name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           cache: "pip"
           cache-dependency-path: "./pyproject.toml"
@@ -133,7 +133,7 @@ jobs:
         run: sphinx-build -M html docs docs/_build
 
       - name: Deploy doc
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: docs
           folder: docs/_build/html
