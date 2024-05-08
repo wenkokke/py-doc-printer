@@ -19,7 +19,7 @@ defaults:
 
 env:
   # NOTE: The default Python version is installed with actions/setup-python.
-  DEFAULT_PYTHON_VERSION: "3.11"
+  DEFAULT_PYTHON_VERSION: "3.12"
 
 jobs:
   ################################################################################
@@ -52,7 +52,7 @@ jobs:
         run: pipx run --spec build pyproject-build --outdir dist
 
       - name: Upload sdist
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: |
@@ -90,11 +90,11 @@ jobs:
           cache: "pip"
           cache-dependency-path: "./requirements-ci.txt"
           python-version: |
-            3.7
             3.8
             3.9
             3.10
             3.11
+            3.12
 
       - # Required to run job via act: https://github.com/nektos/act
         name: Setup dependencies
@@ -153,7 +153,7 @@ jobs:
 
     steps:
       - name: Download dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
@@ -185,7 +185,7 @@ jobs:
 
     steps:
       - name: Download dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
